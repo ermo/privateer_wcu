@@ -1,0 +1,39 @@
+= Goals
+
+The overarching goal is two-fold:
+
+ 1. Update PU to run on the newest VS on Linux
+
+ 2. Make PU a suitable base for Privateer: Wing Commander Universe
+
+
+== 1. Update PU to run on the newest VS on Linux
+
+Facts:
+ * Sadly, we've lost access to the PU SVN history.
+ * PU r505 does not work on Linux due to case-sensitivity issues
+ * The PU assets are not all working (sprites reference missing assets)
+ * The Windows support stuff is outdated
+ * It is possible to solve all of the above
+ * PU does not use cube-maps
+
+In summary, the issues outlined above are solvable. :-)
+
+
+== 2. Make PU a suitable base for Privateer: Wing Commander Universe
+
+I think it is important to recognize and acknowledge that this goal is
+more about "taste", which implies someone setting a standard for "good"
+vs. "not good enough".
+
+For now, this will likely be a meritocracy, where whoever does the work
+gets to set the standard -- at least initially.
+
+Personally, I support not deleting anything right away.
+
+Observations:
+ * PU is not well balanced currently
+ * PU ships are not too pretty.
+ * The extra campaign stuff is an, er, "interesting" idea?
+ * The PU assets are not all working
+
