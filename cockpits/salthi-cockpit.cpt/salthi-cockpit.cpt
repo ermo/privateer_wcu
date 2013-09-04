@@ -1,0 +1,45 @@
+<Cockpit front="shoklar-cockpit.spr" left="shoklar-cockpit-left.spr" right="shoklar-cockpit-right.spr" back="shoklar-cockpit-back.spr" ViewOffset=".2857" CockpitOffset="0.4625">
+	
+<Crosshairs file="crosshairs.spr" xcent=".0001" ycent=".276" height=".55"/>
+	
+<Radar file="" xcent=".001" ycent="-.2695" width=".2285" height=".3047"/>
+	
+
+<ShieldF file="shieldf.spr" xcent="-.5098" ycent="-.2656" width=".1563" height=".1094"/>
+<ShieldB file="shieldf.spr" xcent="-.5098" ycent="-.4141" width=".1563" height=".1094"  GaugeDown="1"/>
+	
+<ShieldL file="shieldl.spr" xcent="-.5723" ycent="-.3398" width=".0938" height=".1797"  GaugeRight="1"/>
+<ShieldR file="shieldl.spr" xcent="-.4473" ycent="-.3398" width=".0938" height=".1797" GaugeLeft="1" />
+	
+
+<ArmorF file="armorf.spr" xcent=".4902" ycent="-.2656" width=".1563" height=".1094"/>
+<ArmorB file="armorf.spr" xcent=".4902" ycent="-.4141" width=".1563" height=".1094"  GaugeDown="1"/>
+	
+<ArmorL file="armorl.spr" xcent=".4277" ycent="-.3398" width=".0938" height=".1797" GaugeRight="1"/>
+<ArmorR file="armorl.spr" xcent=".5527" ycent="-.3398" width=".0938" height=".1797" GaugeLeft="1"/>
+	
+
+<WarpEnergy file="fuelstat.spr" xcent=".1973" ycent="-.2956" width=".0936" height=".3099"/>
+	
+<Energy file="blasterpower.spr" xcent="-.1953" ycent="-.2956" width=".0936" height=".3099"/> 
+	
+<Lock file="locklight.spr" xcent="-.0156" ycent=".8529" width=".3438" height=".0495"/>
+	
+<Eject file="eject.spr"/>
+	
+<Speed file="radar.spr" xcent=".6631" ycent="-.7733" width=".1289" height=".0651"/>
+	
+<SetSpeed file="radar.spr" xcent="-.7331" ycent="-.7683" width=".1289" height=".0651"/>
+
+<Auto file="auto.spr" xcent="-.0088" ycent="-.7708" width="1.7324" height=".0781"/> 	
+
+<VDU TextRows="15" TextCols="25" type="Objectives View Weapon Damage Manifest COMM TargetManifest" file="lvdu.spr" xcent="-.6934" ycent=".3516"/>
+	
+<VDU  TextRows="15" TextCols="25" type="Target Nav" file="rvdu.spr" xcent=".6934" ycent=".3516"/>
+
+<!--<VDU TextRows="10" TextCols="30" type="Weapon" file="mvdu.spr" xcent="-.5537" ycent=".3398" width=".5527" height=".3047"/>-->
+<VDU TextRows="10" TextCols="30" type="Message" file="mvdu.spr" xcent="0" ycent=".62" width=".8827" height=".3047"/>
+	
+
+<!--<FPS file="radar.spr" xcent=".8" ycent=".7" width=".018" height=".036"/>-->
+</Cockpit>

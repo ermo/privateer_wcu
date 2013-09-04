@@ -1,0 +1,29 @@
+<mission>
+	<settings>
+		<origin  planet="earth" x="0000" y="100" z="000.0"/>
+	</settings>
+
+	<variables>
+		<var name="defaultplayer" value="blue"/>
+		<var name="credits" value="100000"/>
+		<var name="system" value="Gemini/New_Detroit" />
+		<var name="mission_name" value="Patrol_War" />
+		<var name="description" value="Clean sweep all enemies in the war system" />
+	</variables>
+        <flightgroups>
+                <flightgroup name="blue" faction="privateer" type="drone" ainame="default" waves="1" nr_ships="1">
+			<pos x="8000" y="100" z="20000"/> 
+			<rot x="180.0" y="180.0" z="180.0"/>
+			<order order="tmptarget" target="omikron"/>
+			<order priority="0" order="superiority" target="enemy"/>
+			<order priority="1" order="bomber" target="omikron"/>
+			<order priority="2" order="escort" target="blue"/>
+		</flightgroup>
+        </flightgroups>
+	<python>
+import cleansweep
+newmission = cleansweep.cleansweep(0,4,1650,2048,('Gemini/Tingerhoff','Gemini/Nexus','Gemini/Capella','Gemini/Famine','Gemini/Death','Gemini/Pestilence','Gemini/War'),'rf_patrol_war',2,3,.33,0,["retro","unknown"],0,1)
+newmission=0
+
+</python>
+</mission>

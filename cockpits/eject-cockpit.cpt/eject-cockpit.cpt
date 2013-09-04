@@ -1,0 +1,18 @@
+<Cockpit front="eject-cockpit.spr" ViewOffset=".2857" CockpitOffset="0.4625">
+<!-- <Crosshairs file="crosshairs.spr" xcent=".0001" ycent=".276" height=".55"/>-->
+	
+
+<Hull file="hull.spr" xcent=".4725" ycent="-.776" width=".305" height=".063" GaugeRight="1"/>
+	
+	
+<Energy file="blasterpower.spr" xcent="-.4725" ycent="-.776" width=".305" height=".09" GaugeLeft="1"/> 
+	
+
+<Speed file="radar.spr" xcent=".4692" ycent="-.4" width=".027" height=".047"/>
+	
+<SetSpeed file="radar.spr" xcent="-.4692" ycent="-.4" width=".027" height=".047"/>
+	
+<VDU TextRows="10" TextCols="100" type="Message" file="mvdu.spr" xcent="0" ycent="0.4" width=".95" height=".3"/>
+
+
+</Cockpit>

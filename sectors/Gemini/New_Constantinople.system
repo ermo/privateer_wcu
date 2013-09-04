@@ -1,0 +1,36 @@
+<system name="New_Constantinople" background="backgrounds/green" nearstars="500" stars="1000" starspread="150" y="0" z="0" x="0">
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="0.948683298050514" blue="1"/>
+	<specular red="1" green="0.9" blue="1"/>
+</Light>
+<Planet name="New_Constantinople" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.9" Blue="1" ReflectNoLight="true" light="0"/>
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="1" blue="1"/>
+	<specular red="1" green="1" blue="1"/>
+</Light>
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".000000002"/>
+</Light>	
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".0000001"/>
+</Light>	
+	<planet name="Jump_To_Varnus" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-14500" y="22000" day="240" destination="Gemini/Varnus"/>
+	<planet name="Jump_To_New_Detroit" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="18000" day="240" destination="Gemini/New_Detroit"/>
+	<planet name="Jump_To_44-P-IM" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-5500" y="7500" day="240" destination="Gemini/44-p-im"/>
+	<planet name="Jump_To_Junction" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="16000" y="4000" day="240" destination="Gemini/Junction"/>
+	<unit name="New_Constantinople" file="new_constantinople" faction="merchant" x="16000" y="-17500"/>
+	<planet name="Edom" file="planets/agricultural.png" radius="1200" gravity="20" x="-8000" y="-6500" day="300">
+		<Atmosphere file="clouds.png" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
+	</planet>
+	<planet name="Jump_To_Newcastle" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-14000" day="240" destination="Gemini/Newcastle"/>
+	<planet name="Jump_To_Aldebran" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="-21500" day="240" destination="Gemini/Aldebran"/>
+	<planet name="Jump_To_XXN-1927" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-17500" y="-6500" day="240" destination="Gemini/XXN-1927"/>
+</system>

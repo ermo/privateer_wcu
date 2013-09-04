@@ -1,0 +1,31 @@
+<system name="Surtur" background="backgrounds/purple" nearstars="500" stars="1000" starspread="150" y="0" z="0" x="0">
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="0.447213595499958" blue="0.447213595499958"/>
+	<specular red="1" green="0.2" blue="0.2"/>
+</Light>
+<Planet name="Surtur" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.2" Blue="0.2" ReflectNoLight="true" light="0"/>
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="1" blue="1"/>
+	<specular red="1" green="1" blue="1"/>
+</Light>
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".000000002"/>
+</Light>	
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".0000001"/>
+</Light>	
+	<planet name="Jump_To_Blockade_Point_Charlie" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-11600" y="15000" day="240" destination="Gemini/Blockade_Point_Charlie"/>
+	<planet name="Surtur" file="planets/agricultural.png" radius="1200" gravity="20" x="-8000" y="-11000" day="300">
+		<Atmosphere file="clouds.png" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
+	</planet>
+	<planet name="Jump_To_Perry" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="2800" y="-3200" day="240" destination="Gemini/Perry"/>
+	<planet name="Jump_To_41-GS" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="15000" day="240" destination="Gemini/41-gs"/>
+</system>

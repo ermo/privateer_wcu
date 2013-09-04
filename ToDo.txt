@@ -1,0 +1,30 @@
+Tags:
+Minimal version 192
+Before blurrified pictures rev 813
+1.0 at version 1812
+
+destroying asteroids should ot add to kill total.  Regular asteroids don't, but the smaller ones they spawn, those add to the kill count when you destroy them.  Not good.
+
+18.
+and the lovely RED lines for the missile lock animation of the hud, they should look exactly like the ones used in wing commander LOL
+
+19.
+additional static.ani flicker effects which are covering the whole monitors SIGH + playback a sound effect when the static.ani is visible like in the original game.
+
+23. Death sound
+When you die in combat before your ship explodes a death sound should start like in the original. Then you see your ship exploding from a fixpoint for about 4 seconds after that you'll be taken to a terminal screen which only has the ability to load a game or to quit, no other buttons should appear there. MEH
+
+
+MO wishlist.  bottom least important (to me):
+
+can see shield and distance info for targetted units outside the cone.  The cone only really affects the selection of new targets
+
+autotracking only on locked targets
+
+targetting box around jump points.  I know it reduced peoples complaints about size, but I never really cared.  Apparent size compared to ships is the same.. people like that might as well complain the distance between nav points is 2.3 times too large (true).  Anyway, it's really good to know how big it is ;)
+
+offspring roids no adding to kill total.  Cargo neither.
+
+after your target disappears (blown up or warps), have computer not switch to a nav point or ejected pilot, those aren't really important in a battle.  Switch only to 't' targettable items, or none at all on target loss.
+
+pirates not give victory gloat when sucking in cargo.  don't really care though, it's amusing :D

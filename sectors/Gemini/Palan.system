@@ -1,0 +1,34 @@
+<system name="Palan" background="backgrounds/darkgreen" nearstars="500" stars="1000" starspread="150" y="0" z="0" x="0">
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="0.547722557505166" blue="0.316227766016838"/>
+	<specular red="1" green="0.3" blue="0.1"/>
+</Light>
+<Planet name="Palan" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.3" Blue="0.1" ReflectNoLight="true" light="0"/>
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="1" blue="1"/>
+	<specular red="1" green="1" blue="1"/>
+</Light>
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".000000002"/>
+</Light>	
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".0000001"/>
+</Light>	
+	<planet name="Jump_To_Tingerhoff" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-11300" y="-17500" day="240" destination="Gemini/Tingerhoff"/>
+	<planet name="Nav_2" file="invisible.png" alpha="ONE ONE" radius="256" gravity="0" x="-2300" y="4800" day="240"/>
+	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-0" file="AFieldBasePriv" difficulty=".02" faction="neutral" x="-2300" y="4800" day="-14000"/>
+	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="1" file="Asteroid_Field" difficulty=".02" faction="neutral" x="-2300" y="4800" day="-14000"/>
+	<planet name="Jump_To_Xytani" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="7700" y="-14000" day="240" destination="Gemini/Xytani"/>
+	<planet name="Palan" file="planets/agricultural.png" radius="1200" gravity="20" x="-14800" y="5900" day="300">
+		<Atmosphere file="clouds.png" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
+	</planet>
+	<unit name="Basra" file="refinery" faction="merchant" x="13200" y="4200"/>
+</system>

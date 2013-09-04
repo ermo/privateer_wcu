@@ -1,0 +1,139 @@
+Canon HUDs vor PR Parallel Universe
+Thanks to z30 for his outstanding MOD
+*C* = Canon, which means final release if nobody submits mistakes, beauty complaints or bugs
+
+Version Developement Index
+==========================
+
+0.9a
+* Created TarsusMk2*C* and Hornet HUD, white background (posted in VS:PRPU forum)
+
+1.0a
+* Background for Hornet, TarsusMk2 and all upcoming HUDs set to transparent
+* Noticed that damage colours and shields come automatically :-)
+* Canon hull and propulsion colours for Hornet
+* Added Drayman CVL
+* Added Ferret and CVL
+* Added Hornet CVL
+* Added Grikath
+* Added Krant
+* ZIP file uploaded to filefront
+
+1.1a
+* Changed server
+* Noticed that the 180° bug is no bug at all
+* Added OrionMk2
+* Added Galaxy Gunship
+* Added Raptor
+* Added Sartha
+* Added Sabre
+* Added Scimitar
+* Added Galaxy_hk*C*
+* Added OrionMk2b*C*
+* Added OrionMk2h*C*
+* Added Kukhri*C*
+* All PU1.1b6 ships available now!
+
+1.2
+* Added Fralthi*C* and I hope that it'll be in service :-)
+* Added Sparrowhawk*C*
+* Added Sartha*C*
+* Changed Sabre*C*
+* Changed Ferret*C*
+* Changed FerretCVL*C*
+* Galaxy Gunship is canon
+* Changed Raptor*C*
+* Changed Scimitar*C*
+* Changed Grikath*C*
+* Changed Hornet*C*
+* Changed Hornet CVL*C*
+* Drayman CVL redesigned. Not canon due to massive armament
+
+1.21fix
+* Perry, Pirate and Mining bases go back to their original HUDs
+* This version includes the original mining base folder and a units.csv to rescale the bases
+* Changed some wrong file links
+
+1.22
+* Changed all wrong file links, every HUD should now be displayed
+
+1.22fix
+* Perry, Pirate and Mining bases go back to their original HUDs
+* This version includes the original mining base folder and a units.csv to rescale the bases
+* Changed all wrong file links, every HUD should now be displayed
+
+1.22 doublefix
+* This version includes the original mining base folder and a units.csv to rescale the bases
+* Adds the Sparrowhawk to retro forces
+* Makes the Gunship buyable
+* Orion variants are visible now
+
+1.22 doublefix-hotfix1
+* Makes Orion variants buyable again, sorry.
+
+1.3
+* setup.bat is now version and folder sensitive
+* New funky Speke planet, Concourse by Sligor
+
+1.31a
+* Burton has a planetary ring
+* Implemented all rooms for Speke, as well as cargo units and ship upgrades (taken from New Detroit)
+* Speke Concourse redesigned by Sligor
+* Minor renaming issues
+* Heimdall is orbiting Speke. It also has a basic room assignment
+* Speke daytime decreased
+* Bfxm fixer included, run setup.bat
+* New HUDs for Heimdall and Speke
+
+1.32
+* Added Militia Guild room by rockstar, thanks to vital suggestions from ace123 and Melonhead
+* Textured Burtons planetary ring, thanks to a tip from GMacLir
+* Renamed Heimdall to Randgrior as OnyxPaladin suggested, though the folder and entry names remain Heimdall. Nordic chars don't work.
+* Added VDU patch by Sligor, keeps e.g. the nav info on always the same display side
+* Incooperated "land-on-yourself"-bugfix by javier, so all capship cargo runs shall go to a dockable destination
+
+1.4
+* Created Demon Fireblade, Mercenary light scout fighter. Thx for a vital tip goes to Bzandon
+* Created HK1303 gun for the Fireblade, not buyable
+* Ferret variants are textured now
+
+###
+PR1.2 PARALLEL UNIVERSE 1.1b6 - Dilloh's Special Edition
+========================================================
+* Includes PU1.1b6 and canonHUDs1.4, as well as a running and further rebalanced Fireblade
+* New batch file which saves a lot of files for better compression
+* Both Ferret variants are textured now
+* Upcoming canonHUDs versions will be named 2.x and only working with this PU or 1.1b6+canonHUDs1.4
+###
+
+1.4 hotfix
+* Replaces the units.csv I've messed up. Available in VS-PU, Page 44. Sorry guys.
+
+2.0
+* Added Orion Fix. Thank you Zool for the fine work, I'm looking forward for further cooperation :-)
+* Added Troy Test Campaign, go to Achilles at any time. TarsusMK2, jump drive and afterburners locked here.
+* Added Fireblade Campaign, Fireblade locked here. Looking for the start? Ask your bartender! :-)
+* Added various other campaigns
+* Added remaining cockpit VDU fixes, made by huzelbub using Sligors concept.
+* Added HornetCVL / DraymanCVL campaign
+* Added Orion variants campaign
+* Added Galaxy variants campaign
+* Added capship-cockpit, a long-lost contribution by Gosshawk :-)
+* Made some key missions within the main campaigns easier
+
+Project list
+* Optional changes to original Privateer 1995 HUDs
+* Fralthi campaign
+* A lot of mini-campaigns, locking all PU ships
+* Steltek campaign
+* Total rebalance of the Boosted steltek gun
+* Torpedo rebalance
+* Rebalance of Drayman, possibly also other capships
+* Incooperation of Zools Rebalance?
+* Raise payments of the original campaign, reduce payoff of generated missions
+* MELONHEAD: Rework of the trading system to make standard trading more profitable
+
+- Dilloh
+
+For any comment please pm me at:
+http://vegastrike.sourceforge.net/forums/profile.php?mode=viewprofile&u=1002159

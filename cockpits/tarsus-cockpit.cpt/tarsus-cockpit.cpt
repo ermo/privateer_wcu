@@ -1,0 +1,48 @@
+<Cockpit front="tarsus-cockpit.spr" left="tarsus-cockpit-left.spr" right="tarsus-cockpit-right.spr" back="tarsus-cockpit-back.spr" ViewOffset=".2857" CockpitOffset="0">
+	
+<Crosshairs file="crosshairs.spr" xcent=".0001" ycent=".0001" height=".55"/>
+	
+<Radar file="" xcent="-.2617" ycent="-.4427" width=".2031" height=".2917"/>
+	
+
+<ShieldF file="shieldf.spr" xcent=".209" ycent="-.3281" width=".0938" height=".0625"/>
+
+<ShieldB file="shieldf.spr" xcent=".209" ycent="-.5651" width=".0938" height=".0625"  GaugeDown="1"/>
+	
+<ShieldL file="shieldl.spr" xcent=".0986" ycent="-.4401" width=".0449" height=".1406"  GaugeRight="1"/>
+
+<ShieldR file="shieldl.spr" xcent=".3213" ycent="-.4401" width=".0449" height=".1406"  GaugeLeft="1"/>
+	
+
+
+<ArmorF file="armorf.spr" xcent=".21" ycent="-.3906" width=".080" height=".052"/>
+	
+<ArmorB file="armorf.spr" xcent=".21" ycent="-.5026" width=".080" height=".052" GaugeDown="1"/>
+	
+<ArmorL file="armorl.spr" xcent=".1436" ycent="-.4401" width=".0371" height=".1198" GaugeRight="1"/>
+
+<ArmorR file="armorl.spr" xcent=".2744" ycent="-.4401" width=".0371" height=".1198" GaugeLeft="1"/>
+
+
+<WarpEnergy file="fuelstat.spr" xcent=".0254" ycent=".9401" width=".1563" height=".0417" GaugeLeft="1"/>
+	
+<Energy file="blasterpower.spr" xcent="-.0001" ycent=".5273" width=".0371" height=".2318"/> 
+	
+<Lock file="locklight.spr" xcent="-.377" ycent="-.4479" width=".0195" height=".151"/>
+	
+<Eject file="eject.spr"/>
+	
+<SetSpeed file="radar.spr" xcent="-.58" ycent="-.3464" width=".078" height=".039"/>
+	
+<Speed file="radar.spr" xcent="-.58" ycent="-.4434" width=".078" height=".039"/>
+	
+<VDU TextRows="15" TextCols="25" file="vdu.spr" xcent="-.5273" ycent=".5456" type="Target Weapon View Nav Damage Manifest COMM TargetManifest"/>
+	
+<VDU TextRows="10" TextCols="100" type="Message" file="mvdu.spr" xcent="0.25001" ycent=".14" width=".65" height=".426"/>
+
+<VDU TextRows="10" TextCols="50" type="Objectives" file="mvdu.spr" xcent="-0.6025" ycent="-.02" width=".7676" height=".33"/>
+
+<Auto file="auto.spr" xcent=".0166" ycent=".8203" width=".1738" height=".0417"/> 
+	
+<!--<FPS file="radar.spr" xcent="-.98" ycent=".95" width=".018" height=".036"/>-->
+</Cockpit>

@@ -1,0 +1,6 @@
+convert -crop 1024x1024+0+0 centurion-cockpit.png tl.png
+convert -crop 1024x256+0+1024 centurion-cockpit.png bl.png
+convert -crop 512x1024+1024+0 centurion-cockpit.png tm.png
+convert -crop 512x256+1024+1024 centurion-cockpit.png bm.png
+convert -crop 64x1024+1536+0 centurion-cockpit.png tr.png
+convert -crop 64x256+1536+1024 centurion-cockpit.png br.png

@@ -1,0 +1,100 @@
+<Mesh scale="1.000000" reverse="0" forcetexture="0" sharevert="0" polygonoffset="0.000000" blend="ONE ZERO"  texture="TEX00008.png" >
+<Material power="2.000000" cullface="1" reflect="1" lighting="1" usenormals="1">
+	<Ambient Red="1.000000" Green="1.000000" Blue="1.000000" Alpha="1.000000"/>
+	<Diffuse Red="0.752941" Green="0.752941" Blue="0.752941" Alpha="1.000000"/>
+	<Emissive Red="0.000000" Green="0.000000" Blue="0.000000" Alpha="1.000000"/>
+	<Specular Red="0.000000" Green="0.000000" Blue="0.000000" Alpha="1.000000"/>
+</Material>
+<Points>
+<Point>
+	<Location x="0.182312" y="-0.034293" z="-0.977529" s="0.500033" t="0.000000"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="0.182304" y="0.109212" z="-0.977529" s="0.499966" t="1.000000"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="0.244450" y="0.073336" z="-0.977529" s="1.000000" t="0.750006"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="0.244450" y="0.001582" z="-0.977529" s="1.000000" t="0.249994"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="0.120166" y="0.001582" z="-0.977529" s="0.000000" t="0.249994"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="0.120166" y="0.073336" z="-0.977529" s="0.000000" t="0.750006"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="-0.182735" y="-0.034293" z="-0.977529" s="0.500034" t="0.000000"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="-0.182743" y="0.109212" z="-0.977529" s="0.499967" t="1.000000"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="-0.120597" y="0.073336" z="-0.977529" s="1.000000" t="0.750006"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="-0.120597" y="0.001582" z="-0.977529" s="1.000000" t="0.249994"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="-0.244881" y="0.001582" z="-0.977529" s="0.000000" t="0.249994"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+<Point>
+	<Location x="-0.244881" y="0.073336" z="-0.977529" s="0.000000" t="0.750006"/>
+	<Normal i="0.000000" j="0.000000" k="1.000000"/>
+</Point>
+</Points>
+<Polygons>
+	<Tri flatshade="0">
+		<Vertex point="0" s="0.500033" t="0.000000"/>
+		<Vertex point="1" s="0.499966" t="1.000000"/>
+		<Vertex point="2" s="1.000000" t="0.750006"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="0" s="0.500033" t="0.000000"/>
+		<Vertex point="2" s="1.000000" t="0.750006"/>
+		<Vertex point="3" s="1.000000" t="0.249994"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="4" s="0.000000" t="0.249994"/>
+		<Vertex point="5" s="0.000000" t="0.750006"/>
+		<Vertex point="1" s="0.499966" t="1.000000"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="4" s="0.000000" t="0.249994"/>
+		<Vertex point="1" s="0.499966" t="1.000000"/>
+		<Vertex point="0" s="0.500033" t="0.000000"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="6" s="0.500034" t="0.000000"/>
+		<Vertex point="7" s="0.499967" t="1.000000"/>
+		<Vertex point="8" s="1.000000" t="0.750006"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="6" s="0.500034" t="0.000000"/>
+		<Vertex point="8" s="1.000000" t="0.750006"/>
+		<Vertex point="9" s="1.000000" t="0.249994"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="10" s="0.000000" t="0.249994"/>
+		<Vertex point="11" s="0.000000" t="0.750006"/>
+		<Vertex point="7" s="0.499967" t="1.000000"/>
+	</Tri>
+	<Tri flatshade="0">
+		<Vertex point="10" s="0.000000" t="0.249994"/>
+		<Vertex point="7" s="0.499967" t="1.000000"/>
+		<Vertex point="6" s="0.500034" t="0.000000"/>
+	</Tri>
+</Polygons>
+</Mesh>

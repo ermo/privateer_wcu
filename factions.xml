@@ -1,0 +1,1555 @@
+<Factions>
+
+	<Faction name="neutral" logoRGB="invisible.png" logoSec="invisible.png" sparkred="0" sparkgreen="0" sparkblue="0">
+		<Explosion name="explosion_wave.ani"/>
+	</Faction>
+
+	<Faction name="confed" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation="0.3"/>
+		<stats name="confed" relation="1.0"/>
+		<stats name="kilrathi" relation="-1.0"/>
+		<stats name="nephilim" relation="0.2"/>
+		<stats name="merchant" relation="0.3"/>
+		<stats name="retro" relation="-0.8"/>
+		<stats name="pirates" relation="-0.2"/>
+		<stats name="hunter" relation="0.3"/>
+		<stats name="militia" relation="0.7"/>
+		<stats name="unknown" relation="-0.9"/>
+		<stats name="landreich" relation="0.6"/>
+		<stats name="border_worlds" relation="0.8"/>
+		<stats name="firekkan" relation="0.9"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.6"/>
+		<stats name="confed_" relation="0.5"/>
+		<stats name="confed__" relation="0.5"/>
+		<stats name="kilrathi_" relation="-0.5"/>
+		<stats name="kilrathi__" relation="-0.5"/>
+		<stats name="merchant_" relation="0.15"/>
+		<stats name="merchant__" relation="0.15"/>
+		<stats name="retro_" relation="-0.4"/>
+		<stats name="retro__" relation="-0.4"/>
+		<stats name="pirates_" relation="-0.1"/>
+		<stats name="pirates__" relation="-0.1"/>
+		<stats name="hunter_" relation="0.15"/>
+		<stats name="hunter__" relation="0.15"/>
+		<stats name="militia_" relation="0.35"/>
+		<stats name="militia__" relation="0.35"/>
+		<stats name="civilian" relation="0.25"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_confed_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_confed_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_confed_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+		<ShipModifier name="stiletto.blank" relation=".8"/>
+		<ShipModifier name="stiletto" relation=".8"/>
+		<ShipModifier name="broadsword.blank" relation=".8"/>
+		<ShipModifier name="broadsword" relation=".8"/>
+		<ShipModifier name="gladius.blank" relation=".2"/>
+		<ShipModifier name="gladius" relation=".2"/>
+		<ShipModifier name="dralthi.blank" relation="-.95"/>
+		<ShipModifier name="dralthi" relation="-.95"/>
+		<ShipModifier name="gothri.blank" relation="-.95"/>
+		<ShipModifier name="gothri" relation="-.95"/>
+		<ShipModifier name="talon.blank" relation="-.5"/>
+		<ShipModifier name="talon" relation="-.5"/>
+	</Faction>
+
+	<Faction name="kilrathi" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="1" sparkgreen="0" sparkblue="0">
+		<stats name="privateer" relation="-0.3"/>
+		<stats name="confed" relation="-1.0"/>
+		<stats name="kilrathi" relation="1.0"/>
+		<stats name="nephilim" relation="-0.3"/>
+		<stats name="merchant" relation="-0.6"/>
+		<stats name="retro" relation="0.8"/>
+		<stats name="pirates" relation="-0.1"/>
+		<stats name="hunter" relation="-0.1"/>
+		<stats name="militia" relation="-0.7"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="-0.8"/>
+		<stats name="border_worlds" relation="-0.8"/>
+		<stats name="firekkan" relation="-0.9"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.6"/>
+		<stats name="confed_" relation="-0.5"/>
+		<stats name="confed__" relation="-0.5"/>
+		<stats name="kilrathi_" relation="0.5"/>
+		<stats name="kilrathi__" relation="0.5"/>
+		<stats name="merchant_" relation="-0.3"/>
+		<stats name="merchant__" relation="-0.3"/>
+		<stats name="retro_" relation="0.4"/>
+		<stats name="retro__" relation="0.4"/>
+		<stats name="pirates_" relation="-0.15"/>
+		<stats name="pirates__" relation="-0.15"/>
+		<stats name="hunter_" relation="-0.15"/>
+		<stats name="hunter__" relation="-0.15"/>
+		<stats name="militia_" relation="-0.35"/>
+		<stats name="militia__" relation="-0.35"/>
+		<stats name="civilian" relation="-0.25"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" dockable_only="false">
+			<MoodAnimation name="com_kilrathi_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" dockable_only="true">
+			<MoodAnimation name="com_kilrathi_male_03.ani"/>
+		</CommAnimation>
+		<ShipModifier name="stiletto.blank" relation="-0.9"/>
+		<ShipModifier name="stiletto" relation="-0.9"/>
+		<ShipModifier name="broadsword.blank" relation="-0.9"/>
+		<ShipModifier name="broadsword" relation="-0.9"/>
+		<ShipModifier name="gladius.blank" relation="-.95"/>
+		<ShipModifier name="gladius" relation="-.95"/>
+		<ShipModifier name="dralthi.blank" relation=".95"/>
+		<ShipModifier name="dralthi" relation=".95"/>
+		<ShipModifier name="gothri.blank" relation=".95"/>
+		<ShipModifier name="gothri" relation=".95"/>
+		<ShipModifier name="talon.blank" relation=".2"/>
+		<ShipModifier name="talon" relation=".2"/>
+	</Faction>
+
+	<Faction name="nephilim" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="1" sparkblue="0">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="-1"/>
+		<stats name="kilrathi" relation="-1"/>
+		<stats name="nephilim" relation="1"/>
+		<stats name="merchant" relation="-1"/>
+		<stats name="retro" relation="-1"/>
+		<stats name="pirates" relation="-1"/>
+		<stats name="hunter" relation="-1"/>
+		<stats name="militia" relation="-1"/>
+		<stats name="unknown" relation="-1"/>
+		<stats name="landreich" relation="-1"/>
+		<stats name="border_worlds" relation="-1"/>
+		<stats name="firekkan" relation="-1"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-1"/>
+		<stats name="confed_" relation="-0.5"/>
+		<stats name="confed__" relation="-0.5"/>
+		<stats name="kilrathi_" relation="-0.5"/>
+		<stats name="kilrathi__" relation="-0.5"/>
+		<stats name="merchant_" relation="-0.5"/>
+		<stats name="merchant__" relation="-0.5"/>
+		<stats name="retro_" relation="-0.5"/>
+		<stats name="retro__" relation="-0.5"/>
+		<stats name="pirates_" relation="-0.5"/>
+		<stats name="pirates__" relation="-0.5"/>
+		<stats name="hunter_" relation="-0.5"/>
+		<stats name="hunter__" relation="-0.5"/>
+		<stats name="militia_" relation="-0.5"/>
+		<stats name="militia__" relation="-0.5"/>
+		<stats name="civilian" relation="-1"/>
+		<Explosion name="explosion_rlaan.ani"/>
+	</Faction>
+
+	<Faction name="merchant" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".5" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation="0.1"/>
+		<stats name="confed" relation="0.3"/>
+		<stats name="kilrathi" relation="-0.6"/>
+		<stats name="nephilim" relation="0.2"/>
+		<stats name="merchant" relation="1.0"/>
+		<stats name="retro" relation="-0.8"/>
+		<stats name="pirates" relation="-1.0"/>
+		<stats name="hunter" relation="0.5"/>
+		<stats name="militia" relation="0.8"/>
+		<stats name="unknown" relation="-0.1"/>
+		<stats name="landreich" relation="0.5"/>
+		<stats name="border_worlds" relation="0.7"/>
+		<stats name="firekkan" relation="0.6"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0.1"/>
+		<stats name="confed_" relation="0.15"/>
+		<stats name="confed__" relation="0.15"/>
+		<stats name="kilrathi_" relation="-0.3"/>
+		<stats name="kilrathi__" relation="-0.3"/>
+		<stats name="merchant_" relation="0.5"/>
+		<stats name="merchant__" relation="0.5"/>
+		<stats name="retro_" relation="-0.4"/>
+		<stats name="retro__" relation="-0.4"/>
+		<stats name="pirates_" relation="-0.5"/>
+		<stats name="pirates__" relation="-0.5"/>
+		<stats name="hunter_" relation="0.25"/>
+		<stats name="hunter__" relation="0.25"/>
+		<stats name="militia_" relation="0.4"/>
+		<stats name="militia__" relation="0.4"/>
+		<stats name="civilian" relation="0.45"/>
+		<Explosion name="explosion_orange.ani"/>
+  		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="true">
+			<MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+		<ShipModifier name="stiletto.blank" relation=".5"/>
+		<ShipModifier name="stiletto" relation=".5"/>
+		<ShipModifier name="broadsword.blank" relation=".5"/>
+		<ShipModifier name="broadsword" relation=".5"/>
+		<ShipModifier name="gladius.blank" relation=".2"/>
+		<ShipModifier name="gladius" relation=".2"/>
+		<ShipModifier name="dralthi.blank" relation="-.95"/>
+		<ShipModifier name="dralthi" relation="-.95"/>
+		<ShipModifier name="gothri.blank" relation="-.95"/>
+		<ShipModifier name="gothri" relation="-.95"/>
+		<ShipModifier name="talon.blank" relation="-.8"/>
+		<ShipModifier name="talon" relation="-.8"/>
+		<ShipModifier name="tarsus.blank" relation=".3"/>
+		<ShipModifier name="tarsus" relation=".3"/>
+		<ShipModifier name="galaxy.blank" relation=".3"/>
+		<ShipModifier name="galaxy" relation=".3"/>
+	</Faction>
+
+	<Faction name="retro" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="1" sparkgreen=".3" sparkblue="0">
+		<stats name="privateer" relation="-0.2"/>
+		<stats name="confed" relation="-0.8"/>
+		<stats name="kilrathi" relation="0.8"/>
+		<stats name="nephilim" relation="-0.5"/>
+		<stats name="merchant" relation="-0.6"/>
+		<stats name="retro" relation="1.0"/>
+		<stats name="pirates" relation="-1.0"/>
+		<stats name="hunter" relation="-0.9"/>
+		<stats name="militia" relation="-0.7"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="-0.3"/>
+		<stats name="border_worlds" relation="-0.1"/>
+		<stats name="firekkan" relation="-0.2"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.1"/>
+		<stats name="confed_" relation="-0.4"/>
+		<stats name="confed__" relation="-0.4"/>
+		<stats name="kilrathi_" relation="0.4"/>
+		<stats name="kilrathi__" relation="0.4"/>
+		<stats name="merchant_" relation="-0.3"/>
+		<stats name="merchant__" relation="-0.3"/>
+		<stats name="retro_" relation="0.5"/>
+		<stats name="retro__" relation="0.5"/>
+		<stats name="pirates_" relation="-0.5"/>
+		<stats name="pirates__" relation="-0.5"/>
+		<stats name="hunter_" relation="-0.45"/>
+		<stats name="hunter__" relation="-0.45"/>
+		<stats name="militia_" relation="-0.35"/>
+		<stats name="militia__" relation="-0.35"/>
+		<stats name="civilian" relation="-0.2"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_retro_female.ani"/>
+		</CommAnimation>
+		<ShipModifier name="stiletto.blank" relation="-0.9"/>
+		<ShipModifier name="stiletto" relation="-0.9"/>
+		<ShipModifier name="broadsword.blank" relation="-0.9"/>
+		<ShipModifier name="broadsword" relation="-0.9"/>
+		<ShipModifier name="gladius.blank" relation="-.95"/>
+		<ShipModifier name="gladius" relation="-.95"/>
+		<ShipModifier name="dralthi.blank" relation=".2"/>
+		<ShipModifier name="dralthi" relation=".2"/>
+		<ShipModifier name="gothri.blank" relation=".2"/>
+		<ShipModifier name="gothri" relation=".2"/>
+		<ShipModifier name="talon.blank" relation=".2"/>
+		<ShipModifier name="talon" relation=".2"/>
+	</Faction>
+
+	<Faction name="pirates" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".4" sparkgreen=".2" sparkblue=".7">
+		<stats name="privateer" relation="-0.1"/>
+		<stats name="confed" relation="-0.2"/>
+		<stats name="kilrathi" relation="-0.3"/>
+		<stats name="nephilim" relation="-0.7"/>
+		<stats name="merchant" relation="-0.7"/>
+		<stats name="retro" relation="-1.0"/>
+		<stats name="pirates" relation="0.1"/>
+		<stats name="hunter" relation="-0.8"/>
+		<stats name="militia" relation="-1.0"/>
+		<stats name="unknown" relation="-0.1"/>
+		<stats name="landreich" relation="-0.1"/>
+		<stats name="border_worlds" relation="-0.1"/>
+		<stats name="firekkan" relation="-0.9"/>
+		<stats name="upgrades" relation="-0.9"/>
+		<stats name="AWACS" relation="0"/>
+		<stats name="confed_" relation="-0.1"/>
+		<stats name="confed__" relation="-0.1"/>
+		<stats name="kilrathi_" relation="-0.15"/>
+		<stats name="kilrathi__" relation="-0.15"/>
+		<stats name="merchant_" relation="-0.35"/>
+		<stats name="merchant__" relation="-0.35"/>
+		<stats name="retro_" relation="-0.5"/>
+		<stats name="retro__" relation="-0.5"/>
+		<stats name="pirates_" relation="0.05"/>
+		<stats name="pirates__" relation="0.05"/>
+		<stats name="hunter_" relation="-0.4"/>
+		<stats name="hunter__" relation="-0.4"/>
+		<stats name="militia_" relation="-0.5"/>
+		<stats name="militia__" relation="-0.5"/>
+		<stats name="civilian" relation="-0.3"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_pirate_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="2">
+			<MoodAnimation name="com_pirate_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_pirate_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_pirate_female.ani"/>
+		</CommAnimation>
+		<ShipModifier name="stiletto.blank" relation="-0.9"/>
+		<ShipModifier name="stiletto" relation="-0.9"/>
+		<ShipModifier name="broadsword.blank" relation="-0.9"/>
+		<ShipModifier name="broadsword" relation="-0.9"/>
+		<ShipModifier name="gladius.blank" relation="-.95"/>
+		<ShipModifier name="gladius" relation="-.95"/>
+		<ShipModifier name="dralthi.blank" relation="-.6"/>
+		<ShipModifier name="dralthi" relation="-.6"/>
+		<ShipModifier name="gothri.blank" relation="-.6"/>
+		<ShipModifier name="gothri" relation="-.6"/>
+		<ShipModifier name="talon.blank" relation=".95"/>
+		<ShipModifier name="talon" relation=".95"/>
+	</Faction>
+
+	<Faction name="hunter" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".6" sparkgreen=".6" sparkblue=".6">
+		<stats name="privateer" relation="0.1"/>
+		<stats name="confed" relation="0.4"/>
+		<stats name="kilrathi" relation="-0.3"/>
+		<stats name="nephilim" relation="0.0"/>
+		<stats name="merchant" relation="0.9"/>
+		<stats name="retro" relation="-0.5"/>
+		<stats name="pirates" relation="-1.0"/>
+		<stats name="hunter" relation="1.0"/>
+		<stats name="militia" relation="0.7"/>
+		<stats name="unknown" relation="-0.1"/>
+		<stats name="landreich" relation="0.6"/>
+		<stats name="border_worlds" relation="0.3"/>
+		<stats name="firekkan" relation="0.5"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.1"/>
+		<stats name="confed_" relation="0.2"/>
+		<stats name="confed__" relation="0.2"/>
+		<stats name="kilrathi_" relation="-0.15"/>
+		<stats name="kilrathi__" relation="-0.15"/>
+		<stats name="merchant_" relation="0.45"/>
+		<stats name="merchant__" relation="0.45"/>
+		<stats name="retro_" relation="-0.25"/>
+		<stats name="retro__" relation="-0.25"/>
+		<stats name="pirates_" relation="-0.5"/>
+		<stats name="pirates__" relation="-0.5"/>
+		<stats name="hunter_" relation="0.5"/>
+		<stats name="hunter__" relation="0.5"/>
+		<stats name="militia_" relation="0.35"/>
+		<stats name="militia__" relation="0.35"/>
+		<stats name="civilian" relation="0.4"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_hunter_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+		<ShipModifier name="dralthi.blank" relation="-.95"/>
+		<ShipModifier name="dralthi" relation="-.95"/>
+		<ShipModifier name="gothri.blank" relation="-.95"/>
+		<ShipModifier name="gothri" relation="-.95"/>
+		<ShipModifier name="talon.blank" relation="-.8"/>
+		<ShipModifier name="talon" relation="-.8"/>
+	</Faction>
+
+	<Faction name="militia" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen=".5" sparkblue="1">
+		<stats name="privateer" relation="0.1"/>
+		<stats name="confed" relation="0.4"/>
+		<stats name="kilrathi" relation="-0.8"/>
+		<stats name="nephilim" relation="0.1"/>
+		<stats name="merchant" relation="0.8"/>
+		<stats name="retro" relation="-1.0"/>
+		<stats name="pirates" relation="-0.5"/>
+		<stats name="hunter" relation="0.7"/>
+		<stats name="militia" relation="1.0"/>
+		<stats name="unknown" relation="-.1"/>
+		<stats name="landreich" relation="0.2"/>
+		<stats name="border_worlds" relation="0.5"/>
+		<stats name="firekkan" relation="0.6"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.6"/>
+		<stats name="confed_" relation="0.2"/>
+		<stats name="confed__" relation="0.2"/>
+		<stats name="kilrathi_" relation="-0.4"/>
+		<stats name="kilrathi__" relation="-0.4"/>
+		<stats name="merchant_" relation="0.4"/>
+		<stats name="merchant__" relation="0.4"/>
+		<stats name="retro_" relation="-0.5"/>
+		<stats name="retro__" relation="-0.5"/>
+		<stats name="pirates_" relation="-0.25"/>
+		<stats name="pirates__" relation="-0.25"/>
+		<stats name="hunter_" relation="0.35"/>
+		<stats name="hunter__" relation="0.35"/>
+		<stats name="militia_" relation="0.5"/>
+		<stats name="militia__" relation="0.5"/>
+		<stats name="civilian" relation="0.35"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_militia_male.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_militia_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+		<ShipModifier name="stiletto.blank" relation=".5"/>
+		<ShipModifier name="stiletto" relation=".5"/>
+		<ShipModifier name="broadsword.blank" relation=".5"/>
+		<ShipModifier name="broadsword" relation=".5"/>
+		<ShipModifier name="gladius.blank" relation=".8"/>
+		<ShipModifier name="gladius" relation=".8"/>
+		<ShipModifier name="dralthi.blank" relation="-.95"/>
+		<ShipModifier name="dralthi" relation="-.95"/>
+		<ShipModifier name="gothri.blank" relation="-.95"/>
+		<ShipModifier name="gothri" relation="-.95"/>
+		<ShipModifier name="talon.blank" relation="-.8"/>
+		<ShipModifier name="talon" relation="-.8"/>
+	</Faction>
+
+	<Faction name="unknown" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband">
+		<stats name="privateer" relation="-0.9"/>
+		<stats name="confed" relation="-0.9"/>
+		<stats name="kilrathi" relation="-0.9"/>
+		<stats name="nephilim" relation="-0.9"/>
+		<stats name="merchant" relation="-0.9"/>
+		<stats name="retro" relation="-0.9"/>
+		<stats name="pirates" relation="-0.9"/>
+		<stats name="hunter" relation="-0.9"/>
+		<stats name="militia" relation="-0.9"/>
+		<stats name="unknown" relation="1.0"/>
+		<stats name="steltek" relation="1.0"/>
+		<stats name="landreich" relation="-0.9"/>
+		<stats name="border_worlds" relation="-0.9"/>
+		<stats name="firekkan" relation="-0.9"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.9"/>
+		<stats name="confed_" relation="-0.45"/>
+		<stats name="confed__" relation="-0.45"/>
+		<stats name="kilrathi_" relation="-0.45"/>
+		<stats name="kilrathi__" relation="-0.45"/>
+		<stats name="merchant_" relation="-0.45"/>
+		<stats name="merchant__" relation="-0.45"/>
+		<stats name="retro_" relation="0.45"/>
+		<stats name="retro__" relation="0.45"/>
+		<stats name="pirates_" relation="-0.45"/>
+		<stats name="pirates__" relation="-0.45"/>
+		<stats name="hunter_" relation="-0.45"/>
+		<stats name="hunter__" relation="-0.45"/>
+		<stats name="militia_" relation="-0.45"/>
+		<stats name="militia__" relation="-0.45"/>
+		<stats name="civilian" relation="-0.45"/>
+<!--		<CommAnimation>  
+			<MoodAnimation name="explosion_orange.ani" sex="0"/>  
+		</CommAnimation>  -->
+	</Faction>
+
+	<Faction name="landreich" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="0" sparkblue=".5">
+		<stats name="privateer" relation="0.1"/>
+		<stats name="confed" relation="0.6"/>
+		<stats name="kilrathi" relation="-1.0"/>
+		<stats name="nephilim" relation="0.2"/>
+		<stats name="merchant" relation="0.5"/>
+		<stats name="retro" relation="-0.8"/>
+		<stats name="pirates" relation="-0.5"/>
+		<stats name="hunter" relation="0.4"/>
+		<stats name="militia" relation="0.3"/>
+		<stats name="unknown" relation="0.0"/>
+		<stats name="landreich" relation="1.0"/>
+		<stats name="border_worlds" relation="0.9"/>
+		<stats name="firekkan" relation="0.5"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0.0"/>
+		<stats name="confed_" relation="0.3"/>
+		<stats name="confed__" relation="0.3"/>
+		<stats name="kilrathi_" relation="-0.5"/>
+		<stats name="kilrathi__" relation="-0.5"/>
+		<stats name="merchant_" relation="0.25"/>
+		<stats name="merchant__" relation="0.25"/>
+		<stats name="retro_" relation="-0.4"/>
+		<stats name="retro__" relation="-0.4"/>
+		<stats name="pirates_" relation="-0.25"/>
+		<stats name="pirates__" relation="-0.25"/>
+		<stats name="hunter_" relation="0.2"/>
+		<stats name="hunter__" relation="0.2"/>
+		<stats name="militia_" relation="0.15"/>
+		<stats name="militia__" relation="0.15"/>
+		<stats name="civilian" relation="0.35"/>
+<!--		<CommAnimation>  
+			<MoodAnimation name="explosion_orange.ani" sex="0"/>  
+		</CommAnimation>  -->
+	</Faction>
+
+	<Faction name="border_worlds" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="1" sparkblue="1">
+		<stats name="privateer" relation="0.1"/>
+		<stats name="confed" relation="0.5"/>
+		<stats name="kilrathi" relation="-1.0"/>
+		<stats name="nephilim" relation="0.2"/>
+		<stats name="merchant" relation="0.8"/>
+		<stats name="retro" relation="-0.1"/>
+		<stats name="pirates" relation="-0.5"/>
+		<stats name="hunter" relation="0.4"/>
+		<stats name="militia" relation="0.3"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="0.9"/>
+		<stats name="border_worlds" relation="1.0"/>
+		<stats name="firekkan" relation="0.6"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0"/>
+		<stats name="confed_" relation="0.25"/>
+		<stats name="confed__" relation="0.25"/>
+		<stats name="kilrathi_" relation="-0.5"/>
+		<stats name="kilrathi__" relation="-0.5"/>
+		<stats name="merchant_" relation="0.4"/>
+		<stats name="merchant__" relation="0.4"/>
+		<stats name="retro_" relation="-0.05"/>
+		<stats name="retro__" relation="-0.05"/>
+		<stats name="pirates_" relation="-0.25"/>
+		<stats name="pirates__" relation="-0.25"/>
+		<stats name="hunter_" relation="0.2"/>
+		<stats name="hunter__" relation="0.2"/>
+		<stats name="militia_" relation="0.15"/>
+		<stats name="militia__" relation="0.15"/>
+		<stats name="civilian" relation="0.35"/>
+		<Explosion name="explosion_orange.ani"/>
+<!--		<CommAnimation>  
+			<MoodAnimation name="explosion_orange.ani" sex="0"/>  
+		</CommAnimation>  -->
+	</Faction>
+
+	<Faction name="firekkan" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="1" sparkblue="1">
+		<stats name="privateer" relation="0.1"/>
+		<stats name="confed" relation="0.5"/>
+		<stats name="kilrathi" relation="-1.0"/>
+		<stats name="nephilim" relation="0.2"/>
+		<stats name="merchant" relation="0.8"/>
+		<stats name="retro" relation="-0.8"/>
+		<stats name="pirates" relation="-0.5"/>
+		<stats name="hunter" relation="0.4"/>
+		<stats name="militia" relation="0.3"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="0.5"/>
+		<stats name="border_worlds" relation="0.6"/>
+		<stats name="firekkan" relation="1.0"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0"/>
+		<stats name="confed_" relation="0.25"/>
+		<stats name="confed__" relation="0.25"/>
+		<stats name="kilrathi_" relation="-0.5"/>
+		<stats name="kilrathi__" relation="-0.5"/>
+		<stats name="merchant_" relation="0.4"/>
+		<stats name="merchant__" relation="0.4"/>
+		<stats name="retro_" relation="-0.4"/>
+		<stats name="retro__" relation="-0.4"/>
+		<stats name="pirates_" relation="-0.25"/>
+		<stats name="pirates__" relation="-0.25"/>
+		<stats name="hunter_" relation="0.2"/>
+		<stats name="hunter__" relation="0.2"/>
+		<stats name="militia_" relation="0.15"/>
+		<stats name="militia__" relation="0.15"/>
+		<stats name="civilian" relation="0.35"/>
+		<Explosion name="explosion_orange.ani"/>
+<!--		<CommAnimation>  
+			<MoodAnimation name="explosion_orange.ani" sex="0"/>  
+		</CommAnimation>  -->
+	</Faction>
+
+	<Faction name="privateer" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".4" sparkgreen=".4" sparkblue="1">
+		<stats name="privateer" relation="0.01" conversation="privtopriv.xml"/>
+		<stats name="confed" relation="0.2" conversation="privtoconfed.xml"/>
+		<stats name="kilrathi" relation="-0.5" conversation="privtokilrathi.xml"/>
+		<stats name="nephilim" relation="0.05"/>
+		<stats name="merchant" relation="0.05" conversation="privtomerchant.xml"/>
+		<stats name="retro" relation="-0.5" conversation="privtoretro.xml"/>
+		<stats name="pirates" relation="-0.6" conversation="privtopirates.xml"/>
+		<stats name="hunter" relation="0.05" conversation="privtohunter.xml"/>
+		<stats name="militia" relation="0.05" conversation="privtomilitia.xml"/>
+		<stats name="unknown" relation="-0.1"/>
+		<stats name="steltek" relation="0.01"/>
+		<stats name="landreich" relation="0" conversation="privtomilitia.xml"/>
+		<stats name="border_worlds" relation="0.05" conversation="privtoconfed.xml"/>
+		<stats name="firekkan" relation="0.05"/>
+		<stats name="riordian" relation="-0.05" conversation="privtohunter.xml"/>
+		<stats name="seelig" relation="-0.05" conversation="privtopirates.xml"/>
+		<stats name="kroiz" relation="-0.05" conversation="privtohunter.xml"/>
+		<stats name="miggs" relation="-0.05" conversation="privtopirates.xml"/>
+		<stats name="toth" relation="0.50" conversation="privtomerchant.xml"/>
+		<stats name="garrovick" relation="-0.05" conversation="privtohunter.xml"/>
+		<stats name="reismann" relation="0.50" conversation="privtoconfed.xml"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0" conversation="privtoAWACS.xml"/>
+		<stats name="confed_" relation="-1" conversation="privtoconfed.xml"/>
+		<stats name="confed__" relation="1" conversation="privtoconfed.xml"/>
+		<stats name="kilrathi_" relation="-1" conversation="privtokilrathi.xml"/>
+		<stats name="kilrathi__" relation="1" conversation="privtokilrathi.xml"/>
+		<stats name="merchant_" relation="-1" conversation="privtomerchant.xml"/>
+		<stats name="merchant__" relation="1" conversation="privtomerchant.xml"/>
+		<stats name="retro_" relation="-1" conversation="privtoretro.xml"/>
+		<stats name="retro__" relation="1" conversation="privtoretro.xml"/>
+		<stats name="pirates_" relation="-1" conversation="privtopirates.xml"/>
+		<stats name="pirates__" relation="1" conversation="privtopirates.xml"/>
+		<stats name="hunter_" relation="-1" conversation="privtohunter.xml"/>
+		<stats name="hunter__" relation="1" conversation="privtohunter.xml"/>
+		<stats name="militia_" relation="-1" conversation="privtomilitia.xml"/>
+		<stats name="militia__" relation="1" conversation="privtomilitia.xml"/>
+		<stats name="civilian" relation="0.05" conversation="privtomerchant.xml"/>
+		<Explosion name="explosion_orange.ani"/>
+<!--		<CommAnimation>  
+			<MoodAnimation name="explosion_orange.ani" sex="0"/>  
+		</CommAnimation>  -->
+	</Faction>
+
+	<Faction name="steltek" sparkred=".25" logoRGB="invisible.png" secLogoRGB="invisible.png" sparkgreen="1" sparkblue=".25">
+		<stats name="privateer" relation="0.05"/>
+		<stats name="confed" relation="0"/>
+		<stats name="kilrathi" relation="0"/>
+		<stats name="nephilim" relation="0"/>
+		<stats name="merchant" relation="0"/>
+		<stats name="retro" relation="0"/>
+		<stats name="pirates" relation="0"/>
+		<stats name="hunter" relation="0"/>
+		<stats name="militia" relation="0"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="steltek" relation="1.0"/>
+		<stats name="landreich" relation="0"/>
+		<stats name="border_worlds" relation="0"/>
+		<stats name="firekkan" relation="0"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0"/>
+		<stats name="confed_" relation="0"/>
+		<stats name="confed__" relation="0"/>
+		<stats name="kilrathi_" relation="0"/>
+		<stats name="kilrathi__" relation="0"/>
+		<stats name="merchant_" relation="0"/>
+		<stats name="merchant__" relation="0"/>
+		<stats name="retro_" relation="0"/>
+		<stats name="retro__" relation="0"/>
+		<stats name="pirates_" relation="0"/>
+		<stats name="pirates__" relation="0"/>
+		<stats name="hunter_" relation="0"/>
+		<stats name="hunter__" relation="0"/>
+		<stats name="militia_" relation="0"/>
+		<stats name="militia__" relation="0"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_steltek_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="upgrades" logoRGB="invisible.png" logoSec="invisible.png">
+		<stats name="pirates" relation="-0.9"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="comm_static.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="planets" logoRGB="invisible.png" logoSec="invisible.png"/>
+
+	<Faction name="riordian" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".6" sparkgreen=".6" sparkblue=".6">
+		<stats name="privateer" relation="-1"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_riordian_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="seelig" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".4" sparkgreen=".2" sparkblue=".7">
+		<stats name="privateer" relation="-1"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_seelig_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="kroiz" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".6" sparkgreen=".6" sparkblue=".6">
+		<stats name="privateer" relation="-1"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_kroiz_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="miggs" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".4" sparkgreen=".2" sparkblue=".7">
+		<stats name="privateer" relation="-1"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_miggs_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="toth" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".5" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation=".5"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_toth_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="garrovick" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".6" sparkgreen=".6" sparkblue=".6">
+		<stats name="privateer" relation="-1"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_garrovick_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="reismann" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation=".5"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_reismann_male_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="AWACS" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="1" sparkgreen="0" sparkblue="0">
+		<stats name="privateer" relation="0.0"/>
+		<stats name="confed" relation="-1.0"/>
+		<stats name="kilrathi" relation="-0.9"/>
+		<stats name="nephilim" relation="-0.6"/>
+		<stats name="merchant" relation="0.9"/>
+		<stats name="retro" relation="-0.5"/>
+		<stats name="pirates" relation="0.0"/>
+		<stats name="hunter" relation="-0.4"/>
+		<stats name="militia" relation="-1.0"/>
+		<stats name="unknown" relation="0.0"/>
+		<stats name="landreich" relation="0.6"/>
+		<stats name="border_worlds" relation="0.5"/>
+		<stats name="firekkan" relation="0.7"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="1.0"/>
+		<stats name="confed_" relation="-0.5"/>
+		<stats name="confed__" relation="-0.5"/>
+		<stats name="kilrathi_" relation="-0.45"/>
+		<stats name="kilrathi__" relation="-0.45"/>
+		<stats name="merchant_" relation="0.45"/>
+		<stats name="merchant__" relation="0.45"/>
+		<stats name="retro_" relation="-0.25"/>
+		<stats name="retro__" relation="-0.25"/>
+		<stats name="pirates_" relation="0"/>
+		<stats name="pirates__" relation="0"/>
+		<stats name="hunter_" relation="-0.2"/>
+		<stats name="hunter__" relation="-0.2"/>
+		<stats name="militia_" relation="-0.5"/>
+		<stats name="militia__" relation="-0.5"/>
+		<stats name="civilian" relation="0.8"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_awacs_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_awacs_female_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="2">
+			<MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="confed_" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="0.1"/>
+		<stats name="kilrathi" relation="-0.1"/>
+		<stats name="nephilim" relation="0.02"/>
+		<stats name="merchant" relation="0.03"/>
+		<stats name="retro" relation="-0.08"/>
+		<stats name="pirates" relation="-0.02"/>
+		<stats name="hunter" relation="0.03"/>
+		<stats name="militia" relation="0.07"/>
+		<stats name="unknown" relation="-0.09"/>
+		<stats name="landreich" relation="0.06"/>
+		<stats name="border_worlds" relation="0.08"/>
+		<stats name="firekkan" relation="0.09"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.06"/>
+		<stats name="confed_" relation="1"/>
+		<stats name="confed__" relation="-1"/>
+		<stats name="kilrathi_" relation="1"/>
+		<stats name="kilrathi__" relation="-1"/>
+		<stats name="merchant_" relation="1"/>
+		<stats name="merchant__" relation="-1"/>
+		<stats name="retro_" relation="1"/>
+		<stats name="retro__" relation="-1"/>
+		<stats name="pirates_" relation="1"/>
+		<stats name="pirates__" relation="-1"/>
+		<stats name="hunter_" relation="1"/>
+		<stats name="hunter__" relation="-1"/>
+		<stats name="militia_" relation="1"/>
+		<stats name="militia__" relation="-1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_confed_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_confed_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_confed_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="confed__" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation="1"/>
+		<stats name="confed" relation="0.1"/>
+		<stats name="kilrathi" relation="-0.1"/>
+		<stats name="nephilim" relation="0.02"/>
+		<stats name="merchant" relation="0.03"/>
+		<stats name="retro" relation="-0.08"/>
+		<stats name="pirates" relation="-0.02"/>
+		<stats name="hunter" relation="0.03"/>
+		<stats name="militia" relation="0.07"/>
+		<stats name="unknown" relation="-0.09"/>
+		<stats name="landreich" relation="0.06"/>
+		<stats name="border_worlds" relation="0.08"/>
+		<stats name="firekkan" relation="0.09"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.06"/>
+		<stats name="confed_" relation="-1"/>
+		<stats name="confed__" relation="1"/>
+		<stats name="kilrathi_" relation="-1"/>
+		<stats name="kilrathi__" relation="1"/>
+		<stats name="merchant_" relation="-1"/>
+		<stats name="merchant__" relation="1"/>
+		<stats name="retro_" relation="-1"/>
+		<stats name="retro__" relation="1"/>
+		<stats name="pirates_" relation="-1"/>
+		<stats name="pirates__" relation="1"/>
+		<stats name="hunter_" relation="-1"/>
+		<stats name="hunter__" relation="1"/>
+		<stats name="militia_" relation="-1"/>
+		<stats name="militia__" relation="1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_confed_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_confed_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_confed_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="kilrathi_" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="1" sparkgreen="0" sparkblue="0">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="-0.1"/>
+		<stats name="kilrathi" relation="0.1"/>
+		<stats name="nephilim" relation="-0.03"/>
+		<stats name="merchant" relation="-0.06"/>
+		<stats name="retro" relation="0.08"/>
+		<stats name="pirates" relation="-0.03"/>
+		<stats name="hunter" relation="-0.03"/>
+		<stats name="militia" relation="-0.07"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="-0.08"/>
+		<stats name="border_worlds" relation="-0.08"/>
+		<stats name="firekkan" relation="-0.09"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.06"/>
+		<stats name="confed_" relation="1"/>
+		<stats name="confed__" relation="-1"/>
+		<stats name="kilrathi_" relation="1"/>
+		<stats name="kilrathi__" relation="-1"/>
+		<stats name="merchant_" relation="1"/>
+		<stats name="merchant__" relation="-1"/>
+		<stats name="retro_" relation="1"/>
+		<stats name="retro__" relation="-1"/>
+		<stats name="pirates_" relation="1"/>
+		<stats name="pirates__" relation="-1"/>
+		<stats name="hunter_" relation="1"/>
+		<stats name="hunter__" relation="-1"/>
+		<stats name="militia_" relation="1"/>
+		<stats name="militia__" relation="-1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" dockable_only="false">
+			<MoodAnimation name="com_kilrathi_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" dockable_only="true">
+			<MoodAnimation name="com_kilrathi_male_03.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="kilrathi__" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="1" sparkgreen="0" sparkblue="0">
+		<stats name="privateer" relation="1"/>
+		<stats name="confed" relation="-0.1"/>
+		<stats name="kilrathi" relation="0.1"/>
+		<stats name="nephilim" relation="-0.03"/>
+		<stats name="merchant" relation="-0.06"/>
+		<stats name="retro" relation="0.08"/>
+		<stats name="pirates" relation="-0.03"/>
+		<stats name="hunter" relation="-0.03"/>
+		<stats name="militia" relation="-0.07"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="-0.08"/>
+		<stats name="border_worlds" relation="-0.08"/>
+		<stats name="firekkan" relation="-0.09"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.06"/>
+		<stats name="confed_" relation="-1"/>
+		<stats name="confed__" relation="1"/>
+		<stats name="kilrathi_" relation="-1"/>
+		<stats name="kilrathi__" relation="1"/>
+		<stats name="merchant_" relation="-1"/>
+		<stats name="merchant__" relation="1"/>
+		<stats name="retro_" relation="-1"/>
+		<stats name="retro__" relation="1"/>
+		<stats name="pirates_" relation="-1"/>
+		<stats name="pirates__" relation="1"/>
+		<stats name="hunter_" relation="-1"/>
+		<stats name="hunter__" relation="1"/>
+		<stats name="militia_" relation="-1"/>
+		<stats name="militia__" relation="1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" dockable_only="false">
+			<MoodAnimation name="com_kilrathi_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" dockable_only="true">
+			<MoodAnimation name="com_kilrathi_male_03.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="merchant_" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".5" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="0.03"/>
+		<stats name="kilrathi" relation="-0.06"/>
+		<stats name="nephilim" relation="0.02"/>
+		<stats name="merchant" relation="0.1"/>
+		<stats name="retro" relation="-0.08"/>
+		<stats name="pirates" relation="-0.1"/>
+		<stats name="hunter" relation="0.05"/>
+		<stats name="militia" relation="0.08"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="0.05"/>
+		<stats name="border_worlds" relation="0.07"/>
+		<stats name="firekkan" relation="0.06"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0.01"/>
+		<stats name="confed_" relation="1"/>
+		<stats name="confed__" relation="-1"/>
+		<stats name="kilrathi_" relation="1"/>
+		<stats name="kilrathi__" relation="-1"/>
+		<stats name="merchant_" relation="1"/>
+		<stats name="merchant__" relation="-1"/>
+		<stats name="retro_" relation="1"/>
+		<stats name="retro__" relation="-1"/>
+		<stats name="pirates_" relation="1"/>
+		<stats name="pirates__" relation="-1"/>
+		<stats name="hunter_" relation="1"/>
+		<stats name="hunter__" relation="-1"/>
+		<stats name="militia_" relation="1"/>
+		<stats name="militia__" relation="-1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+  		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="true">
+			<MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="merchant__" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".5" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation="1"/>
+		<stats name="confed" relation="0.03"/>
+		<stats name="kilrathi" relation="-0.06"/>
+		<stats name="nephilim" relation="0.02"/>
+		<stats name="merchant" relation="0.1"/>
+		<stats name="retro" relation="-0.08"/>
+		<stats name="pirates" relation="-0.1"/>
+		<stats name="hunter" relation="0.05"/>
+		<stats name="militia" relation="0.08"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="0.05"/>
+		<stats name="border_worlds" relation="0.07"/>
+		<stats name="firekkan" relation="0.06"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0.01"/>
+		<stats name="confed_" relation="-1"/>
+		<stats name="confed__" relation="1"/>
+		<stats name="kilrathi_" relation="-1"/>
+		<stats name="kilrathi__" relation="1"/>
+		<stats name="merchant_" relation="-1"/>
+		<stats name="merchant__" relation="1"/>
+		<stats name="retro_" relation="-1"/>
+		<stats name="retro__" relation="1"/>
+		<stats name="pirates_" relation="-1"/>
+		<stats name="pirates__" relation="1"/>
+		<stats name="hunter_" relation="-1"/>
+		<stats name="hunter__" relation="1"/>
+		<stats name="militia_" relation="-1"/>
+		<stats name="militia__" relation="1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+  		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="true">
+			<MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="retro_" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="1" sparkgreen=".3" sparkblue="0">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="-0.08"/>
+		<stats name="kilrathi" relation="0.08"/>
+		<stats name="nephilim" relation="-0.05"/>
+		<stats name="merchant" relation="-0.06"/>
+		<stats name="retro" relation="0.1"/>
+		<stats name="pirates" relation="-0.1"/>
+		<stats name="hunter" relation="-0.09"/>
+		<stats name="militia" relation="-0.07"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="-0.03"/>
+		<stats name="border_worlds" relation="-0.01"/>
+		<stats name="firekkan" relation="-0.02"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.01"/>
+		<stats name="confed_" relation="1"/>
+		<stats name="confed__" relation="-1"/>
+		<stats name="kilrathi_" relation="1"/>
+		<stats name="kilrathi__" relation="-1"/>
+		<stats name="merchant_" relation="1"/>
+		<stats name="merchant__" relation="-1"/>
+		<stats name="retro_" relation="1"/>
+		<stats name="retro__" relation="-1"/>
+		<stats name="pirates_" relation="1"/>
+		<stats name="pirates__" relation="-1"/>
+		<stats name="hunter_" relation="1"/>
+		<stats name="hunter__" relation="-1"/>
+		<stats name="militia_" relation="1"/>
+		<stats name="militia__" relation="-1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_retro_female.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="retro__" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="1" sparkgreen=".3" sparkblue="0">
+		<stats name="privateer" relation="1"/>
+		<stats name="confed" relation="-0.08"/>
+		<stats name="kilrathi" relation="0.08"/>
+		<stats name="nephilim" relation="-0.05"/>
+		<stats name="merchant" relation="-0.06"/>
+		<stats name="retro" relation="0.1"/>
+		<stats name="pirates" relation="-0.1"/>
+		<stats name="hunter" relation="-0.09"/>
+		<stats name="militia" relation="-0.07"/>
+		<stats name="unknown" relation="0"/>
+		<stats name="landreich" relation="-0.03"/>
+		<stats name="border_worlds" relation="-0.01"/>
+		<stats name="firekkan" relation="-0.02"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.01"/>
+		<stats name="confed_" relation="-1"/>
+		<stats name="confed__" relation="1"/>
+		<stats name="kilrathi_" relation="-1"/>
+		<stats name="kilrathi__" relation="1"/>
+		<stats name="merchant_" relation="-1"/>
+		<stats name="merchant__" relation="1"/>
+		<stats name="retro_" relation="-1"/>
+		<stats name="retro__" relation="1"/>
+		<stats name="pirates_" relation="-1"/>
+		<stats name="pirates__" relation="1"/>
+		<stats name="hunter_" relation="-1"/>
+		<stats name="hunter__" relation="1"/>
+		<stats name="militia_" relation="-1"/>
+		<stats name="militia__" relation="1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_retro_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_retro_female.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="pirates_" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".4" sparkgreen=".2" sparkblue=".7">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="-0.02"/>
+		<stats name="kilrathi" relation="-0.03"/>
+		<stats name="nephilim" relation="-0.07"/>
+		<stats name="merchant" relation="-0.07"/>
+		<stats name="retro" relation="-0.1"/>
+		<stats name="pirates" relation="0.1"/>
+		<stats name="hunter" relation="-0.08"/>
+		<stats name="militia" relation="-0.1"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="-0.01"/>
+		<stats name="border_worlds" relation="-0.01"/>
+		<stats name="firekkan" relation="-0.09"/>
+		<stats name="upgrades" relation="-0.09"/>
+		<stats name="AWACS" relation="0"/>
+		<stats name="confed_" relation="1"/>
+		<stats name="confed__" relation="-1"/>
+		<stats name="kilrathi_" relation="1"/>
+		<stats name="kilrathi__" relation="-1"/>
+		<stats name="merchant_" relation="1"/>
+		<stats name="merchant__" relation="-1"/>
+		<stats name="retro_" relation="1"/>
+		<stats name="retro__" relation="-1"/>
+		<stats name="pirates_" relation="1"/>
+		<stats name="pirates__" relation="-1"/>
+		<stats name="hunter_" relation="1"/>
+		<stats name="hunter__" relation="-1"/>
+		<stats name="militia_" relation="1"/>
+		<stats name="militia__" relation="-1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_pirate_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="2">
+			<MoodAnimation name="com_pirate_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_pirate_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_pirate_female.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="pirates__" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".4" sparkgreen=".2" sparkblue=".7">
+		<stats name="privateer" relation="1"/>
+		<stats name="confed" relation="-0.02"/>
+		<stats name="kilrathi" relation="-0.03"/>
+		<stats name="nephilim" relation="-0.07"/>
+		<stats name="merchant" relation="-0.07"/>
+		<stats name="retro" relation="-0.1"/>
+		<stats name="pirates" relation="0.1"/>
+		<stats name="hunter" relation="-0.08"/>
+		<stats name="militia" relation="-0.1"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="-0.01"/>
+		<stats name="border_worlds" relation="-0.01"/>
+		<stats name="firekkan" relation="-0.09"/>
+		<stats name="upgrades" relation="-0.09"/>
+		<stats name="AWACS" relation="0"/>
+		<stats name="confed_" relation="-1"/>
+		<stats name="confed__" relation="1"/>
+		<stats name="kilrathi_" relation="-1"/>
+		<stats name="kilrathi__" relation="1"/>
+		<stats name="merchant_" relation="-1"/>
+		<stats name="merchant__" relation="1"/>
+		<stats name="retro_" relation="-1"/>
+		<stats name="retro__" relation="1"/>
+		<stats name="pirates_" relation="-1"/>
+		<stats name="pirates__" relation="1"/>
+		<stats name="hunter_" relation="-1"/>
+		<stats name="hunter__" relation="1"/>
+		<stats name="militia_" relation="-1"/>
+		<stats name="militia__" relation="1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_pirate_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="2">
+			<MoodAnimation name="com_pirate_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0">
+			<MoodAnimation name="com_pirate_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1">
+			<MoodAnimation name="com_pirate_female.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="hunter_" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".6" sparkgreen=".6" sparkblue=".6">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="0.04"/>
+		<stats name="kilrathi" relation="-0.03"/>
+		<stats name="nephilim" relation="0.0"/>
+		<stats name="merchant" relation="0.09"/>
+		<stats name="retro" relation="-0.05"/>
+		<stats name="pirates" relation="-0.1"/>
+		<stats name="hunter" relation="0.1"/>
+		<stats name="militia" relation="0.07"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="0.06"/>
+		<stats name="border_worlds" relation="0.03"/>
+		<stats name="firekkan" relation="0.05"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.01"/>
+		<stats name="confed_" relation="1"/>
+		<stats name="confed__" relation="-1"/>
+		<stats name="kilrathi_" relation="1"/>
+		<stats name="kilrathi__" relation="-1"/>
+		<stats name="merchant_" relation="1"/>
+		<stats name="merchant__" relation="-1"/>
+		<stats name="retro_" relation="1"/>
+		<stats name="retro__" relation="-1"/>
+		<stats name="pirates_" relation="1"/>
+		<stats name="pirates__" relation="-1"/>
+		<stats name="hunter_" relation="1"/>
+		<stats name="hunter__" relation="-1"/>
+		<stats name="militia_" relation="1"/>
+		<stats name="militia__" relation="-1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_hunter_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="hunter__" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".6" sparkgreen=".6" sparkblue=".6">
+		<stats name="privateer" relation="1"/>
+		<stats name="confed" relation="0.04"/>
+		<stats name="kilrathi" relation="-0.03"/>
+		<stats name="nephilim" relation="0.0"/>
+		<stats name="merchant" relation="0.09"/>
+		<stats name="retro" relation="-0.05"/>
+		<stats name="pirates" relation="-0.1"/>
+		<stats name="hunter" relation="0.1"/>
+		<stats name="militia" relation="0.07"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="0.06"/>
+		<stats name="border_worlds" relation="0.03"/>
+		<stats name="firekkan" relation="0.05"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.01"/>
+		<stats name="confed_" relation="-1"/>
+		<stats name="confed__" relation="1"/>
+		<stats name="kilrathi_" relation="-1"/>
+		<stats name="kilrathi__" relation="1"/>
+		<stats name="merchant_" relation="-1"/>
+		<stats name="merchant__" relation="1"/>
+		<stats name="retro_" relation="-1"/>
+		<stats name="retro__" relation="1"/>
+		<stats name="pirates_" relation="-1"/>
+		<stats name="pirates__" relation="1"/>
+		<stats name="hunter_" relation="-1"/>
+		<stats name="hunter__" relation="1"/>
+		<stats name="militia_" relation="-1"/>
+		<stats name="militia__" relation="1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_hunter_male_03.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_hunter_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="militia_" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen=".5" sparkblue="1">
+		<stats name="privateer" relation="-1"/>
+		<stats name="confed" relation="0.04"/>
+		<stats name="kilrathi" relation="-0.08"/>
+		<stats name="nephilim" relation="0.01"/>
+		<stats name="merchant" relation="0.08"/>
+		<stats name="retro" relation="-0.1"/>
+		<stats name="pirates" relation="-0.05"/>
+		<stats name="hunter" relation="0.07"/>
+		<stats name="militia" relation="0.1"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="0.02"/>
+		<stats name="border_worlds" relation="0.05"/>
+		<stats name="firekkan" relation="0.06"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.06"/>
+		<stats name="confed_" relation="1"/>
+		<stats name="confed__" relation="-1"/>
+		<stats name="kilrathi_" relation="1"/>
+		<stats name="kilrathi__" relation="-1"/>
+		<stats name="merchant_" relation="1"/>
+		<stats name="merchant__" relation="-1"/>
+		<stats name="retro_" relation="1"/>
+		<stats name="retro__" relation="-1"/>
+		<stats name="pirates_" relation="1"/>
+		<stats name="pirates__" relation="-1"/>
+		<stats name="hunter_" relation="1"/>
+		<stats name="hunter__" relation="-1"/>
+		<stats name="militia_" relation="1"/>
+		<stats name="militia__" relation="-1"/>
+		<stats name="civilian" relation="1"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_militia_male.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_militia_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="militia__" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred="0" sparkgreen=".5" sparkblue="1">
+		<stats name="privateer" relation="1"/>
+		<stats name="confed" relation="0.04"/>
+		<stats name="kilrathi" relation="-0.08"/>
+		<stats name="nephilim" relation="0.01"/>
+		<stats name="merchant" relation="0.08"/>
+		<stats name="retro" relation="-0.1"/>
+		<stats name="pirates" relation="-0.05"/>
+		<stats name="hunter" relation="0.07"/>
+		<stats name="militia" relation="0.1"/>
+		<stats name="unknown" relation="-0.01"/>
+		<stats name="landreich" relation="0.02"/>
+		<stats name="border_worlds" relation="0.05"/>
+		<stats name="firekkan" relation="0.06"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="-0.06"/>
+		<stats name="confed_" relation="-1"/>
+		<stats name="confed__" relation="1"/>
+		<stats name="kilrathi_" relation="-1"/>
+		<stats name="kilrathi__" relation="1"/>
+		<stats name="merchant_" relation="-1"/>
+		<stats name="merchant__" relation="1"/>
+		<stats name="retro_" relation="-1"/>
+		<stats name="retro__" relation="1"/>
+		<stats name="pirates_" relation="-1"/>
+		<stats name="pirates__" relation="1"/>
+		<stats name="hunter_" relation="-1"/>
+		<stats name="hunter__" relation="1"/>
+		<stats name="militia_" relation="-1"/>
+		<stats name="militia__" relation="1"/>
+		<stats name="civilian" relation="0"/>
+		<Explosion name="explosion_orange.ani"/>
+		<CommAnimation sex="0" base_only="false">
+			<MoodAnimation name="com_militia_male.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_militia_female.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="1" base_only="true">
+		   <MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+	</Faction>
+
+	<Faction name="civilian" logoRGB="invisible.png" secLogoRGB="invisible.png" contraband="contraband" sparkred=".5" sparkgreen="0" sparkblue="1">
+		<stats name="privateer" relation="0.1"/>
+		<stats name="confed" relation="0.3"/>
+		<stats name="kilrathi" relation="-0.6"/>
+		<stats name="nephilim" relation="0.2"/>
+		<stats name="merchant" relation="0.9"/>
+		<stats name="retro" relation="-0.8"/>
+		<stats name="pirates" relation="-0.9"/>
+		<stats name="hunter" relation="0.5"/>
+		<stats name="militia" relation="0.8"/>
+		<stats name="unknown" relation="-0.1"/>
+		<stats name="landreich" relation="0.4"/>
+		<stats name="border_worlds" relation="0.7"/>
+		<stats name="firekkan" relation="0.6"/>
+		<stats name="upgrades" relation="0"/>
+		<stats name="AWACS" relation="0.8"/>
+		<stats name="confed_" relation="0.15"/>
+		<stats name="confed__" relation="0.15"/>
+		<stats name="kilrathi_" relation="-0.3"/>
+		<stats name="kilrathi__" relation="-0.3"/>
+		<stats name="merchant_" relation="0.45"/>
+		<stats name="merchant__" relation="0.45"/>
+		<stats name="retro_" relation="-0.4"/>
+		<stats name="retro__" relation="-0.4"/>
+		<stats name="pirates_" relation="-0.45"/>
+		<stats name="pirates__" relation="-0.45"/>
+		<stats name="hunter_" relation="0.25"/>
+		<stats name="hunter__" relation="0.25"/>
+		<stats name="militia_" relation="0.4"/>
+		<stats name="militia__" relation="0.4"/>
+		<stats name="civilian" relation="1.0"/>
+		<Explosion name="explosion_orange.ani"/>
+  		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="false">
+		   <MoodAnimation name="com_merchant_male_02.ani"/>
+		</CommAnimation>
+  		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="0" base_only="true">
+		   <MoodAnimation name="com_neutral_male_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_01.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="false">
+			<MoodAnimation name="com_merchant_female_02.ani"/>
+		</CommAnimation>
+		<CommAnimation sex="1" base_only="true">
+			<MoodAnimation name="com_neutral_female_01.ani"/>
+		</CommAnimation>
+		<ShipModifier name="stiletto.blank" relation=".5"/>
+		<ShipModifier name="stiletto" relation=".5"/>
+		<ShipModifier name="broadsword.blank" relation=".5"/>
+		<ShipModifier name="broadsword" relation=".5"/>
+		<ShipModifier name="gladius.blank" relation=".2"/>
+		<ShipModifier name="gladius" relation=".2"/>
+		<ShipModifier name="dralthi.blank" relation="-.95"/>
+		<ShipModifier name="dralthi" relation="-.95"/>
+		<ShipModifier name="gothri.blank" relation="-.95"/>
+		<ShipModifier name="gothri" relation="-.95"/>
+		<ShipModifier name="talon.blank" relation="-.8"/>
+		<ShipModifier name="talon" relation="-.8"/>
+		<ShipModifier name="tarsus.blank" relation=".3"/>
+		<ShipModifier name="tarsus" relation=".3"/>
+		<ShipModifier name="galaxy.blank" relation=".3"/>
+		<ShipModifier name="galaxy" relation=".3"/>
+	</Faction>
+
+</Factions>

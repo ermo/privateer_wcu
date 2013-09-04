@@ -1,0 +1,228 @@
+<comm>
+	<node text="startingNode" relationship="0"><!-- node 0 (starting node: Don't link here)-->
+		<edge index="1"/>
+		<edge index="2"/>
+		<edge index="3"/>
+	</node>
+
+<!-- Starting Points -->
+	<node text="Fear not; my claws are sheathed, my belly full." relationship="0.2"><!-- node 1 (very happy)-->
+	<sound file="communications/kilrathi/male/01.wav" sex="0"/>
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+	</node>
+	<node text="I grant you passage today, lucky ape." relationship="0"><!-- node 2 (neutral)-->
+	<sound file="communications/kilrathi/male/02.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="Your death will honor my name." relationship="-.2"><!-- node 3 (very mad)-->
+	<sound file="communications/kilrathi/male/07.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+<!-- End of Starting Points -->
+
+<!-- Other Nodes -->
+
+	<node text="Monkey boy, you make me laugh!" relationship=".03125"><!-- node 4(random good chatter)-->
+	<sound file="communications/kilrathi/male/03.wav" sex="0"/>
+		<edge index="4"/>
+		<edge index="5"/>
+	</node>
+	<node text="I grant you passage today, lucky ape." relationship=".0625"><!-- node 5 (random good chatter)-->
+	<sound file="communications/kilrathi/02.wav" sex="0"/>
+		<edge index="4"/>
+		<edge index="6"/>
+	</node>
+	<node text="Fear not; my claws are sheathed, my belly full." relationship=".0625"><!-- node 6 (best node)-->
+	<sound file="communications/kilrathi/male/01.wav" sex="0"/>
+		<edge index="5"/>
+		<edge index="6"/>
+	</node>
+	<node text="I have no time to duel with you, monkey boy." relationship="-.03125"><!-- node 7 (hit while happy)-->
+	<sound file="communications/kilrathi/male/04.wav" sex="0"/>
+		<edge index="4"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="We are tracking you; keep your distance!" relationship=".03125"><!-- node 8 (random neutral chatter)-->
+	<sound file="communications/kilrathi/male/05.wav" sex="0"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="I grant you passage today, lucky ape." relationship=".04125"><!-- node 9 (neutral node after he has decided to be nicer after conflict)-->
+	<sound file="communications/kilrathi/male/02.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="10"/>
+	</node>
+	<node text="Monkey boy, you make me laugh!" relationship=".03125"><!-- node 10 (good node in neutral) -->
+	<sound file="communications/kilrathi/male/03.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="9"/>
+	</node>
+	<node text="I shall mount your bones in my hall." relationship="-.125"><!-- node 11 (got hit when neutral)-->
+	<sound file="communications/kilrathi/male/06.wav" sex="0"/>
+		<edge index="9"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="Your death will honor my name." relationship="-.0625"><!-- node 12 (taunt)-->
+	<sound file="communications/kilrathi/male/07.wav" sex="0"/>
+		<edge index="13"/>
+		<edge index="15"/>
+		<edge index="19"/>
+	</node>
+	<node text="Fight back! There is no honor in slaughter." relationship="-.125"><!-- node 13 (taunt)-->
+	<sound file="communications/kilrathi/male/11.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="15"/>
+		<edge index="19"/>
+	</node>
+	<node text="Primate, cower before the claws of a warrior!" relationship="-.0625"><!-- node 14 (trying to appease him, but failing)-->
+	<sound file="communications/kilrathi/male/08.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="Fight back! There is no honor in slaughter." relationship="-.0625"><!-- node 16 kill-->
+	<sound file="communications/kilrathi/male/11.wav" sex="0"/>
+		<edge index="11"/>
+		<edge index="13"/>
+		<edge index="12"/>
+		<edge index="19"/>
+	</node>
+	<node text="I shall mount your bones in my hall." relationship="-.0625"><!-- node 15 hit while mad node-->
+	<sound file="communications/kilrathi/male/08.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="17"/>
+		<edge index="19"/>
+	</node>
+	<node text="Primate, cower before the claws of a warrior!" relationship="-.0625"><!-- node 17 (trying to appease him, but failing)-->
+	<sound file="communications/kilrathi/male/08.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="16"/>
+		<edge index="19"/>
+	</node>
+	<node text="Your death will honor my name." relationship="-.0625"><!-- node 18 (taunt)-->
+	<sound file="communications/kilrathi/male/07.wav" sex="0"/>
+		<edge index="9"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>	
+	<node text="Pah; you are hardly worthy of my fire." relationship="-.0625"><!-- node 19 (taunt)-->
+	<sound file="communications/kilrathi/male/12.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+
+<!-- Built-in Conversations --> 
+	<node text="Docking operation complete. You're free of the docking clamps." relationship="0.01">
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+		<edge index="7"/>
+	</node>
+	<node text="You are not in docking clamps. Move into one of the green guide boxes and try to dock again." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>
+	<node text="Docking operation begun; press 0 to step into our starship." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="You are not authorized to land here!" relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="We allow you to dock this time, ape. Bring your weapons to show us your skill." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Unable to comply." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Acknowledged." relationship="0">
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+		<edge index="7"/>
+	</node>		
+	<node text="We scan you for illegal military items." relationship="0"> <!-- maintain speed and course -->
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="No contraband detected; you may proceed." relationship="0"> <!-- no contraband detected you may proceed -->
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="CONTRABAND DETECTED -- Target offender and fire at will." relationship="-.125"> <!-- contraband detected! all units close and engage -->
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="Your course is deviating. Maintain course!" relationship="0"> <!-- maintain your speed and course...DO NOT deviate -->
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>	
+	<node text="Request Clearance To Land." relationship="0"> 
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>	
+	<node text="Ahh; I feed another enemy to the void." text1="I have gained another slave in the afterworld" relationship="-.03125"><!-- node 18 (trying to appease, but failing)-->
+	<sound file="communications/kilrathi/male/14.wav" sex="0"/>
+	<sound file="communications/kilrathi/male/13.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="Fight back! There is no honor in slaughter." text1="Pah! You are hardly worthy of my fire!" relationship="-.03125"><!-- node 18 (trying to appease, but failing)-->
+	<sound file="communications/kilrathi/male/11.wav" sex="0"/>
+	<sound file="communications/kilrathi/male/12.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="I am battered, human, yet un-beaten." text1="A deadly blow, I salute you" relationship="-.125">
+	<sound file="communications/kilrathi/male/10.wav" sex="0"/>
+	<sound file="communications/kilrathi/male/9.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="*hit*" relationship="-.01">
+		<edge index="7"/>
+		<edge index="11"/>
+		<edge index="15"/>
+	</node>
+
+<!-- End of Built-in Conversations --> 
+</comm>

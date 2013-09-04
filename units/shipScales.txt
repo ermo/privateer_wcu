@@ -1,0 +1,23 @@
+salthi 6.5  (not in game yet)
+
+
+ship		length		modelLength	scale
+
+tarsus		?? (12)		1		12
+galaxy		?? (20)		1		20
+orion		?? (16)		1		16
+centurion	?? (18)		1		18
+drayman 	?? (66)		1		66
+paradigm 	150		48.5		3.09
+kamekh 		136		1		136
+dralthi 	9		2.078		4.331
+stiletto 	?? (8)		8		1
+gladius 	16		18.4           .87
+demon 		?? (8)		1               8
+talon 		?? (12)		8.52		1.4085
+broadsword 	18		1		18
+gothri 		17.3		16.153		1.07
+salthi		6.5		1		6.5
+
+
+?? (x) means there is no real given length, the number in the brackets is my best guess/what I am using at the moment

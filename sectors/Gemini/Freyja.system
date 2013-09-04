@@ -1,0 +1,27 @@
+<system name="Freyja" background="backgrounds/blue_galaxy1" nearstars="500" stars="1000" starspread="150" y="0" z="0" x="0">
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="0.894427190999916" blue="0.707106781186548"/>
+	<specular red="1" green="0.8" blue="0.5"/>
+</Light>
+<Planet name="Freyja" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.8" Blue="0.5" ReflectNoLight="true" light="0"/>
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="1" blue="1"/>
+	<specular red="1" green="1" blue="1"/>
+</Light>
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".000000002"/>
+</Light>	
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".0000001"/>
+</Light>	
+	<planet name="Jump_To_Regallis" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-7000" y="-15500" day="240" destination="Gemini/Regallis"/>
+	<planet name="Jump_To_Pyrenees" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="12500" y="8500" day="240" destination="Gemini/Pyrenees"/>
+</system>

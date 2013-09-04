@@ -1,0 +1,1445 @@
+<vegaconfig>
+	<bindings>
+	</bindings>
+	<colors>
+		<section name="absolute">
+		<!-- absolute colors -->
+			<color name="red"	 r="1.0"  g="0.0"  b="0.0"  a="1.0"/>
+			<color name="green"	 r="0.0"  g="1.0"  b="0.0"  a="1.0"/>
+			<color name="blue"	 r="0.0"  g="0.0"  b="1.0"  a="1.0"/>
+			<color name="cyan"	 r="0.0"  g="1.0"  b="1.0"  a="1.0"/>
+			<color name="yellow"	 r="1.0"  g="1.0"  b="0.0"  a="1.0"/>
+			<color name="brown"	 r="0.6"  g="0.2"  b="0.0"  a="1.0"/>
+			<color name="black"	 r="0.0"  g="0.0"  b="0.0"  a="1.0"/>
+			<color name="clear"	 r="0.0"  g="0.0"  b="0.0"  a="0.0"/>
+			<color name="white"	 r="1.0"  g="1.0"  b="1.0"  a="1.0"/>
+			<color name="grey"	 r="0.5"  g="0.5"  b="0.5"  a="1.0"/>
+			<color name="light-grey" r="0.8"  g="0.8"  b="0.8"  a="1.0"/>
+			<color name="violet"	 r="1.0"  g="0.0"  b="1.0"  a="1.0"/>
+			<color name="light-blue" r="0.68" g="0.9"  b="1.0"  a="1.0"/>
+			<color name="pink"	 r="1.0"  g="0.47" b="0.64" a="1.0"/>
+			<color name="dark-red"	 r="0.1"  g="0.0"  b="0.0"  a="1.0"/>
+			<color name="dark-blue"	 r="0.0"  g="0.0"  b="0.2"  a="1.0"/>
+			<color name="orange"	 r="1.0"  g="0.4"  b="0.0"  a="1.0"/>
+		</section>
+		<section name="armor_flash" >
+<!-- 			<color name=fallbackcolor[1] section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:2114 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="default" >
+			<section name="base_mouse_over" >
+<!-- 				<color name=overcolor section="absolute" ref=true /> -->	<!-- cmd/base_interface.cpp:720 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="base_mouse_passive" >
+<!-- 				<color name=inactivecolor section="absolute" ref=true /> -->	<!-- cmd/base_interface.cpp:722 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="hud_repair_damaged" >
+<!-- 				<color name=cdamaged section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:1171 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="hud_repair_destroyed" >
+<!-- 				<color name=cdestroyed section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:1172 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="hud_repair_half_damaged" >
+<!-- 				<color name=chdamaged section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:1170 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="hud_repair_repaired" >
+<!-- 				<color name=cfullpower section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:1169 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="hud_target_damaged" >
+<!-- 				<color name=damaged section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:188 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="hud_target_full" >
+<!-- 				<color name=full section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:190 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="hud_target_half_damaged" >
+<!-- 				<color name=half_damaged section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:189 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="inner_shield_color" >
+<!-- 				<color name=ishieldcolor section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:1300,1307,517,528,776,783 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="middle_shield_color" >
+<!-- 				<color name=mshieldcolor section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:1301,1308,518,529,777,784 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="outer_shield_color" >
+<!-- 				<color name=oshieldcolor section="absolute" ref=true /> -->	<!-- gfx/vdu.cpp:1302,1309,519,530,778,785 ['variable not quoted', 'value not quoted'] -->
+			</section>
+		</section>
+		<section name="enemy" >
+<!-- 			<color name=&amp;enemy.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:1796 gfx/cockpit_generic.cpp:218 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="friend" >
+<!-- 			<color name=&amp;friendly.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:1797 gfx/cockpit_generic.cpp:219 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="hull_flash" >
+<!-- 			<color name=fallbackcolor[2] section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:2115 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="nav" >
+			<section name="current_system" >
+<!-- 				<color name=tempcol1 section="absolute" ref=true /> -->	<!-- gfx/nav/navscreen.cpp:398 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="destination_system" >
+<!-- 				<color name=tempcol2 section="absolute" ref=true /> -->	<!-- gfx/nav/navscreen.cpp:401 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="highlighted_text_on_tail" >
+<!-- 				<color name=col section="absolute" ref=true /> -->	<!-- gfx/nav/drawlist.cpp:365 ['variable not quoted', 'value not quoted'] -->
+<!-- 				<color name=col2 section="absolute" ref=true /> -->	<!-- gfx/nav/drawgalaxy.cpp:115 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="highlighted_unit_off_tail" >
+<!-- 				<color name=col section="absolute" ref=true /> -->	<!-- gfx/nav/drawlist.cpp:369 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="highlighted_unit_on_tail" >
+<!-- 				<color name=col section="absolute" ref=true /> -->	<!-- gfx/nav/drawlist.cpp:361 ['variable not quoted', 'value not quoted', 'duplicate variable'] -->
+<!-- 				<color name=col1 section="absolute" ref=true /> -->	<!-- gfx/nav/drawgalaxy.cpp:111 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="path_system" >
+<!-- 				<color name=tempcol4 section="absolute" ref=true /> -->	<!-- gfx/nav/navscreen.cpp:407 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="selection_system" >
+<!-- 				<color name=tempcol3 section="absolute" ref=true /> -->	<!-- gfx/nav/navscreen.cpp:404 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="targeted_unit" >
+<!-- 				<color name=col section="absolute" ref=true /> -->	<!-- gfx/nav/drawsystem.cpp:411 ['variable not quoted', 'value not quoted'] -->
+			</section>
+<!-- 			<section name=(std::string('unhighlighted_')+name)+(text?'_text':'') >	-->
+<!-- 				<color name=col section="absolute" ref=true /> -->	<!-- gfx/nav/drawlist.cpp:313 ['subsection not quoted', 'variable not quoted', 'value not quoted', 'broken subsection', 'duplicate variable'] -->
+<!-- 			</section>	-->
+		</section>
+		<section name="neutral" >
+<!-- 			<color name=&amp;neutral.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:1798 gfx/cockpit_generic.cpp:220 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="planet" >
+<!-- 			<color name=&amp;planet.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:1801 gfx/cockpit_generic.cpp:223 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="planet_ambient" >
+<!-- 			<color name=color section="absolute" ref= /> -->	<!-- gfx/sphere.cpp:17 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="planet_mat_ambient" >
+<!-- 			<color name=&amp;ourmat.ar section="absolute" ref= /> -->	<!-- star_system_xml.cpp:416 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="planet_mat_diffuse" >
+<!-- 			<color name=&amp;ourmat.dr section="absolute" ref= /> -->	<!-- star_system_xml.cpp:417 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="planet_mat_emmissive" >
+<!-- 			<color name=&amp;ourmat.er section="absolute" ref= /> -->	<!-- star_system_xml.cpp:419 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="planet_mat_specular" >
+<!-- 			<color name=&amp;ourmat.sr section="absolute" ref= /> -->	<!-- star_system_xml.cpp:418 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="shield_flash" >
+<!-- 			<color name=fallbackcolor[0] section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:2113 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="space_background" >
+<!-- 			<color name=clearcol section="absolute" ref= /> -->	<!-- gldrv/gl_init.cpp:462 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="target" >
+<!-- 			<color name=&amp;targeted.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:1799 gfx/cockpit_generic.cpp:221 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="targetting_ship" >
+<!-- 			<color name=&amp;targetting.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:1800 gfx/cockpit_generic.cpp:222 ['variable not quoted', 'no value'] -->
+		</section>
+		<section name="unit" >
+<!-- 			<color name="ship_ambient" section="absolute" ref=color /> -->	<!-- gfx/mesh_gfx.cpp:429 ['value not quoted'] -->
+			<section name="engine" >
+<!-- 				<color name=halocolor section="absolute" ref=0xffffffff /> -->	<!-- cmd/unit_xml.cpp:835 ['variable not quoted', 'value not quoted'] -->
+			</section>
+		</section>
+<!-- 		<section name=name >	-->
+<!-- 			<color name=&amp;def.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:71 ['section not quoted', 'variable not quoted', 'no value', 'broken section'] -->
+<!-- 			<color name=&amp;dockbox.r section="absolute" ref= /> -->	<!-- gfx/cockpit.cpp:472 ['section not quoted', 'variable not quoted', 'no value', 'broken section'] -->
+<!-- 		</section>	-->
+<!-- 		<section name=std::string('default') >	-->
+			<section name="no_money" >
+<!-- 				<color name=color section="absolute" ref=true /> -->	<!-- cmd/unit_interface.cpp:491 ['section not quoted', 'variable not quoted', 'value not quoted', 'broken section'] -->
+			</section>
+<!-- 			<section name=std::string(name) >	-->
+<!-- 				<color name=color section="absolute" ref=true /> -->	<!-- gui/guidefs.cpp:33 ['section not quoted', 'subsection not quoted', 'variable not quoted', 'value not quoted', 'broken section', 'broken subsection', 'duplicate variable'] -->
+<!-- 			</section>	-->
+<!-- 		</section>	-->
+	</colors>
+	<variables>
+		<section name="AI" >
+			<var name="AllowAnySpeedReference" value="false" />	<!-- cmd/ai/flykeyboard.cpp:234 -->
+			<var name="AllowCivilWar" value="false" />	<!-- options.cpp:92 -->
+			<var name="AllowNonplayerFactionChange" value="false" />	<!-- options.cpp:94 -->
+			<var name="AlwaysFireAutotrackers" value="true" />	<!-- cmd/ai/fire.cpp:622 -->
+			<var name="AngerAffectsRespose" value="1" />	<!-- cmd/ai/comm_ai.cpp:357 -->
+			<var name="CappedFactionRating" value="true" />	<!-- options.cpp:93 -->
+			<var name="ChooseDestinationScript" value="" />	<!-- cmd/ai/aggressive.cpp:1206 -->
+			<var name="CommInitiateTime" value="300" />	<!-- cmd/ai/fire.cpp:704 -->
+			<var name="CommResponseTime" value="3" />	<!-- cmd/ai/order.cpp:32 -->
+			<var name="CommToPlayerPercent" value=".05" />	<!-- cmd/ai/fire.cpp:707 -->
+			<var name="CommToTargetPercent" value=".25" />	<!-- cmd/ai/fire.cpp:708 -->
+			<var name="ContrabandInitiateTime" value="3000" />	<!-- cmd/ai/fire.cpp:706 -->
+			<var name="ContrabandMadness" value="5" />	<!-- cmd/ai/comm_ai.cpp:74 -->
+			<var name="ContrabandToPlayerPercent" value=".98" />	<!-- cmd/ai/fire.cpp:709 -->
+			<var name="ContrabandToTargetPercent" value="0.001" />	<!-- cmd/ai/fire.cpp:710 -->
+			<var name="ContrabandUpdateTime" value="1" />	<!-- cmd/ai/fire.cpp:700 -->
+			<var name="DefaultRank" value=".01" />	<!-- cmd/pilot.cpp:10 -->
+			<var name="DockedToScript" value="" />	<!-- cmd/ai/docking.cpp:11 -->
+			<var name="EaseToAnger" value="-.5" />	<!-- cmd/ai/comm_ai.cpp:20 -->
+			<var name="EaseToAppease" value=".5" />	<!-- cmd/ai/comm_ai.cpp:16 -->
+			<var name="HullDamageAnger" value="10" />	<!-- cmd/unit_generic.cpp:4586 -->
+			<var name="HullPercentForComm" value=".75" />	<!-- cmd/unit_generic.cpp:4579 -->
+			<var name="LowestNegativeCommChoice" value="-.00001" />	<!-- cmd/ai/comm_ai.cpp:41 cmd/ai/communication.cpp:164 -->
+			<var name="LowestPositiveCommChoice" value="0" />	<!-- cmd/ai/comm_ai.cpp:40 cmd/ai/communication.cpp:163 -->
+			<var name="MissileGunDelay" value="4" />	<!-- cmd/ai/fire.cpp:636 -->
+			<var name="MissileGunDelayProbability" value=".25" />	<!-- cmd/ai/fire.cpp:637 -->
+			<var name="MoodAffectsRespose" value="0" />	<!-- cmd/ai/comm_ai.cpp:356 -->
+			<var name="MoodSwingLevel" value=".2" />	<!-- cmd/ai/comm_ai.cpp:24 -->
+			<var name="OnlyUpgradeSpeedReference" value="false" />	<!-- cmd/ai/flykeyboard.cpp:235 -->
+			<var name="PercentageSpeedChangeToStopSearch" value="1" />	<!-- cmd/ai/comm_ai.cpp:169 -->
+			<var name="RandomResponseRange" value=".8" />	<!-- cmd/ai/comm_ai.cpp:28 -->
+			<var name="ShieldDamageAnger" value="1" />	<!-- cmd/unit_generic.cpp:4585 -->
+			<var name="SlowDiplomacyForEnemies" value=".25" />	<!-- cmd/ai/comm_ai.cpp:261 cmd/pilot.cpp:30,41 -->
+			<var name="StaticRelationshipAffectsResponse" value="1" />	<!-- cmd/ai/comm_ai.cpp:358 -->
+			<var name="UnknownRelationEnemy" value="-.05" />	<!-- cmd/pilot.cpp:38 -->
+			<var name="UnknownRelationHitCost" value=".01" />	<!-- cmd/pilot.cpp:51 -->
+			<var name="afterburn_to_no_enemies" value="true" />	<!-- cmd/ai/aggressive.cpp:1412 -->
+			<var name="ai_cheat_dot" value=".99" />	<!-- cmd/ai/navigation.cpp:311 -->
+			<var name="always_have_jumpdrive_cheat" value="false" />	<!-- cmd/ai/aggressive.cpp:1587 -->
+			<var name="always_obedient" value="true" />	<!-- cmd/ai/aggressive.cpp:624 -->
+			<var name="always_use_itts" value="false" />	<!-- cmd/ai/navigation.cpp:387 -->
+			<var name="arrest_energy_zero" value="false" />	<!-- cmd/ai/firekeyboard.cpp:2320 -->
+			<var name="assist_friend_in_need" value="true" />	<!-- cmd/unit_generic.cpp:4639 -->
+			<var name="attacker_switch_time" value="15" />	<!-- cmd/ai/fire.cpp:591 -->
+			<var name="autodock" value="false" />	<!-- gfx/cockpit_generic.cpp:532 -->
+			<var name="can_dock_to_enemy_base" value="true" />	<!-- cmd/ai/firekeyboard.cpp:1438 -->
+			<var name="compile_python" value="true" />	<!-- python/python_compile.cpp:73 -->
+			<var name="debug_level" value="0" />	<!-- cmd/ai/script.cpp:746 cmd/ai/event_xml.cpp:37 -->
+			<var name="dockOnLoad" value="true" />	<!-- main.cpp:687 -->
+			<var name="dock_to_area" value="false" />	<!-- cmd/ai/firekeyboard.cpp:1497 -->
+			<var name="eject_attacks" value="false" />	<!-- cmd/unit_generic.cpp:8606 -->
+			<var name="evasion_angle" value="45" />	<!-- cmd/ai/hard_coded_scripts.cpp:135 -->
+			<var name="faction_contraband_relation_adjust" value="-.025" />	<!-- cmd/ai/comm_ai.cpp:90 -->
+			<var name="fg_nav_select_time" value="120" />	<!-- cmd/ai/aggressive.cpp:1224 -->
+			<var name="force_jump_after_time" value="120" />	<!-- cmd/ai/aggressive.cpp:1521 -->
+			<var name="friend_factor" value=".1" />	<!-- cmd/unit_functions_generic.cpp:109 -->
+			<var name="hostile_lurk" value="true" />	<!-- cmd/ai/aggressive.cpp:1270 -->
+			<var name="how_far_to_stop_navigating" value="100" />	<!-- cmd/ai/aggressive.cpp:1368 -->
+			<var name="independent_turrets" value="false" />	<!-- cmd/unit_generic.cpp:2283 -->
+			<var name="jump_cheat" value="true" />	<!-- cmd/ai/aggressive.cpp:1600 -->
+			<var name="jump_without_energy" value="false" />	<!-- cmd/unit_generic.cpp:3343 -->
+			<var name="kill_factor" value=".2" />	<!-- cmd/unit_functions_generic.cpp:106 -->
+			<var name="loop_around_destination_distance" value="10.0" />	<!-- cmd/ai/hard_coded_scripts.cpp:227 -->
+			<var name="loop_around_destination_lateral" value="4.0" />	<!-- cmd/ai/hard_coded_scripts.cpp:229 -->
+			<var name="loop_around_destination_vertical" value="4.0" />	<!-- cmd/ai/hard_coded_scripts.cpp:228 -->
+			<var name="loop_around_distance" value="1" />	<!-- cmd/ai/hard_coded_scripts.cpp:225 -->
+			<var name="lurk_time" value="600" />	<!-- cmd/ai/aggressive.cpp:1223 -->
+			<var name="match_velocity_cone" value="-.8" />	<!-- cmd/ai/warpto.cpp:57 -->
+			<var name="match_velocity_of_pursuant" value="false" />	<!-- cmd/ai/warpto.cpp:77 -->
+			<var name="max_allowable_travel_time" value="15" />	<!-- cmd/ai/warpto.cpp:6 -->
+			<var name="max_faction_contraband_relation" value="-.05" />	<!-- cmd/ai/comm_ai.cpp:89 -->
+			<var name="max_player_attackers" value="0" />	<!-- cmd/ai/fire.cpp:588 gfx/cockpit_generic.cpp:402 -->
+			<var name="min_angular_accel_cheat" value="50" />	<!-- cmd/ai/navigation.cpp:304 -->
+			<var name="min_docking_relationship" value="-.002" />	<!-- cmd/ai/firekeyboard.cpp:1437 -->
+			<var name="min_energy_to_enter_warp" value=".33" />	<!-- cmd/ai/warpto.cpp:66 -->
+			<var name="min_rechoose_interval" value="128" />	<!-- cmd/ai/fire.cpp:478 -->
+			<var name="min_relationship" value="-20.0" />	<!-- options.cpp:95 -->
+			<var name="min_time_to_auto" value="25" />	<!-- cmd/ai/aggressive.cpp:1395,1431 -->
+			<var name="no_turret_ai" value="false" />	<!-- cmd/ai/firekeyboard.cpp:2053 -->
+			<var name="num_pirates_per_asteroid_field" value="12" />	<!-- cmd/ai/aggressive.cpp:1226 -->
+			<var name="pirate_bonus_for_empty_hold" value=".75" />	<!-- cmd/pilot.cpp:76 -->
+			<var name="pirate_nav_select_time" value="400" />	<!-- cmd/ai/aggressive.cpp:1225 -->
+			<var name="randomspacingfactor" value="4" />	<!-- cmd/ai/aggressive.cpp:1424 -->
+			<var name="resistance_to_side_force_percent" value="1" />	<!-- cmd/ai/aggressive.cpp:1571 -->
+			<var name="resistance_to_side_movement" value="false" />	<!-- cmd/ai/aggressive.cpp:1556 -->
+			<var name="resistance_to_side_movement_percent" value=".01" />	<!-- cmd/ai/aggressive.cpp:1570 -->
+			<var name="roll_order_duration" value="5.0" />	<!-- cmd/ai/hard_coded_scripts.cpp:297,302 -->
+			<var name="safetyspacing" value="2500" />	<!-- cmd/ai/aggressive.cpp:1423 -->
+			<var name="startDockedTo" value="MiningBase" />	<!-- universe_generic.cpp:41 -->
+			<var name="switch_nonowned_units" value="true" />	<!-- gfx/cockpit_generic.cpp:560 -->
+			<var name="talk_relation_factor" value=".5" />	<!-- cmd/ai/order_comm.cpp:37 -->
+			<var name="talking_faster_helps" value="true" />	<!-- cmd/ai/order_comm.cpp:36 -->
+			<var name="too_close_for_warp_in_formation" value="1500" />	<!-- cmd/ai/warpto.cpp:13 -->
+			<var name="too_close_for_warp_tactic" value="13000" />	<!-- cmd/ai/warpto.cpp:12 -->
+			<var name="turn_cheat" value="true" />	<!-- cmd/ai/navigation.cpp:302 -->
+			<var name="use_afterburner" value="true" />	<!-- cmd/ai/hard_coded_scripts.cpp:22 -->
+			<var name="use_afterburner_to_follow" value="true" />	<!-- cmd/ai/hard_coded_scripts.cpp:30 -->
+			<var name="use_afterburner_to_run" value="true" />	<!-- cmd/ai/hard_coded_scripts.cpp:26 -->
+			<var name="warp_cone" value=".8" />	<!-- cmd/ai/warpto.cpp:56 -->
+			<var name="warp_to_enemies" value="true" />	<!-- cmd/ai/aggressive.cpp:1642 -->
+			<var name="warp_to_no_enemies" value="true" />	<!-- cmd/ai/aggressive.cpp:1430 -->
+			<var name="warp_to_wingmen" value="true" />	<!-- cmd/ai/navigation.cpp:716,753 -->
+			<section name="Firing" >
+				<var name="Aggressivity" value="15" />	<!-- cmd/ai/fire.cpp:116 -->
+				<var name="InWeaponRange" value="1.2" />	<!-- cmd/ai/fire.cpp:571 -->
+				<var name="MaximumFiringAngle.maxagg" value="18" />	<!-- cmd/ai/fire.cpp:573 -->
+				<var name="MaximumFiringAngle.minagg" value="10" />	<!-- cmd/ai/fire.cpp:572 -->
+				<var name="MissileProbability" value=".01" />	<!-- cmd/ai/fire.cpp:100 -->
+				<var name="ReactionTime" value=".2" />	<!-- cmd/pilot.cpp:9 -->
+				<var name="TurretDotCutoff" value=".4" />	<!-- cmd/ai/turretai.cpp:41 -->
+				<var name="TurretMissileProbability" value=".05" />	<!-- cmd/ai/turretai.cpp:42 -->
+			</section>
+			<section name="Targetting" >
+				<var name="AssignPointDef" value="true" />	<!-- cmd/ai/fire.cpp:448 -->
+				<var name="EscortDistance" value="10.0" />	<!-- cmd/ai/aggressive.cpp:738,785,919 -->
+				<var name="MassInertialPriorityCutoff" value="5000" />	<!-- cmd/ai/fire.cpp:240 -->
+				<var name="MassInertialPriorityScale" value=".0000001" />	<!-- cmd/ai/fire.cpp:242 -->
+				<var name="MaxNumberofpollersperframe" value="49" />	<!-- cmd/ai/fire.cpp:395 -->
+				<var name="MinNullTimeToSwitchTargets" value="5" />	<!-- cmd/ai/fire.cpp:392 -->
+				<var name="MinNumberofpollersperframe" value="5" />	<!-- cmd/ai/fire.cpp:394 -->
+				<var name="MinTimeToSwitchTargets" value="3" />	<!-- cmd/ai/fire.cpp:101,391 -->
+				<var name="MountlessGunRange" value="300000000" />	<!-- cmd/ai/fire.cpp:234 -->
+				<var name="TargetCommandierTime" value="100" />	<!-- cmd/ai/aggressive.cpp:1165 -->
+				<var name="ThreatWeight" value=".5" />	<!-- cmd/ai/fire.cpp:252 -->
+				<var name="TimeUntilSwitch" value="20" />	<!-- cmd/ai/fire.cpp:672 -->
+				<var name="TurnLeaderDist" value="5.0" />	<!-- cmd/ai/aggressive.cpp:739,786,920 -->
+				<var name="obedience" value=".99" />	<!-- cmd/ai/event_xml.cpp:145 -->
+				<var name="search_extra_radius" value="1000" />	<!-- cmd/ai/fire.cpp:464 -->
+				<var name="search_max_candidates" value="64" />	<!-- cmd/ai/fire.cpp:466 -->
+				<var name="search_max_role_priority" value="16" />	<!-- cmd/ai/fire.cpp:465 -->
+			</section>
+		</section>
+		<section name="audio" >
+			<var name="Doppler" value="false" />	<!-- aldrv/al_init.cpp:131 -->
+			<var name="DopplerScale" value="1" />	<!-- aldrv/al_init.cpp:135 -->
+			<var name="MaxSingleSounds" value="8" />	<!-- aldrv/al_init.cpp:138 -->
+			<var name="MaxTotalSounds" value="20" />	<!-- aldrv/al_init.cpp:139 -->
+			<var name="Music" value="true" />	<!-- main.cpp:286 aldrv/al_init.cpp:141 -->
+			<var name="Positional" value="true" />	<!-- aldrv/al_init.cpp:132 -->
+			<var name="Sound" value="true" />	<!-- aldrv/al_init.cpp:140 -->
+			<var name="Volume" value="100" />	<!-- aldrv/al_init.cpp:134 -->
+			<var name="afterburner_gain" value=".5" />	<!-- cmd/unit_physics.cpp:185 -->
+			<var name="ai_high_quality_weapon" value="false" />	<!-- cmd/mount.cpp:375 -->
+			<var name="ai_sound" value="true" />	<!-- cmd/mount.cpp:376 -->
+			<var name="automatic_docking_zone" value="automatic_landing_zone.wav" />	<!-- cmd/ai/firekeyboard.cpp:1369 -->
+			<var name="buzzing_distance" value="5" />	<!-- cmd/unit_physics.cpp:194 -->
+			<var name="buzzing_needs_afterburner" value="false" />	<!-- cmd/unit_physics.cpp:182 -->
+			<var name="buzzing_time" value="5" />	<!-- cmd/unit_physics.cpp:193 -->
+			<var name="cache_songs" value="../music/land.ogg" />	<!-- cmd/music.cpp:420 -->
+			<var name="cross_fade_music" value="true" />	<!-- cmd/music.cpp:592 -->
+			<var name="damage_factor_for_sound" value=".001" />	<!-- cmd/unit_generic.cpp:5389 -->
+			<var name="every_other_mount" value="false" />	<!-- cmd/unit_csv.cpp:271 cmd/unit_xml.cpp:2058 -->
+			<var name="explosion_closeness" value=".8" />	<!-- cmd/unit_damage.cpp:299 -->
+			<var name="frequency" value="48000" />	<!-- aldrv/al_init.cpp:137 -->
+			<var name="high_quality_weapon" value="true" />	<!-- cmd/mount.cpp:374 -->
+			<var name="loading_sound" value="../music/loading.ogg" />	<!-- cmd/music.cpp:380 -->
+			<var name="max_range_to_hear_weapon_fire" value="100000" />	<!-- cmd/mount.cpp:380 -->
+			<var name="missionvictorysong" value="../music/victory.ogg" />	<!-- options.cpp:23 -->
+			<var name="music_fadein" value="0" />	<!-- cmd/music.cpp:234 -->
+			<var name="music_fadeout" value="0" />	<!-- cmd/music.cpp:235 -->
+			<var name="music_layers" value="1" />	<!-- cmd/music.cpp:816 -->
+			<var name="music_muting_fadeout" value="0.2" />	<!-- cmd/music.cpp:924 -->
+<!-- 			<var name="music_muting_fadeout" value="0.5" /> -->	<!-- cmd/music.cpp:925 ['duplicate variable'] -->
+			<var name="music_volume" value=".5" />	<!-- cmd/music.cpp:248 -->
+			<var name="music_volume_down_latency" value="2" />	<!-- cmd/music.cpp:244 -->
+			<var name="music_volume_up_latency" value="15" />	<!-- cmd/music.cpp:243 -->
+			<var name="newssong" value="../music/news1.ogg" />	<!-- cmd/basecomputer.cpp:3031 cmd/unit_interface.cpp:803,814 -->
+			<var name="pierce_firewall" value="true" />	<!-- cmd/music.cpp:66 -->
+			<var name="shuffle_songs" value="true" />	<!-- cmd/music.cpp:355,694,725 -->
+			<var name="shuffle_songs.clear_history_on_list_change" value="true" />	<!-- cmd/music.cpp:659 -->
+<!-- 			<var name="shuffle_songs.history_depth" value=MAX_RECENT_HISTORY /> -->	<!-- cmd/music.cpp:356 ['value not quoted'] -->
+			<var name="sound_gain" value=".5" />	<!-- main.cpp:317 -->
+			<var name="threadtime" value="1" />	<!-- options.cpp:22 -->
+			<var name="weapon_gain" value=".25" />	<!-- cmd/mount.cpp:399 -->
+<!-- 			<var name=listvars[i] value=deflistvars[i] /> -->	<!-- cmd/music.cpp:111 ['variable not quoted', 'value not quoted'] -->
+		</section>
+		<section name="auto_physics" >
+			<var name="auto_docking_speed_boost" value="20" />	<!-- cmd/ai/navigation.cpp:463 -->
+		</section>
+		<section name="cargo" >
+			<var name="filter_expensive_cargo" value="false" />	<!-- cmd/unit_generic.cpp:8448 -->
+			<var name="junk_starship_mass" value="50" />	<!-- cmd/beam_generic.cpp:555 -->
+			<var name="junk_starship_price" value="100000" />	<!-- cmd/beam_generic.cpp:554 -->
+			<var name="junk_starship_volume" value="1500" />	<!-- cmd/beam_generic.cpp:556 -->
+			<var name="max_price_quant_adj" value="5" />	<!-- cmd/unit_generic.cpp:9224 -->
+			<var name="min_cargo_price" value="0.01" />	<!-- cmd/unit_generic.cpp:9237 -->
+			<var name="min_price_quant_adj" value="1" />	<!-- cmd/unit_generic.cpp:9225 -->
+			<var name="missions_from_cargolist" value="false" />	<!-- cmd/unit_interface.cpp:1120,1452,667 -->
+			<var name="news_from_cargolist" value="false" />	<!-- options.cpp:124 cmd/basecomputer.cpp:3073 cmd/unit_interface.cpp:428,798 -->
+			<var name="price_quant_adj_power" value="1" />	<!-- cmd/unit_generic.cpp:9226 -->
+			<var name="price_recenter_factor" value="0" />	<!-- cmd/unit_generic.cpp:9207 -->
+			<var name="space_junk_price" value="10" />	<!-- cmd/beam_generic.cpp:546 cmd/unit_generic.cpp:8328,8339 -->
+		</section>
+		<section name="cockpitaudio" >
+			<var name="automatic_landing_zone" value="als" />	<!-- gfx/cockpit.cpp:912 -->
+			<var name="automatic_landing_zone1" value="als" />	<!-- gfx/cockpit.cpp:913 -->
+			<var name="automatic_landing_zone2" value="als" />	<!-- gfx/cockpit.cpp:914 -->
+			<var name="autopilot_available" value="autopilot_available" />	<!-- gfx/cockpit.cpp:1345 -->
+			<var name="autopilot_disabled" value="autopilot_disabled" />	<!-- gfx/cockpit.cpp:2845 -->
+			<var name="autopilot_enabled" value="autopilot" />	<!-- gfx/cockpit.cpp:2028 -->
+			<var name="autopilot_unavailable" value="autopilot_unavailable" />	<!-- gfx/cockpit.cpp:1352 -->
+			<var name="comm" value="vdu_c" />	<!-- options.cpp:26 -->
+			<var name="compress_change" value="compress_burst" />	<!-- options.cpp:35 -->
+			<var name="compress_interval" value="3" />	<!-- options.cpp:37 -->
+			<var name="compress_loop" value="compress_loop" />	<!-- options.cpp:34 -->
+			<var name="compress_max" value="3" />	<!-- options.cpp:33 -->
+			<var name="compress_stop" value="compress_end" />	<!-- options.cpp:36 -->
+			<var name="docking_complete" value="docking_complete" />	<!-- cmd/ai/firekeyboard.cpp:1379 -->
+			<var name="docking_denied" value="request_denied" />	<!-- cmd/ai/firekeyboard.cpp:1412 -->
+			<var name="docking_failed" value="docking_failed" />	<!-- cmd/ai/firekeyboard.cpp:1396 -->
+			<var name="docking_granted" value="request_granted" />	<!-- cmd/ai/firekeyboard.cpp:1404 -->
+			<var name="examine" value="vdu_b" />	<!-- options.cpp:29 -->
+			<var name="interface_target" value="vdu_e" />	<!-- cmd/ai/firekeyboard.cpp:2210 -->
+			<var name="jump_engaged" value="jump" />	<!-- cmd/ai/flykeyboard.cpp:479 -->
+			<var name="manifest" value="vdu_a" />	<!-- options.cpp:32 -->
+			<var name="missile_switch" value="vdu_d" />	<!-- cmd/ai/firekeyboard.cpp:2183 -->
+			<var name="objective" value="vdu_c" />	<!-- options.cpp:28 -->
+			<var name="overload" value="overload" />	<!-- gfx/cockpit.cpp:1253 -->
+			<var name="overload_stopped" value="overload_stopped" />	<!-- gfx/cockpit.cpp:1246 -->
+			<var name="repair" value="vdu_a" />	<!-- options.cpp:31 -->
+			<var name="scanning" value="vdu_c" />	<!-- options.cpp:27 -->
+			<var name="shield" value="vdu_d" />	<!-- cmd/ai/firekeyboard.cpp:142,161,179 -->
+			<var name="target" value="vdu_b" />	<!-- cmd/ai/firekeyboard.cpp:1256 -->
+			<var name="target_reverse" value="vdu_a" />	<!-- cmd/ai/firekeyboard.cpp:1263 -->
+			<var name="undocking_complete" value="undocking_complete" />	<!-- cmd/ai/firekeyboard.cpp:1354 -->
+			<var name="undocking_failed" value="undocking_failed" />	<!-- cmd/ai/firekeyboard.cpp:1362 -->
+			<var name="vdu_static" value="vdu_static" />	<!-- gfx/cockpit.cpp:2530 -->
+			<var name="view" value="vdu_b" />	<!-- options.cpp:30 -->
+			<var name="weapon_switch" value="vdu_d" />	<!-- cmd/ai/firekeyboard.cpp:2137 -->
+<!-- 			<var name=vsconfigvar value="\n" /> -->	<!-- gfx/cockpit.cpp:2767 ['variable not quoted'] -->
+		</section>
+		<section name="data" >
+			<var name="UnitCSV" value="modunits.csv" />	<!-- universe_generic.cpp:374 -->
+			<var name="ai_directory" value="ai" />	<!-- vsfilesystem.cpp:798 -->
+			<var name="animations" value="animations" />	<!-- vsfilesystem.cpp:790 -->
+			<var name="capship_roles" value="ESCORTCAP CAPITAL CARRIER BASE TROOP" />	<!-- cmd/role_bitmask.cpp:216 -->
+			<var name="cockpits" value="cockpits" />	<!-- vsfilesystem.cpp:788 -->
+			<var name="datadir" value="" />	<!-- vsfilesystem.cpp:694 -->
+			<var name="empty_cell_check" value="true" />	<!-- cmd/unit_generic.cpp:7574 -->
+			<var name="master_part_list" value="master_part_list" />	<!-- cmd/unit_csv.cpp:1731 cmd/unit_factory_server.cpp:23 cmd/unit_factory.cpp:36 -->
+			<var name="mountlocation" value="weapons" />	<!-- cmd/weapon_xml.cpp:516 -->
+			<var name="movies" value="movies" />	<!-- vsfilesystem.cpp:791 -->
+			<var name="python_bases" value="bases" />	<!-- python/init.cpp:225 -->
+			<var name="python_modules" value="modules" />	<!-- python/init.cpp:224 -->
+			<var name="sectors" value="sectors" />	<!-- options.cpp:118 vsfilesystem.cpp:787 -->
+			<var name="serialized_xml" value="serialized_xml" />	<!-- vsfilesystem.cpp:793 -->
+			<var name="sharedmeshes" value="meshes" />	<!-- vsfilesystem.cpp:796 -->
+			<var name="sharedsounds" value="sounds" />	<!-- vsfilesystem.cpp:795 -->
+			<var name="sharedtextures" value="textures" />	<!-- vsfilesystem.cpp:794 -->
+			<var name="sharedunits" value="units" />	<!-- vsfilesystem.cpp:797 -->
+			<var name="sprites" value="sprites" />	<!-- vsfilesystem.cpp:792 -->
+			<var name="universe_path" value="universe" />	<!-- options.cpp:117 vsfilesystem.cpp:789 -->
+			<var name="usingtemplates" value="true" />	<!-- cmd/unit_generic.cpp:1359 -->
+			<var name="verbose_debug" value="false" />	<!-- aldrv/al_sound.cpp:415 cmd/ai/aggressive.cpp:1166 gldrv/gl_texture.cpp:338 cmd/unit_generic.cpp:1536 -->
+			<var name="volume_format" value="pk3" />	<!-- vsfilesystem.cpp:874 -->
+		</section>
+		<section name="debug" >
+			<var name="showdiagnostics" value="false" />	<!-- cmd/basecomputer.cpp:5713 -->
+		</section>
+		<section name="economics" >
+			<var name="ship_sellback_price" value=".5" />	<!-- cmd/basecomputer.cpp:4432 -->
+			<var name="upgrade_sellback_price" value=".5" />	<!-- cmd/unit_interface.cpp:59 -->
+		</section>
+		<section name="flight" >
+			<var name="inertial::enable" value="true" />	<!-- cmd/ai/flybywire.cpp:171 -->
+			<var name="inertial::initial" value="false" />	<!-- cmd/ai/flybywire.cpp:170 cmd/ai/flykeyboard.cpp:283 -->
+		</section>
+		<section name="galaxy" >
+			<var name="AmbientLightFactor" value="0" />	<!-- galaxy_gen.cpp:210 -->
+			<var name="AtmosphereProbability" value="0.5" />	<!-- galaxy_gen.cpp:798 -->
+			<var name="CompactnessScale" value="1.5" />	<!-- galaxy_gen.cpp:1206 -->
+			<var name="DefaultAtmosphereTexture" value="sol/earthcloudmaptrans.png" />	<!-- galaxy_gen.cpp:752 -->
+			<var name="DefaultRingTexture" value="planets/ring.pngwrapx36wrapy2" />	<!-- galaxy_gen.cpp:855 -->
+			<var name="DoubleRingProbability" value=".025" />	<!-- galaxy_gen.cpp:843 -->
+			<var name="InnerRingRadius" value="1.5" />	<!-- galaxy_gen.cpp:848 -->
+			<var name="JumpCompactnessScale" value="1.5" />	<!-- galaxy_gen.cpp:1207 -->
+			<var name="MeanNaturalPhenomena" value="1" />	<!-- galaxy_gen.cpp:1209 -->
+			<var name="MeanStarBases" value="2" />	<!-- galaxy_gen.cpp:1210 -->
+			<var name="MoonRelativeToMoon" value=".8" />	<!-- galaxy_gen.cpp:888 -->
+			<var name="MoonRelativeToPlanet" value=".4" />	<!-- galaxy_gen.cpp:887 -->
+			<var name="OuterRingRadius" value="2.5" />	<!-- galaxy_gen.cpp:849 -->
+			<var name="PrisonSystem" value="enigma_sector/prison" />	<!-- cmd/ai/firekeyboard.cpp:1684 -->
+			<var name="PushValuesToMean" value="true" />	<!-- options.cpp:121 galaxy_gen.cpp:1190 -->
+			<var name="RingProbability" value=".1" />	<!-- galaxy_gen.cpp:842 -->
+			<var name="RockyRelativeToPrimary" value=".05" />	<!-- galaxy_gen.cpp:938 -->
+			<var name="SecondRingDifference" value=".4" />	<!-- galaxy_gen.cpp:875 -->
+			<var name="SmallUnitsMultiplier" value="0" />	<!-- galaxy_gen.cpp:1221 -->
+			<var name="StarRadiusScale" value="1000" />	<!-- galaxy_gen.cpp:1203,314,376 -->
+			<var name="police_faction" value="homeland-security" />	<!-- cmd/ai/firekeyboard.cpp:1648 -->
+		</section>
+		<section name="general" >
+			<var name="PercentageSpeedChangeToFaultSearch" value=".5" />	<!-- cmd/unit_generic.cpp:9086 -->
+			<var name="command_interpretor" value="false" />	<!-- main.cpp:332 -->
+			<var name="custompython" value="import custom;custom.processMessage" />	<!-- options.cpp:15 -->
+			<var name="debug_fs" value="0" />	<!-- vsfilesystem.cpp:40 -->
+			<var name="default_mission" value="test/test1.mission" />	<!-- main.cpp:289 -->
+			<var name="deleteoldsystems" value="true" />	<!-- options.cpp:19 -->
+			<var name="docking_fee" value="0" />	<!-- cmd/unit_generic.cpp:6558 -->
+			<var name="dockingtime" value="20" />	<!-- cmd/ai/firekeyboard.cpp:1487 cmd/unit_generic.cpp:6401 -->
+			<var name="empty_mission" value="internal.mission" />	<!-- options.cpp:14 -->
+			<var name="fuel_docking_fee" value="0" />	<!-- cmd/unit_generic.cpp:6541 -->
+			<var name="galaxy" value="milky_way.xml" />	<!-- main.cpp:337 vsfilesystem.cpp:799 -->
+			<var name="garbagecollectfrequency" value="20" />	<!-- options.cpp:17 -->
+			<var name="intro2" value="The #8080FFt#000000 key targets objects; #8080FFspace#000000 fires at them &amp; #8080FFa#000000 activates the SPEC drive. To" />	<!-- main.cpp:669 -->
+			<var name="intro4" value="wireframe jump-point and press #8080FFj#000000 to warp to a near star. Target a base or planet;" />	<!-- main.cpp:675 -->
+			<var name="jump_key_delay" value=".125" />	<!-- cmd/ai/flykeyboard.cpp:472 -->
+			<var name="load_last_savegame" value="false" />	<!-- main.cpp:488 -->
+			<var name="new_game_save_name" value="New_Game" />	<!-- options.cpp:12 -->
+			<var name="numoldsystems" value="6" />	<!-- options.cpp:18 -->
+			<var name="persistent_mission_across_ship_switch" value="true" />	<!-- cmd/basecomputer.cpp:4557 -->
+			<var name="pitch" value="0" />	<!-- cmd/unit_generic.cpp:1164 -->
+			<var name="quick_savegame_summaries" value="true" />	<!-- options.cpp:16 -->
+			<var name="quick_savegame_summaries_buffer" value="16384" />	<!-- options.cpp:13 -->
+			<var name="remember_savegame" value="true" />	<!-- options.cpp:11 -->
+			<var name="remove_downgrades_less_than_percent" value=".9" />	<!-- cmd/unit_generic.cpp:7388 -->
+			<var name="remove_impossible_downgrades" value="true" />	<!-- cmd/unit_generic.cpp:8358 -->
+			<var name="simulation_atom" value="0.1" />	<!-- cmd/ai/fire.cpp:404 vsfilesystem.cpp:850 -->
+			<var name="times_to_show_help_screen" value="3" />	<!-- options.cpp:10 gfx/nav/navscreen.cpp:170 -->
+			<var name="wheel_increment_lines" value="3" />	<!-- gui/slider.cpp:189 gui/staticdisplay.cpp:96 gui/picker.cpp:359 -->
+			<var name="write_savegame_on_exit" value="true" />	<!-- options.cpp:9 -->
+			<section name="intro1" >
+<!-- 				<var name="Welcome to Vega Strike! Use #8080FFTab#000000 to afterburn (#8080FF+,-#000000 cruise control) value=#8080FFarrows#000000 to steer." /> -->	<!-- main.cpp:666 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="intro3" >
+<!-- 				<var name=buy a jump drive for about 10000 credits value=fly to a" /> -->	<!-- main.cpp:672 ['variable not quoted', 'value not quoted'] -->
+			</section>
+			<section name="intro5" >
+<!-- 				<var name="When you get close a green box will appear. Inside the box value=#8080FFd#000000 will land." /> -->	<!-- main.cpp:678 ['variable not quoted', 'value not quoted'] -->
+			</section>
+		</section>
+		<section name="graphics" >
+			<var name="AlphaTestCutoff" value=".8" />	<!-- gfx/cockpit.cpp:2438 -->
+			<var name="BeamFadeoutHitLength" value=".95" />	<!-- cmd/beam_generic.cpp:103 -->
+			<var name="BeamFadeoutLength" value=".8" />	<!-- cmd/beam_generic.cpp:102 -->
+			<var name="BlendGuns" value="true" />	<!-- cmd/beam.cpp:80 cmd/bolt.cpp:104 -->
+<!-- 			<var name="CityLightFilter" value=XMLSupport::tostring(((int)TRILINEAR)) /> -->	<!-- gfx/sphere_generic.cpp:262 ['value not quoted'] -->
+			<var name="ClearOnStartup" value="true" />	<!-- gldrv/gl_init.cpp:553 -->
+			<var name="ForceLighting" value="true" />	<!-- gfx/mesh_bxm.cpp:405 gfx/mesh_xml.cpp:316 -->
+			<var name="HaloOffset" value=".1" />	<!-- gfx/halo.cpp:43 gfx/animation.cpp:191,374 -->
+			<var name="LockVertexArrays" value="true" />	<!-- gldrv/gl_init.cpp:197 -->
+			<var name="LogoOffset" value="-1" />	<!-- gfx/aux_logo.cpp:151 -->
+			<var name="LogoOffsetScale" value="-4.0" />	<!-- gfx/aux_logo.cpp:152 -->
+			<var name="ModelDetail" value="1" />	<!-- gldrv/gl_init.cpp:411 -->
+			<var name="OptimizeVertexArrays" value="false" />	<!-- gfx/mesh_xml.cpp:1805 -->
+			<var name="OptimizeVertexCondition" value="1.0" />	<!-- gfx/mesh_xml.cpp:1806 -->
+			<var name="SharedVertexArrays" value="true" />	<!-- gfx/mesh_xml.cpp:424 -->
+			<var name="SmoothShade" value="true" />	<!-- gldrv/gl_init.cpp:449 -->
+			<var name="StretchBolts" value="0" />	<!-- cmd/bolt.cpp:105 -->
+			<var name="SwitchCockpitToDefaultOnUnitSwitch" value="false" />	<!-- gfx/cockpit.cpp:2876 -->
+			<var name="UnitSwitchCockpitChange" value="false" />	<!-- gfx/cockpit.cpp:2875 -->
+			<var name="UseAnimations" value="true" />	<!-- gldrv/gl_init.cpp:417 -->
+			<var name="UseLogos" value="true" />	<!-- gldrv/gl_init.cpp:415 -->
+			<var name="UsePlanetTextures" value="false" />	<!-- gldrv/gl_init.cpp:414 -->
+			<var name="UseShipTextures" value="false" />	<!-- gldrv/gl_init.cpp:413 -->
+			<var name="UseTextures" value="true" />	<!-- gldrv/gl_init.cpp:412 -->
+			<var name="UseVSSprites" value="true" />	<!-- gldrv/gl_init.cpp:416 -->
+			<var name="UseVideos" value="true" />	<!-- gldrv/gl_init.cpp:418 -->
+			<var name="absolute_relation_color" value="false" />	<!-- gfx/cockpit.cpp:205 -->
+			<var name="always_make_smooth_cam" value="false" />	<!-- options.cpp:61 -->
+			<var name="anim_far_percent" value=".8" />	<!-- gfx/animation.cpp:380 -->
+			<var name="armor_flash_animation" value="armorflash.ani" />	<!-- gfx/cockpit.cpp:2095 -->
+			<var name="aspect" value="1.33" />	<!-- gldrv/gl_init.cpp:408 -->
+			<var name="atmosphere_diffuse" value="1" />	<!-- cmd/planet.cpp:46,88 -->
+			<var name="atmosphere_emmissive" value="1" />	<!-- cmd/planet.cpp:45,87 -->
+			<var name="atmosphere_texture_resolution" value="512" />	<!-- cmd/planet.cpp:105,62 -->
+			<var name="auto_message_nav_switch_time_lim" value=".15" />	<!-- gfx/vdu.cpp:1600 -->
+			<var name="auto_message_time_lim" value="5" />	<!-- gfx/vdu.cpp:747,950 -->
+			<var name="automatic_landing_zone_warning" value="comm_docking.ani" />	<!-- gfx/cockpit.cpp:915 -->
+			<var name="automatic_landing_zone_warning1" value="comm_docking.ani" />	<!-- gfx/cockpit.cpp:916 -->
+			<var name="automatic_landing_zone_warning2" value="comm_docking.ani" />	<!-- gfx/cockpit.cpp:917 -->
+			<var name="automatic_landing_zone_warning_text" value="Now Entering an 'Automatic Landing Zone'." />	<!-- gfx/cockpit.cpp:918 -->
+			<var name="autopilot_front_bias" value="1.65" />	<!-- gfx/cockpit.cpp:2052 -->
+			<var name="autopilot_rotation_speed" value=".15" />	<!-- gfx/cockpit.cpp:2824 -->
+			<var name="autopilot_side_bias" value="1.1" />	<!-- gfx/cockpit.cpp:2051 -->
+			<var name="background" value="true" />	<!-- options.cpp:49 -->
+			<var name="background_star_streak_velocity_scale" value="0" />	<!-- gfx/background.cpp:292 -->
+			<var name="base_alpha_test_cutoff" value="0" />	<!-- cmd/base_interface.cpp:169 -->
+			<var name="base_draw_locationtext" value="false" />	<!-- cmd/base_interface.cpp:249 -->
+			<var name="base_drawlocationborders" value="false" />	<!-- cmd/base_interface.cpp:319 -->
+			<var name="base_enable_debugmarkers" value="false" />	<!-- cmd/base_interface.cpp:320 -->
+			<var name="base_enable_locationmarkers" value="false" />	<!-- cmd/base_interface.cpp:248 -->
+			<var name="base_faction_color_darkness" value=".75" />	<!-- cmd/basecomputer.cpp:409 -->
+			<var name="base_fov" value="90" />	<!-- gfx/cockpit.cpp:1870 cmd/base_interface.cpp:182 -->
+			<var name="base_locationmarker_distance" value="0.5" />	<!-- cmd/base_interface.cpp:736 -->
+			<var name="base_locationmarker_drawalways" value="false" />	<!-- cmd/base_interface.cpp:250,735 -->
+			<var name="base_locationmarker_sprite" value="" />	<!-- cmd/base_interface.cpp:269 -->
+			<var name="base_locationmarker_textcolor_b" value="1" />	<!-- cmd/base_interface.cpp:260 -->
+			<var name="base_locationmarker_textcolor_g" value="1" />	<!-- cmd/base_interface.cpp:259 -->
+			<var name="base_locationmarker_textcolor_r" value="1" />	<!-- cmd/base_interface.cpp:258 -->
+			<var name="base_locationmarker_textoffset_x" value="0" />	<!-- cmd/base_interface.cpp:256,324 -->
+			<var name="base_locationmarker_textoffset_y" value="0" />	<!-- cmd/base_interface.cpp:257,325 -->
+			<var name="base_max_height" value="0" />	<!-- cmd/base_interface.cpp:392,92 -->
+			<var name="base_max_width" value="0" />	<!-- cmd/base_interface.cpp:391,91 -->
+			<var name="base_print_cargo_volume" value="true" />	<!-- cmd/basecomputer.cpp:2289 -->
+			<var name="base_saturation" value="1.0" />	<!-- cmd/basecomputer.cpp:119 gui/guidefs.cpp:38 -->
+			<var name="base_text_background_alpha" value="0.0625" />	<!-- cmd/base_interface.cpp:1354,252,400 -->
+			<var name="basefont" value="helvetica12" />	<!-- gfx/hud.cpp:42,55 -->
+			<var name="bitmap_alphamap" value="true" />	<!-- gfx/aux_texture.cpp:277,397 -->
+			<var name="blend_cockpit" value="false" />	<!-- gfx/cockpit.cpp:2427 -->
+			<var name="blend_panels" value="false" />	<!-- gfx/cockpit.cpp:2426 -->
+			<var name="blur_bases" value="true" />	<!-- cmd/base_interface.cpp:123 -->
+			<var name="bolt_offset" value="-.2" />	<!-- cmd/bolt.cpp:46 -->
+			<var name="bolt_pixel_size" value=".5" />	<!-- cmd/bolt.cpp:118 -->
+			<var name="camera_pan_speed" value="0.0001" />	<!-- options.cpp:48 -->
+			<var name="can_target_asteroid" value="true" />	<!-- cmd/ai/firekeyboard.cpp:1073 -->
+			<var name="can_target_cargo" value="false" />	<!-- cmd/ai/firekeyboard.cpp:1087 -->
+			<var name="can_target_sun" value="false" />	<!-- cmd/ai/firekeyboard.cpp:1069,1139 -->
+			<var name="cargo_rotates_at_same_speed" value="true" />	<!-- cmd/unit_generic.cpp:8707 -->
+			<var name="cargo_rotation_speed" value="60" />	<!-- cmd/unit_generic.cpp:8581 -->
+			<var name="circle_accuracy" value="0.1" />	<!-- gldrv/gl_misc.cpp:36 -->
+			<var name="city_light_strength" value="10" />	<!-- cmd/planet.cpp:194 -->
+			<var name="client_anim_scale" value="3" />	<!-- networking/netclient_clients.cpp:26 -->
+			<var name="cockpit" value="true" />	<!-- options.cpp:50 -->
+			<var name="cockpit_drift_amount" value="0.15" />	<!-- gfx/cockpit.cpp:2310 -->
+			<var name="cockpit_drift_limit" value="1.00" />	<!-- gfx/cockpit.cpp:2309 -->
+			<var name="cockpit_drift_ref_accel" value="100" />	<!-- gfx/cockpit.cpp:2311 -->
+			<var name="cockpit_no_face_cull" value="true" />	<!-- gfx/cockpit.cpp:2370 -->
+			<var name="cockpit_shake" value="3" />	<!-- gfx/cockpit.cpp:2082 -->
+			<var name="cockpit_shake_max" value="20" />	<!-- gfx/cockpit.cpp:2083 -->
+			<var name="cockpit_smooth_texture" value="false" />	<!-- gfx/cockpit_xml.cpp:204 -->
+			<var name="cockpit_z_partitions" value="1" />	<!-- gfx/cockpit.cpp:2349 -->
+			<var name="colordepth" value="32" />	<!-- gldrv/winsys.cpp:291,776 -->
+			<var name="comm_static" value="static.ani" />	<!-- cmd/ai/firekeyboard.cpp:1587 gfx/cockpit.cpp:2952 -->
+			<var name="crosshair_smooth_texture" value="true" />	<!-- gfx/cockpit_xml.cpp:206 -->
+			<var name="damage_flash_alpha" value="true" />	<!-- gfx/cockpit.cpp:2122 -->
+			<var name="damage_flash_length" value=".1" />	<!-- gfx/cockpit.cpp:2388 -->
+			<var name="day_city_light_strength" value="0" />	<!-- cmd/planet.cpp:195 -->
+			<var name="death_menu_script" value="" />	<!-- gfx/cockpit.cpp:2659 -->
+			<var name="death_scene_time" value="4" />	<!-- gfx/cockpit.cpp:2657 -->
+			<var name="default_boot_message" value="" />	<!-- main.cpp:409 -->
+			<var name="default_engine_activation" value=".00048828125" />	<!-- cmd/unit_csv.cpp:417 -->
+			<var name="detail_texture_blankout" value="3" />	<!-- gldrv/gl_texture.cpp:817 -->
+			<var name="detail_texture_full_color" value="1" />	<!-- gldrv/gl_texture.cpp:818 -->
+			<var name="detail_texture_scale" value="1" />	<!-- gfx/mesh_xml.cpp:294 -->
+			<var name="detail_texture_trilinear" value="true" />	<!-- gldrv/gl_texture.cpp:806 gfx/mesh_gfx.cpp:127 -->
+			<var name="disabled_cockpit_allowed" value="true" />	<!-- options.cpp:51 -->
+			<var name="displaylists" value="false" />	<!-- gldrv/gl_init.cpp:457 -->
+			<var name="docking_comm_anim" value="false" />	<!-- cmd/ai/firekeyboard.cpp:1349 -->
+			<var name="drawVSarmor" value="true" />	<!-- gfx/vdu.cpp:507 -->
+			<var name="draw_cockpit_from_chase_cam" value="false" />	<!-- gfx/cockpit.cpp:2433 -->
+			<var name="draw_cockpit_from_padlock_cam" value="false" />	<!-- gfx/cockpit.cpp:2436 -->
+			<var name="draw_cockpit_from_panning_cam" value="false" />	<!-- gfx/cockpit.cpp:2434 -->
+			<var name="draw_cockpit_from_target_cam" value="false" />	<!-- gfx/cockpit.cpp:2435 -->
+			<var name="draw_docking_boxes" value="true" />	<!-- gfx/cockpit.cpp:543,614 -->
+			<var name="draw_jump_target_nav_symbol" value="true" />	<!-- gfx/cockpit.cpp:603 -->
+			<var name="draw_nav_button_labels" value="true" />	<!-- gfx/nav/navscreen.cpp:1348 -->
+			<var name="draw_near_stars_in_front_of_planets" value="false" />	<!-- options.cpp:63 -->
+			<var name="draw_star_body" value="true" />	<!-- cmd/planet.cpp:354 -->
+			<var name="draw_star_glow" value="true" />	<!-- cmd/planet.cpp:352 -->
+			<var name="draw_star_glow_halo" value="false" />	<!-- gfx/halo.cpp:47 -->
+			<var name="draw_target_nav_symbol" value="true" />	<!-- gfx/cockpit.cpp:602 -->
+			<var name="draw_vdus_from_chase_cam" value="false" />	<!-- gfx/cockpit.cpp:2428 -->
+			<var name="draw_vdus_from_padlock_cam" value="false" />	<!-- gfx/cockpit.cpp:2431 -->
+			<var name="draw_vdus_from_panning_cam" value="false" />	<!-- gfx/cockpit.cpp:2429 -->
+			<var name="draw_vdus_from_target_cam" value="false" />	<!-- gfx/cockpit.cpp:2430 -->
+			<var name="draw_velocity_indicator" value="true" />	<!-- gfx/cockpit.cpp:2263 -->
+			<var name="draw_weapons" value="false" />	<!-- cmd/unit.cpp:289,496 -->
+			<var name="eject_rotation_speed" value="0" />	<!-- cmd/unit_generic.cpp:8582 -->
+			<var name="engine_length_scale" value="1.25" />	<!-- gfx/halo_system.cpp:125 -->
+			<var name="engine_radii_scale" value=".4" />	<!-- gfx/halo_system.cpp:124 -->
+			<var name="enter_client_ani" value="warp.ani" />	<!-- networking/netclient_clients.cpp:22,23 -->
+			<var name="explore_for_map" value="false" />	<!-- gfx/nav/drawgalaxy.cpp:238 -->
+			<var name="explosion_animation" value="explosion_orange.ani" />	<!-- cmd/unit_csv.cpp:1256 cmd/unit_damage.cpp:268 -->
+			<var name="explosion_damage_edge" value=".125" />	<!-- cmd/unit_damage.cpp:290 -->
+			<var name="explosion_face_player" value="true" />	<!-- cmd/unit_damage.cpp:281 -->
+			<var name="explosion_size" value="3" />	<!-- cmd/unit_generic.cpp:5114 -->
+			<var name="explosionforce" value=".5" />	<!-- cmd/unit_damage.cpp:135 -->
+			<var name="explosiontorque" value=".001" />	<!-- cmd/unit_damage.cpp:142 -->
+			<var name="ext_clamp_to_border" value="true" />	<!-- gldrv/gl_init.cpp:460 -->
+			<var name="ext_clamp_to_edge" value="true" />	<!-- gldrv/gl_init.cpp:459 -->
+			<var name="faction_dependant_textures" value="true" />	<!-- gfx/mesh_gfx.cpp:128,182 -->
+			<var name="far_stars_sprite_size" value="2" />	<!-- gfx/background.cpp:37 -->
+			<var name="far_stars_sprite_texture" value="" />	<!-- gfx/background.cpp:36 -->
+			<var name="flash_behind_hud" value="true" />	<!-- gfx/cockpit.cpp:2389 -->
+			<var name="fog" value="true" />	<!-- cmd/nebula_generic.cpp:103 -->
+			<var name="fog_fade_in_percent" value="0.5" />	<!-- cmd/nebula.cpp:66 -->
+			<var name="fog_time" value=".01" />	<!-- cmd/nebula.cpp:37,65 -->
+			<var name="fogdetail" value="0" />	<!-- gldrv/gl_init.cpp:329 -->
+			<var name="font" value="helvetica12" />	<!-- gfx/hud.cpp:41,54 -->
+			<var name="font_antialias" value="true" />	<!-- gfx/hud.cpp:213 -->
+			<var name="font_point" value="16" />	<!-- gfx/hud.cpp:212 cmd/base_util.cpp:487 -->
+			<var name="font_width_hack" value="0.925" />	<!-- gui/painttext.cpp:752 -->
+			<var name="forceOneOneShieldBlend" value="true" />	<!-- cmd/unit_xml.cpp:459 -->
+			<var name="force_glowmap_restore_write_to_depthmap" value="true" />	<!-- gfx/mesh_gfx.cpp:1025 -->
+			<var name="fov" value="78" />	<!-- gldrv/gl_init.cpp:407 gfx/cockpit.cpp:1777 -->
+			<var name="framerate_changes_shader" value="false" />	<!-- gldrv/gl_program.cpp:222 -->
+			<var name="fullscreen" value="false" />	<!-- gldrv/winsys.cpp:290,775 -->
+			<var name="gauge_static" value="static.ani" />	<!-- gfx/cockpit.cpp:1497 -->
+			<var name="generic_cargo_rotation_speed" value="1" />	<!-- cmd/unit_generic.cpp:8579 -->
+			<var name="glow_ambient_star_light" value="false" />	<!-- cmd/planet.cpp:358 -->
+			<var name="glow_diffuse_star_light" value="false" />	<!-- cmd/planet.cpp:359 -->
+			<var name="glut_stencil" value="true" />	<!-- gldrv/winsys.cpp:778 -->
+			<var name="gui_font_scale" value=".75" />	<!-- gui/glut_support.cpp:73 -->
+			<var name="halos_by_velocity" value="false" />	<!-- gfx/halo_system.cpp:163,233 -->
+			<var name="halosparklerate" value="20" />	<!-- gfx/halo_system.cpp:257 -->
+			<var name="head_lag" value="10" />	<!-- gfx/cockpit.cpp:1748 -->
+			<var name="high_quality_font" value="false" />	<!-- gfx/hud.cpp:131,180,211 cmd/base_util.cpp:486 -->
+<!-- 			<var name="high_quality_font_computer" value=vs_config-&gt;getVariable ('graphics','high_quality_font','false') /> -->	<!-- gui/font.cpp:42 ['value not quoted'] -->
+			<var name="high_quality_sprites" value="false" />	<!-- gfx/vdu.cpp:208 -->
+			<var name="hull_flash_animation" value="hullflash.ani" />	<!-- gfx/cockpit.cpp:2096 -->
+			<var name="include_base_name_on_dock" value="true" />	<!-- cmd/basecomputer.cpp:1756 -->
+			<var name="inital_zoom_factor" value="2.25" />	<!-- gfx/cockpit.cpp:2837 gfx/cockpit_generic.cpp:172,300,556,651 networking/netclient.cpp:401 -->
+			<var name="initial_boot_message" value="Loading..." />	<!-- main.cpp:410 -->
+			<var name="insys_jump_ani_second_ahead" value="4" />	<!-- cmd/unit_generic.cpp:3253,4291 -->
+			<var name="insys_jump_ani_second_ahead_end" value=".03" />	<!-- cmd/unit_generic.cpp:4292 -->
+			<var name="insys_jump_animation" value="warp.ani" />	<!-- cmd/unit_generic.cpp:3235,4281 -->
+			<var name="insys_jump_animation_growth" value=".99" />	<!-- cmd/unit_generic.cpp:3247 -->
+			<var name="insys_jump_animation_size" value="4" />	<!-- cmd/unit_generic.cpp:3246 -->
+			<var name="jumpanimationshrink" value=".95" />	<!-- options.cpp:45 -->
+			<var name="jumpgate" value="warp.ani" />	<!-- options.cpp:44 -->
+			<var name="jumpgatesize" value="1.75" />	<!-- options.cpp:46 -->
+			<var name="last_message_time" value="5" />	<!-- gfx/vdu.cpp:845 -->
+			<var name="lightcutoff" value=".06" />	<!-- gldrv/gl_light.cpp:334 -->
+			<var name="lightoptimalintensity" value=".06" />	<!-- gldrv/gl_light.cpp:335 -->
+			<var name="lightsaturation" value=".95" />	<!-- gldrv/gl_light.cpp:336 -->
+			<var name="lock_significant_target_box" value="true" />	<!-- gfx/cockpit.cpp:611 -->
+			<var name="locklight_time" value="1" />	<!-- gfx/cockpit.cpp:1264,1274 -->
+			<var name="mac_shader_name" value="mac" />	<!-- gldrv/gl_program.cpp:121 -->
+			<var name="main_menu" value="false" />	<!-- main.cpp:461 -->
+			<var name="max_animation_time" value="1000" />	<!-- cmd/unit_xml.cpp:500 -->
+			<var name="max_cubemap_size" value="1024" />	<!-- gfx/background.cpp:45 -->
+			<var name="max_map_nodes" value="256000" />	<!-- gfx/nav/navscreen.cpp:160 -->
+			<var name="max_movie_dimension" value="65536" />	<!-- gldrv/gl_init.cpp:448 -->
+			<var name="max_texture_dimension" value="65536" />	<!-- gldrv/gl_init.cpp:447 -->
+			<var name="mesh_animation_max_frames_skipped" value="3" />	<!-- gfx/mesh.cpp:277 -->
+			<var name="mesh_far_percent" value=".8" />	<!-- gfx/mesh_gfx.cpp:308 -->
+			<var name="mipmapdetail" value="2" />	<!-- gldrv/gl_init.cpp:450 -->
+			<var name="missile_explosion_radius_mult" value="1" />	<!-- cmd/missile_generic.cpp:57 -->
+			<var name="missilesparkle" value="false" />	<!-- cmd/missile.h:20 -->
+			<var name="multitexture_glowmaps" value="true" />	<!-- gfx/mesh_gfx.cpp:710 -->
+			<var name="nav_max_search_size" value="16384" />	<!-- gfx/nav/navpath.cpp:289 -->
+			<var name="nav_symbol_size" value=".25" />	<!-- gfx/cockpit.cpp:2239,2270,606 -->
+			<var name="near_stars_alpha" value="false" />	<!-- gfx/star.cpp:415,545 -->
+			<var name="near_stars_alpha_blend" value="false" />	<!-- gfx/star.cpp:416 -->
+			<var name="near_stars_sprite_size" value="2" />	<!-- gfx/star.cpp:390 -->
+			<var name="near_stars_sprite_texture" value="" />	<!-- gfx/star.cpp:389 -->
+			<var name="num_far_stars" value="2000" />	<!-- options.cpp:55 -->
+			<var name="num_messages" value="2" />	<!-- gfx/vdu.cpp:846 -->
+			<var name="num_near_stars" value="1000" />	<!-- options.cpp:54 -->
+			<var name="num_times_to_draw_shine" value="2" />	<!-- cmd/planet.cpp:423 -->
+			<var name="numlights" value="4" />	<!-- gldrv/gl_light.cpp:337 -->
+			<var name="offset_sprites_by_pos" value="true" />	<!-- cmd/base_util.cpp:52,71 -->
+			<var name="only_scanner_modes_static" value="true" />	<!-- gfx/vdu.cpp:21 -->
+			<var name="only_stretch_in_warp" value="true" />	<!-- cmd/unit.h:227 -->
+			<var name="pan_on_auto" value="true" />	<!-- gfx/cockpit.cpp:2024,2815 -->
+			<var name="panel_smooth_texture" value="true" />	<!-- gfx/cockpit_xml.cpp:205 -->
+			<var name="per_pixel_lighting" value="true" />	<!-- gfx/mesh_xml.cpp:478 -->
+			<var name="percent_shockwave" value=".5" />	<!-- cmd/unit_damage.cpp:307 -->
+			<var name="planet_detail" value="24" />	<!-- cmd/planet.cpp:200,219,238,320 -->
+			<var name="precull_dist" value="500000000" />	<!-- options.cpp:62 -->
+			<var name="print_ecm_status" value="true" />	<!-- gfx/vdu.cpp:1124 -->
+			<var name="reduced_vdus_height" value="0" />	<!-- gfx/vdu.cpp:1577,215,592 -->
+			<var name="reduced_vdus_width" value="0" />	<!-- gfx/vdu.cpp:1576,214,591 -->
+			<var name="reflection" value="true" />	<!-- gldrv/gl_init.cpp:452 -->
+			<var name="reflectivity" value=".2" />	<!-- options.cpp:59 -->
+<!-- 			<var name="rgb_pixel_format" value=((bpp==16)?'555':'888') /> -->	<!-- gldrv/winsys.cpp:209 ['value not quoted'] -->
+			<var name="s3tc" value="true" />	<!-- gldrv/gl_init.cpp:458 -->
+			<var name="sector_map_ortho_view" value="false" />	<!-- gfx/nav/navscreen.cpp:127 -->
+			<var name="separatespecularcolor" value="false" />	<!-- gldrv/gl_light.cpp:338 gfx/mesh_gfx.cpp:1049,707,821,949 -->
+			<var name="set_raster_text_color" value="true" />	<!-- gfx/hud.cpp:317 gui/painttext.cpp:212 -->
+			<var name="shader_name" value="default" />	<!-- gldrv/gl_program.cpp:123 -->
+			<var name="shake_limit" value="25" />	<!-- gfx/cockpit.cpp:2307 -->
+			<var name="shake_magnitude" value="0.3" />	<!-- gfx/cockpit.cpp:2308 -->
+			<var name="shake_reduction" value="8" />	<!-- gfx/cockpit.cpp:2306 -->
+			<var name="shake_speed" value="50" />	<!-- gfx/cockpit.cpp:2305 -->
+			<var name="shield_detail" value="16" />	<!-- cmd/unit_csv.cpp:1267 cmd/unit_xml.cpp:2121 -->
+			<var name="shield_flash_animation" value="" />	<!-- gfx/cockpit.cpp:2094 -->
+			<var name="shield_texture" value="shield.bmp" />	<!-- cmd/unit_csv.cpp:1268 cmd/unit_xml.cpp:2113,2122 -->
+			<var name="shockwave_animation" value="explosion_wave.ani" />	<!-- cmd/unit_damage.cpp:310 -->
+			<var name="shockwave_growth" value="1.05" />	<!-- cmd/unit_damage.cpp:309 -->
+			<var name="shove_camera_down" value=".3" />	<!-- gfx/cockpit.cpp:3000 -->
+			<var name="show_respawn_text" value="false" />	<!-- gfx/cockpit.cpp:2650 -->
+			<var name="smart_targetting_key" value="true" />	<!-- cmd/ai/firekeyboard.cpp:1948,2032 -->
+			<var name="sparkeblend" value="false" />	<!-- gfx/particle.cpp:121 -->
+			<var name="sparkegrowrate" value="200.0" />	<!-- gfx/particle.cpp:17 -->
+			<var name="sparkesize" value="1.5" />	<!-- gfx/particle.cpp:103 -->
+			<var name="sparkesmooth" value="false" />	<!-- gfx/particle.cpp:106 -->
+			<var name="sparkleabsolutespeed" value=".02" />	<!-- gfx/halo_system.cpp:39 -->
+			<var name="sparklealpha" value="2.5" />	<!-- gfx/particle.cpp:19 -->
+			<var name="sparkleenginesizerelativetoship" value="0.1875" />	<!-- gfx/halo_system.cpp:60 -->
+			<var name="sparklefade" value="0.1" />	<!-- gfx/particle.cpp:18 -->
+			<var name="sparklefixedsize" value="0" />	<!-- gfx/halo_system.cpp:40 -->
+			<var name="sparkleflare" value=".15" />	<!-- gfx/halo_system.cpp:37 -->
+			<var name="sparklerate" value="5" />	<!-- cmd/unit.cpp:561 -->
+			<var name="sparklescale" value="8" />	<!-- gfx/halo_system.cpp:35 -->
+			<var name="sparklesizeenginerelative" value=".125" />	<!-- gfx/halo_system.cpp:53 -->
+			<var name="sparklespeed" value=".5" />	<!-- gfx/halo_system.cpp:36 -->
+			<var name="sparklespread" value=".04" />	<!-- gfx/halo_system.cpp:38 -->
+			<var name="sparkletexture" value="supernova.bmp" />	<!-- gfx/particle.cpp:113 -->
+			<var name="sparksize" value="1" />	<!-- gfx/particle.cpp:93 -->
+			<var name="specmap_with_reflection" value="false" />	<!-- gfx/mesh_gfx.cpp:1161 -->
+			<var name="splash_audio" value="" />	<!-- main.cpp:460 -->
+			<var name="splash_screen" value="vega_splash.ani" />	<!-- options.cpp:52 main.cpp:459 -->
+			<var name="split_dead_subunits" value="true" />	<!-- cmd/unit_damage.cpp:36 -->
+			<var name="star_allowable_sectors" value="Vega Sol" />	<!-- gfx/star.cpp:130 -->
+			<var name="star_body_radius" value=".33" />	<!-- cmd/planet_generic.cpp:428 cmd/planet.cpp:351 -->
+			<var name="star_glow_radius" value="1.33" />	<!-- cmd/planet.cpp:355 -->
+			<var name="star_overlap" value="1" />	<!-- gfx/star.cpp:128 -->
+			<var name="star_shine" value="shine.ani" />	<!-- cmd/planet.cpp:366 -->
+			<var name="star_spread_attenuation" value=".2" />	<!-- gfx/star.cpp:437 -->
+			<var name="star_spreading" value="30000" />	<!-- options.cpp:56 -->
+			<var name="star_streaks" value="false" />	<!-- gfx/star.cpp:313 -->
+			<var name="starblend" value="true" />	<!-- options.cpp:64 -->
+			<var name="starcoloraverage" value=".6" />	<!-- gfx/star.cpp:97 -->
+			<var name="starcolorcutoff" value=".1" />	<!-- gfx/star.cpp:111 -->
+			<var name="starcolorincrement" value="100" />	<!-- gfx/star.cpp:98 -->
+			<var name="starcolorpower" value=".25" />	<!-- gfx/star.cpp:83 -->
+			<var name="starluminscale" value=".001" />	<!-- gfx/star.cpp:96 -->
+			<var name="starmincolorval" value=".3" />	<!-- gfx/star.cpp:82 -->
+			<var name="stars_alpha_test_cutoff" value=".2" />	<!-- gfx/star.cpp:417 -->
+			<var name="stars_dont_move" value="false" />	<!-- gfx/star.cpp:404 -->
+			<var name="startup_cockpit_view" value="front" />	<!-- main.cpp:483 -->
+			<var name="system_map_ortho_view" value="false" />	<!-- gfx/nav/navscreen.cpp:126 -->
+			<var name="target_null_if_no_unit" value="false" />	<!-- cmd/ai/firekeyboard.cpp:1767 -->
+			<var name="text_delay" value=".05" />	<!-- cmd/base_interface.cpp:483 -->
+			<var name="text_display_lists" value="true" />	<!-- gfx/hud.cpp:132 -->
+			<var name="text_speed" value=".025" />	<!-- cmd/base_interface.cpp:502 -->
+			<var name="texture_compression" value="0" />	<!-- gldrv/gl_init.cpp:451 -->
+			<var name="torque_star_streak_scale" value="1" />	<!-- gfx/star.cpp:339 -->
+			<var name="tractor.scoop" value="true" />	<!-- cmd/beam_generic.cpp:106,68 -->
+			<var name="tractor.scoop_alpha_multiplier" value="2.5" />	<!-- cmd/beam_generic.cpp:107 -->
+			<var name="tractor.scoop_long_slices" value="10" />	<!-- cmd/beam_generic.cpp:109,67 -->
+			<var name="tractor.scoop_rad_slices" value="10" />	<!-- cmd/beam_generic.cpp:108,66 -->
+			<var name="unprintable_faction_extension" value="citizen" />	<!-- gfx/nav/navscreen.cpp:683 -->
+			<var name="unprintable_factions" value="" />	<!-- cmd/basecomputer.cpp:4654 gfx/nav/navscreen.cpp:682 -->
+			<var name="update_nav_after_jump" value="false" />	<!-- gfx/cockpit.cpp:1855 gfx/nav/navscreen.cpp:1229 -->
+			<var name="usePlanetAtmosphere" value="true" />	<!-- options.cpp:57 -->
+			<var name="usePlanetFog" value="true" />	<!-- options.cpp:58 -->
+			<var name="use_bsp_heuristic" value="false" />	<!-- cmd/unit_bsp.cpp:140 -->
+			<var name="use_detail_texture" value="true" />	<!-- gfx/mesh_xml.cpp:267 -->
+			<var name="use_faction_gui_background_color" value="true" />	<!-- cmd/basecomputer.cpp:408 -->
+			<var name="use_star_coords" value="true" />	<!-- gfx/background.cpp:40,42 -->
+			<var name="use_wireframe" value="0" />	<!-- gldrv/gl_init.cpp:446 -->
+			<var name="vbo" value="false" />	<!-- options.cpp:53 -->
+			<var name="vdu_static" value="static.ani" />	<!-- gfx/cockpit.cpp:2526 -->
+			<var name="velocity_star_streak_max" value="100" />	<!-- gfx/star.cpp:330 -->
+			<var name="velocity_star_streak_min" value="1" />	<!-- gfx/star.cpp:319 -->
+			<var name="velocity_star_streak_scale" value="5" />	<!-- gfx/star.cpp:318 -->
+			<var name="vista_draw_stars" value="false" />	<!-- gfx/star.cpp:691 -->
+			<var name="warp.fovlink.referencekps" value="0" />	<!-- gfx/cockpit.cpp:3144 -->
+			<var name="warp.fovlink.shake.asymptotic" value="1" />	<!-- gfx/cockpit.cpp:3135 -->
+			<var name="warp.fovlink.shake.exp" value="1.5" />	<!-- gfx/cockpit.cpp:3134 -->
+			<var name="warp.fovlink.shake.hiref" value="200000" />	<!-- gfx/cockpit.cpp:3133 -->
+			<var name="warp.fovlink.shake.loref" value="10000" />	<!-- gfx/cockpit.cpp:3132 -->
+			<var name="warp.fovlink.shake.multiplier.back" value="0" />	<!-- gfx/cockpit.cpp:3141 -->
+			<var name="warp.fovlink.shake.multiplier.front" value="0" />	<!-- gfx/cockpit.cpp:3140 -->
+			<var name="warp.fovlink.shake.multiplier.perpendicular" value="0" />	<!-- gfx/cockpit.cpp:3142 -->
+			<var name="warp.fovlink.shake.offset.back" value="0" />	<!-- gfx/cockpit.cpp:3138 -->
+			<var name="warp.fovlink.shake.offset.front" value="0" />	<!-- gfx/cockpit.cpp:3137 -->
+			<var name="warp.fovlink.shake.offset.perpendicular" value="0" />	<!-- gfx/cockpit.cpp:3139 -->
+			<var name="warp.fovlink.shake.speed" value="10" />	<!-- gfx/cockpit.cpp:3136 -->
+			<var name="warp.fovlink.smoothing" value=".4" />	<!-- gfx/cockpit.cpp:3183 gfx/star.cpp:320 -->
+			<var name="warp.fovlink.stable.asymptotic" value="1" />	<!-- gfx/cockpit.cpp:3124 -->
+			<var name="warp.fovlink.stable.exp" value="0.5" />	<!-- gfx/cockpit.cpp:3123 -->
+			<var name="warp.fovlink.stable.hiref" value="100000" />	<!-- gfx/cockpit.cpp:3122 -->
+			<var name="warp.fovlink.stable.loref" value="1" />	<!-- gfx/cockpit.cpp:3121 -->
+			<var name="warp.fovlink.stable.multiplier.back" value="1.5" />	<!-- gfx/cockpit.cpp:3129 -->
+			<var name="warp.fovlink.stable.multiplier.front" value="0.85" />	<!-- gfx/cockpit.cpp:3128 -->
+			<var name="warp.fovlink.stable.multiplier.perpendicular" value="1.25" />	<!-- gfx/cockpit.cpp:3130 -->
+			<var name="warp.fovlink.stable.offset.back" value="0" />	<!-- gfx/cockpit.cpp:3126 -->
+			<var name="warp.fovlink.stable.offset.front" value="0" />	<!-- gfx/cockpit.cpp:3125 -->
+			<var name="warp.fovlink.stable.offset.perpendicular" value="0" />	<!-- gfx/cockpit.cpp:3127 -->
+			<var name="warp_shake_magnitude" value="0.125" />	<!-- gfx/cockpit.cpp:2313 -->
+			<var name="warp_shake_ref" value="2000" />	<!-- gfx/cockpit.cpp:2315 -->
+			<var name="warp_shake_speed" value="70" />	<!-- gfx/cockpit.cpp:2314 -->
+			<var name="warp_stretch_cutoff" value="50000" />	<!-- cmd/unit.h:225 -->
+<!-- 			<var name="warp_stretch_cutoff" value="500000" /> -->	<!-- cmd/unit_generic.cpp:4271 ['duplicate variable'] -->
+			<var name="warp_stretch_decel_cutoff" value="500000" />	<!-- cmd/unit_generic.cpp:4272 -->
+			<var name="warp_stretch_max" value="4" />	<!-- cmd/unit.h:237 -->
+			<var name="warp_stretch_max_region0_speed" value="100000" />	<!-- cmd/unit.h:239 -->
+			<var name="warp_stretch_max_speed" value="1000000" />	<!-- cmd/unit.h:238 -->
+			<var name="warp_stretch_region0_max" value="1" />	<!-- cmd/unit.h:235 -->
+			<var name="warp_trail" value="true" />	<!-- cmd/unit_generic.cpp:3257 -->
+			<var name="warp_trail_stretch" value="300" />	<!-- gfx/warptrail.cpp:58 -->
+			<var name="warp_trail_time" value="20" />	<!-- cmd/unit_generic.cpp:3259 -->
+			<var name="weapon_xyscale" value="1" />	<!-- cmd/mount.cpp:31,69 -->
+			<var name="weapon_zscale" value="1" />	<!-- cmd/mount.cpp:33,71 -->
+			<var name="wheel_zoom_amount" value="0.1" />	<!-- gfx/nav/navscreen.cpp:1890 -->
+			<var name="wormhole" value="wormhole" />	<!-- cmd/planet.cpp:271 -->
+			<var name="x_resolution" value="1024" />	<!-- gldrv/winsys.cpp:288,773 -->
+			<var name="y_resolution" value="768" />	<!-- gldrv/winsys.cpp:289,774 -->
+			<var name="z_pixel_format" value="24" />	<!-- gldrv/winsys.cpp:210 -->
+			<var name="zfar" value="100000" />	<!-- gldrv/gl_init.cpp:410 -->
+			<var name="znear" value="1" />	<!-- gldrv/gl_init.cpp:409 -->
+<!-- 			<var name=var value="0.0" /> -->	<!-- star_system_xml.cpp:271 ['variable not quoted'] -->
+			<section name="glowflicker" >
+				<var name="hull-for-total-dark" value=".04" />	<!-- cmd/unit_generic.cpp:377 -->
+				<var name="min-cycle" value="2" />	<!-- cmd/unit_generic.cpp:375 -->
+				<var name="num-times-per-second-on" value=".66" />	<!-- cmd/unit_generic.cpp:376 -->
+				<var name="off-time" value="2" />	<!-- cmd/unit_generic.cpp:374 -->
+				<var name="time" value="30" />	<!-- cmd/unit_generic.cpp:373 -->
+			</section>
+			<section name="hud" >
+				<var name="AlreadyNearMessage" value="#ff0000Already Near#000000" />	<!-- gfx/cockpit.cpp:2043 cmd/unit_generic.cpp:3199 -->
+				<var name="AsteroidsNearMessage" value="#ff0000Asteroids Near#000000" />	<!-- cmd/unit_generic.cpp:3053 -->
+				<var name="BlipRangeFadeMidpoint" value="0.2" />	<!-- gfx/cockpit.cpp:794 -->
+				<var name="BlipRangeMaxFade" value="1.0" />	<!-- gfx/cockpit.cpp:792 -->
+				<var name="BlipRangeMinFade" value="1.0" />	<!-- gfx/cockpit.cpp:793 -->
+				<var name="BoxLineThickness" value="1" />	<!-- gfx/cockpit.cpp:265 -->
+				<var name="DiamondLineThickness" value="1" />	<!-- gfx/cockpit.cpp:338,395 -->
+				<var name="DiamondRotationSpeed" value="1" />	<!-- gfx/cockpit.cpp:346 -->
+				<var name="DiamondSize" value="2.05" />	<!-- gfx/cockpit.cpp:344 -->
+				<var name="DrawTacticalTarget" value="false" />	<!-- gfx/cockpit.cpp:735 -->
+				<var name="DrawTargettingBoxes" value="true" />	<!-- gfx/cockpit.cpp:2216 -->
+				<var name="DrawTargettingBoxesInside" value="true" />	<!-- gfx/cockpit.cpp:2217 -->
+				<var name="DrawTheirRelationColor" value="true" />	<!-- gfx/cockpit.cpp:196 -->
+				<var name="EnemyNearMessage" value="#ff0000Enemy Near#000000" />	<!-- cmd/unit_generic.cpp:3061 -->
+				<var name="LockCenterCrosshair" value="false" />	<!-- gfx/cockpit.cpp:340 -->
+				<var name="LockConfirmLineLength" value="1.5" />	<!-- gfx/cockpit.cpp:347 -->
+				<var name="MaxMissileBracketSize" value="2.05" />	<!-- gfx/cockpit.cpp:343 -->
+				<var name="MinMissileBracketSize" value="1.05" />	<!-- gfx/cockpit.cpp:342 -->
+				<var name="NavCrossLineThickness" value="1" />	<!-- gfx/cockpit.cpp:228 -->
+				<var name="PadlockViewLag" value="1.5" />	<!-- gfx/cockpit.cpp:3069 -->
+				<var name="PadlockViewLagFixZone" value="0.0872" />	<!-- gfx/cockpit.cpp:3071 -->
+				<var name="PlanetNearMessage" value="#ff0000Planetary Hazard Near#000000" />	<!-- cmd/unit_generic.cpp:3057 -->
+				<var name="RotatingBracketInner" value="true" />	<!-- gfx/cockpit.cpp:351 -->
+				<var name="RotatingBracketSize" value="0.58" />	<!-- gfx/cockpit.cpp:345 -->
+				<var name="RotatingBracketWidth" value="0.1" />	<!-- gfx/cockpit.cpp:350 -->
+				<var name="StarshipNearMessage" value="#ff0000Starship Near#000000" />	<!-- cmd/unit_generic.cpp:3064 -->
+				<var name="TacTargetFoci" value="0.5" />	<!-- gfx/cockpit.cpp:760 -->
+				<var name="TacTargetLength" value="0.1" />	<!-- gfx/cockpit.cpp:759 -->
+				<var name="TacTargetThickness" value="1.0" />	<!-- gfx/cockpit.cpp:758 -->
+				<var name="armor_hull_size" value=".55" />	<!-- gfx/vdu.cpp:237 -->
+				<var name="basename:basename" value="true" />	<!-- gfx/vdu.cpp:61 -->
+				<var name="crosshairs_on_chasecam" value="false" />	<!-- gfx/cockpit.cpp:2400 -->
+				<var name="crosshairs_on_padlock" value="false" />	<!-- gfx/cockpit.cpp:2401 -->
+				<var name="damage_report_heading" value="#00ff00DAMAGE REPORT\n\n" />	<!-- gfx/vdu.cpp:1176 -->
+				<var name="debug_position" value="false" />	<!-- gfx/cockpit.cpp:2553 -->
+				<var name="display_relative_velocity" value="true" />	<!-- gfx/cockpit.cpp:1297 -->
+				<var name="display_warp_energy_if_no_jump_drive" value="true" />	<!-- gfx/cockpit.cpp:1230 -->
+				<var name="drawAllTargetBoxes" value="false" />	<!-- gfx/cockpit.cpp:1759 gfx/cockpit_generic.cpp:204 -->
+				<var name="drawAlwaysITTS" value="false" />	<!-- gfx/cockpit.cpp:1763 gfx/cockpit_generic.cpp:208 -->
+				<var name="drawLineToITTS" value="false" />	<!-- gfx/cockpit.cpp:1762 gfx/cockpit_generic.cpp:207 -->
+				<var name="drawLineToTarget" value="false" />	<!-- gfx/cockpit.cpp:1760 gfx/cockpit_generic.cpp:205 -->
+				<var name="drawLineToTargetsTarget" value="false" />	<!-- gfx/cockpit.cpp:1761 gfx/cockpit_generic.cpp:206 -->
+				<var name="drawNavSymbol" value="false" />	<!-- gfx/cockpit.cpp:578,701 -->
+				<var name="draw_arrow_on_chasecam" value="true" />	<!-- gfx/cockpit.cpp:2588 -->
+				<var name="draw_arrow_on_pancam" value="false" />	<!-- gfx/cockpit.cpp:2586 -->
+				<var name="draw_arrow_on_pantgt" value="false" />	<!-- gfx/cockpit.cpp:2587 -->
+				<var name="draw_arrow_to_target" value="true" />	<!-- gfx/cockpit.cpp:2585 -->
+				<var name="draw_damage_sprite" value="true" />	<!-- gfx/vdu.cpp:1114 -->
+				<var name="draw_gravitational_objects" value="true" />	<!-- gfx/cockpit.cpp:1047 -->
+				<var name="draw_nav_grid" value="true" />	<!-- gfx/nav/navitemstodraw.h:53 -->
+				<var name="draw_radar_blips_behind" value="true" />	<!-- gfx/cockpit.cpp:790 -->
+<!-- 				<var name="draw_rendered_crosshairs" value=vs_config-&gt;getVariable('graphics','draw_rendered_crosshairs','true') /> -->	<!-- gfx/cockpit.cpp:2407 ['value not quoted'] -->
+				<var name="draw_significant_blips" value="true" />	<!-- gfx/cockpit.cpp:1086,975 -->
+				<var name="draw_star_direction" value="true" />	<!-- gfx/cockpit.cpp:2197 -->
+				<var name="draw_unit_on_chasecam" value="true" />	<!-- gfx/cockpit.cpp:3107 -->
+				<var name="draw_vdu_view_shields" value="true" />	<!-- gfx/vdu.cpp:1290 -->
+				<var name="draw_weapon_sprite" value="false" />	<!-- gfx/vdu.cpp:1376 -->
+				<var name="invert_friendly_shields" value="false" />	<!-- gfx/vdu.cpp:598 -->
+				<var name="invert_friendly_sprite" value="false" />	<!-- gfx/vdu.cpp:603 -->
+				<var name="invert_target_shields" value="false" />	<!-- gfx/vdu.cpp:700 -->
+				<var name="invert_target_sprite" value="false" />	<!-- gfx/vdu.cpp:699 -->
+				<var name="invert_view_shields" value="false" />	<!-- gfx/vdu.cpp:1311 -->
+				<var name="manifest_heading" value="Manifest\n" />	<!-- gfx/vdu.cpp:1006 -->
+				<var name="message_prefix" value="" />	<!-- gfx/vdu.cpp:901,995 -->
+				<var name="min_lock_box_size" value=".001" />	<!-- gfx/cockpit.cpp:341 -->
+				<var name="min_radarblip_size" value="0" />	<!-- gfx/cockpit.cpp:994 -->
+				<var name="min_target_box_size" value=".01" />	<!-- gfx/cockpit.cpp:266 -->
+				<var name="not_included_in_damage_report" value="plasteel_hull tungsten_hull isometal_hull" />	<!-- gfx/vdu.cpp:1181 -->
+				<var name="out_of_cone_distance" value="false" />	<!-- gfx/vdu.cpp:1263,729 -->
+				<var name="print_damage_percent" value="true" />	<!-- gfx/vdu.cpp:1205 -->
+				<var name="print_faction" value="true" />	<!-- gfx/vdu.cpp:735 -->
+				<var name="print_fg_name" value="true" />	<!-- gfx/vdu.cpp:52 -->
+				<var name="print_fg_sub_id" value="false" />	<!-- gfx/vdu.cpp:46 -->
+				<var name="print_request_docking" value="true" />	<!-- cmd/ai/communication.cpp:219 -->
+				<var name="print_ship_type" value="true" />	<!-- gfx/vdu.cpp:53 -->
+				<var name="projectile_means_missile" value="false" />	<!-- cmd/unit_generic.cpp:359 -->
+				<var name="radarRange" value="20000" />	<!-- cmd/unit_generic.cpp:1165 -->
+				<var name="radarType" value="WC" />	<!-- gfx/cockpit.cpp:1765 gfx/cockpit_generic.cpp:209 -->
+				<var name="radar_search_extra_radius" value="1000" />	<!-- gfx/cockpit.cpp:1040 cmd/ai/comm_ai.cpp:305 -->
+				<var name="shield_vdu_fade" value="true" />	<!-- gfx/vdu.cpp:372 -->
+<!-- 				<var name="shield_vdu_thresh0" value=do_shield_fade?'0':'.25" /> -->	<!-- gfx/vdu.cpp:375 ['value not quoted'] -->
+<!-- 				<var name="shield_vdu_thresh1" value=do_shield_fade?'.33':'.50" /> -->	<!-- gfx/vdu.cpp:376 ['value not quoted'] -->
+<!-- 				<var name="shield_vdu_thresh2" value=do_shield_fade?'.66':'.75" /> -->	<!-- gfx/vdu.cpp:377 ['value not quoted'] -->
+				<var name="switchToTargetModeOnKey" value="true" />	<!-- options.cpp:47 -->
+				<var name="switch_back_from_comms" value="true" />	<!-- gfx/vdu.cpp:975 -->
+				<var name="text_background_alpha" value="0.0625" />	<!-- gfx/nav/drawlist.cpp:275 gfx/nav/drawgalaxy.cpp:59 gfx/vdu.cpp:1018,1214,1266,1321,1427,1505,1643,741,766,795,903,961,996 gfx/cockpit.cpp:1515 gfx/nav/navscreen.cpp:1350,814 gfx/nav/drawsystem.cpp:73 -->
+				<var name="textwidthapproxHACK" value="0.0175" />	<!-- gfx/cockpit.cpp:1516 -->
+				<var name="top_view" value="false" />	<!-- gfx/vdu.cpp:238 -->
+				<var name="untarget_beyond_cone" value="false" />	<!-- gfx/cockpit.cpp:1094,976 -->
+			</section>
+			<section name="nav" >
+				<var name="modern_mouse_cursor" value="true" />	<!-- gfx/nav/navitemstodraw.h:5 -->
+				<var name="mouse_cursor_sprite" value="mouse.spr" />	<!-- gfx/nav/navitemstodraw.h:7 -->
+			</section>
+		</section>
+		<section name="graphics/mesh" >
+			<var name="smooth_lines" value="true" />	<!-- gldrv/gl_init.cpp:453 -->
+			<var name="smooth_points" value="true" />	<!-- gldrv/gl_init.cpp:454 -->
+		</section>
+		<section name="interpreter" >
+			<var name="debuglevel" value="0" />	<!-- cmd/script/director_generic.cpp:339 -->
+			<var name="startgame" value="true" />	<!-- cmd/script/director_generic.cpp:340 -->
+			<var name="trace" value="false" />	<!-- cmd/script/director_generic.cpp:341 -->
+		</section>
+		<section name="joystick" >
+			<var name="clamp_axes" value="true" />	<!-- cmd/ai/flyjoystick.cpp:65 -->
+			<var name="deadband" value="0.05" />	<!-- options.cpp:82 -->
+			<var name="debug_digital_hatswitch" value="false" />	<!-- options.cpp:81 -->
+			<var name="double_mouse_factor" value="2" />	<!-- cmd/base_interface.cpp:42 -->
+			<var name="double_mouse_position" value="1280" />	<!-- cmd/base_interface.cpp:41 -->
+			<var name="ff_device" value="0" />	<!-- options.cpp:89 -->
+			<var name="force_feedback" value="false" />	<!-- options.cpp:88 -->
+			<var name="force_use_of_joystick" value="false" />	<!-- options.cpp:80 -->
+			<var name="initial_mode" value="normal" />	<!-- cmd/ai/flykeyboard.cpp:105 -->
+			<var name="joystick_exponent" value="1.0" />	<!-- options.cpp:78 -->
+			<var name="mouse_blur" value=".025" />	<!-- options.cpp:87 -->
+			<var name="mouse_crosshair" value="crosshairs.spr" />	<!-- gfx/cockpit.cpp:2706 -->
+			<var name="mouse_cursor" value="false" />	<!-- gfx/cockpit.cpp:2692 -->
+			<var name="mouse_cursor_chasecam" value="true" />	<!-- gfx/cockpit.cpp:2695 -->
+			<var name="mouse_cursor_pancam" value="false" />	<!-- gfx/cockpit.cpp:2693 -->
+			<var name="mouse_cursor_pantgt" value="false" />	<!-- gfx/cockpit.cpp:2694 -->
+			<var name="mouse_deadband" value="0.025" />	<!-- options.cpp:83 -->
+			<var name="mouse_exponent" value="3.0" />	<!-- options.cpp:86 -->
+			<var name="mouse_sensitivity" value="50.0" />	<!-- options.cpp:85 -->
+			<var name="nonlinear_expamount_combat" value="1.0" />	<!-- cmd/ai/flyjoystick.cpp:74 -->
+			<var name="nonlinear_expamount_nav" value="1.0" />	<!-- cmd/ai/flyjoystick.cpp:70 -->
+			<var name="nonlinear_expfactor_combat" value="6.0" />	<!-- cmd/ai/flyjoystick.cpp:72 -->
+			<var name="nonlinear_expfactor_nav" value="6.0" />	<!-- cmd/ai/flyjoystick.cpp:68 -->
+			<var name="nonlinear_pamount_combat" value="0.0" />	<!-- cmd/ai/flyjoystick.cpp:75 -->
+			<var name="nonlinear_pamount_nav" value="0.0" />	<!-- cmd/ai/flyjoystick.cpp:71 -->
+			<var name="nonlinear_pfactor_combat" value="2.0" />	<!-- cmd/ai/flyjoystick.cpp:73 -->
+			<var name="nonlinear_pfactor_nav" value="2.0" />	<!-- cmd/ai/flyjoystick.cpp:69 -->
+			<var name="nonlinear_throttle_combat" value="false" />	<!-- cmd/ai/flyjoystick.cpp:67 -->
+			<var name="nonlinear_throttle_nav" value="true" />	<!-- cmd/ai/flyjoystick.cpp:66 -->
+			<var name="polling_rate" value="0" />	<!-- options.cpp:79 -->
+			<var name="reverse_mouse_spr" value="true" />	<!-- gfx/cockpit.cpp:2705 -->
+			<var name="warp_mouse" value="false" />	<!-- in_mouse.cpp:80 options.cpp:84 -->
+			<var name="warp_mouse_zone" value="100" />	<!-- in_mouse.cpp:81 -->
+			<var name="zero_min_throttle" value="false" />	<!-- cmd/ai/flyjoystick.cpp:174 -->
+		</section>
+		<section name="keyboard" >
+			<var name="enable_unicode" value="true" />	<!-- gldrv/winsys.cpp:399 -->
+		</section>
+		<section name="network" >
+			<var name="account_server_url" value="" />	<!-- networking/netserver.cpp:261 -->
+<!-- 			<var name="account_server_url" value="http://localhost/cgi-bin/accountserver.py" /> -->	<!-- networking/netclient_login.cpp:347,686 ['duplicate variable'] -->
+<!-- 			<var name="account_server_url" value="http://vegastrike.sourceforge.net/" /> -->	<!-- cmd/basecomputer.cpp:1142 ['duplicate variable'] -->
+<!-- 			<var name="account_server_url" value="http://vegastrike.sourceforge.net/cgi-bin/accountserver.py?" /> -->	<!-- gamemenu.cpp:177 ['duplicate variable'] -->
+			<var name="accountsrv" value="" />	<!-- networking/netserver.cpp:263 -->
+			<var name="accountsrvport" value="" />	<!-- networking/acctserver.cpp:91,94 networking/netserver.cpp:287 -->
+			<var name="aim_assist" value="true" />	<!-- networking/netclient_clients.cpp:352 networking/netserver_clients.cpp:515 -->
+			<var name="chat_only_in_network" value="false" />	<!-- main_loop.cpp:268 -->
+			<var name="client_side_fire" value="true" />	<!-- cmd/unit_generic.cpp:1527 -->
+			<var name="connecttimeout" value="10" />	<!-- networking/netclient_login.cpp:428 -->
+			<var name="damage_atom" value="1" />	<!-- networking/netserver.cpp:221 -->
+			<var name="debug_position_interpolation" value="false" />	<!-- networking/netclient_clients.cpp:345,371 networking/netserver_clients.cpp:529 -->
+			<var name="debug_prediction" value="false" />	<!-- networking/netserver_clients.cpp:338 -->
+			<var name="encryption_keylength" value="40" />	<!-- networking/networkcomm.cpp:224 -->
+			<var name="encryption_seed" value="I love VegaStrike" />	<!-- networking/networkcomm.cpp:222 -->
+			<var name="force_client_connect" value="false" />	<!-- main.cpp:283 -->
+			<var name="logintimeout" value="100" />	<!-- networking/netclient_login.cpp:100 -->
+<!-- 			<var name="logintimeout" value="20" /> -->	<!-- networking/netclient_login.cpp:172 ['duplicate variable'] -->
+			<var name="max_lead_prediction" value="10" />	<!-- networking/netserver_clients.cpp:410 -->
+			<var name="max_lead_prediction_angle" value="60" />	<!-- networking/netserver_clients.cpp:357 -->
+			<var name="min_time_btw_damage_updates" value=".25" />	<!-- networking/netserver_devices.cpp:229 -->
+			<var name="nbplayers" value="1" />	<!-- main.cpp:509 -->
+			<var name="network_atom" value="" />	<!-- networking/netclient_login.cpp:402 -->
+<!-- 			<var name="network_atom" value="0.2" /> -->	<!-- networking/netserver.cpp:219 ['duplicate variable'] -->
+			<var name="no_interpolation" value="false" />	<!-- networking/prediction.cpp:103 -->
+			<var name="planet_atom" value="10" />	<!-- networking/netserver.cpp:223 -->
+			<var name="server_ip" value="" />	<!-- networking/netclient_login.cpp:359 gamemenu.cpp:133 -->
+			<var name="server_port" value="6777" />	<!-- networking/netserver.cpp:232 networking/netclient_login.cpp:353 gamemenu.cpp:156 -->
+			<var name="serverport" value="6777" />	<!-- networking/netserver.cpp:234 -->
+			<var name="servertime_calibration" value="10" />	<!-- networking/netclient_login.cpp:488 -->
+			<var name="transport" value="udp" />	<!-- networking/netclient_login.cpp:502 networking/netclient.cpp:283 -->
+			<var name="udp_listen_port" value="6778" />	<!-- networking/netclient_login.cpp:490 -->
+			<var name="udp_listen_port_max" value="6778" />	<!-- networking/netclient_login.cpp:493 -->
+			<var name="udp_timeout" value="1" />	<!-- networking/netclient_login.cpp:489 -->
+			<var name="use_account_server" value="false" />	<!-- networking/netclient_login.cpp:344 -->
+<!-- 			<var name="use_account_server" value="true" /> -->	<!-- cmd/basecomputer.cpp:1140 gamemenu.cpp:103 ['duplicate variable'] -->
+			<var name="use_portaudio" value="false" />	<!-- networking/networkcomm.cpp:142 -->
+		</section>
+		<section name="physics" >
+			<var name="AfterburnerFuelUsage" value="4" />	<!-- cmd/unit_generic.cpp:3567 -->
+			<var name="AsteroidDifficulty" value=".4" />	<!-- options.cpp:104 -->
+			<var name="AsteroidWeaponCollision" value="false" />	<!-- cmd/bolt_generic.cpp:129 cmd/beam_generic.cpp:400 -->
+			<var name="AutoLandingDisplaceDistance" value="50" />	<!-- gfx/cockpit.cpp:884 -->
+			<var name="AutoLandingDockDistance" value="50" />	<!-- gfx/cockpit.cpp:881 -->
+			<var name="AutoLandingEnable" value="false" />	<!-- gfx/cockpit.cpp:1089,977 networking/netserver_devices.cpp:554 -->
+			<var name="AutoLandingExcludeList" value="" />	<!-- gfx/cockpit.cpp:861 -->
+			<var name="AutoLandingExcludeWarningList" value="" />	<!-- gfx/cockpit.cpp:870 -->
+			<var name="AutoLandingMoveDistance" value="50" />	<!-- gfx/cockpit.cpp:883 -->
+			<var name="AutoLandingWarningDistance" value="350" />	<!-- gfx/cockpit.cpp:882 -->
+			<var name="AutomaticUnDock" value="true" />	<!-- cmd/base_interface.cpp:1099,1155 -->
+			<var name="BouncePercent" value=".1" />	<!-- cmd/unit_generic.cpp:469 -->
+<!-- 			<var name="CarControl" value=#ifdef CAR_SIM 'true' #else 'false' #endif /> -->	<!-- cmd/ai/flybywire.cpp:161 ['value not quoted'] -->
+			<var name="DeuteriumRelativeEfficiency_Lithium" value="1" />	<!-- cmd/unit_generic.cpp:3793 -->
+			<var name="Drone" value="drone" />	<!-- options.cpp:99 -->
+			<var name="FMEC_efficiency" value="2" />	<!-- cmd/unit_generic.cpp:4011 -->
+			<var name="FMEC_exit_vel" value="0.0000002" />	<!-- cmd/unit_generic.cpp:3597,3797 -->
+			<var name="FMEC_factor" value="0.000000008" />	<!-- cmd/unit_generic.cpp:3595,3795,4009 -->
+			<var name="FuelConversion" value=".00144" />	<!-- cmd/unit_csv.cpp:617 -->
+			<var name="FuelUsage" value="1" />	<!-- cmd/unit_generic.cpp:3472,3566 -->
+			<var name="InactiveSystemTime" value=".3" />	<!-- networking/netserver.cpp:485 universe_generic.cpp:352 -->
+<!-- 			<var name="InactiveSystemTime" value="0.3" /> -->	<!-- options.cpp:112 ['duplicate variable'] -->
+			<var name="JumpWeaponCollision" value="false" />	<!-- cmd/bolt_generic.cpp:134 cmd/beam_generic.cpp:405 -->
+			<var name="LithiumRelativeEfficiency_Lithium" value="1" />	<!-- cmd/unit_generic.cpp:3593 -->
+			<var name="MinimumWarpCapToRefuelDockeesAutomatically" value="0" />	<!-- cmd/ai/docking.cpp:162 cmd/unit_generic.cpp:6537 -->
+			<var name="NoFuelAfterburn" value=".1" />	<!-- cmd/unit_generic.cpp:3648,3744 -->
+			<var name="NoFuelThrust" value=".4" />	<!-- cmd/unit_generic.cpp:3581,3647,3743 -->
+			<var name="NumRunningSystems" value="4" />	<!-- options.cpp:111 networking/netserver.cpp:486 -->
+			<var name="PlayerTractorabilityMask" value="p" />	<!-- cmd/unit_generic.cpp:9620 -->
+			<var name="RepairDroidCheckTime" value="5" />	<!-- cmd/unit_generic.cpp:9502 -->
+			<var name="RepairDroidContinuous" value="true" />	<!-- cmd/unit_generic.cpp:9503 -->
+			<var name="RepairDroidTime" value="180" />	<!-- cmd/unit_generic.cpp:9501 -->
+			<var name="UnitTable" value="false" />	<!-- cmd/unit_csv.cpp:1391,1449 cmd/unit_generic.cpp:1265,7745 -->
+			<var name="VSD_MJ_yield" value="5.4" />	<!-- cmd/unit_generic.cpp:4007 -->
+			<var name="VariableFuelConsumption" value="false" />	<!-- cmd/unit_generic.cpp:3745 -->
+			<var name="WarpMemoryEffect" value="0.9" />	<!-- cmd/unit_generic.cpp:2909,2972 -->
+			<var name="YearScale" value="10.0" />	<!-- options.cpp:105 -->
+			<var name="ab_damage_prob" value=".2" />	<!-- cmd/unit_generic.cpp:4798 -->
+			<var name="ai_lock_cheat" value="true" />	<!-- cmd/unit_generic.cpp:2574 -->
+			<var name="ai_pilot_when_in_turret" value="true" />	<!-- gfx/cockpit_generic.cpp:340 -->
+			<var name="allow_mission_abort" value="true" />	<!-- cmd/basecomputer.cpp:2204 -->
+			<var name="auto_landing_port_unclamped_seconds" value="120" />	<!-- cmd/ai/navigation.cpp:520 -->
+			<var name="auto_pilot_no_enemies_distance_multiplier" value="4" />	<!-- cmd/unit_generic.cpp:3095 -->
+			<var name="auto_pilot_planet_radius_percent" value=".75" />	<!-- options.cpp:109 -->
+			<var name="auto_pilot_termination_distance" value="6000" />	<!-- cmd/ai/navigation.cpp:625 gfx/cockpit_generic.cpp:162,536 cmd/unit_generic.cpp:2794,2907,3093 -->
+			<var name="auto_pilot_termination_distance_enemy" value="24000" />	<!-- cmd/ai/navigation.cpp:626 -->
+<!-- 			<var name="auto_pilot_termination_distance_no_enemies" value=vs_config-&gt;getVariable ('physics','auto_pilot_termination_distance','6000') /> -->	<!-- cmd/unit_generic.cpp:3094 ['value not quoted'] -->
+			<var name="auto_turn_towards" value="true" />	<!-- cmd/unit_generic.cpp:3215 -->
+			<var name="autoeject_percent" value=".5" />	<!-- cmd/unit_generic.cpp:5487 -->
+			<var name="autogen_compactness" value="1.0" />	<!-- options.cpp:103 -->
+			<var name="autopilot_compensate_for_interdiction" value="false" />	<!-- cmd/ai/navigation.cpp:532 -->
+			<var name="autopilot_ramp_warp_down" value="true" />	<!-- cmd/ai/navigation.cpp:604 cmd/ai/warpto.cpp:22 -->
+			<var name="autopilot_spec_lining_up_angle" value="3" />	<!-- cmd/ai/navigation.cpp:599 -->
+			<var name="autopilot_terminate" value="true" />	<!-- cmd/ai/navigation.cpp:627 -->
+			<var name="autospeed" value=".020" />	<!-- gfx/cockpit.cpp:2819 -->
+			<var name="autotime" value="10" />	<!-- gfx/cockpit.cpp:2068 gfx/cockpit_generic.cpp:302 -->
+			<var name="autotracking" value=".93" />	<!-- cmd/unit_generic.cpp:1166,1236,7922 -->
+			<var name="beam_bsp" value="false" />	<!-- cmd/unit_collide.cpp:593 -->
+			<var name="bounding_box_collision" value="false" />	<!-- cmd/unit_collide.cpp:619 -->
+			<var name="campaigns" value="privateer_campaign vegastrike_campaign" />	<!-- options.cpp:110 universe_util_generic.cpp:861 -->
+			<var name="can_auto_through_planets" value="true" />	<!-- cmd/unit_generic.cpp:3154 -->
+			<var name="can_downgrade_mount_upgrades" value="false" />	<!-- cmd/unit_generic.cpp:7220 -->
+			<var name="can_fire_in_cloak" value="false" />	<!-- cmd/unit_generic.cpp:1535 -->
+			<var name="can_fire_in_spec" value="false" />	<!-- cmd/unit_generic.cpp:1534 -->
+			<var name="capship_size" value="500" />	<!-- cmd/unit_generic.cpp:1080 -->
+			<var name="cargo_damage_prob" value="1" />	<!-- cmd/unit_generic.cpp:4804 -->
+			<var name="cargo_deals_collide_damage" value="false" />	<!-- cmd/unit_generic.cpp:597 -->
+			<var name="cargo_live_time" value="600" />	<!-- cmd/unit_generic.cpp:8539 -->
+			<var name="cargo_wingmen_only_with_dockport" value="false" />	<!-- cmd/basecomputer.cpp:2735 -->
+			<var name="cargovolume_damage_prob" value=".15" />	<!-- cmd/unit_generic.cpp:4800 -->
+			<var name="change_docking_orientation" value="false" />	<!-- cmd/unit_generic.cpp:6442 -->
+			<var name="close_enough_to_autotrack" value="4" />	<!-- cmd/unit_generic.cpp:1861 -->
+			<var name="collidemap_sanity_check" value="false" />	<!-- cmd/unit_collide.cpp:35 -->
+			<var name="collision_avoidance_hack_distance" value="10000" />	<!-- cmd/unit_generic.cpp:604 -->
+			<var name="collision_damage_scale" value="1.0" />	<!-- cmd/unit_generic.cpp:471 -->
+			<var name="collision_inertial_time" value="1.25" />	<!-- gfx/cockpit.cpp:1280 cmd/ai/flybywire.cpp:337 -->
+			<var name="combat_speed_boost" value="100" />	<!-- cmd/basecomputer.cpp:5145 cmd/unit_generic.cpp:3617,3624 -->
+			<var name="component_based_upgrades" value="false" />	<!-- cmd/unit_generic.cpp:8205 -->
+			<var name="computerwarprampuptime" value="10" />	<!-- cmd/unit_util_generic.cpp:251 cmd/unit_generic.cpp:2885 -->
+			<var name="contraband_assist_range" value="50000" />	<!-- cmd/ai/comm_ai.cpp:87 -->
+			<var name="damage_chance" value=".005" />	<!-- cmd/unit_generic.cpp:5309 -->
+			<var name="damage_player_chance" value=".5" />	<!-- cmd/unit_generic.cpp:5320 -->
+			<var name="debris_mass" value=".00001" />	<!-- cmd/unit_damage.cpp:42 -->
+			<var name="debris_time" value="500" />	<!-- cmd/unit_damage.cpp:359 -->
+			<var name="debug_performance" value="false" />	<!-- star_system_generic.cpp:619 -->
+			<var name="default_interdiction" value=".125" />	<!-- cmd/unit_generic.cpp:2814,2927 -->
+			<var name="default_shield_tightness" value="0" />	<!-- cmd/unit_generic.cpp:1139 -->
+			<var name="definite_damage_chance" value=".1" />	<!-- cmd/unit_generic.cpp:5310,5321 -->
+			<var name="density_of_jump_point" value="100000" />	<!-- cmd/planet_generic.cpp:447 -->
+			<var name="density_of_rock" value="3" />	<!-- cmd/planet_generic.cpp:446 -->
+			<var name="difficulty_based_enemy_damage" value="true" />	<!-- cmd/unit_generic.cpp:4430 -->
+			<var name="difficulty_based_shield_recharge" value="true" />	<!-- cmd/unit_generic.cpp:3993 -->
+			<var name="difficulty_speed_exponent" value=".2" />	<!-- cmd/unit_generic.cpp:3433 -->
+			<var name="disabling_weapon_constant" value="1" />	<!-- cmd/unit_generic.cpp:5449 -->
+			<var name="display_in_meters" value="true" />	<!-- gfx/cockpit.cpp:1159 ship_commands.cpp:118 -->
+			<var name="distance_to_warp" value="1000000000000.0" />	<!-- cmd/unit_generic.cpp:2335 -->
+			<var name="dock_with_clear_planets" value="true" />	<!-- cmd/ai/firekeyboard.cpp:1421 cmd/ai/fire.cpp:18 -->
+			<var name="dock_within_base_shield" value="false" />	<!-- cmd/unit_util_generic.cpp:608 -->
+			<var name="docking_time" value="10" />	<!-- cmd/ai/docking.cpp:176,34 -->
+			<var name="dockport_allows_ugrade_storage" value="false" />	<!-- cmd/basecomputer.cpp:2736 -->
+			<var name="ecm_energy_cost" value=".05" />	<!-- cmd/unit_generic.cpp:4061 -->
+			<var name="eject_cargo_on_blowup" value="0" />	<!-- cmd/unit_damage.cpp:388 -->
+			<var name="eject_cargo_percent" value="1" />	<!-- cmd/unit_generic.cpp:5482 -->
+			<var name="eject_cargo_speed" value="1" />	<!-- cmd/unit_generic.cpp:8751 cmd/base_interface.cpp:1174 -->
+			<var name="eject_distance" value="20" />	<!-- cmd/unit_generic.cpp:8733 -->
+<!-- 			<var name="eject_live_time" value=SERVER?'200':'0" /> -->	<!-- cmd/unit_generic.cpp:8635 ['value not quoted'] -->
+			<var name="engine_energy_priority" value="true" />	<!-- cmd/unit_generic.cpp:3992 -->
+			<var name="enough_warp_for_cruise" value="1000" />	<!-- cmd/ai/navigation.cpp:533 -->
+			<var name="explosion_damage_center" value="1" />	<!-- cmd/unit_damage.cpp:289 -->
+			<var name="extra_space_drag_for_cargo" value="0.005" />	<!-- cmd/unit_generic.cpp:2411 -->
+			<var name="face_on_auto" value="false" />	<!-- gfx/cockpit.cpp:2061 gfx/cockpit_generic.cpp:285 -->
+			<var name="fire_missing_autotrackers" value="true" />	<!-- cmd/mount.cpp:230 cmd/beam_generic.cpp:333 -->
+			<var name="fixed_system_priority_velocity_cutoff" value="50" />	<!-- cmd/unit_util_generic.cpp:83 -->
+			<var name="friendly_auto_radius" value="00" />	<!-- cmd/unit_functions_generic.cpp:174 -->
+			<var name="front_collision_avoidance_hack_angle" value="40" />	<!-- cmd/unit_generic.cpp:609 -->
+			<var name="front_collision_avoidance_hack_distance" value="200000" />	<!-- cmd/unit_generic.cpp:605 -->
+			<var name="fuel_damage_prob" value=".25" />	<!-- cmd/unit_generic.cpp:4794 -->
+			<var name="fuel_equals_warp" value="false" />	<!-- cmd/unit_csv.cpp:1142 cmd/unit_generic.cpp:3316,3330,3577,3742,6491 -->
+			<var name="game_accel" value="1" />	<!-- cmd/unit_csv.cpp:1180,1633 cmd/unit_generic.cpp:719 cmd/basecomputer.cpp:4815 cmd/ai/aggressive.cpp:322 cmd/ai/script.cpp:775 cmd/unit_xml.cpp:528 -->
+			<var name="game_speed" value="1" />	<!-- gfx/halo_system.cpp:121 cmd/unit_csv.cpp:1181,1634 cmd/unit_generic.cpp:718,726 star_system_generic.cpp:83 cmd/unit_functions_generic.cpp:172 gfx/vdu.cpp:637,943 gfx/cockpit.cpp:1158 cmd/basecomputer.cpp:4814 cmd/ai/aggressive.cpp:321 cmd/ai/script.cpp:774 cmd/weapon_xml.cpp:235 ship_commands.cpp:117 cmd/unit_xml.cpp:527 -->
+<!-- 			<var name="game_speed" value="1.0" /> -->	<!-- options.cpp:101 ['duplicate variable'] -->
+			<var name="game_speed_affects_autogen_systems" value="false" />	<!-- options.cpp:106 -->
+			<var name="game_speed_lying" value="true" />	<!-- gfx/cockpit.cpp:1160 ship_commands.cpp:119 gfx/vdu.cpp:638,944 -->
+			<var name="gun_speed" value="1" />	<!-- cmd/weapon_xml.cpp:237 -->
+			<var name="gun_speed_adjusted_game_speed" value="false" />	<!-- cmd/weapon_xml.cpp:236 -->
+			<var name="hardware_cursor" value="false" />	<!-- options.cpp:60 -->
+			<var name="hostile_auto_radius" value="1000" />	<!-- cmd/unit_functions_generic.cpp:176 -->
+			<var name="hud_repair_unit" value=".25" />	<!-- cmd/unit_generic.cpp:9576 -->
+			<var name="hull_damage_to_eject" value="100" />	<!-- cmd/unit_generic.cpp:5484 -->
+			<var name="indestructable_cargo_items" value="" />	<!-- main_loop.cpp:447 cmd/unit_generic.cpp:5409 -->
+			<var name="indiscriminate_system_destruction" value=".25" />	<!-- cmd/unit_generic.cpp:5431 -->
+			<var name="inelastic_scale" value=".8" />	<!-- cmd/unit_generic.cpp:472 -->
+			<var name="insystem_jump_cost" value=".1" />	<!-- cmd/unit_xml.cpp:1106 cmd/unit_generic.cpp:1088 -->
+			<var name="insystem_jump_or_timeless_auto-pilot" value="false" />	<!-- gfx/cockpit.cpp:1325 cmd/ai/warpto.cpp:103,88 cmd/unit_generic.cpp:3071 -->
+			<var name="jump_damage_multiplier" value=".1" />	<!-- cmd/unit_functions_generic.cpp:275 -->
+			<var name="jump_delay_multiplier" value="5" />	<!-- cmd/unit_xml.cpp:1139,441 -->
+			<var name="jump_disables_shields" value="true" />	<!-- star_system_generic.cpp:1032 -->
+			<var name="jump_mesh_radius_scale" value=".5" />	<!-- cmd/planet.cpp:339 -->
+			<var name="jump_radius_scale" value="2" />	<!-- star_system_generic.cpp:82 -->
+			<var name="kilojoules_per_unit_damage" value="5400" />	<!-- cmd/basecomputer.cpp:4829 cmd/unit_generic.cpp:470 -->
+			<var name="launch_speed" value="-1" />	<!-- cmd/unit_generic.cpp:6735 -->
+			<var name="lock_cone" value=".8" />	<!-- cmd/unit_generic.cpp:1169,7920 -->
+			<var name="low_power_mode_energy" value="10" />	<!-- cmd/basecomputer.cpp:5635 cmd/unit_generic.cpp:4001 -->
+			<var name="match_speed_with_target" value="true" />	<!-- cmd/mount.cpp:265 -->
+			<var name="maxNPCrot" value="360" />	<!-- cmd/unit_generic.cpp:4237 -->
+			<var name="max_accel_for_smooth_autopilot" value="10" />	<!-- cmd/ai/navigation.cpp:512 -->
+			<var name="max_collide_trees" value="16384" />	<!-- cmd/collide.cpp:36 -->
+			<var name="max_dumped_cargo" value="15" />	<!-- cmd/unit_generic.cpp:5495 -->
+			<var name="max_ecm" value="4" />	<!-- cmd/missile_generic.cpp:138 -->
+			<var name="max_jump_damage" value="100" />	<!-- cmd/unit_functions_generic.cpp:276 -->
+			<var name="max_lost_target_live_time" value="30" />	<!-- cmd/missile_generic.cpp:177 -->
+			<var name="max_missions" value="4" />	<!-- options.cpp:100 cmd/unit_interface.cpp:1116 -->
+			<var name="max_over_combat_speed_for_smooth_autopilot" value="2" />	<!-- cmd/ai/navigation.cpp:513 -->
+			<var name="max_radar_cone_damage" value=".9" />	<!-- cmd/unit_generic.cpp:4698 -->
+			<var name="max_radar_lockcone_damage" value=".95" />	<!-- cmd/unit_generic.cpp:4704 -->
+			<var name="max_radar_trackcone_damage" value=".98" />	<!-- cmd/unit_generic.cpp:4710 -->
+			<var name="max_shield_leak" value="0" />	<!-- cmd/unit_generic.cpp:4909 -->
+<!-- 			<var name="max_shield_leak" value="90" /> -->	<!-- cmd/unit_generic.cpp:4908 ['duplicate variable'] -->
+			<var name="max_shield_lowers_capacitance" value="false" />	<!-- cmd/unit_generic.cpp:4003,5157 -->
+			<var name="max_shield_recharge_drain" value="0" />	<!-- cmd/unit_generic.cpp:4002 -->
+			<var name="maxplayerrot" value="24" />	<!-- cmd/unit_generic.cpp:4236 -->
+			<var name="maxwarpeffectsize" value="10000000" />	<!-- cmd/unit_generic.cpp:2796 -->
+			<var name="min_asteroid_distance" value="-100" />	<!-- cmd/unit_functions_generic.cpp:180 cmd/unit_generic.cpp:3186 -->
+			<var name="min_damage" value=".001" />	<!-- cmd/unit_generic.cpp:4661 -->
+<!-- 			<var name="min_damage" value=".999" /> -->	<!-- cmd/unit_generic.cpp:4662 ['duplicate variable'] -->
+			<var name="min_maxenergy_shot_damage" value="0.2" />	<!-- cmd/unit_generic.cpp:4924 -->
+			<var name="min_reactor_efficiency" value=".00001" />	<!-- cmd/unit_generic.cpp:4199 -->
+			<var name="min_recharge_shot_damage" value="0.5" />	<!-- cmd/unit_generic.cpp:4918 -->
+			<var name="min_shield_speeding_discharge" value=".1" />	<!-- cmd/unit_generic.cpp:3999 -->
+			<var name="min_spec_interdiction_for_jittery_autopilot" value=".05" />	<!-- cmd/ai/navigation.cpp:503 -->
+			<var name="min_warp_orbit_radius" value="100000000" />	<!-- cmd/ai/navigation.cpp:535 -->
+			<var name="minimum_collision_velocity" value="5" />	<!-- cmd/unit_generic.cpp:474 -->
+			<var name="minimum_time_between_recorded_player_collisions" value="0.1" />	<!-- cmd/unit_generic.cpp:473 -->
+			<var name="minwarpeffectsize" value="100" />	<!-- cmd/unit_generic.cpp:2795,2908 -->
+			<var name="missile_bounce" value="false" />	<!-- cmd/missile_generic.cpp:76 cmd/missile.h:34 -->
+			<var name="mount_repair_unit" value=".25" />	<!-- cmd/unit_generic.cpp:9587 -->
+			<var name="must_lock_to_autotrack" value="true" />	<!-- cmd/unit_generic.cpp:2631,2654 -->
+			<var name="must_repair_to_sell" value="true" />	<!-- cmd/basecomputer.cpp:2036 -->
+			<var name="near_autotrack_cone" value=".9" />	<!-- cmd/unit_generic.cpp:1853 -->
+			<var name="nebula_shield_recharge" value=".5" />	<!-- cmd/unit_damage.cpp:208 cmd/unit_generic.cpp:4054,4424,4526,5573 -->
+			<var name="nebula_space_drag" value="0.01" />	<!-- cmd/unit_collide.cpp:363 -->
+			<var name="neutral_auto_radius" value="0" />	<!-- cmd/unit_functions_generic.cpp:175 -->
+			<var name="new_collisions" value="true" />	<!-- cmd/collide.cpp:131,144 cmd/unit_collide.cpp:113 -->
+			<var name="noSPECJUMP" value="true" />	<!-- cmd/ai/firekeyboard.cpp:1439 cmd/unit_generic.cpp:3344 -->
+			<var name="no_ai_jump_points" value="false" />	<!-- cmd/unit_generic.cpp:5664 -->
+			<var name="no_auto_light_below" value="2000" />	<!-- gfx/cockpit.cpp:1331 -->
+			<var name="no_damage_to_docked_ships" value="true" />	<!-- cmd/unit_generic.cpp:4442 -->
+			<var name="no_unit_collisions" value="false" />	<!-- cmd/unit_collide.cpp:109 -->
+			<var name="num_planet_docking_port" value="4" />	<!-- cmd/planet_generic.cpp:456 -->
+			<var name="num_times_to_simulate_new_star_system" value="20" />	<!-- universe_generic.cpp:301 -->
+			<var name="only_hangar_collision_docks" value="false" />	<!-- cmd/unit_generic.cpp:458 -->
+			<var name="only_show_best_downgrade" value="true" />	<!-- cmd/basecomputer.cpp:3455 cmd/unit_interface.cpp:1638 -->
+			<var name="orbit_averaging" value="16" />	<!-- cmd/planet_generic.cpp:79 -->
+			<var name="out_of_arc_fire_disrupts_lock" value="false" />	<!-- cmd/mount.cpp:211 -->
+			<var name="percent_missile_match_target_velocity" value=".5" />	<!-- cmd/missile_generic.cpp:188 -->
+			<var name="percent_to_tractor" value=".1" />	<!-- cmd/beam_generic.cpp:412 -->
+			<var name="persistent_on_load" value="true" />	<!-- gfx/cockpit_generic.cpp:683 -->
+			<var name="planet_collision_docks" value="true" />	<!-- cmd/planet.cpp:534 -->
+			<var name="planet_ejection_stophack" value="2000" />	<!-- cmd/planet_generic.cpp:222 -->
+			<var name="planet_port_min_size" value="300" />	<!-- cmd/planet_generic.cpp:458 -->
+			<var name="planet_port_size" value="1.2" />	<!-- cmd/planet_generic.cpp:457 -->
+			<var name="planets_always_neutral" value="true" />	<!-- cmd/planet_generic.cpp:494 -->
+			<var name="planets_can_have_subunits" value="false" />	<!-- cmd/planet_generic.cpp:477 -->
+			<var name="player_autoeject" value="true" />	<!-- cmd/unit_generic.cpp:5490 -->
+			<var name="player_godliness" value="0" />	<!-- gfx/cockpit_generic.cpp:151 -->
+			<var name="player_survival_chance_on_base_death" value="1.0" />	<!-- cmd/unit_generic.cpp:5004 -->
+			<var name="reactor_idle_efficiency" value="0.98" />	<!-- cmd/unit_generic.cpp:4006 -->
+			<var name="reactor_uses_fuel" value="false" />	<!-- cmd/unit_generic.cpp:3981,4005 -->
+			<var name="reduce_beam_ammo" value="0" />	<!-- cmd/mount.cpp:245 -->
+			<var name="refire_difficutly_scaling" value="3.0" />	<!-- cmd/weapon_xml.cpp:568 -->
+			<var name="repair_price" value="1000" />	<!-- cmd/unit_interface.cpp:1292 -->
+<!-- 			<var name="repair_price" value="5000" /> -->	<!-- cmd/basecomputer.cpp:348 cmd/unit_interface.cpp:860 ['duplicate variable'] -->
+			<var name="respawn_unit_size" value="400.0" />	<!-- options.cpp:108 -->
+			<var name="reverse_speed_limit" value="1.0" />	<!-- cmd/ai/flybywire.cpp:259 -->
+			<var name="runtime_compactness" value="1.0" />	<!-- options.cpp:102 -->
+			<var name="seconds_per_parsec" value="10" />	<!-- cmd/unit_generic.cpp:5666 -->
+			<var name="sellback_shipping_price" value="6000" />	<!-- cmd/basecomputer.cpp:4427 -->
+			<var name="separate_system_flakiness_component" value="false" />	<!-- main_loop.cpp:451 cmd/unit_generic.cpp:5414 -->
+			<var name="shield_energy_capacitance" value=".2" />	<!-- cmd/basecomputer.cpp:4820 cmd/unit_generic.cpp:3955,3991 -->
+			<var name="shield_maintenance_charge" value=".25" />	<!-- cmd/basecomputer.cpp:4818 cmd/unit_generic.cpp:3994 -->
+			<var name="shields_in_spec" value="false" />	<!-- cmd/unit_generic.cpp:3990 -->
+			<var name="shields_require_passive_recharge_maintenance" value="true" />	<!-- cmd/basecomputer.cpp:4819 cmd/unit_generic.cpp:3995 -->
+			<var name="shipping_price" value="50000" />	<!-- cmd/basecomputer.cpp:4214 cmd/unit_interface.cpp:1534 -->
+			<var name="simulate_while_docked" value="false" />	<!-- cmd/unit_generic.cpp:8771 cmd/base_interface.cpp:904 -->
+			<var name="slide_end" value="2" />	<!-- cmd/ai/flykeyboard.cpp:132 -->
+			<var name="slide_start" value="3" />	<!-- cmd/ai/flykeyboard.cpp:115 -->
+			<var name="smallest_subunit_to_collide" value=".2" />	<!-- cmd/unit_collide.cpp:232 -->
+			<var name="special_and_normal_gun_combo" value="true" />	<!-- cmd/ai/firekeyboard.cpp:1785,1825 cmd/basecomputer.cpp:3858 cmd/unit_generic.cpp:5961 -->
+			<var name="speed_shield_drain_leniency" value="1.18" />	<!-- cmd/unit_generic.cpp:4000 -->
+			<var name="speeding_discharge" value=".25" />	<!-- cmd/unit_generic.cpp:3996 -->
+			<var name="sphere_collision" value="true" />	<!-- cmd/unit_collide.cpp:618 -->
+			<var name="star_system_scale" value="1.0" />	<!-- options.cpp:107 -->
+			<var name="starships_as_cargo" value="true" />	<!-- cmd/basecomputer.cpp:2749 -->
+			<var name="steady_itts" value="false" />	<!-- gfx/cockpit.cpp:1764 -->
+			<var name="survival_chance_on_base_death" value="0.1" />	<!-- cmd/unit_generic.cpp:5003 -->
+			<var name="system_damage_on_armor" value="false" />	<!-- cmd/unit_generic.cpp:5399 -->
+			<var name="target_distance_to_warp_bonus" value="1.33" />	<!-- cmd/unit_generic.cpp:2388 -->
+			<var name="teleport_autopilot" value="true" />	<!-- cmd/unit_generic.cpp:3148 -->
+			<var name="thruster_hit_chance" value=".25" />	<!-- cmd/unit_generic.cpp:4728 -->
+			<var name="tractor.cargo.distance" value="0" />	<!-- cmd/beam_generic.cpp:441 -->
+			<var name="tractor.cargo.distance_own_rsize" value="1.5" />	<!-- cmd/beam_generic.cpp:439 -->
+			<var name="tractor.cargo.distance_tgt_rsize" value="1.1" />	<!-- cmd/beam_generic.cpp:440 -->
+			<var name="tractor.cargo.force_in" value="true" />	<!-- cmd/beam_generic.cpp:417 -->
+			<var name="tractor.cargo.force_push" value="true" />	<!-- cmd/beam_generic.cpp:416 -->
+			<var name="tractor.cargo.light_shields_on_push" value="1" />	<!-- cmd/beam_generic.cpp:433 -->
+			<var name="tractor.disabled.force_in" value="true" />	<!-- cmd/beam_generic.cpp:423 -->
+			<var name="tractor.disabled.force_push" value="true" />	<!-- cmd/beam_generic.cpp:422 -->
+			<var name="tractor.disabled.light_shields_on_push" value="0" />	<!-- cmd/beam_generic.cpp:436 -->
+			<var name="tractor.faction.distance" value="0" />	<!-- cmd/beam_generic.cpp:447 -->
+			<var name="tractor.faction.distance_own_rsize" value="2.2" />	<!-- cmd/beam_generic.cpp:445 -->
+			<var name="tractor.faction.distance_tgt_rsize" value="2.2" />	<!-- cmd/beam_generic.cpp:446 -->
+			<var name="tractor.faction.force_in" value="true" />	<!-- cmd/beam_generic.cpp:421 -->
+			<var name="tractor.faction.force_push" value="true" />	<!-- cmd/beam_generic.cpp:420 -->
+			<var name="tractor.faction.light_shields_on_push" value="1" />	<!-- cmd/beam_generic.cpp:435 -->
+			<var name="tractor.max_relative_speed" value="150" />	<!-- cmd/beam_generic.cpp:431 -->
+			<var name="tractor.others.distance" value="0" />	<!-- cmd/beam_generic.cpp:450 -->
+			<var name="tractor.others.distance_own_rsize" value="1.1" />	<!-- cmd/beam_generic.cpp:448 -->
+			<var name="tractor.others.distance_tgt_rsize" value="1.1" />	<!-- cmd/beam_generic.cpp:449 -->
+			<var name="tractor.others.force_in" value="false" />	<!-- cmd/beam_generic.cpp:425 -->
+			<var name="tractor.others.force_push" value="false" />	<!-- cmd/beam_generic.cpp:424 -->
+			<var name="tractor.others.light_shields_on_push" value="1" />	<!-- cmd/beam_generic.cpp:437 -->
+			<var name="tractor.scoop" value="true" />	<!-- cmd/beam_generic.cpp:426 -->
+			<var name="tractor.scoop_angle" value="0.5" />	<!-- cmd/beam_generic.cpp:428 -->
+			<var name="tractor.scoop_fov" value="0.5" />	<!-- cmd/beam_generic.cpp:104 -->
+			<var name="tractor.ugprade.distance_own_rsize" value="1.5" />	<!-- cmd/beam_generic.cpp:442 -->
+			<var name="tractor.upgrade.distance" value="0" />	<!-- cmd/beam_generic.cpp:444 -->
+			<var name="tractor.upgrade.distance_tgt_rsize" value="1.1" />	<!-- cmd/beam_generic.cpp:443 -->
+			<var name="tractor.upgrade.force_in" value="true" />	<!-- cmd/beam_generic.cpp:419 -->
+			<var name="tractor.upgrade.force_push" value="true" />	<!-- cmd/beam_generic.cpp:418 -->
+			<var name="tractor.upgrade.light_shields_on_push" value="1" />	<!-- cmd/beam_generic.cpp:434 -->
+			<var name="un_docking_time" value="180" />	<!-- cmd/ai/docking.cpp:196 -->
+			<var name="undock_turn_away" value="true" />	<!-- cmd/unit_generic.cpp:6736 -->
+			<var name="unit_collision_docks" value="false" />	<!-- cmd/unit_generic.cpp:448 -->
+			<var name="unit_default_autodock_radius" value="0" />	<!-- gfx/cockpit.cpp:885 -->
+			<var name="unit_space_drag" value="0.000000" />	<!-- cmd/unit_generic.cpp:2410 -->
+			<var name="upgrade_cockpit_damage" value="false" />	<!-- cmd/unit_generic.cpp:7811 -->
+			<var name="upgradevolume_damage_prob" value=".1" />	<!-- cmd/unit_generic.cpp:4802 -->
+			<var name="use_cargo_mass" value="true" />	<!-- cmd/unit_generic.cpp:8842,8873,9251 -->
+			<var name="use_hidden_cargo_space" value="true" />	<!-- cmd/ai/comm_ai.cpp:168 -->
+			<var name="use_max_shield_energy_usage" value="false" />	<!-- cmd/unit_generic.cpp:3956,4004 -->
+			<var name="use_unit_autodock_radius" value="false" />	<!-- gfx/cockpit.cpp:886 -->
+			<var name="use_upgrade_template_maxrange" value="true" />	<!-- cmd/unit_generic.cpp:7923 -->
+			<var name="velocity_max" value="10000" />	<!-- cmd/unit_generic.cpp:2409 -->
+			<var name="warpMaxEfVel" value="2960881320" />	<!-- cmd/unit_generic.cpp:2802,2915 -->
+			<var name="warpMultiplierMax" value="300000000" />	<!-- cmd/unit_generic.cpp:2800,2913 -->
+			<var name="warpMultiplierMin" value="9.86960440109" />	<!-- cmd/unit_generic.cpp:2798,2911 -->
+			<var name="warp_behind_angle" value="150" />	<!-- cmd/ai/navigation.cpp:537 -->
+			<var name="warp_energy_for_cloak" value="true" />	<!-- cmd/unit_generic.cpp:2433,5771 -->
+			<var name="warp_energy_multiplier" value="0.12" />	<!-- cmd/basecomputer.cpp:4816 cmd/unit_generic.cpp:3896 -->
+			<var name="warp_energy_player_multiplier" value=".12" />	<!-- cmd/unit_generic.cpp:3897 -->
+			<var name="warp_is_interstellar" value="false" />	<!-- cmd/unit_generic.cpp:2704 -->
+			<var name="warp_orbit_multiplier" value="4" />	<!-- cmd/ai/navigation.cpp:536 -->
+			<var name="warp_perpendicular" value="80" />	<!-- cmd/ai/navigation.cpp:534 -->
+			<var name="warpbleed" value="20" />	<!-- cmd/basecomputer.cpp:4817 cmd/unit_generic.cpp:3315,4163 -->
+			<var name="warpcruisemult" value="5000" />	<!-- cmd/unit_generic.cpp:2808,2921 -->
+			<var name="warpcurvedegree" value="1.5" />	<!-- cmd/unit_generic.cpp:2810,2923 -->
+			<var name="warpenergy_damage_prob" value="0.05" />	<!-- cmd/unit_generic.cpp:4796 -->
+			<var name="warprampdowntime" value="0.5" />	<!-- cmd/unit_util_generic.cpp:252 cmd/ai/warpto.cpp:24 cmd/unit_generic.cpp:2886 -->
+			<var name="warprampuptime" value="5" />	<!-- cmd/unit_generic.cpp:2883 -->
+			<var name="warpregion0" value="5000" />	<!-- cmd/unit_generic.cpp:2806,2919 -->
+			<var name="warpregion1" value="5000000" />	<!-- cmd/unit_generic.cpp:2804,2917 -->
+			<var name="weapon_damage_efficiency" value="1.0" />	<!-- cmd/weapon_xml.cpp:381 -->
+			<section name="priorities" >
+				<var name="asteroid.low" value="32" />	<!-- cmd/unit_util_generic.cpp:148 -->
+				<var name="asteroid_high" value="2" />	<!-- cmd/unit_util_generic.cpp:146 -->
+				<var name="asteroid_parent" value="1" />	<!-- cmd/unit_util_generic.cpp:144 -->
+				<var name="dockable" value="1" />	<!-- cmd/unit_util_generic.cpp:74 -->
+				<var name="dynamic_throttle.enable" value="true" />	<!-- cmd/unit_util_generic.cpp:181 -->
+				<var name="dynamic_throttle.maxdistancefactor" value="4" />	<!-- cmd/unit_util_generic.cpp:185 -->
+				<var name="dynamic_throttle.mindistancefactor" value="0.25" />	<!-- cmd/unit_util_generic.cpp:183 -->
+				<var name="dynamic_throttle.targetfps" value="30" />	<!-- cmd/unit_util_generic.cpp:187 -->
+				<var name="force_top_priority" value="false" />	<!-- cmd/unit_util_generic.cpp:64 -->
+<!-- 				<var name="high" value=SERVER?'1':'2" /> -->	<!-- cmd/unit_util_generic.cpp:153 ['value not quoted'] -->
+				<var name="inert" value="64" />	<!-- cmd/unit_util_generic.cpp:173 -->
+				<var name="low" value="32" />	<!-- cmd/unit_util_generic.cpp:161 -->
+				<var name="medium" value="8" />	<!-- cmd/unit_util_generic.cpp:157 -->
+				<var name="mediumhigh" value="4" />	<!-- cmd/unit_util_generic.cpp:155 -->
+				<var name="mediumlow" value="16" />	<!-- cmd/unit_util_generic.cpp:159 -->
+				<var name="min_asteroid_distance" value="none" />	<!-- cmd/unit_util_generic.cpp:237 -->
+				<var name="missile" value="1" />	<!-- cmd/unit_util_generic.cpp:72 -->
+				<var name="no_enemies" value="64" />	<!-- cmd/unit_util_generic.cpp:171 -->
+				<var name="notvisible_combat_high" value="10" />	<!-- cmd/unit_util_generic.cpp:164 -->
+				<var name="notvisible_combat_low" value="40" />	<!-- cmd/unit_util_generic.cpp:168 -->
+				<var name="notvisible_combat_medium" value="20" />	<!-- cmd/unit_util_generic.cpp:166 -->
+				<var name="player" value="1" />	<!-- cmd/unit_util_generic.cpp:70 -->
+				<var name="playerthreat_distance_factor" value="2" />	<!-- cmd/unit_util_generic.cpp:176 -->
+				<var name="system_installation" value="3" />	<!-- cmd/unit_util_generic.cpp:85 -->
+				<var name="threat_distance_factor" value="1" />	<!-- cmd/unit_util_generic.cpp:178 -->
+				<var name="top" value="1" />	<!-- cmd/unit_util_generic.cpp:151 -->
+			</section>
+		</section>
+		<section name="player" >
+			<var name="callsign" value="" />	<!-- networking/netclient_login.cpp:35 gamemenu.cpp:199 -->
+			<var name="password" value="" />	<!-- networking/netclient_login.cpp:36 gamemenu.cpp:189 -->
+		</section>
+<!-- 		<section name="player'+((p&gt;0)?tostring(p+1):string('')) >	-->
+<!-- 			<var name="callsign" value="" /> -->	<!-- main.cpp:525 ['section not quoted', 'broken section'] -->
+<!-- 			<var name="password" value="" /> -->	<!-- main.cpp:526 ['section not quoted', 'broken section'] -->
+<!-- 		</section>	-->
+		<section name="server" >
+			<var name="accounts_dir" value="/accounts/" />	<!-- networking/acctserver.cpp:74 -->
+			<var name="clienttimeout" value="180" />	<!-- networking/netserver.cpp:214 -->
+			<var name="difficulty" value="1" />	<!-- networking/netserver.cpp:226 -->
+			<var name="disconnect_client_on_timeout" value="true" />	<!-- networking/netserver_net.cpp:79 -->
+			<var name="galaxy" value="milky_way.xml" />	<!-- networking/netserver.cpp:304 -->
+			<var name="logintimeout" value="60" />	<!-- networking/netserver.cpp:216 -->
+			<var name="max_send_range" value="1e21" />	<!-- networking/zonemgr.cpp:649 -->
+			<var name="missionfile" value="networking.mission" />	<!-- networking/netserver.cpp:308 -->
+			<var name="players_per_docking_port" value="10" />	<!-- cmd/unit_csv.cpp:388 -->
+			<var name="reconnectperiod" value="60" />	<!-- networking/netserver.cpp:212 -->
+			<var name="saveperiod" value="" />	<!-- networking/acctserver.cpp:75 -->
+<!-- 			<var name="saveperiod" value="7200" /> -->	<!-- networking/netserver.cpp:210 ['duplicate variable'] -->
+			<var name="serverscript" value="import server;my_obj=server.player()" />	<!-- networking/netserver_login.cpp:182 -->
+<!-- 			<var name="useaccountserver" value=vs_config-&gt;getVariable('network','use_account_server','false') /> -->	<!-- networking/netserver.cpp:241 ['value not quoted'] -->
+		</section>
+		<section name="sound" >
+			<var name="dj_script" value="modules/dj.py" />	<!-- cmd/music.cpp:357 -->
+			<var name="loss_relationship" value="-.1" />	<!-- cmd/unit_damage.cpp:336 -->
+			<var name="time_between_music" value="180" />	<!-- cmd/unit_damage.cpp:338 -->
+			<var name="victory_relationship" value=".5" />	<!-- cmd/unit_damage.cpp:337 -->
+		</section>
+		<section name="splash" >
+			<var name="auto_hide" value="true" />	<!-- main.cpp:722 -->
+			<var name="while_loading_starsystem" value="false" />	<!-- universe_generic.cpp:278 -->
+		</section>
+		<section name="terrain" >
+			<var name="mass" value="100.0" />	<!-- options.cpp:71 -->
+			<var name="radius" value="10000.0" />	<!-- options.cpp:72 -->
+			<var name="xscale" value="1.0" />	<!-- options.cpp:68 -->
+			<var name="yscale" value="1.0" />	<!-- options.cpp:69 -->
+			<var name="zscale" value="1.0" />	<!-- options.cpp:70 -->
+		</section>
+		<section name="unit" >
+			<var name="aggressivity" value="2" />	<!-- cmd/ai/aggressive.cpp:248 -->
+		</section>
+		<section name="unitaudio" >
+			<var name="afterburner" value="sfx10.wav" />	<!-- cmd/unit_csv.cpp:562 cmd/unit_xml.cpp:1225 -->
+			<var name="armor" value="sfx08.wav" />	<!-- cmd/unit_csv.cpp:570,574 cmd/unit_xml.cpp:1233,1237 -->
+			<var name="cloak" value="sfx43.wav" />	<!-- cmd/unit_csv.cpp:558 cmd/unit_xml.cpp:1221 -->
+			<var name="explode" value="explosion.wav" />	<!-- cmd/unit_csv.cpp:578 cmd/unit_xml.cpp:1241 -->
+<!-- 			<var name="explode" value="sfx43.wav" /> -->	<!-- cmd/unit_csv.cpp:582 cmd/unit_xml.cpp:1245 ['duplicate variable'] -->
+			<var name="jumparrive" value="sfx43.wav" />	<!-- cmd/unit_jump.cpp:138 -->
+			<var name="jumpleave" value="sfx43.wav" />	<!-- options.cpp:41 -->
+			<var name="locked" value="locked.wav" />	<!-- cmd/unit_generic.cpp:2589 -->
+			<var name="locking" value="locking.wav" />	<!-- cmd/unit_generic.cpp:2555 -->
+			<var name="locking_torp" value="locking.wav" />	<!-- cmd/unit_generic.cpp:2557 -->
+			<var name="locking_torp_trumps_music" value="false" />	<!-- cmd/unit_generic.cpp:2586 -->
+			<var name="locking_trumps_music" value="false" />	<!-- cmd/unit_generic.cpp:2584 -->
+			<var name="player_afterburner" value="sfx10.wav" />	<!-- cmd/unit_physics.cpp:184 -->
+			<var name="player_armor_hit" value="bigarmor.wav" />	<!-- cmd/unit_damage.cpp:163 -->
+			<var name="player_hull_hit" value="bigarmor.wav" />	<!-- cmd/unit_damage.cpp:179 -->
+			<var name="player_shield_hit" value="shieldhit.wav" />	<!-- cmd/unit_damage.cpp:196 -->
+			<var name="player_tractor_cargo" value="tractor_onboard.wav" />	<!-- cmd/beam_generic.cpp:569 -->
+			<var name="player_tractor_cargo_fromturret" value="tractor_onboard.wav" />	<!-- cmd/beam_generic.cpp:575 -->
+			<var name="shield" value="sfx09.wav" />	<!-- cmd/unit_csv.cpp:566 cmd/unit_xml.cpp:1229 -->
+		</section>
+<!-- 		<section name=category >	-->
+<!-- 			<var name=option value=def /> -->	<!-- universe_util_generic.cpp:155 ['section not quoted', 'variable not quoted', 'value not quoted', 'broken section'] -->
+<!-- 		</section>	-->
+<!-- 		<section name=section >	-->
+<!-- 			<var name=name value=def /> -->	<!-- universe_util_generic.cpp:720 ['section not quoted', 'variable not quoted', 'value not quoted', 'broken section'] -->
+<!-- 			<section name=subsection >	-->
+<!-- 				<var name=name value=def /> -->	<!-- universe_util_generic.cpp:723 ['section not quoted', 'subsection not quoted', 'variable not quoted', 'value not quoted', 'broken section', 'broken subsection', 'duplicate variable'] -->
+<!-- 			</section>	-->
+<!-- 		</section>	-->
+<!-- 		<section name=std::string('player')+((squadnum&gt;0)?XMLSupport::tostring(squadnum+1):std::string('')) >	-->
+<!-- 			<var name="callsign" value="pilot" /> -->	<!-- options.cpp:130 ['section not quoted', 'broken section'] -->
+<!-- 		</section>	-->
+	</variables>
+</vegaconfig>

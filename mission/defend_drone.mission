@@ -1,0 +1,27 @@
+<mission>
+
+	<variables>
+		<var name="defaultplayer" value="blue"/>
+		<var name="mission_name" value="4 versus 4" />
+		<var name="splashscreen" value="bad_guys_vs_good_guys.bmp" />
+		<var name="system" value="Gemini/Troy" />
+		<var name="description" value="4vs4.txt" />
+                <var name="credits" value="5000000"/>
+	</variables>
+        <flightgroups>
+
+
+                <flightgroup name="RogueLeader" faction="privateer" type="centurion.stel" ainame="default" waves="1" nr_ships="1">
+			<pos x="100" y="1000" z="1100.0"/>
+			<rot x="0.0" y="00.0" z="90.0"/>
+			<order priority="0" order="superiority" target="enemy"/>
+			<order priority="1" order="bomber" target="tau"/>
+			<order priority="2" order="escort" target="terrell"/>
+		</flightgroup>
+        </flightgroups>
+<python>
+import defend_drone
+tmp=defend_drone.defend_drone('steltek_fighter','steltek','Gemini/Penders_Star','drone','unknown',10,'confed',('Gemini/Penders_Star','Gemini/Blockade_Point_Tango'),"drone_mission",[("You're not Kilrathi, are you?",True,"campaign/Steltek.wav")])
+print "MAKING SAID MISSION"
+</python>
+</mission>

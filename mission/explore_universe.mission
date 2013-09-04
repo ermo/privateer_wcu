@@ -1,0 +1,48 @@
+<mission>
+	<settings>
+		<origin  planet="earth" x="0000" y="100" z="000.0"/>
+	</settings>
+
+	<variables>
+		<var name="credits" value="3000"/>
+		<var name="defaultplayer" value="blue"/>
+		<var name="mission_name" value="Privateer Mission" />
+		<var name="difficulty" value=".05"/><!--good starting difficulty here-->
+		<var name="system" value="Gemini/Troy" />
+		<var name="description" value="Welcome to the Wing Commander: Privateer mod of Vega Strike." />
+		<var name="savegame" value="explore_wcuniverse" />
+	</variables>
+        <flightgroups>
+                <flightgroup name="Privateer" faction="privateer" type="tarsus.begin" ainame="default" waves="1" nr_ships="1">
+			<pos x="18068.451" y="-60.189" z="-371.339" />  
+			<rot x="180.0" y="180.0" z="180.0"/>
+			<order order="tmptarget" target="omikron"/>
+			<order priority="0" order="superiority" target="enemy"/>
+			<order priority="1" order="bomber" target="omikron"/>
+			<order priority="2" order="escort" target="blue"/>
+		</flightgroup>
+<!--                <flightgroup name="Shlog" faction="privateer" type="stiletto" ainame="default" waves="1" nr_ships="5">
+			<pos x="-14510" y="-32000" z="7200"/>  
+			<rot x="180.0" y="180.0" z="180.0"/>
+			<order order="tmptarget" target="omikron"/>
+			<order priority="0" order="superiority" target="enemy"/>
+			<order priority="1" order="bomber" target="omikron"/>
+			<order priority="2" order="escort" target="blue"/>
+		</flightgroup>-->
+<!--                <flightgroup name="Shlimazel1" faction="privateer" type="clydesdale" ainame="default" waves="1" nr_ships="1">
+			<pos x="-95124024.543917" y="412089999916.256812" z="-110779667.398050"/>  </flightgroup>
+                <flightgroup name="Shlimazel2" faction="privateer" type="huldra" ainame="default" waves="1" nr_ships="1">
+			<pos x="-951240249999.543917" y="412089999916.256812" z="-110779667.398050"/>  </flightgroup>
+                <flightgroup name="Shlimazel3" faction="privateer" type="mule" ainame="default" waves="1" nr_ships="1">
+			<pos x="-95124024999.543917" y="412089999916.256812" z="-110779667.398050"/>  </flightgroup>
+                <flightgroup name="Shlimazel4" faction="privateer" type="lodur" ainame="default" waves="1" nr_ships="1">
+			<pos x="-9512400024.543917" y="412089999916.256812" z="-110779667.398050"/>  </flightgroup>
+-->
+
+        </flightgroups>
+<python>
+from privateer import privateer
+my_obj=privateer(3000,5000,500,3,2,.6,.25,.1,400000,2000)
+</python>
+
+</mission>

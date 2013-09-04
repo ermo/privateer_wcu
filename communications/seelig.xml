@@ -1,0 +1,225 @@
+<comm>
+	<node text="startingNode" relationship="0"><!-- node 0 (starting node: Don't link here)-->
+		<edge index="1"/>
+		<edge index="2"/>
+		<edge index="3"/>
+	</node>
+
+<!-- Starting Points -->
+	<node text="Looking sharp, ace." relationship="0.2"><!-- node 1 (very happy)-->
+	<sound file="communications/seelig/male/01.wav" sex="0"/>
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+	</node>
+	<node text="You're clear for klicks." relationship="0"><!-- node 2 (neutral)-->
+	<sound file="communications/seelig/male/02.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="How's that for a message, errand boy?" relationship="-.2"><!-- node 3 (very mad)-->
+	<sound file="communications/seelig/male/11.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+<!-- End of Starting Points -->
+
+<!-- Other Nodes -->
+
+	<node text="Catch you on the next run." relationship=".03125"><!-- node 4(random good chatter)-->
+	<sound file="communications/seelig/male/03.wav" sex="0"/>
+		<edge index="4"/>
+		<edge index="5"/>
+	</node>
+	<node text="You're clear for klicks." relationship=".0625"><!-- node 5 (random good chatter)-->
+	<sound file="communications/seelig/male/02.wav" sex="0"/>
+		<edge index="4"/>
+		<edge index="6"/>
+	</node>
+	<node text="Looking sharp, ace." relationship=".0625"><!-- node 6 (best node)-->
+	<sound file="communications/seelig/male/01.wav" sex="0"/>
+		<edge index="5"/>
+		<edge index="6"/>
+	</node>
+	<node text="Non looking for trouble, ace." relationship="-.03125"><!-- node 7 (hit while happy)-->
+		<edge index="4"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="I didn't see you, and you're blind. Got it?" relationship=".03125"><!-- node 8 (random neutral chatter)-->
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="Forget this meet happened; we got no problem." relationship=".04125"><!-- node 9 (neutral node after he has decided to be nicer after conflict)-->
+		<edge index="8"/>
+		<edge index="10"/>
+	</node>
+	<node text="Catch you on the next run." relationship=".03125"><!-- node 10 (good node in neutral) -->
+	<sound file="communications/seelig/male/03.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="9"/>
+	</node>
+	<node text="Non looking for trouble, ace." relationship="-.125"><!-- node 11 (got hit when neutral)-->
+		<edge index="9"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="You're finished, flyboy!" relationship="-.0625"><!-- node 12 (taunt)-->
+	<sound file="communications/seelig/male/07.wav" sex="0"/>
+		<edge index="13"/>
+		<edge index="15"/>
+		<edge index="19"/>
+	</node>
+	<node text="You're about to suck void, buddy." text1="You're a loose end looking to be tied, pal." relationship="-.125"><!-- node 13 (taunt)-->
+	<sound file="communications/seelig/male/08.wav" sex="0"/>
+	<sound file="communications/seelig/male/08b.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="15"/>
+		<edge index="19"/>
+	</node>
+	<node text="You're dead, chump." relationship="-.0625"><!-- node 14 (trying to appease him, but failing)-->
+	<sound file="communications/seelig/male/14.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="Damn! You're ripping me apart!" relationship="-.0625"><!-- node 15 hit while mad node-->
+	<sound file="communications/seelig/male/09.wav" sex="0"/>
+		<edge index="11"/>
+		<edge index="13"/>
+		<edge index="12"/>
+		<edge index="19"/>
+	</node>
+	<node text="Yeah; you're nailed, pal!" relationship="-.0625"><!-- node 16 kill-->
+	<sound file="communications/seelig/male/12.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="17"/>
+		<edge index="19"/>
+	</node>
+	<node text="A clean kill! Shudda been a bounty hunter..." relationship="-.0625"><!-- node 17 kill-->
+	<sound file="communications/seelig/male/13.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="16"/>
+		<edge index="19"/>
+	</node>
+	<node text="How's that for a message, errand boy?" relationship="-.03125"><!-- node 18 (trying to appease, but failing)-->
+	<sound file="communications/seelig/male/11.wav" sex="0"/>
+		<edge index="9"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>	
+	<node text="Yeah you're nailed, pal!" relationship="-.0625"><!-- node 19 (taunt)-->
+	<sound file="communications/seelig/male/12.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+
+<!-- Built-in Conversations --> 
+	<node text="Docking operation complete. You're free of the docking clamps." relationship="0.01">
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+		<edge index="7"/>
+	</node>
+	<node text="You are not in docking clamps. Move into one of the green guide boxes and try to dock again." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>
+	<node text="Docking Operation begun; press 0 to step into airlock." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Docking denied. Do not land here!" relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Docking agreement reached: move to docking port in green indicators." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Not a chance pal, go to hell." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Will do, buddy." relationship="0">
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+		<edge index="7"/>
+	</node>		
+	<node text="Then what is it alan? Is it a smuggler flown off normal space lanes? Maybe a BAD smugger, with some nice contraband..." relationship="0"> <!-- maintain speed and course -->
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="Nothing is interesting in your hold." relationship="0"> <!-- no contraband detected you may proceed -->
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="Prepare to be boarded!" relationship="-.125"> <!-- contraband detected! all units close and engage -->
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="I can see you; can you see me?" relationship="0"> <!-- maintain your speed and course...DO NOT deviate -->
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>	
+	<node text="Request Clearance To Land." relationship="0"> 
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>	
+	<node text="A clean kill! Should have been a bounty hunter..." relationship="-.0625"><!-- node 17 kill-->
+	<sound file="communications/seelig/male/13.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="How's that for a message, errand boy?" text1="Yeah, you're nailed, pal" relationship="-.03125"><!-- dealt damage -->
+	<sound file="communications/seelig/male/11.wav" sex="0"/>
+	<sound file="communications/seelig/male/12.wav" sex="0"/>
+
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="Damn, you're ripping me apart!" text1="This crate's about to explode!" relationship="-.0625"><!-- node 15 first  hull damage -->
+	<sound file="communications/seelig/male/09.wav" sex="0"/>
+	<sound file="communications/seelig/male/10.wav" sex="0"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="*hit*" relationship="-.01">
+		<edge index="7"/>
+		<edge index="11"/>
+		<edge index="15"/>
+	</node>
+
+<!-- End of Built-in Conversations --> 
+</comm>

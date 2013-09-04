@@ -1,0 +1,27 @@
+<system name="KM-252" background="backgrounds/verypurple" nearstars="500" stars="1000" starspread="150" y="0" z="0" x="0">
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="0.774596669241483" green="0.774596669241483" blue="1"/>
+	<specular red="0.6" green="0.6" blue="1"/>
+</Light>
+<Planet name="KM-252" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="0.6" Green="0.6" Blue="1" ReflectNoLight="true" light="0"/>
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="1" blue="1"/>
+	<specular red="1" green="1" blue="1"/>
+</Light>
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".000000002"/>
+</Light>	
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".0000001"/>
+</Light>	
+	<unit name="Smallville" file="mining_base" faction="pirates" x="7500" y="7500"/>
+	<planet name="Jump_To_Nexus" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-14500" y="-6000" day="240" destination="Gemini/Nexus"/>
+</system>

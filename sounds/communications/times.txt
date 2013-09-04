@@ -1,0 +1,1440 @@
+
+
+Error opening ./reismann/male/01.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/10.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/11.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/12.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 71%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/13.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/14.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/15.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/plot0001.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./reismann/male/plot0002.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/01.wav
+0.01user 0.00system 0:00.94elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/02.wav
+0.01user 0.00system 0:01.22elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/03.wav
+0.01user 0.00system 0:01.04elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/04.wav
+0.01user 0.00system 0:02.34elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/05.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/06.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/07.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/08.wav
+0.01user 0.00system 0:01.78elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/09.wav
+0.02user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/10.wav
+0.02user 0.00system 0:03.36elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/11.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/12.wav
+0.01user 0.00system 0:02.62elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/13.wav
+0.01user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/male/14.wav
+0.01user 0.00system 0:02.80elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/01.wav
+0.01user 0.00system 0:01.13elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/02.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/03.wav
+0.01user 0.00system 0:01.22elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/04.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/05.wav
+0.01user 0.00system 0:01.50elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/06.wav
+0.01user 0.00system 0:01.50elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/07.wav
+0.01user 0.00system 0:01.87elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/08.wav
+0.01user 0.00system 0:01.97elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/09.wav
+0.02user 0.00system 0:03.36elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/10.wav
+0.02user 0.00system 0:04.29elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/11.wav
+0.01user 0.00system 0:02.62elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/12.wav
+0.02user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/13.wav
+0.02user 0.00system 0:03.27elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./merchant/female/14.wav
+0.02user 0.00system 0:03.64elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/01.ogg
+0.02user 0.00system 0:01.17elapsed 2%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/02.ogg
+0.02user 0.00system 0:01.68elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/03.ogg
+0.03user 0.00system 0:02.24elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/04.ogg
+0.03user 0.00system 0:02.99elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/05.ogg
+0.02user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/06.ogg
+0.02user 0.00system 0:01.50elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/07.ogg
+0.03user 0.00system 0:02.06elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/08.ogg
+0.03user 0.00system 0:02.62elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/09.ogg
+0.03user 0.00system 0:02.01elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/10.ogg
+0.03user 0.00system 0:02.71elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/11.ogg
+0.03user 0.00system 0:03.13elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/12.ogg
+0.03user 0.00system 0:02.61elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/13.ogg
+0.03user 0.00system 0:02.24elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/14.ogg
+0.03user 0.00system 0:02.29elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/15.ogg
+0.03user 0.00system 0:01.97elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./AWACS/male/16.ogg
+0.03user 0.00system 0:02.15elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/02.wav
+0.01user 0.00system 0:02.41elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/07.wav
+0.01user 0.00system 0:03.51elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/08.wav
+0.01user 0.00system 0:03.14elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/09.wav
+0.01user 0.00system 0:03.14elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/10.wav
+0.01user 0.00system 0:02.96elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/11.wav
+0.01user 0.00system 0:02.22elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/12.wav
+0.01user 0.00system 0:03.70elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/13.wav
+0.01user 0.00system 0:02.96elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/14.wav
+0.01user 0.00system 0:02.22elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/15.wav
+0.01user 0.00system 0:02.04elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/12b.wav
+0.01user 0.00system 0:03.51elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/plot0001.wav
+0.01user 0.00system 0:03.53elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/plot0002.wav
+0.02user 0.00system 0:09.78elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/plot0003.wav
+0.02user 0.00system 0:10.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/plot0004.wav
+0.01user 0.00system 0:03.54elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kroiz/male/plot0005.wav
+0.02user 0.00system 0:10.55elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/01.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/02.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/03.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/04.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/05.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/06.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/07.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 71%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/08.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/09.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/10.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/11.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/12.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/13.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/14.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/08b.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./miggs/male/plot0001.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.08elapsed 9%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/contraband01.wav
+0.02user 0.00system 0:02.89elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/contraband02.wav
+0.01user 0.00system 0:02.34elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/contraband03.wav
+0.01user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/contraband04.wav
+0.01user 0.00system 0:02.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/01.wav
+0.02user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/02.wav
+0.01user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/03.wav
+0.01user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/04.wav
+0.01user 0.00system 0:03.02elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/05.wav
+0.02user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/06.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/07.wav
+0.02user 0.00system 0:03.54elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/08.wav
+0.02user 0.00system 0:03.46elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/09.wav
+0.02user 0.00system 0:03.49elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/10.wav
+0.02user 0.00system 0:03.55elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/unassigned01.wav
+0.02user 0.00system 0:04.04elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/unassigned02.wav
+0.01user 0.00system 0:00.85elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/unassigned03.wav
+0.01user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/unassigned04.wav
+0.01user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/male/unassigned05.wav
+0.02user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/contraband01.wav
+0.02user 0.00system 0:04.01elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/contraband02.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/contraband03.wav
+0.02user 0.00system 0:04.29elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/contraband04.wav
+0.02user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/01.wav
+0.01user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/02.wav
+0.02user 0.00system 0:04.38elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/03.wav
+0.02user 0.00system 0:03.55elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/04.wav
+0.02user 0.00system 0:05.24elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/05.wav
+0.02user 0.00system 0:04.57elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/06.wav
+0.01user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/07.wav
+0.02user 0.00system 0:05.22elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/08.wav
+0.02user 0.00system 0:05.50elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/09.wav
+0.02user 0.00system 0:04.19elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/10.wav
+0.02user 0.00system 0:04.38elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/unassigned01.wav
+0.02user 0.00system 0:04.85elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/unassigned02.wav
+0.01user 0.00system 0:00.85elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/unassigned03.wav
+0.02user 0.00system 0:03.46elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/unassigned04.wav
+0.02user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./retro/female/unassigned05.wav
+0.02user 0.00system 0:03.38elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/01.wav
+0.02user 0.00system 0:04.75elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/02.wav
+0.02user 0.00system 0:03.55elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/03.wav
+0.02user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/04.wav
+0.01user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/05.wav
+0.02user 0.00system 0:03.45elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/06.wav
+0.01user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/07.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/08.wav
+0.02user 0.00system 0:03.83elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/09.wav
+0.01user 0.00system 0:02.73elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/10.wav
+0.02user 0.00system 0:03.45elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/11.wav
+0.01user 0.00system 0:03.46elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/12.wav
+0.02user 0.00system 0:03.45elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/13.wav
+0.02user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/14.wav
+0.02user 0.00system 0:03.46elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/unassigned01.wav
+0.01user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/unassigned02.wav
+0.02user 0.00system 0:03.82elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/unassigned03.wav
+0.02user 0.00system 0:03.27elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/unassigned04.wav
+0.01user 0.00system 0:03.29elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./kilrathi/male/unassigned05.wav
+0.01user 0.00system 0:02.06elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/contraband01.wav
+0.02user 0.00system 0:03.92elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/contraband02.wav
+0.01user 0.00system 0:03.55elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/contraband03.wav
+0.02user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/01.wav
+0.01user 0.00system 0:02.34elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/02.wav
+0.01user 0.00system 0:02.34elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/03.wav
+0.02user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/04.wav
+0.01user 0.00system 0:02.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/05.wav
+0.01user 0.00system 0:02.06elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/06.wav
+0.01user 0.00system 0:01.04elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/07.wav
+0.02user 0.00system 0:02.53elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/08.wav
+0.01user 0.01system 0:02.06elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/09.wav
+0.02user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/10.wav
+0.01user 0.00system 0:01.87elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/11.wav
+0.01user 0.00system 0:01.03elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/12.wav
+0.02user 0.00system 0:03.55elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/13.wav
+0.02user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/14.wav
+0.01user 0.00system 0:01.97elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/15.wav
+0.01user 0.00system 0:02.90elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/male/16.wav
+0.02user 0.00system 0:03.17elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/contraband01.wav
+0.01user 0.00system 0:03.46elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/contraband02.wav
+0.02user 0.00system 0:03.27elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/contraband03.wav
+0.01user 0.00system 0:02.53elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/01.wav
+0.01user 0.00system 0:01.97elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/02.wav
+0.01user 0.00system 0:02.06elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/03.wav
+0.01user 0.00system 0:02.06elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/04.wav
+0.01user 0.00system 0:02.15elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/05.wav
+0.01user 0.00system 0:01.78elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/06.wav
+0.01user 0.00system 0:01.04elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/07.wav
+0.01user 0.00system 0:02.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/08.wav
+0.01user 0.00system 0:01.96elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/09.wav
+0.02user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/10.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/11.wav
+0.01user 0.00system 0:00.94elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/12.wav
+0.01user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/13.wav
+0.01user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/14.wav
+0.01user 0.00system 0:01.69elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/15.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./militia/female/16.wav
+0.01user 0.00system 0:02.62elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0007b.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.02elapsed 23%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0001.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.01elapsed 54%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0002.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.01elapsed 43%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0003.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.01elapsed 27%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0004.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.01elapsed 35%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0005.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.02elapsed 25%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0006.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.01elapsed 33%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0007.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.04elapsed 16%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0008.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0009.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.02elapsed 33%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./steltek/male/plot0010.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.02elapsed 22%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/contraband01.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/contraband02.wav
+0.01user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/contraband03.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/01.wav
+0.01user 0.00system 0:01.97elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/02.wav
+0.01user 0.00system 0:02.34elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/03.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/04.wav
+0.02user 0.00system 0:03.45elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/05.wav
+0.02user 0.00system 0:03.83elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/06.wav
+0.02user 0.00system 0:03.45elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/07.wav
+0.02user 0.00system 0:02.62elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/08.wav
+0.01user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/09.wav
+0.01user 0.00system 0:02.80elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/10.wav
+0.02user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/11.wav
+0.01user 0.00system 0:02.34elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/12.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/13.wav
+0.01user 0.00system 0:02.24elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/14.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/15.wav
+0.01user 0.00system 0:01.87elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/16.wav
+0.01user 0.00system 0:01.87elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/unassigned01.wav
+0.01user 0.00system 0:02.63elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/male/unassigned02.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/contraband01.wav
+0.02user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/contraband02.wav
+0.02user 0.00system 0:03.36elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/contraband03.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/01.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/02.wav
+0.02user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/03.wav
+0.02user 0.00system 0:03.27elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/04.wav
+0.02user 0.00system 0:04.10elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/05.wav
+0.02user 0.00system 0:04.19elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/06.wav
+0.01user 0.00system 0:03.36elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/07.wav
+0.02user 0.00system 0:03.27elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/08.wav
+0.01user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/09.wav
+0.01user 0.00system 0:02.15elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/10.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/11.wav
+0.01user 0.00system 0:02.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/12.wav
+0.01user 0.00system 0:02.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/13.wav
+0.01user 0.00system 0:01.87elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/14.wav
+0.01user 0.00system 0:01.50elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/15.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/16.wav
+0.01user 0.00system 0:02.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/unassigned01.wav
+0.02user 0.00system 0:03.86elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./confed/female/unassigned02.wav
+0.01user 0.00system 0:02.80elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/01.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/02.wav
+0.02user 0.00system 0:02.90elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/03.wav
+0.01user 0.00system 0:03.08elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/04.wav
+0.01user 0.00system 0:03.10elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/05.wav
+0.02user 0.00system 0:03.27elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/06.wav
+0.02user 0.00system 0:03.64elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/07.wav
+0.01user 0.00system 0:03.92elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/08.wav
+0.02user 0.00system 0:04.01elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/09.wav
+0.02user 0.00system 0:03.45elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/10.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/11.wav
+0.01user 0.00system 0:02.52elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/12.wav
+0.02user 0.00system 0:03.36elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/13.wav
+0.01user 0.00system 0:02.62elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/14.wav
+0.02user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/15.wav
+0.01user 0.00system 0:02.06elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/unassigned01.wav
+0.01user 0.01system 0:04.79elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/male/unassigned02.wav
+0.02user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/01.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/02.wav
+0.01user 0.00system 0:01.97elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/03.wav
+0.01user 0.00system 0:01.78elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/04.wav
+0.01user 0.00system 0:02.80elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/05.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/06.wav
+0.01user 0.00system 0:02.62elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/07.wav
+0.01user 0.00system 0:02.80elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/08.wav
+0.02user 0.00system 0:03.18elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/09.wav
+0.01user 0.00system 0:02.80elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/10.wav
+0.01user 0.00system 0:01.97elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/11.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/12.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/13.wav
+0.02user 0.00system 0:02.53elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/14.wav
+0.01user 0.00system 0:02.15elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/15.wav
+0.01user 0.00system 0:01.97elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/unassigned01.wav
+0.01user 0.00system 0:03.01elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./hunter/female/unassigned02.wav
+0.01user 0.00system 0:02.26elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/00004.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/01.wav
+0.00user 0.00system 0:01.30elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/02.wav
+0.00user 0.00system 0:01.48elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/03.wav
+0.01user 0.00system 0:01.48elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/07.wav
+0.01user 0.00system 0:01.67elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/08.wav
+0.01user 0.00system 0:02.04elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/09.wav
+0.01user 0.00system 0:01.48elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/10.wav
+0.00user 0.00system 0:01.85elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/11.wav
+0.01user 0.00system 0:02.59elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/12.wav
+0.01user 0.00system 0:02.22elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/13.wav
+0.01user 0.00system 0:03.14elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/14.wav
+0.01user 0.00system 0:01.30elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/08b.wav
+0.01user 0.00system 0:02.41elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/plot0001.wav
+0.01user 0.00system 0:02.77elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/plot0002.wav
+0.01user 0.00system 0:02.77elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/plot0003.wav
+0.01user 0.00system 0:03.17elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./seelig/male/plot0004.wav
+0.00user 0.00system 0:01.67elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/07.wav
+0.01user 0.00system 0:02.22elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/08.wav
+0.01user 0.00system 0:02.59elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/09.wav
+0.01user 0.00system 0:02.41elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/10.wav
+0.00user 0.00system 0:01.67elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/11.wav
+0.01user 0.00system 0:01.67elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/12.wav
+0.01user 0.00system 0:02.41elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/13.wav
+0.01user 0.00system 0:02.22elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/14.wav
+0.01user 0.00system 0:01.85elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/15.wav
+0.01user 0.00system 0:01.48elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/plot0004b.wav
+0.01user 0.00system 0:01.88elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/plot0001.wav
+0.00user 0.00system 0:01.67elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/plot0002.wav
+0.01user 0.00system 0:05.93elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/plot0003.wav
+0.01user 0.00system 0:03.70elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/plot0004.wav
+0.01user 0.00system 0:02.41elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/plot0005.wav
+0.02user 0.00system 0:10.00elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./riordian/male/plot0006.wav
+0.00user 0.00system 0:01.51elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/01.wav
+0.01user 0.00system 0:01.31elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/02.wav
+0.01user 0.00system 0:01.22elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/03.wav
+0.01user 0.00system 0:01.22elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/04.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/05.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/06.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/07.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/08.wav
+0.01user 0.00system 0:01.69elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/09.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/10.wav
+0.01user 0.00system 0:01.69elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/11.wav
+0.01user 0.00system 0:02.06elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/12.wav
+0.01user 0.00system 0:01.87elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/13.wav
+0.02user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/14.wav
+0.01user 0.00system 0:01.25elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/unassigned01.wav
+0.01user 0.00system 0:02.36elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/unassigned02.wav
+0.02user 0.00system 0:02.99elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/female/unassigned03.wav
+0.02user 0.00system 0:02.90elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/01.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/02.wav
+0.01user 0.00system 0:01.50elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/03.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/04.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/05.wav
+0.02user 0.00system 0:02.62elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/06.wav
+0.01user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/07.wav
+0.01user 0.00system 0:01.97elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/08.wav
+0.01user 0.00system 0:02.43elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/09.wav
+0.01user 0.00system 0:01.78elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/10.wav
+0.01user 0.00system 0:01.97elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/11.wav
+0.01user 0.00system 0:02.34elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/12.wav
+0.01user 0.00system 0:02.54elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/13.wav
+0.02user 0.00system 0:02.81elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/14.wav
+0.01user 0.00system 0:01.59elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/unassigned01.wav
+0.02user 0.00system 0:03.01elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/unassigned02.wav
+0.02user 0.00system 0:03.65elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male01/unassigned03.wav
+0.01user 0.00system 0:03.56elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./pirates/male01/08b.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.04elapsed 13%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/01.wav
+0.01user 0.00system 0:01.50elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/02.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/03.wav
+0.01user 0.00system 0:01.13elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/04.wav
+0.01user 0.00system 0:01.41elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/05.wav
+0.01user 0.00system 0:02.16elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/06.wav
+0.02user 0.00system 0:02.71elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/07.wav
+0.01user 0.00system 0:01.50elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/08.wav
+0.01user 0.00system 0:01.97elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/11.wav
+0.01user 0.00system 0:02.25elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/12.wav
+0.02user 0.00system 0:02.90elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/13.wav
+0.01user 0.00system 0:03.27elapsed 0%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Playing: ./pirates/male02/14.wav
+0.01user 0.00system 0:01.32elapsed 1%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/01.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/02.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 100%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/03.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/07.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/10.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 71%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/11.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 100%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/12.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 85%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/13.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/14.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/15.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.00elapsed 75%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/plot0001.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.04elapsed 13%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/plot0002.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.13elapsed 4%CPU (0avgtext+0avgdata 0maxresident)k
+
+
+Error opening ./garrovick/male/plot0003.wav using the oggvorbis module.  The file may be corrupted.
+0.00user 0.00system 0:00.13elapsed 4%CPU (0avgtext+0avgdata 0maxresident)k

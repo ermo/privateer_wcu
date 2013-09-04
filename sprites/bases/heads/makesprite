@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "bases/heads/$1.png 0"> $1.spr
+echo "3.104 2.4832" >> $1.spr
+echo "0 0" >> $1.spr

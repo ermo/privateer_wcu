@@ -1,0 +1,51 @@
+<Cockpit front="banshee-cockpit.spr" left="banshee-cockpit-left.spr" right="banshee-cockpit-right.spr" back="banshee-cockpit-back.spr" ViewOffset=".2857" CockpitOffset="0.4625">
+	
+<Crosshairs file="crosshairs.spr" xcent=".0001" ycent=".276" height=".55"/>
+	
+<Radar file="" xcent="0" ycent="-.3359" width=".2422" height=".3229"/>
+	
+
+<ShieldF file="shieldf.spr" xcent="-.3359" ycent="-.375" width=".1406" height=".1042"/>
+
+<ShieldB file="shieldf.spr" xcent="-.3359" ycent="-.5156" width=".1406" height=".1042"  GaugeDown="1"/>
+	
+<ShieldL file="shieldl.spr" xcent="-.3848" ycent="-.4479" width=".0625" height=".2188"  GaugeRight="1"/>
+
+<ShieldR file="shieldl.spr" xcent="-.2852" ycent="-.4479" width=".0625" height=".2188"  GaugeLeft="1"/>
+	
+
+
+<ArmorF file="armorf.spr" xcent=".334" ycent="-.3789" width=".1406" height=".1042"/>
+	
+<ArmorB file="armorf.spr" xcent=".334" ycent="-.5156" width=".1406" height=".1042" GaugeDown="1"/>
+	
+<ArmorL file="armorl.spr" xcent=".2852" ycent="-.4479" width=".0625" height=".2188" GaugeRight="1"/>
+
+<ArmorR file="armorl.spr" xcent=".3848" ycent="-.4479" width=".0625" height=".2188" GaugeLeft="1"/>
+
+
+<WarpEnergy file="blasterpower.spr" xcent="-.334" ycent="-.1055" width=".293" height=".0495" GaugeRight="1"/> 
+	
+<Energy file="blasterpower.spr" xcent=".3281" ycent="-.1055" width=".293" height=".0495" GaugeLeft="1"/> 
+	
+<Lock file="locklight.spr" xcent="-.4033" ycent="-.2148" width=".1543" height=".0651"/>
+
+<Auto file="auto.spr" xcent=".4033" ycent="-.2148" width=".1543" height=".0651"/> 
+	
+<Eject file="eject.spr" xcent=".002" ycent=".9453" width=".2031" height=".0833"/>
+	
+<SetSpeed file="radar.spr" xcent="-.1069" ycent="-.105" width=".1387" height=".0572"/>
+	
+<Speed file="radar.spr" xcent=".0569" ycent="-.105" width=".1387" height=".0572"/>
+	
+
+<VDU TextRows="15" TextCols="25" type="Objectives View Weapon Damage Manifest COMM TargetManifest" file="lvdu.spr"/>
+	
+<VDU  TextRows="15" TextCols="25" type="Target Nav" file ="rvdu.spr"/>
+	
+<VDU TextRows="10" TextCols="100" type="Message" file="mvdu.spr" xcent="0" ycent="0.64" width="1" height=".2"/>
+<!-- <VDU TextRows="10" TextCols="50" type="Objectives" file="mvdu.spr" xcent="0.6025" ycent=".15" width=".7676" height=".526"/>-->
+<!-- <VDU TextRows="10" TextCols="50" type="Weapon" file="mvdu.spr" xcent="-0.6025" ycent=".7" width=".7676" height=".526"/>-->
+
+<!--<FPS file="radar.spr" xcent="-.98" ycent=".95" width=".018" height=".036"/>-->
+</Cockpit>

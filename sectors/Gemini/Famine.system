@@ -1,0 +1,31 @@
+<system name="Famine" background="backgrounds/fiery_galaxy" nearstars="500" stars="1000" starspread="150" y="0" z="0" x="0">
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="0.547722557505166" blue="0.316227766016838"/>
+	<specular red="1" green="0.3" blue="0.1"/>
+</Light>
+<Planet name="Famine" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.3" Blue="0.1" ReflectNoLight="true" light="0"/>
+<Light>
+	<ambient red="000.0" green="000.0" blue="000.0"/>
+	<diffuse red="1" green="1" blue="1"/>
+	<specular red="1" green="1" blue="1"/>
+</Light>
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".000000002"/>
+</Light>	
+<Light>
+	<ambient red="1" green=".1" blue="0"/>
+	<!--<diffuse red="1" green=".7" blue="0"/>-->
+	<!--<attenuated red=".00000001" blue=".00000015"/>-->
+	<attenuated red="0" blue=".0000001"/>
+</Light>	
+	<planet name="Jump_To_Death" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="7500" day="240" destination="Gemini/Death"/>
+	<planet name="Jump_To_Sherwood" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-18500" day="240" destination="Gemini/Sherwood"/>
+	<planet name="Jump_To_Capella" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="0" day="240" destination="Gemini/Capella"/>
+	<planet name="Nav_4" file="invisible.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="7500" day="240"/>
+	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-0" file="AFieldBasePriv" difficulty=".02" faction="neutral" x="0" y="7500" day="-14000"/>
+	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="1" file="Asteroid_Field" difficulty=".02" faction="neutral" x="0" y="7500" day="-14000"/>
+</system>

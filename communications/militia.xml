@@ -1,0 +1,261 @@
+<comm>
+	<node text="startingNode" relationship="0"><!-- node 0 (starting node: Don't link here)-->
+		<edge index="1"/>
+		<edge index="2"/>
+		<edge index="3"/>
+	</node>
+
+<!-- Starting Points -->
+	<node text="Keep your eyes peeled for trouble, ace." relationship="0.2"><!-- node 1 (very happy)-->
+	<sound file="communications/militia/male/01.wav" sex="0"/>
+	<sound file="communications/militia/female/01.wav" sex="1"/>
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+	</node>
+	<node text="Let me know if you hit trouble in my quad." relationship="0"><!-- node 2 (neutral)-->
+	<sound file="communications/militia/male/02.wav" sex="0"/>
+	<sound file="communications/militia/female/02.wav" sex="1"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="You're not leaving this quad alive, pirate!" relationship="-.2"><!-- node 3 (very mad)-->
+	<sound file="communications/militia/male/07.wav" sex="0"/>
+	<sound file="communications/militia/female/07.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+<!-- End of Starting Points -->
+
+<!-- Other Nodes -->
+
+	<node text="We got this sector bottled tight, friend." relationship=".03125"><!-- node 4(random good chatter)-->
+	<sound file="communications/militia/male/03.wav" sex="0"/>
+	<sound file="communications/militia/female/03.wav" sex="1"/>
+		<edge index="4"/>
+		<edge index="5"/>
+	</node>
+	<node text="Let me know if you hit trouble in my quad." relationship=".0625"><!-- node 5 (random good chatter)-->
+	<sound file="communications/militia/male/02.wav" sex="0"/>
+	<sound file="communications/militia/female/02.wav" sex="1"/>
+		<edge index="4"/>
+		<edge index="6"/>
+	</node>
+	<node text="Keep your eyes peeled for trouble, ace." relationship=".0625"><!-- node 6 (best node)-->
+	<sound file="communications/militia/male/01.wav" sex="0"/>
+	<sound file="communications/militia/female/01.wav" sex="1"/>
+		<edge index="5"/>
+		<edge index="6"/>
+	</node>
+	<node text="Keep your nose clean in our sector." relationship="-.03125"><!-- node 7 (hit while happy)-->
+	<sound file="communications/militia/male/05.wav" sex="0"/>
+	<sound file="communications/militia/female/05.wav" sex="1"/>
+		<edge index="4"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="Militia here; stick to your flight path." relationship=".03125"><!-- node 8 (random neutral chatter)-->
+	<sound file="communications/militia/male/04.wav" sex="0"/>
+	<sound file="communications/militia/female/04.wav" sex="1"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="You're clear to pass." relationship=".04125"><!-- node 9 (neutral node after he has decided to be nicer after conflict)-->
+	<sound file="communications/militia/male/06.wav" sex="0"/>
+	<sound file="communications/militia/female/06.wav" sex="1"/>
+		<edge index="8"/>
+		<edge index="10"/>
+	</node>
+	<node text="Let me know if you hit trouble in my quad." relationship=".03125"><!-- node 10 (good node in neutral) -->
+	<sound file="communications/militia/male/02.wav" sex="0"/>
+	<sound file="communications/militia/female/02.wav" sex="1"/>
+		<edge index="8"/>
+		<edge index="9"/>
+	</node>
+	<node text="Militia forces in need of assistance!" relationship="-.125"><!-- node 11 (got hit when neutral)-->
+	<sound file="communications/militia/male/10.wav" sex="0"/>
+	<sound file="communications/militia/female/10.wav" sex="1"/>
+		<edge index="9"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="You're not leaving this quad alive, pirate!" relationship="-.0625"><!-- node 12 (taunt)-->
+	<sound file="communications/militia/male/07.wav" sex="0"/>
+	<sound file="communications/militia/female/07.wav" sex="1"/>
+		<edge index="13"/>
+		<edge index="15"/>
+		<edge index="19"/>
+	</node>
+	<node text="This is your LAST run!" relationship="-.125"><!-- node 13 (taunt)-->
+	<sound file="communications/militia/male/08.wav" sex="0"/>
+	<sound file="communications/militia/female/08.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="15"/>
+		<edge index="19"/>
+	</node>
+	<node text="Your luck has run out, --along with my patience." relationship="-.0625"><!-- node 14 (trying to appease him, but failing)-->
+	<sound file="communications/militia/male/09.wav" sex="0"/>
+	<sound file="communications/militia/female/09.wav" sex="1"/>
+		<edge index="8"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="You cannot win. Withdraw, or be destroyed." relationship="-.0625"><!-- node 15 hit while mad node-->
+	<sound file="communications/militia/male/12.wav" sex="0"/>
+	<sound file="communications/militia/female/12.wav" sex="1"/>
+		<edge index="11"/>
+		<edge index="13"/>
+		<edge index="12"/>
+		<edge index="19"/>
+	</node>
+	<node text="You're not leaving this quad alive, pirate!" relationship="-.0625"><!-- node 16 kill-->
+	<sound file="communications/militia/male/16.wav" sex="0"/>
+	<sound file="communications/militia/female/16.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="17"/>
+		<edge index="19"/>
+	</node>
+	<node text="Sensors show you are breaking up. Retreat!" relationship="-.0625"><!-- node 17 kill-->
+	<sound file="communications/militia/male/13.wav" sex="0"/>
+	<sound file="communications/militia/female/13.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="16"/>
+		<edge index="19"/>
+	</node>
+	<node text="This is your LAST run!" relationship="-.03125"><!-- node 18 (trying to appease, but failing)-->
+	<sound file="communications/militia/male/08.wav" sex="0"/>
+	<sound file="communications/militia/female/08.wav" sex="1"/>
+		<edge index="9"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>	
+	<node text="You're not leaving this quad alive, pirate!" relationship="-.0625"><!-- node 19 (taunt)-->
+	<sound file="communications/militia/male/07.wav" sex="0"/>
+	<sound file="communications/militia/female/07.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+
+<!-- Built-in Conversations --> 
+	<node text="Docking operation complete. You're free of the docking clamps." relationship="0.01">
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+		<edge index="7"/>
+	</node>
+	<node text="You are not in docking clamps. Move into one of the green guide boxes and try to dock again." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>
+	<node text="Docking operation begun; press 0 to step into our starship." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="You are not authorized to land here!" relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Clearance code acknowledged; move into landing pattern and dock at the white indicators." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Unable to comply." relationship="0">
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="11"/>
+	</node>		
+	<node text="Acknowledged." relationship="0">
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="6"/>
+		<edge index="7"/>
+	</node>		
+	<node text="Prepare to be searched, maintain speed and course." relationship="0"> <!-- maintain speed and course -->
+	<sound file="communications/militia/male/contraband01.wav" sex="0"/>
+	<sound file="communications/militia/female/contraband01.wav" sex="1"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="No contraband detected; you may proceed." relationship="0"> <!-- no contraband detected you may proceed -->
+	<sound file="communications/militia/male/contraband03.wav" sex="0"/>
+	<sound file="communications/militia/female/contraband03.wav" sex="1"/>
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>
+	<node text="CONTRABAND DETECTED -- All units: close and terminate!" text1="Filthy little brilliance runner; you're busted!" relationship="-.125"> <!-- contraband detected! all units close and engage -->
+	<sound file="communications/militia/male/contraband02.wav" sex="0"/>
+	<sound file="communications/militia/female/contraband02.wav" sex="1"/>
+	<sound file="communications/militia/male/16.wav" sex="0"/>
+	<sound file="communications/militia/female/16.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+	</node>
+	<node text="Your course is deviating. Maintain course!" relationship="0"> <!-- maintain your speed and course...DO NOT deviate -->
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>	
+	<node text="Request Clearance To Land." relationship="0"> 
+		<edge index="8"/>
+		<edge index="9"/>
+		<edge index="10"/>
+	</node>	
+	<node text="Target eliminated, Command." text1="Militia to Base: Enemy dispatched." relationship="0"> <!-- no contraband detected you may proceed -->
+	<sound file="communications/militia/male/14.wav" sex="0"/>
+	<sound file="communications/militia/female/14.wav" sex="1"/>
+	<sound file="communications/militia/male/15.wav" sex="0"/>
+	<sound file="communications/militia/female/15.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="Sensors show you are breaking up. Retreat!" text1="You cannot win; withdraw, or be destroyed" relationship="-.0625"><!-- node 17 kill-->
+	<sound file="communications/militia/male/13.wav" sex="0"/>
+	<sound file="communications/militia/female/13.wav" sex="1"/>
+	<sound file="communications/militia/male/12.wav" sex="0"/>
+	<sound file="communications/militia/female/12.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="Militia forces in need of assistance!" text1="We're in trouble" relationship="-.125"><!-- Critical damage -->
+	<sound file="communications/militia/male/10.wav" sex="0"/>
+	<sound file="communications/militia/female/10.wav" sex="1"/>
+	<sound file="communications/militia/male/11.wav" sex="0"/>
+	<sound file="communications/militia/female/11.wav" sex="1"/>
+		<edge index="12"/>
+		<edge index="13"/>
+		<edge index="14"/>
+		<edge index="15"/>
+	</node>
+	<node text="*hit*" relationship="-.01">
+		<edge index="7"/>
+		<edge index="11"/>
+		<edge index="15"/>
+	</node>
+
+<!-- End of Built-in Conversations --> 
+</comm>

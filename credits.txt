@@ -1,0 +1,30 @@
+Minister of Information:
+MamiyaOtaru
+
+3d-Models for Tarsus, Centurion, Galaxy 
+Brad Mick
+
+Textures for Tarsus, Centurion, Galaxy
+PeteyG
+
+3d-Model and Texture for Orion, Major Cockpiots
+MamiyaOtaru
+
+Stiletto Model,:
+(WIP) Scheherazade
+
+Base Models, Demon, Drone, Talon, Paradigm, Bartender Speech
+Darkmage
+
+InFlight Comms, Speech, Improvements to Look/Feel, Fighter Cockpits
+JohnC
+
+Documentation
+Silverain
+
+Campaign Coding, Dynamic Universe
+Hellcatv, Ace123
+
+Vega Strike Engine Coding
+Hellcatv, Ace123, Jacks
+

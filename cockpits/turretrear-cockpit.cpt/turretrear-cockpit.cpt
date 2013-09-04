@@ -1,0 +1,24 @@
+<Cockpit front="centurion-cockpit-turret.spr" ViewOffset=".2857" CockpitOffset=".05">
+
+<Crosshairs file="crosshairs.spr"/>
+
+<Radar file="" xcent=".5479" ycent="-.6654" width=".1738" height=".2318"/>
+
+<Fuel file="radar.spr" xcent=".5605" ycent="-.7109" width=".25" height=".3333"/>
+
+
+<Energy file="blasterpower.spr" xcent="0" ycent="-.6641" width="1" height=".3333"/> 
+
+<Eject file="eject.spr"/>
+
+
+<!--<leftVDU TextRows="10" TextCols="20" file="blank.spr" xcent="-.72" ycent="-1.735" width=".42" height=".36" />-->
+
+<VDU TextRows="10" TextCols="20" file="vdu.spr" xcent=".0" ycent="-.66" type="Target View TargetManifest Weapon"/>
+
+<VDU TextRows="10" TextCols="100" type="Message" file="mvdu.spr" xcent="0" ycent=".45" width=".8" height=".25"/>
+<Auto file="auto.spr" xcent="0.46" ycent="-.0976" width=".16" height=".046"/> 
+
+
+<!--<FPS file="radar.spr" xcent=".8" ycent=".7" width=".018" height=".036"/>-->
+</Cockpit>

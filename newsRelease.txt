@@ -1,0 +1,21 @@
+Wing Commander Privateer Remake
+
+We are pleased to announce the 1.0 release of the Wing Commander Privateer Remake.  The original Privateer is a well loved game, with incredible graphics and gameplay for its day.  Built on an open source codebase, the Remake is a community effort to bring the universe of the original into the 21st century, playable on all modern operating systems (win,mac,linux), and in 3d glory.  
+
+Privateer gives you the freedom to carve your own path in the Wing Commander universe.  Opportunity abounds in the Gemini Sector.  Wedged between the unknown frontier and the Kilrathi Empire, Gemini is home to various competing factions with which you can choose to align yourself.  
+
+Upgrade your ship or trade it in to deal with the demands of a Privateer.  Find your fortune by logging into the mission computer, or take your chances with seedy characters in bars.  Meet up with Sandoval in New Detroit, tilt back a glass with Demetria in a Munchen bar in the Tingerhoff System.  Make your way as a trader, traitor, bounty hunter, or pirate.  Only you can imagine what you might encounter beyond the frontier.
+
+The Remake is available from the following mirrors:
+
+http://www.filerush.com/download.php?target=privateer1.0.exe (Bit Torrent: fastest, any OS)
+
+http://prdownloads.sourceforge.net/wcuniverse/privateer1.0.exe?download (Windows)
+http://prdownloads.sourceforge.net/wcuniverse/privateer1.0.dmg?download   (Mac)
+http://prdownloads.sourceforge.net/wcuniverse/privateer1.0.bz2.run?download  (Linux)
+http://www.queztone.com/tigershark/privateer1.0.exe (Windows)
+http://www.queztone.com/tigershark/privateer1.0.dmg  (Mac)
+http://www.queztone.com/tigershark/privateer1.0.bin  (linux) 
+http://www.spiritplumber.com/priv_remake/privateer1.0.exe (Windows)
+ mkb@libero.it
+-The Privateer Remake Team

@@ -1,0 +1,37 @@
+<system name="Troy" background="backgrounds/bluegreen" nearstars="0" stars="0" starspread="0" y="0" z="0" x="0">
+<Light>
+	<ambient red=".25" green=".25" blue=".25"/>
+	<diffuse red="1.6" green="1.8" blue="2.0"/>
+	<specular red="1.6" green="1.8" blue="2.0"/>
+</Light>
+<Planet name="Troy" file="stars/sun.png" radius="4000000" y="-14594814" z="0" x="14594814" Red="1.6" green="1.8" blue="2.0" ReflectNoLight="true" light="0"/>
+<Light>
+	<ambient red=".25" green=".25" blue=".25"/>
+	<diffuse red="1.6" green="1.8" blue="2.0"/>
+	<specular red="1.6" green="1.8" blue="2.0"/>
+</Light>
+<Light>
+	<ambient red=".25" green=".25" blue=".25"/>
+	<diffuse red="1.6" green="1.8" blue="2.0"/>
+	<specular red="1.6" green="1.8" blue="2.0"/>
+</Light>	
+<Light>
+	<ambient red=".25" green=".25" blue=".25"/>
+	<diffuse red="1.6" green="1.8" blue="2.0"/>
+	<specular red="1.6" green="1.8" blue="2.0"/>
+</Light>	
+	<planet name="Jump_To_Pyrenees" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="14500" day="240" destination="Gemini/Pyrenees"/>
+	<unit name="Achilles" file="mining_base" faction="merchant" x="17500" y="000"/>
+	<planet name="Jump_To_Pender's_Star" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="-14000" day="240" destination="Gemini/Penders_Star"/>
+	<unit name="Hector" file="mining_base" faction="merchant" x="-14500" y="-22000"/>
+	<planet name="Jump_To_Regallis" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-13000" y="-7500" day="240" destination="Gemini/Regallis"/>
+	<planet name="Helen" file="planets/agricultural.png" faction="merchant" radius="1200" gravity="20" x="-14000" y="10500" day="300">
+		<Atmosphere file="clouds.png" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
+<!--		<Fog>
+			<FogElement file="atmXatm.bfxm" ScaleAtmosphereHeight="1.0" red="0.9" blue="0.9" green="1" alpha="1" dired="0.9" diblue="0.900000" digreen="1" dialpha="1" concavity=".3" focus=".6" minalpha="0" maxalpha="0.7"/>
+			<FogElement file="atmXhalo.bfxm" ScaleAtmosphereHeight="1.0" red="0.9" blue="0.9" green="1" alpha="1" dired="0.9" diblue="0.900000" digreen="1" dialpha="1" concavity="1" focus=".6" minalpha="0" maxalpha="0.7"/>
+	</Fog> -->
+	</planet>
+	<planet name="Jump_To_War" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="10" y="16000" day="240" destination="Gemini/War"/>
+	<planet name="Nav_8" file="invisible.png" alpha="ONE ONE" radius="256" gravity="0" x="4000" y="4000" day="240"/>
+</system>

@@ -1,0 +1,50 @@
+<Cockpit front="paradigm-cockpit.spr" left="paradigm-cockpit-left.spr" right="paradigm-cockpit-right.spr" back="paradigm-cockpit-back.spr" ViewOffset=".2857" CockpitOffset="0.4625">
+	
+<!-- <Crosshairs file="crosshairs.spr" xcent=".0001" ycent=".276" height=".55"/> -->
+	
+<Radar file="" xcent=".52" ycent="-.254" width=".20" height=".24"/>
+<RearRadar file="" xcent=".52" ycent="-.522" width=".20" height=".24"/>	
+
+<ShieldF file="shieldf.spr" xcent=".7799" ycent="-.1808" width=".1309" height=".0703"/>
+
+<ShieldB file="shieldf.spr" xcent=".7799" ycent="-.3223" width=".1309" height=".0703"  GaugeDown="1"/>
+	
+<ShieldL file="shieldl.spr" xcent=".687" ycent="-.2503" width=".043" height=".1693"  GaugeRight="1"/>
+
+<ShieldR file="shieldl.spr" xcent=".874" ycent="-.2503" width=".043" height=".1693"  GaugeLeft="1"/>
+	
+
+
+<ArmorF file="armorf.spr" xcent=".7799" ycent="-.4362" width=".1309" height=".0703"/>
+	
+<ArmorB file="armorf.spr" xcent=".7799" ycent="-.5752" width=".1309" height=".0703" GaugeDown="1"/>
+	
+<ArmorL file="armorl.spr" xcent=".687" ycent="-.5057" width=".043" height=".1693" GaugeRight="1"/>
+
+<ArmorR file="armorl.spr" xcent=".874" ycent="-.5057" width=".043" height=".1693" GaugeLeft="1"/>
+
+
+<WarpEnergy file="fuelstat.spr" xcent=".6703" ycent="-.977"  width=".36" height=".038" GaugeLeft="1"/> 
+<Energy file="blasterpower.spr" xcent=".6703" ycent="-.847"  width=".36" height=".038" GaugeLeft="1"/> 
+
+	
+<Lock file="locklight.spr" xcent=".04" ycent=".8" width=".100" height=".0330"/>
+
+<Auto file="auto.spr" xcent="-.0482" ycent=".8" width=".100" height=".0330"/> 
+	
+<Eject file="eject.spr" xcent=".001" ycent=".805" width=".16" height=".043"/>
+	
+<SetSpeed file="radar.spr" xcent="-.023" ycent=".902" width=".4" height=".16"/>
+	
+<Speed file="radar.spr" xcent="-.023" ycent=".865" width=".4" height=".16"/>
+	
+<VDU  TextRows="15" TextCols="25" type="Objectives View Weapon Nav Target Damage Manifest COMM TargetManifest" file="lvdu.spr" xcent="-.67" ycent="-.39" />
+
+<VDU TextRows="15" TextCols="25" type="Target Weapon View Nav Objectives Damage Manifest COMM TargetManifest" file="rvdu.spr" xcent="-.02" ycent="-.39"/>
+	
+<VDU TextRows="10" TextCols="100" type="Message" file="mvdu.spr" xcent="0" ycent="0.60" width="2" height=".3"/>
+<!-- <VDU TextRows="10" TextCols="50" type="Objectives" file="mvdu.spr" xcent="0.6025" ycent=".15" width=".7676" height=".526"/>-->
+<!-- <VDU TextRows="10" TextCols="50" type="Weapon" file="mvdu.spr" xcent="-0.6025" ycent=".7" width=".7676" height=".526"/>-->
+	
+<!--<FPS file="radar.spr" xcent="-.98" ycent=".95" width=".018" height=".036"/>-->
+</Cockpit>

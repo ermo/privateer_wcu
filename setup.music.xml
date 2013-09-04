@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<install product="privateer" desc="Privateer Space Simulator" version="0.1.0" binarypath="/usr/local/bin"
+         express="no" nopromptoverwrite="yes" splashpos="top" component="Music" >
+
+  <option required="yes">
+    Music
+    <help>The musical score to your adventures.</help>
+    <files>
+      .privateer100/*.m3u
+      music/*.ogg
+      sounds/*
+    </files>
+  </option>
+    
+</install>

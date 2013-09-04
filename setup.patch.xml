@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<install product="privater" desc="Privateer Space Simulator" version="0.1.0" binarypath="/usr/local/bin" url="Manual.pdf" localurl="Manual.pdf" 
+         promptbinaries="yes" splashpos="left" express="no" nopromptoverwrite="yes"  component="patchA" >
+  <readme>
+   README
+  </readme>
+
+
+    <option required="true">
+      patchA (1.1)
+      <help>This contains the required binaries and data to play Vegastrike.</help>
+      <binary play="no" binpath="bin/fixmusic.sh" keepdirs="yes">
+        bin/fixmusic.sh
+      </binary>
+      <binary play="no" binpath="bin/vegastrike" keepdirs="yes">
+        bin/vegastrike
+      </binary>
+      <binary play="no" binpath="bin/soundserver" keepdirs="yes">
+        bin/soundserver
+      </binary>
+      <binary symlink="privateer" icon="vegastrike.xpm" name="Privateer" play="no" binpath="bin/vegastrike.sh" keepdirs="yes">
+        bin/vegastrike.sh
+      </binary>
+      <binary play="no" binpath="bin/setup" keepdirs="yes">
+        bin/setup
+      </binary>
+      <binary play="no" binpath="bin/vsinstall.sh" keepdirs="yes">
+        bin/vsinstall.sh
+      </binary>
+      <script message="Configuring Data Path">
+          echo 'cd '$SETUP_INSTALLPATH'/bin' >> $SETUP_INSTALLPATH/bin/vegastrike.sh
+          echo 'sh vsinstall.sh $SETUPARG' >> $SETUP_INSTALLPATH/bin/vegastrike.sh
+
+      echo 'dir /usr/share/timidity/patches' > $SETUP_INSTALLPATH/timidity.cfg
+      echo 'dir /usr/timidity/patches' >> $SETUP_INSTALLPATH/timidity.cfg
+      echo 'dir /usr/local/timidity/patches' >> $SETUP_INSTALLPATH/timidity.cfg
+      echo 'bank 0' >> $SETUP_INSTALLPATH/timidity.cfg
+      echo '0 patch/acpiano.pat' >> $SETUP_INSTALLPATH/timidity.cfg
+      echo '24 patch/nylongt2.pat' >> $SETUP_INSTALLPATH/timidity.cfg
+      echo 'source midia.cfg' >> $SETUP_INSTALLPATH/timidity.cfg
+      cp -f /etc/timidity.cfg $SETUP_INSTALLPATH/timidity.cfg
+      </script>
+      <files>
+.privateer110
+Manual.pdf
+ToDo.txt
+Version.txt
+ai
+ai.easy
+ai.hard
+animations
+bases
+cockpits
+communications
+credits.txt
+factions.xml
+fixmusic.sh
+icon4.ico
+m3uloki_add.sh
+m3uloki_remove.sh
+makeloki.sh
+master_part_list.csv
+meshes
+mission
+modules
+music
+play_vs
+priv.icns
+priv.nsi
+priv2.nsi
+resources.rc
+sectors
+setup.base.xml
+setup.config
+setup.music.xml
+sounds
+sprites
+textures
+uninstall.ico
+units
+universe
+vega.ico
+vegastrike.config
+vegastrike.sh
+vegastrike.xpm
+vsinstall.sh
+vslogo.xpm
+weapon_list.xml
+      </files>
+    </option>
+
+  
+</install>

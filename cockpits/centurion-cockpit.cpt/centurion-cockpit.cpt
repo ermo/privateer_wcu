@@ -1,0 +1,48 @@
+<Cockpit front="centurion-cockpit.spr" left="centurion-cockpit-left.spr" right="centurion-cockpit-right.spr" back="centurion-cockpit-back.spr" ViewOffset=".2857" CockpitOffset="0.4625">
+<Crosshairs file="crosshairs.spr" xcent=".0001" ycent=".276" height=".55"/>
+	
+<Radar file="" xcent=".5995" ycent="-.429" width=".23" height=".33"/>
+	
+
+<ShieldF file="shieldf.spr" xcent="-.575" ycent="-.25" width=".232" height=".016" GaugeLeft="1"/>
+	
+<ShieldB file="shieldf.spr" xcent="-.575" ycent="-.602" width=".232" height=".016"  GaugeLeft="1"/>
+	
+<ShieldL file="shieldl.spr" xcent="-.698" ycent="-.43" width=".014" height=".245"  />
+
+<ShieldR file="shieldl.spr" xcent="-.454" ycent="-.43" width=".014" height=".245"  />
+	
+
+
+<ArmorF file="armorf.spr" xcent="-.576" ycent="-.3175" width=".082" height=".0855"/>
+	
+<ArmorB file="armorf.spr" xcent="-.576" ycent="-.5372" width=".082" height=".0855" GaugeDown="1"/>
+	
+<ArmorR file="armorl.spr" xcent="-.498" ycent="-.427" width=".0598" height=".12" GaugeLeft="1"/>
+	
+<ArmorL file="armorl.spr" xcent="-.652" ycent="-.427" width=".057" height=".12" GaugeRight="1"/>
+	
+
+<WarpEnergy file="fuelstat.spr" xcent="-.423" ycent="-.092" width=".145" height=".038" GaugeLeft="1"/>
+	
+<Energy file="blasterpower.spr" xcent="0.037" ycent=".7435" width=".3" height=".09" GaugeLeft="1"/> 
+	
+<Lock file="locklight.spr" xcent="0.469" ycent="-.43" width=".03125" height=".1667"/>
+	
+<Eject file="eject.spr"/>
+	
+<Speed file="radar.spr" xcent=".4692" ycent="-.0275" width=".027" height=".047"/>
+	
+<SetSpeed file="radar.spr" xcent="-.408" ycent="-.0275" width=".027" height=".047"/>
+	
+<VDU TextRows="15" TextCols="25" file="vdu.spr" xcent=".0254" ycent="-.4661" type="Target Weapon View Nav Damage Manifest COMM TargetManifest Objectives"/>
+	
+<VDU TextRows="10" TextCols="100" type="Message" file="mvdu.spr" xcent="0" ycent="0.4" width=".95" height=".3"/>
+
+<!--<VDU TextRows="10" TextCols="50" type="Objectives" file="mvdu.spr" xcent="0.68" ycent=".45" width=".64" height=".526"/>-->
+
+<Auto file="auto.spr" xcent="0.458" ycent="-.0972" width=".18" height=".044"/> 
+<Jump file="canjump.spr" xcent="0.458" ycent="-.0972" width=".18" height=".044"/>
+
+<!--<FPS file="radar.spr" xcent=".8" ycent=".7" width=".018" height=".036"/>-->
+</Cockpit>
