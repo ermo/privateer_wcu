@@ -27,25 +27,25 @@ Base.Link (room1, 'commodity', 0.6975, -0.216667, 0.275, 0.37, 'Commodity_Exchan
 Base.Comp (room1, 'my_comp_id', 0.5425, -0.183333, 0.1075, 0.183333, 'Mission_Computer', 'Missions News Info ')
 import mercenary_guild
 if (mercenary_guild.Can()):
-	merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
-	Base.Link (room1, 'mercenary', 0.2625, 0.196667, 0.225, 0.203333, 'Mercenary_Guild', merchant)
+    merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
+    Base.Link (room1, 'mercenary', 0.2625, 0.196667, 0.225, 0.203333, 'Mercenary_Guild', merchant)
 else:
-	Base.Texture(room1,'nomercenary','bases/mining_base/nomercenary.spr', 0.425, 0.296875)
+    Base.Texture(room1,'nomercenary','bases/mining_base/nomercenary.spr', 0.425, 0.296875)
 
 import merchant_guild
 if (merchant_guild.Can()):
-	merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
-	Base.Link (room1, 'merchant', 0.6775, 0.31, 0.295, 0.263333, 'Merchant_Guild', merchant)
+    merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
+    Base.Link (room1, 'merchant', 0.6775, 0.31, 0.295, 0.263333, 'Merchant_Guild', merchant)
 else:
-	Base.Texture(room1,'nomerchant','bases/mining_base/nomerchant.spr', 0.85, 0.482421875)
+    Base.Texture(room1,'nomerchant','bases/mining_base/nomerchant.spr', 0.85, 0.482421875)
 
 import weapons_lib
 if (weapons_lib.CanRepair()):
-	weap = weapons_lib.MakeWeapon (room1,time_of_day)
-	Base.Link (room1, 'weapon_room', -0.0975, -0.0466667, 0.2225, 0.326667, 'Ship_Dealer/Upgrade', weap)
-	Base.Texture (room, 'wk0', 'bases/mining_base/MiningBase_Concourse_wk0'+time_of_day+'.spr', -0.23125, 0.00390625)
+    weap = weapons_lib.MakeWeapon (room1,time_of_day)
+    Base.Link (room1, 'weapon_room', -0.0975, -0.0466667, 0.2225, 0.326667, 'Ship_Dealer/Upgrade', weap)
+    Base.Texture (room, 'wk0', 'bases/mining_base/MiningBase_Concourse_wk0'+time_of_day+'.spr', -0.23125, 0.00390625)
 else:
-	Base.Texture(room1,'noshipdealer','bases/mining_base/noshipdealer.spr', 0.0375, 0.052734375)
+    Base.Texture(room1,'noshipdealer','bases/mining_base/noshipdealer.spr', 0.0375, 0.052734375)
 
 Base.Texture (room1, 'car', 'bases/mining_base/MiningBase_Concourse_car'+time_of_day+'.spr', 0.97255, -0.279296875)
 import bar_lib

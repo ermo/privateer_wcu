@@ -389,7 +389,7 @@ def generateCargoMission (path, numcargos,category, fac):
     if (randCompany==''):
         strStart = "We need to deliver some "
     else:
-    	  strStart = randCompany+" seeks delivery of "    	  
+          strStart = randCompany+" seeks delivery of "        
     brief = GetRandomCargoBrief()
     if (brief<>''):
         composedBrief = brief.replace('$CL',randCompany)

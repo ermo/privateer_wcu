@@ -26,27 +26,27 @@ Base.Texture (room, 'car', 'bases/perry/Perry_Concourse_car'+time_of_day+'.spr',
 import campaign_lib
 terrell_entry=(not quest.checkSaveValue(VS.getCurrentPlayer(),"terrell_no_entry",1.0)) and len(campaign_lib.getActiveCampaignNodes(room1))
 if terrell_entry:
-	room = Base.Room ('Admiral_Terrells_Office')
-	room2 = room
-	Base.Texture (room, 'background', 'bases/perry/Perry_AdmTerrelOffice'+time_of_day+'.spr', 0, 0)
-	Base.Texture (room, 'ltt', 'bases/perry/Perry_AdmTerrelOffice_ltt'+time_of_day+'.spr', -0.53125, -0.015625)
-	Base.Texture (room, 'trl', 'bases/perry/Perry_AdmTerrelOffice_trl'+time_of_day+'.spr', 0.56875, -0.03515625)
-	Base.Link (room1, 'my_link_id', 0.0625, -0.22, 0.0975, 0.12, 'Admiral_Terrell\'s_Office', room2)
-	Base.Link (room2, 'my_link_id', -0.9675, -0.98, 0.3975, 0.48, 'Main_Concourse', room1)
-	Base.Python (room2, 'my_link_id', 0.48, -0.09375, 0.1953125, 0.1953125, 'Talk_To_Admiral_Terrell', '#\nimport campaign_lib\nimport campaign_lib\ncampaign_lib.AddConversationStoppingSprite("Admiral_Terrell","bases/heads/terrell.spr",(0,0),(3.2,2.0),"Return_To_Office").__call__('+str(room2)+',None)\ncampaign_lib.clickFixer('+str(room2)+')\n',False)
+    room = Base.Room ('Admiral_Terrells_Office')
+    room2 = room
+    Base.Texture (room, 'background', 'bases/perry/Perry_AdmTerrelOffice'+time_of_day+'.spr', 0, 0)
+    Base.Texture (room, 'ltt', 'bases/perry/Perry_AdmTerrelOffice_ltt'+time_of_day+'.spr', -0.53125, -0.015625)
+    Base.Texture (room, 'trl', 'bases/perry/Perry_AdmTerrelOffice_trl'+time_of_day+'.spr', 0.56875, -0.03515625)
+    Base.Link (room1, 'my_link_id', 0.0625, -0.22, 0.0975, 0.12, 'Admiral_Terrell\'s_Office', room2)
+    Base.Link (room2, 'my_link_id', -0.9675, -0.98, 0.3975, 0.48, 'Main_Concourse', room1)
+    Base.Python (room2, 'my_link_id', 0.48, -0.09375, 0.1953125, 0.1953125, 'Talk_To_Admiral_Terrell', '#\nimport campaign_lib\nimport campaign_lib\ncampaign_lib.AddConversationStoppingSprite("Admiral_Terrell","bases/heads/terrell.spr",(0,0),(3.2,2.0),"Return_To_Office").__call__('+str(room2)+',None)\ncampaign_lib.clickFixer('+str(room2)+')\n',False)
 else:
-	room = Base.Room ('Exit_Admirals_Office')
-	room2 = room
-	# No access to Admeral Ofise
-	Base.Texture(room2, 'goodin','bases/heads/goodindoor.spr', 0, 0)
-	Base.LinkPython (room1, 'my_link_id', '''#
+    room = Base.Room ('Exit_Admirals_Office')
+    room2 = room
+    # No access to Admeral Ofise
+    Base.Texture(room2, 'goodin','bases/heads/goodindoor.spr', 0, 0)
+    Base.LinkPython (room1, 'my_link_id', '''#
 import campaign_lib
 campaign_lib.displayText('''+str(room2)+''',[("Goodin","Hey, where do you think you\'re going?","campaign/wheredoyouthinkyouregoing.ogg"),
-	("Burrows","Just wandering around. Is there a problem?"),
-	("Goodin","There is, if you try to go through that door. That\'s Admiral Terrell\'s office. He doesn\'t like visitors."),
-	("Burrows","Hey, don\'t sweat it, sweetheart. I don\'t like visiting. Later.")])
+    ("Burrows","Just wandering around. Is there a problem?"),
+    ("Goodin","There is, if you try to go through that door. That\'s Admiral Terrell\'s office. He doesn\'t like visitors."),
+    ("Burrows","Hey, don\'t sweat it, sweetheart. I don\'t like visiting. Later.")])
 ''', 0.0625, -0.22, 0.0975, 0.12, 'Admiral_Terrell\'s_Office', room2)
-	Base.LinkPython (room2, 'go_back','#\nimport VS\nVS.StopAllSounds()\n', -1, -1, 2, 2, 'Exit_Admirals_Office', room1)
+    Base.LinkPython (room2, 'go_back','#\nimport VS\nVS.StopAllSounds()\n', -1, -1, 2, 2, 'Exit_Admirals_Office', room1)
 
 Base.LaunchPython (room0, 'my_launch_id', 'bases/launch_music.py', 0.24, -0.133333, 0.695, 0.52, 'Launch')
 Base.Link (room0, 'my_link_id', -0.415, -0.13, 0.2875, 0.383333, 'Main_Concourse', room1)

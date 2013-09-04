@@ -4,37 +4,37 @@ import sys
 debugnum=0
 
 class VSException(Exception):
-	pass
+    pass
 
 
 def _info(msg): # == /dev/null
-	pass
+    pass
 
 def prettyfile(fil):
-	lasttwo=str(fil).split('/')[-2:]
-	if len(lasttwo)<2: return fil
-	return lasttwo[0][0]+'/'+lasttwo[1]
+    lasttwo=str(fil).split('/')[-2:]
+    if len(lasttwo)<2: return fil
+    return lasttwo[0][0]+'/'+lasttwo[1]
 
 def _debug(msg): # Simple line number
-	laststack = traceback.extract_stack()[-2]
-	print ' +++ '+prettyfile(laststack[0])+':'+str(laststack[1])+': '+str(msg)
+    laststack = traceback.extract_stack()[-2]
+    print ' +++ '+prettyfile(laststack[0])+':'+str(laststack[1])+': '+str(msg)
 
 
 def _warn(msg): # Traceback without killing the script
-	global debugnum
-	debugnum+=1
-	print " *** Python Warning "+str(debugnum)+"!"
-	sys.stderr.write('Warning Traceback '+str(debugnum)+':\n')
-	for frame in traceback.extract_stack()[:-1]:
-		sys.stderr.write('  File "'+prettyfile(frame[0])+'", line '+str(frame[1]))
-		sys.stderr.write(', in '+str(frame[2])+'\n    '+str(frame[3])+'\n')
-	sys.stderr.write('Message: '+str(msg)+'\n\n')
+    global debugnum
+    debugnum+=1
+    print " *** Python Warning "+str(debugnum)+"!"
+    sys.stderr.write('Warning Traceback '+str(debugnum)+':\n')
+    for frame in traceback.extract_stack()[:-1]:
+        sys.stderr.write('  File "'+prettyfile(frame[0])+'", line '+str(frame[1]))
+        sys.stderr.write(', in '+str(frame[2])+'\n    '+str(frame[3])+'\n')
+    sys.stderr.write('Message: '+str(msg)+'\n\n')
 
 def _fatal(msg): # Kill the script!
-	global debugnum
-	debugnum+=1
-	print "Python VSException "+str(debugnum)+"!"
-	raise VSException(msg)
+    global debugnum
+    debugnum+=1
+    print "Python VSException "+str(debugnum)+"!"
+    raise VSException(msg)
 
 fatal = _fatal # Really bad error... Kill the script.  Same as a call to raise()
 

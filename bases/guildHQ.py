@@ -25,27 +25,27 @@ Base.Link (room1, 'bar', 0.5, 0.1, 0.2075, 0.25, 'Chez Copernicus', bar)
 
 import merchant_guild
 if (merchant_guild.Can()):
-	merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
-	Base.Link (room1, 'merchant', -0.38, -0.3, 0.22, 0.176667, "Merchant's Guild", merchant)
+    merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
+    Base.Link (room1, 'merchant', -0.38, -0.3, 0.22, 0.176667, "Merchant's Guild", merchant)
 else:
-	merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
-	Base.Link (room1, 'merchant', -0.38, -0.3, 0.22, 0.176667, "Merchant's Guild", merchant)
+    merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
+    Base.Link (room1, 'merchant', -0.38, -0.3, 0.22, 0.176667, "Merchant's Guild", merchant)
 
 import mercenary_guild
 if (mercenary_guild.Can()):
-	merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
-	Base.Link (room1, 'mercenary', -0.38, -0.15, 0.22, 0.226667, "Mercenary's Guild", merchant)
+    merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
+    Base.Link (room1, 'mercenary', -0.38, -0.15, 0.22, 0.226667, "Mercenary's Guild", merchant)
 else:
-	merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
-	Base.Link (room1, 'mercenary', -0.38, -0.15, 0.22, 0.226667, "Mercenary's Guild", merchant)
+    merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
+    Base.Link (room1, 'mercenary', -0.38, -0.15, 0.22, 0.226667, "Mercenary's Guild", merchant)
 
 import weapons_lib
 if (weapons_lib.CanRepair()):
-	weap = weapons_lib.MakeWeapon (room1,time_of_day)
-	Base.Link (room1, 'weapon_room', -0.9, -0.8, 0.315, 0.386667, 'Ship_Dealer/Upgrades', weap)
+    weap = weapons_lib.MakeWeapon (room1,time_of_day)
+    Base.Link (room1, 'weapon_room', -0.9, -0.8, 0.315, 0.386667, 'Ship_Dealer/Upgrades', weap)
 else:
-	weap = weapons_lib.MakeWeapon (room1,time_of_day)
-	Base.Link (room1, 'weapon_room', -0.9, -0.8, 0.315, 0.386667, 'Ship_Dealer/Upgrades', weap)
+    weap = weapons_lib.MakeWeapon (room1,time_of_day)
+    Base.Link (room1, 'weapon_room', -0.9, -0.8, 0.315, 0.386667, 'Ship_Dealer/Upgrades', weap)
 
 Base.Link (room1, 'my_link_id', -1, -0.046667, 0.2825, 0.27, 'Landing_Pad', room0)
 Base.Link (room1, 'my_link_id', -0.43, -0.5, 0.3425, 0.17, 'Commodity_Exchange', room2)

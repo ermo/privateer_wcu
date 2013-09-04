@@ -25,7 +25,7 @@ def whereTo (radius, launch_around):
         pos = launch_around.Position ()    
     rsize = ((launch_around.rSize())*5.0)+5.0*radius
     if (rsize > faction_ships.max_radius):
-	    rsize=faction_ships.max_radius
+        rsize=faction_ships.max_radius
     return (pos[0]+rsize*vsrandom.randrange(-1,2,2),
             pos[1]+rsize*vsrandom.randrange(-1,2,2),
             pos[2]+rsize*vsrandom.randrange(-1,2,2))

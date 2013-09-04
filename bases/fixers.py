@@ -12,7 +12,7 @@ activeobjs=[]
 def checkSaveValue (playernum,questname, value):
     return quest.checkSaveValue(playernum,questname,value)
 def setSaveValue (playernum,name,value):
-	quest.removeQuest(playernum,name,value);
+    quest.removeQuest(playernum,name,value);
 
 def payCheck(playernum,savevalue,value,money):
     if checkSaveValue(playernum,savevalue,value):
@@ -20,46 +20,46 @@ def payCheck(playernum,savevalue,value,money):
         setSaveValue(playernum,savevalue,value+1)
 
 class Choice:
-	_number=0
-	def __init__(self,pics,actions,name):
-		self.pics=pics
-		self.name=name
-		self.index=name.replace('/','_')+'/'+str(Choice._number)
-		Choice._number+=1
-		self.actions=actions
-	def drawobjs(self,room,x,y,wid,hei):
-		Base.Texture(room,self.index,self.pics,x+(wid/2.),y+(wid/2.))
-		Base.Python(room,self.index,x,y,wid,hei,self.name,self.actions,1)
-		global activelinks
-		global activeobjs
-		activelinks.append((room,self.index))
-		print '*** add link: '+str((room,self.index))
-		print activelinks
-		activeobjs.append((room,self.index))
-		print '*** add obj: '+str((room,self.index))
-		print activeobjs
+    _number=0
+    def __init__(self,pics,actions,name):
+        self.pics=pics
+        self.name=name
+        self.index=name.replace('/','_')+'/'+str(Choice._number)
+        Choice._number+=1
+        self.actions=actions
+    def drawobjs(self,room,x,y,wid,hei):
+        Base.Texture(room,self.index,self.pics,x+(wid/2.),y+(wid/2.))
+        Base.Python(room,self.index,x,y,wid,hei,self.name,self.actions,1)
+        global activelinks
+        global activeobjs
+        activelinks.append((room,self.index))
+        print '*** add link: '+str((room,self.index))
+        print activelinks
+        activeobjs.append((room,self.index))
+        print '*** add obj: '+str((room,self.index))
+        print activeobjs
 class Fixer:
-	"""A class that draws nobody."""
-	def __init__(self,name,text,precondition,image,choices):
-		self.name = name
-		self.text = text
-		self.precondition = precondition
-		self.choices = choices
-		pos=image.rfind(".")
-		if pos>=0:
-			image=image[:pos]
-		self.image = image
-	def abletodraw(self):
-		for cond in self.precondition:
-			var= cond[0]
-			value = cond[1]
-			if not checkSaveValue(VS.getCurrentPlayer(),var,value):
-				return 0
-			
-		return 1
-	def drawobjs(self,room,x,y,wid,hei,imageappend=''):
-		Base.Texture(room,self.name,self.image+imageappend+".spr",x+(wid/2.),y+(hei/2.))
-		Base.Python(room,self.name,x,y,wid,hei,self.text,self.choices,False)
+    """A class that draws nobody."""
+    def __init__(self,name,text,precondition,image,choices):
+        self.name = name
+        self.text = text
+        self.precondition = precondition
+        self.choices = choices
+        pos=image.rfind(".")
+        if pos>=0:
+            image=image[:pos]
+        self.image = image
+    def abletodraw(self):
+        for cond in self.precondition:
+            var= cond[0]
+            value = cond[1]
+            if not checkSaveValue(VS.getCurrentPlayer(),var,value):
+                return 0
+            
+        return 1
+    def drawobjs(self,room,x,y,wid,hei,imageappend=''):
+        Base.Texture(room,self.name,self.image+imageappend+".spr",x+(wid/2.),y+(hei/2.))
+        Base.Python(room,self.name,x,y,wid,hei,self.text,self.choices,False)
 class CFixer(Fixer):
     """A class class for \'Campaign\' Fixers."""
     
@@ -72,72 +72,72 @@ class CFixer(Fixer):
         return self.conversation.canDraw()
 
 class NoFixer (Fixer):
-	"""Class that displays nobody.  Should maybe draw a bartender guy to talk to."""
-	def __init__(self):
-		Fixer.__init__(self,'nobody','Bar',[],'','')
+    """Class that displays nobody.  Should maybe draw a bartender guy to talk to."""
+    def __init__(self):
+        Fixer.__init__(self,'nobody','Bar',[],'','')
 
-	def abletodraw(self):
-		"""A NoFixer can't draw."""
-		return 0
+    def abletodraw(self):
+        """A NoFixer can't draw."""
+        return 0
 
-	def drawobjs(self,room,x,y,wid,hei,imageappend=''):
-		"""Don't create the python script OR the texture, so trhe user won't notice :-)"""
-		pass
+    def drawobjs(self,room,x,y,wid,hei,imageappend=''):
+        """Don't create the python script OR the texture, so trhe user won't notice :-)"""
+        pass
 
 def RandFixer (room,which):
-	fixer=mission_lib.CreateRandomMission(which)
-	if fixer==():
-		return NoFixer()
-	return Fixer(fixer[1].split(' ')[-1].lower(),fixer[1],[],fixer[0],"bases/fixers/generic%d.py"%which)
+    fixer=mission_lib.CreateRandomMission(which)
+    if fixer==():
+        return NoFixer()
+    return Fixer(fixer[1].split(' ')[-1].lower(),fixer[1],[],fixer[0],"bases/fixers/generic%d.py"%which)
 
 def getCampaignFixers (room):
-	import campaign_lib
-	return campaign_lib.getFixersToDisplay(room)
+    import campaign_lib
+    return campaign_lib.getFixersToDisplay(room)
 
 fixers={"enigma_sector/niven":[
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",0)],"bases/fixers/militia.spr","bases/fixers/explore_enigma.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",0),("gemini_sector/beta_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_notready.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",1),("gemini_sector/beta_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_beta.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_beta.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",1),("gemini_sector/gamma_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_gamma.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_gamma.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",1),("gemini_sector/delta_prime_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_delta_prime.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",2),("gemini_sector/delta_prime_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_delta_prime.py"),
-	Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",2),("gemini_sector/delta_prime_navpoint",1)],"bases/fixers/militia.spr","bases/fixers/attack_drone0.py"),
-	],"enigma_sector/enigma":[
-	Fixer("confed_drone","Talk to the Confed Officer",[("quest_drone",1)],"bases/fixers/confed.spr","bases/fixers/attack_drone1.py"),
-	Fixer("confed_drone","Talk to the Confed Officer",[("quest_drone",-1)],"bases/fixers/confed.spr","bases/fixers/attack_drone1.py")
-	],"enigma_sector/heinlein":[
-	Fixer ("cloaked_man","Speak with hooded figure",[("decided_iso_good",0)],"bases/fixers/cloak.spr","bases/fixers/iso_antagonist.py"),
-	Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission2",0)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
-	Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission2",-1)],"bases/fixers/iso.spr","bases/fixers/iso.py")
-	],"enigma_sector/adams":[
-	Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",0),("iso_mission2",1)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
-	Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",0),("iso_mission2",-1)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
-	Fixer ("cloaked_man","Speak with hooded figure",[("decided_iso_good",0),("iso_evil2",1)],"bases/fixers/cloak.spr","bases/fixers/iso_antagonist.py")
-	],"enigma_sector/defiance":[
-	Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",1)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
-	Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",-1)],"bases/fixers/iso.spr","bases/fixers/iso.py")
-	],"enigma_sector/blake":[
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	],"enigma_sector/rigel":[
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission2",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission3",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission4",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",2),("pirate_mission4",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",2),("pirate_mission4",1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	],"sol_sector/tingvallir":[
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission2",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission3",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
-	Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",1),("pirate_mission4",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py")
-	]}
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",0)],"bases/fixers/militia.spr","bases/fixers/explore_enigma.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",0),("gemini_sector/beta_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_notready.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",1),("gemini_sector/beta_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_beta.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_beta.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",1),("gemini_sector/gamma_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_gamma.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_gamma.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",1),("gemini_sector/delta_prime_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_delta_prime.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",2),("gemini_sector/delta_prime_navpoint",0)],"bases/fixers/militia.spr","bases/fixers/explore_delta_prime.py"),
+    Fixer("explore","Talk to the Explorer",[("enigma_sector/enigma_nav",3),("gemini_sector/delta_navpoint",2),("gemini_sector/beta_navpoint",2),("gemini_sector/gamma_navpoint",2),("gemini_sector/delta_prime_navpoint",1)],"bases/fixers/militia.spr","bases/fixers/attack_drone0.py"),
+    ],"enigma_sector/enigma":[
+    Fixer("confed_drone","Talk to the Confed Officer",[("quest_drone",1)],"bases/fixers/confed.spr","bases/fixers/attack_drone1.py"),
+    Fixer("confed_drone","Talk to the Confed Officer",[("quest_drone",-1)],"bases/fixers/confed.spr","bases/fixers/attack_drone1.py")
+    ],"enigma_sector/heinlein":[
+    Fixer ("cloaked_man","Speak with hooded figure",[("decided_iso_good",0)],"bases/fixers/cloak.spr","bases/fixers/iso_antagonist.py"),
+    Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission2",0)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
+    Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission2",-1)],"bases/fixers/iso.spr","bases/fixers/iso.py")
+    ],"enigma_sector/adams":[
+    Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",0),("iso_mission2",1)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
+    Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",0),("iso_mission2",-1)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
+    Fixer ("cloaked_man","Speak with hooded figure",[("decided_iso_good",0),("iso_evil2",1)],"bases/fixers/cloak.spr","bases/fixers/iso_antagonist.py")
+    ],"enigma_sector/defiance":[
+    Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",1)],"bases/fixers/iso.spr","bases/fixers/iso.py"),
+    Fixer ("rowenna","Speak with Rowenna",[("decided_iso_evil",0),("iso_mission3",-1)],"bases/fixers/iso.spr","bases/fixers/iso.py")
+    ],"enigma_sector/blake":[
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    ],"enigma_sector/rigel":[
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission2",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission3",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission4",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",2),("pirate_mission4",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",2),("pirate_mission4",1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    ],"sol_sector/tingvallir":[
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission2",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission3",-1)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py"),
+    Fixer ("pirate","Talk with the Pirate",[("pirate_mission1",1),("pirate_mission2",1),("pirate_mission3",1),("pirate_mission4",0)],"bases/fixers/pirate.spr","bases/fixers/pirates.py")
+    ]}
 
 def eraseCFixer(playernum, name):
     """Removes the Campaign Fixer from the queue."""
@@ -181,82 +181,82 @@ def queueFixer(playernum, name, scripttext, overwrite=0):
     Director.pushSaveString(int(playernum),str("CFixers"),name + '|' + scripttext)
 
 def AppendFixer(name,fixer):
-	fixers[name]=fixer
+    fixers[name]=fixer
 
 def DestroyActiveButtons ():
-	global activelinks
-	global activeobjs
-	for button in activelinks:
-		Base.EraseLink(button[0],button[1])
-		print '*** erase link: '+str(button)
-		print activelinks
-	for button in activeobjs:
-		Base.EraseObj(button[0],button[1])
-		print '*** erase obj: '+str(button)
-		print activeobjs
-	activeobjs=[]
-	activelinks=[]
+    global activelinks
+    global activeobjs
+    for button in activelinks:
+        Base.EraseLink(button[0],button[1])
+        print '*** erase link: '+str(button)
+        print activelinks
+    for button in activeobjs:
+        Base.EraseObj(button[0],button[1])
+        print '*** erase obj: '+str(button)
+        print activeobjs
+    activeobjs=[]
+    activelinks=[]
 def CreateChoiceButtons (room,buttonlist,vert=0,spacing=.025,wid=.2,hei=.2):
-	x=0
-	if (vert):
-		x=-(wid/2.)
-		y=-((hei*len(buttonlist)*spacing)+spacing)/2.
-	else:
-		y=-.75-(hei/2.)
-		x=-(wid*len(buttonlist)+(len(buttonlist)-1)*spacing)/2.
-	print x,y
-	for button in buttonlist:
-		print '*** draw: '+str(button.index)
-		button.drawobjs(room,x,y,wid,hei)
-		if (vert):
-			y-=(spacing+hei)
-		else:
-			x+=spacing+wid
-		
+    x=0
+    if (vert):
+        x=-(wid/2.)
+        y=-((hei*len(buttonlist)*spacing)+spacing)/2.
+    else:
+        y=-.75-(hei/2.)
+        x=-(wid*len(buttonlist)+(len(buttonlist)-1)*spacing)/2.
+    print x,y
+    for button in buttonlist:
+        print '*** draw: '+str(button.index)
+        button.drawobjs(room,x,y,wid,hei)
+        if (vert):
+            y-=(spacing+hei)
+        else:
+            x+=spacing+wid
+        
 def CreateCampaignFixers (room,locations,j=0):
-	fixerlist = getCampaignFixers(room)
-	locfixers = fixers.get (VS.getSystemFile())
-	if locfixers:
-		fixerlist+=locfixers
-	if (fixerlist):
-		for i in range (len(fixerlist)):
-			if (j<len(locations) and fixerlist[i] and fixerlist[i].abletodraw()):
-				append=''
-				if len(locations[j])>4:
-					append=locations[j][4]
-				fixerlist[i].drawobjs (room,locations[j][0],locations[j][1],locations[j][2],locations[j][3],append)
-				j+=1
-	return j
+    fixerlist = getCampaignFixers(room)
+    locfixers = fixers.get (VS.getSystemFile())
+    if locfixers:
+        fixerlist+=locfixers
+    if (fixerlist):
+        for i in range (len(fixerlist)):
+            if (j<len(locations) and fixerlist[i] and fixerlist[i].abletodraw()):
+                append=''
+                if len(locations[j])>4:
+                    append=locations[j][4]
+                fixerlist[i].drawobjs (room,locations[j][0],locations[j][1],locations[j][2],locations[j][3],append)
+                j+=1
+    return j
 
 def CreateMissionFixers (room,locations,j=0):
-#	rndnum=vsrandom.random()
-#	if rndnum<.7 and j<len(locations):
-#		f=RandFixer(room,0)
-#		append=''
-#		if len(locations[j])>4:
-#			append=locations[j][4]
-#		f.drawobjs (room,locations[j][0],locations[j][1],locations[j][2],locations[j][3],append)
-#		j+=1
-#		img=f.image
-#		rndnum=vsrandom.random()
-#		if rndnum<.6 and j<len(locations):
-#			i=0
-#			while f.image==img and i<10:
-#				f=RandFixer(room,1)
-#				i+=1
-#			if i<10:
-#				append=''
-#				if len(locations[j])>4:
-#					append=locations[j][4]
-#				f.drawobjs (room,locations[j][0],locations[j][1],locations[j][2],locations[j][3],append)
-#				j+=1
-	return j
+#   rndnum=vsrandom.random()
+#   if rndnum<.7 and j<len(locations):
+#       f=RandFixer(room,0)
+#       append=''
+#       if len(locations[j])>4:
+#           append=locations[j][4]
+#       f.drawobjs (room,locations[j][0],locations[j][1],locations[j][2],locations[j][3],append)
+#       j+=1
+#       img=f.image
+#       rndnum=vsrandom.random()
+#       if rndnum<.6 and j<len(locations):
+#           i=0
+#           while f.image==img and i<10:
+#               f=RandFixer(room,1)
+#               i+=1
+#           if i<10:
+#               append=''
+#               if len(locations[j])>4:
+#                   append=locations[j][4]
+#               f.drawobjs (room,locations[j][0],locations[j][1],locations[j][2],locations[j][3],append)
+#               j+=1
+    return j
 
 def CreateFixers (room,locations):
-	j=0
-	j=CreateCampaignFixers(room,locations,j)
-	j=CreateMissionFixers(room,locations,j)
-	return j
+    j=0
+    j=CreateCampaignFixers(room,locations,j)
+    j=CreateMissionFixers(room,locations,j)
+    return j
 
 class Conversation:
 

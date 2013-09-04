@@ -30,24 +30,24 @@ Base.Link (room1, 'bar', -0.61, -0.113333, 0.2075, 0.25, 'Bar', bar)
 
 import merchant_guild
 if (merchant_guild.Can()):
-	merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
-	Base.Link (room1, 'merchant', 0.03, 0.0933333, 0.22, 0.176667, "Merchant's Guild", merchant)
+    merchant = merchant_guild.MakeMerchantGuild (room1,time_of_day)
+    Base.Link (room1, 'merchant', 0.03, 0.0933333, 0.22, 0.176667, "Merchant's Guild", merchant)
 else:
-	Base.Texture (room, 'nomerchant', 'bases/agricultural/nomerchant'+time_of_day+'.spr', 0.15, 0.1796875)
+    Base.Texture (room, 'nomerchant', 'bases/agricultural/nomerchant'+time_of_day+'.spr', 0.15, 0.1796875)
 
 import mercenary_guild
 if (mercenary_guild.Can()):
-	merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
-	Base.Link (room1, 'mercenary', 0.77, 0.0233333, 0.22, 0.226667, "Mercenary's Guild", merchant)
+    merchant = mercenary_guild.MakeMercenaryGuild (room1,time_of_day)
+    Base.Link (room1, 'mercenary', 0.77, 0.0233333, 0.22, 0.226667, "Mercenary's Guild", merchant)
 else:
-	Base.Texture (room, 'nomercenary', 'bases/agricultural/nomercenary'+time_of_day+'.spr', 0.8875, 0.130859375)
+    Base.Texture (room, 'nomercenary', 'bases/agricultural/nomercenary'+time_of_day+'.spr', 0.8875, 0.130859375)
 
 import weapons_lib
 if (weapons_lib.CanRepair()):
-	weap = weapons_lib.MakeWeapon (room1,time_of_day)
-	Base.Link (room1, 'weapon_room', -0.5725, -0.583333, 0.315, 0.386667, 'Ship_Dealer/Upgrades', weap)
+    weap = weapons_lib.MakeWeapon (room1,time_of_day)
+    Base.Link (room1, 'weapon_room', -0.5725, -0.583333, 0.315, 0.386667, 'Ship_Dealer/Upgrades', weap)
 else:
-	Base.Texture (room, 'noshipdealer', 'bases/agricultural/noshipdealer'+time_of_day+'.spr', -0.26875, -0.4453125)
+    Base.Texture (room, 'noshipdealer', 'bases/agricultural/noshipdealer'+time_of_day+'.spr', -0.26875, -0.4453125)
 
 Base.Link (room1, 'my_link_id', 0.035, -0.346667, 0.2825, 0.27, 'Landing_Pad', room0)
 Base.Link (room1, 'my_link_id', 0.6275, -0.37, 0.3425, 0.17, 'Commodity_Exchange', room2)

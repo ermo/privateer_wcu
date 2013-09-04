@@ -20,23 +20,23 @@ room = Base.Room ('')
 room1 = room
 Base.Texture (room, 'background', 'bases/derelict/derelictship_noweapon'+time_of_day+'.spr', 0, 0)
 if not quest.checkSaveValue(VS.getCurrentPlayer(),'have_the_gun'):
-	Base.Texture (room1, 'weapon', 'bases/derelict/derelictship_weapon'+time_of_day+'.spr', 0, 0)
-	Base.Python (room1, 'weapon', -0.605, -0.78, 0.2975, 0.423333, 'Mount Weapon On Your Ship', '''#
+    Base.Texture (room1, 'weapon', 'bases/derelict/derelictship_weapon'+time_of_day+'.spr', 0, 0)
+    Base.Python (room1, 'weapon', -0.605, -0.78, 0.2975, 0.423333, 'Mount Weapon On Your Ship', '''#
 import Base
 import VS
 plr=VS.getPlayer()
 if plr:
-	if not quest.checkSaveValue(VS.getCurrentPlayer(),'have_the_gun'):
-		percentage = plr.upgrade('steltek_gun',0,0,True,True)
-		if percentage != 1.0:
-			quest.removeQuest(VS.getCurrentPlayer(),'have_the_gun',1)
-			Base.EraseObj('''+str(room1)+''', 'weapon')
-			Base.EraseLink('''+str(room1)+''', 'weapon')
-		else:
-			Base.Message("Can't install the weapon on this ship!")
-	else:
-		Base.EraseObj('''+str(room1)+''', 'weapon')
-		Base.EraseLink('''+str(room1)+''', 'weapon')
+    if not quest.checkSaveValue(VS.getCurrentPlayer(),'have_the_gun'):
+        percentage = plr.upgrade('steltek_gun',0,0,True,True)
+        if percentage != 1.0:
+            quest.removeQuest(VS.getCurrentPlayer(),'have_the_gun',1)
+            Base.EraseObj('''+str(room1)+''', 'weapon')
+            Base.EraseLink('''+str(room1)+''', 'weapon')
+        else:
+            Base.Message("Can't install the weapon on this ship!")
+    else:
+        Base.EraseObj('''+str(room1)+''', 'weapon')
+        Base.EraseLink('''+str(room1)+''', 'weapon')
 ''', False)
 
 Base.Link (room0, 'my_link_id', -0.8225, -0.27, 0.225, 0.2, 'Inspect Alien Ship', room1)

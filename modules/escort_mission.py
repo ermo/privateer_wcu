@@ -41,12 +41,12 @@ class escort_mission (Director.Mission):
         #                                              self.you,
         #                                              "")
         L=launch.Launch()
-	if fgname == "":
-	        L.fg = "Escort"
-	        L.fgappend = "_"+str(escort_num)
-	else:
-	        L.fg = fgname
-		L.fgappend = ""
+    if fgname == "":
+            L.fg = "Escort"
+            L.fgappend = "_"+str(escort_num)
+    else:
+            L.fg = fgname
+        L.fgappend = ""
         L.faction=self.faction
         if (dyntype==''):
             L.type = faction_ships.getRandomFighter("merchant")

@@ -1,10 +1,10 @@
 import VS
 def isLandable (un):
     if (un):
-	me = VS.getPlayer()
-	if (not me.isNull()):
-	   if (un == me):
-	      return 0
+    me = VS.getPlayer()
+    if (not me.isNull()):
+       if (un == me):
+          return 0
         return un.isDockableUnit()
 
 def isBase (un):
