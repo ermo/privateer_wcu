@@ -75,7 +75,7 @@ def MakeWeapon(concourse,timeofdayignored='_day', dealername="bases/repair_upgra
     if TalkToStanForExtraShips: # move generic shipdealer to showroom from upgrades
         Base.Comp (room0, 'my_comp_id', -0.855, -0.81, 0.6325, 0.663333, 'Upgrade/Repair', 'Upgrade Info ')
         Base.Comp (room1, 'my_comp_id3', -0.999, -.965, 0.35, 0.35,  'Look At Other Ships', 'ShipDealer Info ')
-        else:
+    else:
         Base.Comp (room0, 'my_comp_id', -0.855, -0.81, 0.6325, 0.663333, 'Upgrade/Repair', 'Upgrade ShipDealer Info ')
     Base.Link (room0, 'my_comp_id', -0.15, 0.2, 0.3375, 0.24, 'Software', software)
     Base.Comp (software, 'my_comp_id', -1, -0.75, 2.0, 1, 'Upgrade Computer(Radar Purchases)', 'Upgrade Info ')
@@ -150,9 +150,8 @@ def BuyShip(shipname):
     #print value
     #print VS.getPlayer().getCredits()
     success=Base.BuyShip(shipname,False,True)
-    if (success!=False):
-        
-                VS.getPlayer().addCredits(value)
+    if success:
+        VS.getPlayer().addCredits(value)
         Base.SellShip(name)
         #print VS.getPlayer().getCredits()
         #VS.getPlayer().addCredits(-ShipValue(shipname,False))

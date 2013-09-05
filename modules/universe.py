@@ -129,15 +129,14 @@ def _tmpint(str,default):
         return default
 
 def significantUnits():
-    iter= VS.getUnitList()
-    un = iter.current()
+    uni = VS.getUnitList()
+    un = uni.current()
     ret = []
-    while (iter.notDone()):
+    while (not uni.isDone()):
         if (un):
             if (un.isSignificant()):
-                ret+=[un]
-        iter.advance()
-        un= iter.current()
+                ret += [un]
+        un = uni.next()
     return ret
 
 def GetNumSignificantsForSystem (cursys):
@@ -232,12 +231,12 @@ def greet(greetingText, enemy=None, you=None, friendly=None):
         VS.IOmessage (8+i*4,fromcolor+fromname,tocolor+toname,fromcolor+text+"#000000")
 
 def getDockedBase():
-    iter = VS.getUnitList()
-    while iter.notDone():
-        if VS.getPlayer().isDocked(iter.current()) or iter.current().isDocked(VS.getPlayer()):
-            return iter.current()
-        iter.advance()
-    return iter.current()
+    uni = VS.getUnitList()
+    while (not uni.isDone()):
+        if VS.getPlayer().isDocked(uni.current()) or uni.current().isDocked(VS.getPlayer()):
+            return uni.current()
+        uni.advance()
+    return uni.current()
 
 def getDockedBaseName():
     un = getDockedBase()

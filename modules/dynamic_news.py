@@ -377,9 +377,8 @@ class NewsManager:
         a batch of stores."""
         i = VS.getUnitList()
         playa=VS.getPlayer()
-        while i.notDone():
-            un = i.current()
-            i.advance()
+        while (not i.isDone()):
+            un = i.next()
             if (un.isDocked(playa) or playa.isDocked(un)):
                 if not (un.isPlanet() or (un.getFactionName() == "neutral")):
                     fac = un.getFactionName()

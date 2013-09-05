@@ -52,7 +52,7 @@ def PlayMusik(forcechange=1,hostile_dist=0):
         target = iter.current()
         unlist=[]
         asteroid=0
-        while (iter.notDone()):
+        while (not iter.isDone()):
             if (target):
                 ftmp = 2*target.getRelation(un)
                 nam=target.getName().lower()
@@ -64,8 +64,7 @@ def PlayMusik(forcechange=1,hostile_dist=0):
                 if (target.GetTarget()==un or (ftmp<0 and un.getDistance(target)<hdis)):
                     unlist.append(target.getFactionName())
                     perfect=0
-            iter.advance()
-            target=iter.current()
+            target=iter.next()
         if (perfect):
             if asteroid and asteroidmisic!=-1 and vsrandom.random()<.7:
                 mpl(asteroidmisic,PEACELIST,forcechange)

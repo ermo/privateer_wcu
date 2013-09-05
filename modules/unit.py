@@ -1,11 +1,11 @@
 import VS
 def isLandable (un):
     if (un):
-    me = VS.getPlayer()
-    if (not me.isNull()):
-       if (un == me):
-          return 0
-        return un.isDockableUnit()
+        me = VS.getPlayer()
+        if (not me.isNull()):
+            if (un == me):
+                return 0
+    return un.isDockableUnit()
 
 def isBase (un):
     unit_fgid = un.getFlightgroupName()
@@ -79,7 +79,7 @@ def getSignificant (whichsignificant, landable_only, capship_only):
 
 def inSystem (unit):
     i=VS.getUnitList ()
-    while (i.notDone()):
+    while (not i.isDone()):
         if (i.current()==unit):
             return 1
         i.advance()

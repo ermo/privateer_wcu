@@ -75,7 +75,7 @@ class InSystemCondition(Condition):
             if type(self.dockedshipname)==str:
                 print '*** Test if docked to: '+ self.dockedshipname
                 iter = VS.getUnitList()
-                while iter.notDone():
+                while (not iter.isDone()):
                     if VS.getPlayer().isDocked(iter.current()) or iter.current().isDocked(VS.getPlayer()):
                         #Not sure why both have to be checked, it seems to second gives a more consistantly correct response
                         #find unit with name and check

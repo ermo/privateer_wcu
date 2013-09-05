@@ -41,31 +41,31 @@ class escort_mission (Director.Mission):
         #                                              self.you,
         #                                              "")
         L=launch.Launch()
-    if fgname == "":
+        if fgname == "":
             L.fg = "Escort"
             L.fgappend = "_"+str(escort_num)
-    else:
-            L.fg = fgname
-        L.fgappend = ""
-        L.faction=self.faction
-        if (dyntype==''):
-            L.type = faction_ships.getRandomFighter("merchant")
         else:
-            L.type = dyntype
-            L.forcetype=True
-        L.dynfg = ""
-        L.ai = "default"
-        L.num=1
-        L.minradius = 2.0*self.you.rSize()
-        L.maxradius = 3.0*self.you.rSize()
-        self.escortee=L.launch(self.you)
-        self.escortee.upgrade("jump_drive",0,0,0,1)
-        self.you.SetTarget(self.escortee)
-        print "h"
-        self.escortee.setFlightgroupLeader(self.you)
-        print "dd"
-        self.difficulty=missiondifficulty
-        self.creds = creds
+            L.fg = fgname
+            L.fgappend = ""
+            L.faction=self.faction
+            if (dyntype==''):
+                L.type = faction_ships.getRandomFighter("merchant")
+            else:
+                L.type = dyntype
+                L.forcetype=True
+            L.dynfg = ""
+            L.ai = "default"
+            L.num=1
+            L.minradius = 2.0*self.you.rSize()
+            L.maxradius = 3.0*self.you.rSize()
+            self.escortee=L.launch(self.you)
+            self.escortee.upgrade("jump_drive",0,0,0,1)
+            self.you.SetTarget(self.escortee)
+            print "h"
+            self.escortee.setFlightgroupLeader(self.you)
+            print "dd"
+            self.difficulty=missiondifficulty
+            self.creds = creds
     def initbriefing(self):
         print "ending briefing"                
     def loopbriefing(self):

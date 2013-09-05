@@ -433,7 +433,7 @@ def countTn (l):
 def findLaunchedShipInFGInSystem (fgname,faction):
     uni = VS.getUnitList()
     un=uni.current()
-    while (uni.notDone()):
+    while (not uni.isDone()):
         if un:
             if (un.getFlightgroupName()==fgname and un.getFactionName()==faction):
                 return un

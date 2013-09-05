@@ -90,7 +90,7 @@ class patrol (Director.Mission):
             excepted = False
             toadd = False
             units_in_sys = VS.getUnitList()
-            while units_in_sys.notDone():
+            while (not units_in_sys.isDone()):
                 un = units_in_sys.current()
                 if un.isNull():
                     units_in_sys.advance()
