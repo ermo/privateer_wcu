@@ -1,29 +1,56 @@
-import campaign_bonus
-import camptroy
-import dillohfb
-import sligorsc
-import zoolcamp
-import galagoss
-import hospital
-import irene
-import scottval
-import avalon
-import ebenezer
-campaignsloaders=[lambda:LoadMainCampaign(),lambda:LoadRFCampaign(),lambda:LoadRFMurphyCampaign(),lambda:LoadRFGoodinCampaign(),lambda:LoadRFTaylaCampaign(),lambda:LoadRFLynchCampaign(),lambda:campaign_bonus.LoadBonusCampaign(),lambda:camptroy.LoadTroyCampaign(),lambda:dillohfb.LoadDillohCampaign(),lambda:sligorsc.LoadSligorCampaign(),lambda:zoolcamp.LoadZoolCampaign(),lambda:galagoss.LoadGosshawkCampaign(),lambda:hospital.LoadNateCampaign(),lambda:irene.LoadIreneCampaign(),lambda:scottval.LoadScottCampaign(),lambda:avalon.LoadAvalonCampaign(),lambda:ebenezer.LoadEbenezerCampaign()]
+import campaign_lib
+from campaign_lib import *
+
+## Set up the main Privateer and Righteous Fire campaigns
+campaignsloaders = [
+                lambda:LoadMainCampaign(),lambda:LoadRFCampaign(),
+                lambda:LoadRFMurphyCampaign(),lambda:LoadRFGoodinCampaign(),
+                lambda:LoadRFTaylaCampaign(),lambda:LoadRFLynchCampaign()]
 campaigns=[]
+
+## Set up PU campaigns for easy disabling
+import campaign_bonus
+campaignsloaders.append(lambda:campaign_bonus.LoadBonusCampaign())
+
+import camptroy
+campaignsloaders.append(lambda:camptroy.LoadTroyCampaign())
+
+import dillohfb
+campaignsloaders.append(lambda:dillohfb.LoadDillohCampaign())
+
+import sligorsc
+campaignsloaders.append(lambda:sligorsc.LoadSligorCampaign())
+
+import zoolcamp
+campaignsloaders.append(lambda:zoolcamp.LoadZoolCampaign())
+
+import galagoss
+campaignsloaders.append(lambda:galagoss.LoadGosshawkCampaign())
+
+import hospital
+campaignsloaders.append(lambda:hospital.LoadNateCampaign())
+
+import irene
+campaignsloaders.append(lambda:irene.LoadIreneCampaign())
+
+import scottval
+campaignsloaders.append(lambda:scottval.LoadScottCampaign())
+
+import avalon
+campaignsloaders.append(lambda:avalon.LoadAvalonCampaign())
+
+import ebenezer
+campaignsloaders.append(lambda:ebenezer.LoadEbenezerCampaign())
+## end PU campaigns
 
 def loadAll(cockpit):
     for x in campaignsloaders:
-        ret=x()
+        ret = x()
         if ret:
             campaigns.append(ret)
 
 def getCampaigns():
     return campaigns
-
-import campaign_lib
-from campaign_lib import *
-
 
 sandovalspeech={"intro":[("Sandoval","Welcome to New Detroit. You look like a man who's hungry for work.", "barspeech/campaign/sandoval1intro.wav"),
                             ("Burrows","Among other things. You hiring?"),
