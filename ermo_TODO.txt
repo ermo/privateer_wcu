@@ -37,3 +37,10 @@ Observations:
  * The extra campaign stuff is an, er, "interesting" idea?
  * The PU assets are not all working
 
+Bug notes:
+ * PU tarsus was too small -- increased scale from 1 to 12 (only affects new games?)
+ * Upped default {game,gun}_speed from 0.1 to 0.2 (should be enough)
+ * Difficulty seems wrong -- player can take too much punishment?
+ * Ships are upgraded too aggressively -- fights become boring/protracted
+ * Tarsus model is missing gun models?
+ * Ships are parked in a weird position on the landing pad
