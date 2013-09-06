@@ -1,39 +1,47 @@
 import traceback
 import sys
+import pprint
 
-debugnum=0
+debugnum = 0
+
+
+# set up a nice pretty-printing function pointer for data-structures.
+# It returns a nicely formatted string which can be used with the debug.<whatever>
+# functions.
+# Usage:  debug.pp(<object>) -> returns string
+pp = pprint.PrettyPrinter(indent=4).pformat
 
 class VSException(Exception):
     pass
 
 
-def _info(msg): # == /dev/null
+def _devnull(msg, *fmtargs): # == /dev/null
     pass
 
 def prettyfile(fil):
-    lasttwo=str(fil).split('/')[-2:]
-    if len(lasttwo)<2: return fil
-    return lasttwo[0][0]+'/'+lasttwo[1]
+    lasttwo = str(fil).split('/')[-2:]
+    if len(lasttwo) < 2: return fil
+    return '%s/%s' % (lasttwo[0][0],lasttwo[1])
 
-def _debug(msg): # Simple line number
+def _withlineno(msg, *fmtargs): # Simple line number
     laststack = traceback.extract_stack()[-2]
-    print ' +++ '+prettyfile(laststack[0])+':'+str(laststack[1])+': '+str(msg)
+    print(' +++ %s:%s %s' % (prettyfile(laststack[0]),laststack[1],str(msg) % fmtargs))
 
-
-def _warn(msg): # Traceback without killing the script
+def _warn(msg, *fmtargs): # Traceback without killing the script
     global debugnum
-    debugnum+=1
-    print " *** Python Warning "+str(debugnum)+"!"
-    sys.stderr.write('Warning Traceback '+str(debugnum)+':\n')
+    debugnum += 1
+    print(" *** Python Warning %s!" % (debugnum,))
+    sys.stderr.write('Warning Traceback %s:\n' % (debugnum,))
     for frame in traceback.extract_stack()[:-1]:
-        sys.stderr.write('  File "'+prettyfile(frame[0])+'", line '+str(frame[1]))
-        sys.stderr.write(', in '+str(frame[2])+'\n    '+str(frame[3])+'\n')
-    sys.stderr.write('Message: '+str(msg)+'\n\n')
+        sys.stderr.write('  File "%s", line %s' % (prettyfile(frame[0]), frame[1]))
+        sys.stderr.write(', in %s\n    %s\n' % (frame[2],frame[3]))
+    sys.stderr.write('Message: %s\n\n' % (msg % fmtargs,))
+    sys.stderr.flush()
 
-def _fatal(msg): # Kill the script!
+def _fatal(msg, *fmtargs): # Kill the script!
     global debugnum
-    debugnum+=1
-    print "Python VSException "+str(debugnum)+"!"
+    debugnum += 1
+    print("Python VSException %s!" % (debugnum,))
     raise VSException(msg)
 
 fatal = _fatal # Really bad error... Kill the script.  Same as a call to raise()
@@ -42,10 +50,9 @@ warn = _warn   # Anything that shouldn't happen, but shouldn't cause a crash eit
 error = _warn  # Different name for the same thing.
 
 # Less important messages that happen a lot.
-debug = _debug # Useful messages for hunting down bugs, or loading status.
-info = _info   # I don't think this is useful, but why not?
+debug = _withlineno # Useful messages for hunting down bugs, or loading status.
+info = _withlineno
 
 # For release, we can disable unimportant messages:
-# debug = _info
-
-
+#info = _devnull
+#debug = _devnull
