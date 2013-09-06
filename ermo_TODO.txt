@@ -34,13 +34,26 @@ Personally, I support not deleting anything right away.
 Observations:
  * PU is not well balanced currently
  * PU ships are not too pretty.
- * The extra campaign stuff is an, er, "interesting" idea?
+ * The extra campaign stuff needs a bit of TLC
  * The PU assets are not all working
+ * The VS backgrounds don't really fit with the theme IMHO
+ * Confed/Militia AI ships don't kill very many ships, which is odd.
 
 Bug notes:
  * PU tarsus was too small -- increased scale from 1 to 12 (only affects new games?)
+ ** Ok, 12 might be too large...
  * Upped default {game,gun}_speed from 0.1 to 0.2 (should be enough)
  * Difficulty seems wrong -- player can take too much punishment?
  * Ships are upgraded too aggressively -- fights become boring/protracted
  * Tarsus model is missing gun models?
  * Ships are parked in a weird position on the landing pad
+ * Tarsus Mk2 uses a rather, er, unflattering texture
+ * The map computer appears to not be scaled correctly to the VS map
+ * Patrol mission description can offer more navpoints than are in the system
+ ** The mission is scaled down correctly by the patrol mission script.
+ * It's tedious to sell missiles -- create Buy/Sell 1, 5 and 10 buttons.
+
+Changes worth making?
+ * Tarsus Mk2 should be similar to the Tarsus in most respects except having upgraded armor
+   and being able to fit a lvl 2 reactor and a belly turret. Let's pretend that its
+   slight increase in armor is offset by smarter construction.
