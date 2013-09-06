@@ -34,7 +34,8 @@ earnable_upgrades={
     ],
     "troy":[
         ["tarsusMk2.blank","starships/Merchant/Light",40000,150,1500,"The unexpected success of the Galaxy as a merchant's gunship turned the Guild's attention to developing lower cost version. Their efforts to turn the venerable Tarsus into an cheap, adequate gunship produced the Tarsus Mk2 - a variant with a belly gun turret, higher shield and faster speed to keep pace with Galaxies in a merchant convoy."],
-        ["jump_drive","upgrades/Miscellaneous",30000,0.01,1,"@upgrades/jumpdrive.png@This is undoubtedly one of your most important and expensive purchases. Unfortunately one manufacturer essentially has a monopoly on jump drives (A common problem with many frontier products).  The jump drive is your ticket to inter-system travel."]
+        # Not having the jump drive freely available is a Bad Idea(tm)
+        # ["jump_drive","upgrades/Miscellaneous",30000,0.01,1,"@upgrades/jumpdrive.png@This is undoubtedly one of your most important and expensive purchases. Unfortunately one manufacturer essentially has a monopoly on jump drives (A common problem with many frontier products).  The jump drive is your ticket to inter-system travel."]
     ],
     "orionvar":[
         ["orionMk2.blank","starships/Merchant/Heavy",100000,200,3700,"The Orion Mk2 was the product of the Merchant Guild's efforts to produce a tough trading vessel that could go where the TarsusMk2 could not.  Taking the Hunter Orion,  guild ship engineers reconfigured the ship to have more missile launchers and a top turret.  Though slower than the hunter version this variant has more cargo space and is rumored to have a faster jump than normal."],

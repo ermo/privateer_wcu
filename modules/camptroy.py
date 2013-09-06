@@ -1,6 +1,9 @@
-import campaign_lib, quest, VS
+import campaign_lib
+import quest
+import VS
 from campaign_lib import *
-stahlspeech1={
+
+stahlspeech1 = {
     "intro":[("Captain_Stahl","Welcome to the Gemini Sector! I hope you had a good flight."),
         ("Burrows","Excuse me?"),
         ("Captain_Stahl","I'm sorry, I forgot to introduce myself. My name is Captain Stahl."),
@@ -17,7 +20,7 @@ stahlspeech1={
         ("Burrows","So what am I supposed to do, deliver gems?"),
         ("Captain_Stahl","Exactly. We delegate such missions to privateers, since we have currently none of our own freighters in this quadrant. Your mission is to deliver 10 cases of gems to Helen. It pays 2500 credits."),
         ("Burrows","Excuse me, but that's a ridiculous payment. If I wanted to make so little money, I could find a job as a male nurse on good old Earth. Tell me why I shouldn't just take those gems and run away?"),
-        ("Captain_Stahl","Because I can offer a lot more than just money. Without contacts you're Nobody in Gemini. If your performance is good, we'll be 'friends', and the friends of ES delegates usually don't have problems getting one of the rare jump drives at a ship dealer, got it?"),
+        ("Captain_Stahl","Because I can offer a lot more than just money. Without contacts you're Nobody in Gemini. If your performance is good, we'll be 'friends', and the friends of ES delegates tend to get access to exclusive parts and ships not available to the general public, got it?"),
         ("Burrows","Yeah, but with 2500 credits I can't even afford a hand laser, let alone a jump drive!"),
         ("Captain_Stahl","If you prove reliable we'll have better paying missions for you, and I can offer you constant work. Plus, you'll eventually gain access to the TarsusMk2."),
         ("Burrows","Okay then, back to the mission specs. Do I need to expect resistance?"),
@@ -184,7 +187,7 @@ stahlspeech6={
     "accept":[("Burrows","That's good money. Deal me in."),
         ("Captain_Stahl","Good. Your ship is being loaded. Good luck Captain!")],
     "accept2":[("Burrows","I've reconsidered; maybe I can use the money to get a better ship and find more challenging work, like along the frontier. Deal me in."),
-("Captain_Stahl","Good! I'll have your ship loaded right now. You can launch at any time - after lunch if you like.")],
+        ("Captain_Stahl","Good! I'll have your ship loaded right now. You can launch at any time - after lunch if you like.")],
     "reminder":[("Captain_Stahl","The gems are not yet on Helen."),
         ("Burrows","Yeah, I thought that after all those hurry-up-missions, I could take things slower, spend some quality time with my pet rabbit..."),
         ("Captain_Stahl","That's right, but why wait for the big money?"),
@@ -192,14 +195,15 @@ stahlspeech6={
     "failure":[("Captain_Stahl","I would never have thought you'd be unable to do such an easy job, after all we've been through. Your failure is preposterous. Goodbye.")]
 }
 stahlspeech7={
-    "intro":[("UNLOCKED: TarsusMk2, Jump Drive."),
+    # This was changed to not unlock the jump drive, as jump drives should be available by default.
+    "intro":[("UNLOCKED: TarsusMk2"),
         ("Captain_Stahl","The gems are safely in a bank vault at Helen, and the first TarsusMk2's are just coming off the assembly line. Our business is within budget and on schedule. It is with pleasure and honor that I hand over these 20000 creds to you."),
         ("Burrows","I like sentences containing the words 'credits' and 'you'."),
         ("Captain_Stahl","The gems-for-shares deal is now formalized and I've made sure that you are given first priority in future shipments. Further loads are necessary but now the pirates won't bother us anymore. You can make easy money by just flying gems from Achilles to Helen, back and forth. I'll pay 1200 credits for every successful trip."),
         ("Burrows","Low pay... but then again, a quick and easy route."),
-        ("Captain_Stahl","Yes. By the way, you should pass by the ship dealer and check out the TarsusMk2 for yourself. A great ship that's not yet available anywhere but right here."),
-        ("Burrows","Any other stuff to go with it? I mean... are we 'friends' now?"),
-        ("Captain_Stahl","Ah yes, I've programmed your Quine with ES VIP information. Just enter any ship dealer and show it, and you'll be able to get a jump drive wherever there is one available. About the job, are you still interested?")],
+        ("Captain_Stahl","Yes. By the way, you should pass by the ship dealer and check out the TarsusMk2 for yourself. A great ship that's not yet available anywhere but right here.  About the job, are you still interested?")],
+        # ("Burrows","Any other stuff to go with it? I mean... are we 'friends' now?"),
+        # ("Captain_Stahl","Ah yes, I've programmed your Quine with ES VIP information. Just enter any ship dealer and show it, and you'll be able to get a jump drive wherever there is one available. About the job, are you still interested?")],
     "reject1":[("Burrows","1200 credits is not enough."),
         ("Captain_Stahl","I know that you're capable of earning more elsewhere. Thanks anyway.")],
     "reconsider":[("Burrows","I could use some extra cash. What was this mission again?"),
