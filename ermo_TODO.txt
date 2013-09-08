@@ -14,8 +14,7 @@ Facts:
  * PU r505 does not work on Linux due to case-sensitivity issues
  * The PU assets are not all working (sprites reference missing assets)
  * The Windows support stuff is outdated
- * It is possible to solve all of the above
- * PU does not use cube-maps
+ * PU does not use cube-maps (?)
 
 In summary, the issues outlined above are solvable. :-)
 
@@ -32,28 +31,60 @@ gets to set the standard -- at least initially.
 Personally, I support not deleting anything right away.
 
 Observations:
- * PU is not well balanced currently
- * PU ships are not too pretty.
- * The extra campaign stuff needs a bit of TLC
+ * PU is not super well balanced currently. Anything more
+   than 2 opposing ships is a challenge.
+ * The extra PU campaign stuff needs a bit of TLC
  * The PU assets are not all working
- * The VS backgrounds don't really fit with the theme IMHO
- * Confed/Militia AI ships don't kill very many ships, which is odd.
+ * I prefer the GG space backgrounds over the VS space backgrounds.
+ * Confed/Militia AI ships don't appear to be particularly effective at
+   killing bad guys, which is odd.
+ * It would be nice to have the in-system map display which facilities
+   are available on each station (ship dealer, guilds)
+ * It would be nice to have the quadrant maps display the base names of
+   each system
+ * The map system needs 'fatter' assets -- the current wireframe
+   assets are 1px wide, which is not enough.
+ * Sometimes, systems become too brigt or too red -- why? Local issue?
+ * Tarsus Mk2 uses a rather, er, unflattering texture
+ * It would be cool to be able to plot a route even when not in the cockpit
+ ** which implies that one's personal system would have an uplink with the
+    ship computer and one could plot mission routes sitting in the bar, for
+    instance.
+ ** The rationale is that the original game placed a burden on the player to
+    keep tabs on stuff that one would expect to be able to do with a computer.
+    Why not have support systems?
+ * The lure of Privater for me is the voice acting, the  music, the 'ambience'.
+   And the art is of course something I remember fondly. But most of all, the
+   space combat was fast and furious, giving you a sense of accomplishment.
+ * There is no facility for deleting save games?
+ * There are no messages about functions turning on/off (think turret ai)?
+ * I wonder if the turret AI can be made to fire in bursts of n shots
+   if ships are within a given distance? This is to give time to recharge.
+ * If I buy a new part and regret my purchase and return it, why do I
+   not get full price for it?  I would be ok with not getting full price
+   for parts that I've lifted off with, but as long as I have not lifted off,
+   I want the same price if I decide to return a part.
+ * If adversary ships are upgraded too aggressively, fights become boring/protracted
+ * It's tedious to sell missiles -- create Buy/Sell 1, 5 and 10 buttons?
 
 Bug notes:
- * PU tarsus was too small -- increased scale from 1 to 12 (only affects new games?)
- ** Ok, 12 might be too large...
- * Upped default {game,gun}_speed from 0.1 to 0.2 (should be enough)
- * Difficulty seems wrong -- player can take too much punishment?
- * Ships are upgraded too aggressively -- fights become boring/protracted
  * Tarsus model is missing gun models?
  * Ships are parked in a weird position on the landing pad
- * Tarsus Mk2 uses a rather, er, unflattering texture
  * The map computer appears to not be scaled correctly to the VS map
  * Patrol mission description can offer more navpoints than are in the system
  ** The mission is scaled down correctly by the patrol mission script.
- * It's tedious to sell missiles -- create Buy/Sell 1, 5 and 10 buttons.
+ * The mission computer does not display the name of the current planet(!)
+   -- PO does and so does GG.
 
-Changes worth making?
+Changes:
+ * Default Tarsus size modified from 1 to 6 (was too small before)
+ * Changed master_parts_list.csv to avoid mismatched categories for parts
+   (seen with the starting Tarsus)
+ ** Hull and Armor => Hull, Armor 
+ ** Sensors => Radar
+ ** Shields => Shield Systems
+ * Upped default {game,gun}_speed from 0.1 to 0.2 (should be enough) 
  * Tarsus Mk2 should be similar to the Tarsus in most respects except having upgraded armor
    and being able to fit a lvl 2 reactor and a belly turret. Let's pretend that its
-   slight increase in armor is offset by smarter construction.
+   slight increase in armor is offset by smarter construction
+   (keeping mass and inertia the same as the original Tarsus, and thus keeping its handling)
