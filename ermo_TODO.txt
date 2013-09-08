@@ -66,6 +66,9 @@ Observations:
    I want the same price if I decide to return a part.
  * If adversary ships are upgraded too aggressively, fights become boring/protracted
  * It's tedious to sell missiles -- create Buy/Sell 1, 5 and 10 buttons?
+ * Ensure that Talons can only get up to Light upgrades
+   (start w/L0, upgrade to max L1, either 3xLasers or 2xLasers + Mass Driver)
+ * SparrowHawks could get up to L2 upgrades and get 2xLasers + 1xMeson
 
 Bug notes:
  * Tarsus model is missing gun models?
@@ -75,6 +78,8 @@ Bug notes:
  ** The mission is scaled down correctly by the patrol mission script.
  * The mission computer does not display the name of the current planet(!)
    -- PO does and so does GG.
+ * Wingmen fire all the time -- can I tell to cease fire? Can they be told
+   to cease fire if no hostiles are nearby?
 
 Changes:
  * Default Tarsus size modified from 1 to 6 (was too small before)
