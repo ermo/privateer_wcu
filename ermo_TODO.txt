@@ -10,7 +10,7 @@ The overarching goal is two-fold:
 == 1. Update PU to run on the newest VS on Linux
 
 Facts:
- * Sadly, we've lost access to the PU SVN history.
+ * Sadly, it seems we've lost access to the PU SVN history.
  * PU r505 does not work on Linux due to case-sensitivity issues
  * The PU assets are not all working (sprites reference missing assets)
  * The Windows support stuff is outdated
@@ -78,8 +78,8 @@ Bug notes:
  ** The mission is scaled down correctly by the patrol mission script.
  * The mission computer does not display the name of the current planet(!)
    -- PO does and so does GG.
- * Wingmen fire all the time -- can I tell to cease fire? Can they be told
-   to cease fire if no hostiles are nearby?
+ * Wingmen fire all the time -- can I tell them to cease fire? Can they
+   be taught to cease fire if no hostiles are nearby?
 
 Changes:
  * Default Tarsus size modified from 1 to 6 (was too small before)
