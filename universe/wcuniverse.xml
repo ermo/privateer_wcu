@@ -13,7 +13,7 @@
 	<planet name="Industrial">
 		<var name="texture" value="planets/industrial"/>
 		<var name="initial" value="i"/>
-		<var name="lights" value="planets/industrial_light.png planets/industrial_light_repeat.pngwrapx64wrapy64"/>
+		<var name="lights" value="planets/industrial_light.image planets/industrial_light_repeat.imagewrapx64wrapy64"/>
 	</planet>
 	<planet name="Arid">
 		<var name="texture" value="planets/arid"/>
@@ -31,7 +31,7 @@
 	<planet name="University">
 		<var name="texture" value="planets/university"/>
 		<var name="initial" value="u"/>
-		<var name="lights" value="planets/university*_light.png"/>
+		<var name="lights" value="planets/university*_light.image"/>
 	</planet>
 	<planet name="Church_Of_Man_Temple">
 		<var name="texture" value="planets/church_of_man"/>
