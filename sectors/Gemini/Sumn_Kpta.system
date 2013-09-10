@@ -4,7 +4,7 @@
 	<diffuse red="1" green="0.948683298050514" blue="1"/>
 	<specular red="1" green="0.9" blue="1"/>
 </Light>
-<Planet name="Sumn-Kp'ta" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.9" Blue="1" ReflectNoLight="true" light="0"/>
+<Planet name="Sumn-Kp'ta" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.9" Blue="1" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Tr-Pakh" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-17500" day="240" destination="Gemini/Tr_Pakh"/>
-	<planet name="Jump_To_Hyades" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="17500" day="240" destination="Gemini/Hyades"/>
-<!-- priv_009	<planet name="Jump_To_Sumn_H'hra" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="0" z="2000" day="240" destination="TrkPahn/SumnHhra"/>	priv_009 -->
+	<planet name="Jump_To_Tr-Pakh" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-17500" day="240" destination="Gemini/Tr_Pakh"/>
+	<planet name="Jump_To_Hyades" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="17500" day="240" destination="Gemini/Hyades"/>
+<!-- priv_009	<planet name="Jump_To_Sumn_H'hra" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="0" z="2000" day="240" destination="TrkPahn/SumnHhra"/>	priv_009 -->
 </system>

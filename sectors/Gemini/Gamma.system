@@ -4,7 +4,7 @@
 	<diffuse red="1" green="0.948683298050514" blue="1"/>
 	<specular red="1" green="0.9" blue="1"/>
 </Light>
-<Planet name="Gamma" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.9" Blue="1" ReflectNoLight="true" light="0"/>
+<Planet name="Gamma" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.9" Blue="1" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,18 +22,18 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>
-	<planet name="Jump_To_Beta" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="11000" day="240" destination="Gemini/Beta"/>
+	<planet name="Jump_To_Beta" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="11000" day="240" destination="Gemini/Beta"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-3" file="AFieldBasePriv" difficulty=".03" faction="neutral" x="11000" y="11000" day="-17500"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="4" file="Asteroid_Field" difficulty=".03" faction="neutral" x="11000" y="11000" day="-17500"/>
 	<unit name="Clawhammer" file="kamekh" faction="kilrathi" x="13500" y="22000" z="100" day="-14000"/>
-	<planet name="Nav_2" file="invisible.png" alpha="ONE ONE" radius="256" faction="neutral" x="13500" y="22000" day="0"/>
-	<planet name="Nav_3" file="invisible.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="11500" day="240"/>
+	<planet name="Nav_2" file="invisible.image" alpha="ONE ONE" radius="256" faction="neutral" x="13500" y="22000" day="0"/>
+	<planet name="Nav_3" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="11500" day="240"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-3" file="AFieldBasePriv" difficulty=".04" faction="neutral" x="0" y="11500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="4" file="Asteroid_Field" difficulty=".04" faction="neutral" x="0" y="11500" day="-14000"/>
-	<planet name="Nav_4" file="invisible.png" alpha="ONE ONE" radius="256" gravity="0" x="13500" y="-3000" day="240"/>
+	<planet name="Nav_4" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="13500" y="-3000" day="240"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-3" file="AFieldBasePriv" difficulty=".035" faction="neutral" x="13500" y="-3000" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="4" file="Asteroid_Field" difficulty=".035" faction="neutral" x="13500" y="-3000" day="-14000"/>
-	<planet name="Jump_To_Delta_Prime" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-8000" y="-10500" day="240" destination="Gemini/Delta_Prime"/>
+	<planet name="Jump_To_Delta_Prime" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-8000" y="-10500" day="240" destination="Gemini/Delta_Prime"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-3" file="AFieldBasePriv" difficulty=".045" faction="neutral" x="-8000" y="-10500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="4" file="Asteroid_Field" difficulty=".045" faction="neutral" x="-8000" y="-10500" day="-14000"/>
 </system>

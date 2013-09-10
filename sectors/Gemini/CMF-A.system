@@ -4,7 +4,7 @@
 	<diffuse red="1" green="0.948683298050514" blue="1"/>
 	<specular red="1" green="0.9" blue="1"/>
 </Light>
-<Planet name="CMF-A" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.9" Blue="1" ReflectNoLight="true" light="0"/>
+<Planet name="CMF-A" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.9" Blue="1" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Tingerhoff" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11000" day="240" destination="Gemini/Tingerhoff"/>
-	<planet name="Nav_2" file="invisible.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="0" day="240"/>
-	<planet name="Jump_To_Nitir" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-8000" y="-11000" day="240" destination="Gemini/Nitir"/>
+	<planet name="Jump_To_Tingerhoff" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11000" day="240" destination="Gemini/Tingerhoff"/>
+	<planet name="Nav_2" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="0" day="240"/>
+	<planet name="Jump_To_Nitir" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-8000" y="-11000" day="240" destination="Gemini/Nitir"/>
 </system>

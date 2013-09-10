@@ -4,7 +4,7 @@
 	<diffuse red="1" green="0.894427190999916" blue="0.707106781186548"/>
 	<specular red="1" green="0.8" blue="0.5"/>
 </Light>
-<Planet name="CM-N1054" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.8" Blue="0.5" ReflectNoLight="true" light="0"/>
+<Planet name="CM-N1054" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.8" Blue="0.5" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Pyrenees" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="1500" day="240" destination="Gemini/Pyrenees"/>
+	<planet name="Jump_To_Pyrenees" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="1500" day="240" destination="Gemini/Pyrenees"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-0" file="AFieldBaseThin" difficulty=".02" faction="neutral" x="1500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="1" file="Asteroid_Field" difficulty=".02" faction="neutral" x="1500" day="-14000"/>
 </system>

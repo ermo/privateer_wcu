@@ -4,7 +4,7 @@
 	<diffuse red="1" green="0.894427190999916" blue="2.23606797749979"/>
 	<specular red="1" green="0.8" blue="5"/>
 </Light>
-<Planet name="New_Detroit" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.8" Blue="5" ReflectNoLight="true" light="0"/>
+<Planet name="New_Detroit" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.8" Blue="5" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,16 +22,16 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Saxtogue" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="11000" day="240" destination="Gemini/Saxtogue"/>
-	<planet name="Jump_To_Raxis" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-5500" y="7500" day="240" destination="Gemini/Raxis"/>
-	<planet name="Jump_To_XXN-1927" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="0" day="240" destination="Gemini/XXN-1927"/>
-	<planet name="Jump_To_Manchester" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="17000" y="4000" day="240" destination="Gemini/Manchester"/>
-	<planet name="New_Detroit" file="planets/industrial.png" citylights="planets/industrial_light.png" radius="1200" gravity="20" x="-3000" y="-13000" day="3000">
-		<CityLights file="planets/industrial_light.png" wrapx="1" wrapy="1"/>
-<!--		<planet name="Atmosphere" file="sol/dirtyatmos.png" alpha="true" radius="3200" gravity="0" ri="0" rj="0" rk="0" si="0" sj="0" sk="0" day="600" position="0"/>	-->
+	<planet name="Jump_To_Saxtogue" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="11000" day="240" destination="Gemini/Saxtogue"/>
+	<planet name="Jump_To_Raxis" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-5500" y="7500" day="240" destination="Gemini/Raxis"/>
+	<planet name="Jump_To_XXN-1927" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="0" day="240" destination="Gemini/XXN-1927"/>
+	<planet name="Jump_To_Manchester" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="17000" y="4000" day="240" destination="Gemini/Manchester"/>
+	<planet name="New_Detroit" file="planets/industrial.image" citylights="planets/industrial_light.image" radius="1200" gravity="20" x="-3000" y="-13000" day="3000">
+		<CityLights file="planets/industrial_light.image" wrapx="1" wrapy="1"/>
+<!--		<planet name="Atmosphere" file="sol/dirtyatmos.image" alpha="true" radius="3200" gravity="0" ri="0" rj="0" rk="0" si="0" sj="0" sk="0" day="600" position="0"/>	-->
 	</planet>
-	<planet name="Jump_To_Rikel" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="-21000" day="240" destination="Gemini/Rikel"/>
-	<planet name="Jump_To_ND-57" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-8500" y="-18000" day="240" destination="Gemini/ND-57"/>
-	<planet name="Jump_To_Perry" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-17500" y="-10500" day="240" destination="Gemini/Perry"/>
-	<planet name="Jump_To_New_Constantinople" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-17500" y="-3000" day="240" destination="Gemini/New_Constantinople"/>
+	<planet name="Jump_To_Rikel" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="-21000" day="240" destination="Gemini/Rikel"/>
+	<planet name="Jump_To_ND-57" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-8500" y="-18000" day="240" destination="Gemini/ND-57"/>
+	<planet name="Jump_To_Perry" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-17500" y="-10500" day="240" destination="Gemini/Perry"/>
+	<planet name="Jump_To_New_Constantinople" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-17500" y="-3000" day="240" destination="Gemini/New_Constantinople"/>
 </system>

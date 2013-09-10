@@ -4,7 +4,7 @@
 	<diffuse red="0.774596669241483" green="0.774596669241483" blue="1"/>
 	<specular red="0.6" green="0.6" blue="1"/>
 </Light>
-<Planet name="Hind's_Variable_N" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="0.6" Green="0.6" Blue="1" ReflectNoLight="true" light="0"/>
+<Planet name="Hind's_Variable_N" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="0.6" Green="0.6" Blue="1" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,11 +22,11 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_DN-N1912" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11500" day="240" destination="Gemini/DN-N1912"/>
+	<planet name="Jump_To_DN-N1912" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11500" day="240" destination="Gemini/DN-N1912"/>
 	<unit name="Meadow" file="refinery" faction="militia" x="11000" y="-10500"/>
-	<planet name="Nav_3" file="invisible.png" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-1500" day="240"/>
-	<planet name="Oresville" file="planets/agricultural.png" radius="1200" gravity="20" x="-12000" y="7000" day="300">
-		<Atmosphere file="clouds.png" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
+	<planet name="Nav_3" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-1500" day="240"/>
+	<planet name="Oresville" file="planets/agricultural.image" radius="1200" gravity="20" x="-12000" y="7000" day="300">
+		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
-	<planet name="Jump_To_Aldebran" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="-14000" day="240" destination="Gemini/Aldebran"/>
+	<planet name="Jump_To_Aldebran" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="-14000" day="240" destination="Gemini/Aldebran"/>
 </system>

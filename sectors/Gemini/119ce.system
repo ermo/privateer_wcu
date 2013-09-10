@@ -4,7 +4,7 @@
 	<diffuse red="1" green="0.774596669241483" blue="0.774596669241483"/>
 	<specular red="1" green="0.6" blue="0.6"/>
 </Light>
-<Planet name="119CE" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.6" Blue="0.6" ReflectNoLight="true" light="0"/>
+<Planet name="119CE" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.6" Blue="0.6" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,8 +22,8 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Junction" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-12000" y="14500" day="240" destination="Gemini/Junction"/>
-	<planet name="Jump_To_Padre" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="7500" day="240" destination="Gemini/Padre"/>
-	<planet name="Jump_To_XXN-1927" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="-6000" y="-6500" day="240" destination="Gemini/XXN-1927"/>
-	<planet name="Jump_To_Pentonville" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="-17500" day="240" destination="Gemini/Pentonville"/>
+	<planet name="Jump_To_Junction" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-12000" y="14500" day="240" destination="Gemini/Junction"/>
+	<planet name="Jump_To_Padre" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="7500" day="240" destination="Gemini/Padre"/>
+	<planet name="Jump_To_XXN-1927" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-6000" y="-6500" day="240" destination="Gemini/XXN-1927"/>
+	<planet name="Jump_To_Pentonville" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="-17500" day="240" destination="Gemini/Pentonville"/>
 </system>

@@ -4,7 +4,7 @@
 	<diffuse red="1" green="0.894427190999916" blue="0.707106781186548"/>
 	<specular red="1" green="0.8" blue="0.5"/>
 </Light>
-<Planet name="Eden" file="stars/sun.png" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.8" Blue="0.5" ReflectNoLight="true" light="0"/>
+<Planet name="Eden" file="stars/sun.image" radius="4000000" y="14594814" z="0" x="-14594814" Red="1" Green="0.8" Blue="0.5" ReflectNoLight="true" light="0"/>
 <Light>
 	<ambient red="000.0" green="000.0" blue="000.0"/>
 	<diffuse red="1" green="1" blue="1"/>
@@ -22,12 +22,12 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Valhalla" file="jump.png" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="10500" day="240" destination="Gemini/Valhalla"/>
-	<planet name="Gaea" file="planets/church_of_man.png" radius="1200" gravity="20" x="0" y="-7500" si="-3000" day="300">
-		<Atmosphere file="clouds.png" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
+	<planet name="Jump_To_Valhalla" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="10500" day="240" destination="Gemini/Valhalla"/>
+	<planet name="Gaea" file="planets/church_of_man.image" radius="1200" gravity="20" x="0" y="-7500" si="-3000" day="300">
+		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
-	<planet name="Sanctuary_Moon" file="planets/rock.png" radius="1500" x="21500" y="-7500" si="-3000" day="300"/>
-	<planet name="Sanctuary_Moon" file="planets/rock.png" radius="1530" x="21500" y="-7500" si="-3000" day="300"/>
-	<planet name="Sanctuary_Moon" file="planets/rock.png" radius="1540" x="21500" y="-7500" si="-3000" day="300"/>
-	<jump name="Unknown" file="jump.png" alpha="ONE ONE" radius="256" x="21500" z="-1500" y="-7500" si="-3000" day="300" destination="Gemini/Rikel"/>
+	<planet name="Sanctuary_Moon" file="planets/rock.image" radius="1500" x="21500" y="-7500" si="-3000" day="300"/>
+	<planet name="Sanctuary_Moon" file="planets/rock.image" radius="1530" x="21500" y="-7500" si="-3000" day="300"/>
+	<planet name="Sanctuary_Moon" file="planets/rock.image" radius="1540" x="21500" y="-7500" si="-3000" day="300"/>
+	<jump name="Unknown" file="jump.image" alpha="ONE ONE" radius="256" x="21500" z="-1500" y="-7500" si="-3000" day="300" destination="Gemini/Rikel"/>
 </system>
