@@ -1,4 +1,4 @@
 interfaces/quine/left_pressed.ani 0
 2.0 2.0
 1 1000 mins=0.77,mint=0.75,maxs=1,maxt=1
-interfaces/quine/pressed.png true
+interfaces/quine/pressed.image true

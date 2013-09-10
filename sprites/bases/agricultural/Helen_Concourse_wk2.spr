@@ -2,90 +2,90 @@ bases/agricultural/wk2.ani bases/agricultural/wk2.ani
 0.2 0.64
 0 0
 87 .20 video
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-bases/agricultural/wk2.ani/wk200000.png true
-bases/agricultural/wk2.ani/wk200001.png true
-bases/agricultural/wk2.ani/wk200002.png true
-bases/agricultural/wk2.ani/wk200003.png true
-bases/agricultural/wk2.ani/wk200004.png true
-bases/agricultural/wk2.ani/wk200005.png true
-bases/agricultural/wk2.ani/wk200006.png true
-bases/agricultural/wk2.ani/wk200007.png true
-bases/agricultural/wk2.ani/wk200008.png true
-bases/agricultural/wk2.ani/wk200009.png true
-bases/agricultural/wk2.ani/wk200010.png true
-bases/agricultural/wk2.ani/wk200011.png true
-bases/agricultural/wk2.ani/wk200012.png true
-bases/agricultural/wk2.ani/wk200013.png true
-bases/agricultural/wk2.ani/wk200014.png true
-bases/agricultural/wk2.ani/wk200015.png true
-bases/agricultural/wk2.ani/wk200016.png true
-bases/agricultural/wk2.ani/wk200017.png true
-bases/agricultural/wk2.ani/wk200018.png true
-bases/agricultural/wk2.ani/wk200019.png true
-bases/agricultural/wk2.ani/wk200020.png true
-bases/agricultural/wk2.ani/wk200021.png true
-bases/agricultural/wk2.ani/wk200022.png true
-bases/agricultural/wk2.ani/wk200023.png true
-bases/agricultural/wk2.ani/wk200024.png true
-bases/agricultural/wk2.ani/wk200025.png true
-bases/agricultural/wk2.ani/wk200026.png true
-bases/agricultural/wk2.ani/wk200027.png true
-bases/agricultural/wk2.ani/wk200028.png true
-bases/agricultural/wk2.ani/wk200029.png true
-bases/agricultural/wk2.ani/wk200030.png true
-bases/agricultural/wk2.ani/wk200031.png true
-bases/agricultural/wk2.ani/wk200032.png true
-bases/agricultural/wk2.ani/wk200033.png true
-bases/agricultural/wk2.ani/wk200034.png true
-bases/agricultural/wk2.ani/wk200035.png true
-bases/agricultural/wk2.ani/wk200036.png true
-bases/agricultural/wk2.ani/wk200037.png true
-bases/agricultural/wk2.ani/wk200038.png true
-bases/agricultural/wk2.ani/wk200039.png true
-bases/agricultural/wk2.ani/wk200040.png true
-bases/agricultural/wk2.ani/wk200041.png true
-bases/agricultural/wk2.ani/wk200042.png true
-bases/agricultural/wk2.ani/wk200043.png true
-bases/agricultural/wk2.ani/wk200044.png true
-bases/agricultural/wk2.ani/wk200045.png true
-bases/agricultural/wk2.ani/wk200046.png true
-bases/agricultural/wk2.ani/wk200047.png true
-bases/agricultural/wk2.ani/wk200048.png true
-bases/agricultural/wk2.ani/wk200049.png true
-bases/agricultural/wk2.ani/wk200050.png true
-bases/agricultural/wk2.ani/wk200051.png true
-bases/agricultural/wk2.ani/wk200052.png true
-bases/agricultural/wk2.ani/wk200053.png true
-bases/agricultural/wk2.ani/wk200054.png true
-bases/agricultural/wk2.ani/wk200055.png true
-bases/agricultural/wk2.ani/wk200056.png true
-bases/agricultural/wk2.ani/wk200057.png true
-bases/agricultural/wk2.ani/wk200058.png true
-bases/agricultural/wk2.ani/wk200059.png true
-bases/agricultural/wk2.ani/wk200060.png true
-bases/agricultural/wk2.ani/wk200061.png true
-bases/agricultural/wk2.ani/wk200062.png true
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
-blackclear.png
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+bases/agricultural/wk2.ani/wk200000.image true
+bases/agricultural/wk2.ani/wk200001.image true
+bases/agricultural/wk2.ani/wk200002.image true
+bases/agricultural/wk2.ani/wk200003.image true
+bases/agricultural/wk2.ani/wk200004.image true
+bases/agricultural/wk2.ani/wk200005.image true
+bases/agricultural/wk2.ani/wk200006.image true
+bases/agricultural/wk2.ani/wk200007.image true
+bases/agricultural/wk2.ani/wk200008.image true
+bases/agricultural/wk2.ani/wk200009.image true
+bases/agricultural/wk2.ani/wk200010.image true
+bases/agricultural/wk2.ani/wk200011.image true
+bases/agricultural/wk2.ani/wk200012.image true
+bases/agricultural/wk2.ani/wk200013.image true
+bases/agricultural/wk2.ani/wk200014.image true
+bases/agricultural/wk2.ani/wk200015.image true
+bases/agricultural/wk2.ani/wk200016.image true
+bases/agricultural/wk2.ani/wk200017.image true
+bases/agricultural/wk2.ani/wk200018.image true
+bases/agricultural/wk2.ani/wk200019.image true
+bases/agricultural/wk2.ani/wk200020.image true
+bases/agricultural/wk2.ani/wk200021.image true
+bases/agricultural/wk2.ani/wk200022.image true
+bases/agricultural/wk2.ani/wk200023.image true
+bases/agricultural/wk2.ani/wk200024.image true
+bases/agricultural/wk2.ani/wk200025.image true
+bases/agricultural/wk2.ani/wk200026.image true
+bases/agricultural/wk2.ani/wk200027.image true
+bases/agricultural/wk2.ani/wk200028.image true
+bases/agricultural/wk2.ani/wk200029.image true
+bases/agricultural/wk2.ani/wk200030.image true
+bases/agricultural/wk2.ani/wk200031.image true
+bases/agricultural/wk2.ani/wk200032.image true
+bases/agricultural/wk2.ani/wk200033.image true
+bases/agricultural/wk2.ani/wk200034.image true
+bases/agricultural/wk2.ani/wk200035.image true
+bases/agricultural/wk2.ani/wk200036.image true
+bases/agricultural/wk2.ani/wk200037.image true
+bases/agricultural/wk2.ani/wk200038.image true
+bases/agricultural/wk2.ani/wk200039.image true
+bases/agricultural/wk2.ani/wk200040.image true
+bases/agricultural/wk2.ani/wk200041.image true
+bases/agricultural/wk2.ani/wk200042.image true
+bases/agricultural/wk2.ani/wk200043.image true
+bases/agricultural/wk2.ani/wk200044.image true
+bases/agricultural/wk2.ani/wk200045.image true
+bases/agricultural/wk2.ani/wk200046.image true
+bases/agricultural/wk2.ani/wk200047.image true
+bases/agricultural/wk2.ani/wk200048.image true
+bases/agricultural/wk2.ani/wk200049.image true
+bases/agricultural/wk2.ani/wk200050.image true
+bases/agricultural/wk2.ani/wk200051.image true
+bases/agricultural/wk2.ani/wk200052.image true
+bases/agricultural/wk2.ani/wk200053.image true
+bases/agricultural/wk2.ani/wk200054.image true
+bases/agricultural/wk2.ani/wk200055.image true
+bases/agricultural/wk2.ani/wk200056.image true
+bases/agricultural/wk2.ani/wk200057.image true
+bases/agricultural/wk2.ani/wk200058.image true
+bases/agricultural/wk2.ani/wk200059.image true
+bases/agricultural/wk2.ani/wk200060.image true
+bases/agricultural/wk2.ani/wk200061.image true
+bases/agricultural/wk2.ani/wk200062.image true
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0
+blackclear.image 0

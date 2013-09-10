@@ -2,15 +2,15 @@ bases/church_of_man/sn1.ani bases/church_of_man/sn1.ani
 0.8 1.25
 0 0
 12 .23 video
-blackclear.png true
-bases/church_of_man/sn1.ani/sn100000.png true
-bases/church_of_man/sn1.ani/sn100001.png true
-bases/church_of_man/sn1.ani/sn100002.png true
-bases/church_of_man/sn1.ani/sn100003.png true
-bases/church_of_man/sn1.ani/sn100004.png true
-bases/church_of_man/sn1.ani/sn100005.png true
-bases/church_of_man/sn1.ani/sn100006.png true
-bases/church_of_man/sn1.ani/sn100007.png true
-bases/church_of_man/sn1.ani/sn100008.png true
-bases/church_of_man/sn1.ani/sn100009.png true
-bases/church_of_man/sn1.ani/sn100010.png true
+blackclear.image true
+bases/church_of_man/sn1.ani/sn100000.image true
+bases/church_of_man/sn1.ani/sn100001.image true
+bases/church_of_man/sn1.ani/sn100002.image true
+bases/church_of_man/sn1.ani/sn100003.image true
+bases/church_of_man/sn1.ani/sn100004.image true
+bases/church_of_man/sn1.ani/sn100005.image true
+bases/church_of_man/sn1.ani/sn100006.image true
+bases/church_of_man/sn1.ani/sn100007.image true
+bases/church_of_man/sn1.ani/sn100008.image true
+bases/church_of_man/sn1.ani/sn100009.image true
+bases/church_of_man/sn1.ani/sn100010.image true

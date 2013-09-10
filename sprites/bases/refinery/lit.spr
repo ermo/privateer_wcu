@@ -2,5 +2,5 @@ bases/refinery/sh0.ani bases/refinery/sh0.ani
 1.6 0.075
 0 0
 2 1.0
-bases/refinery/lit.png true
-blackclear.png true
+bases/refinery/lit.image true
+blackclear.image true
