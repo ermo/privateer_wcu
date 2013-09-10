@@ -16,7 +16,7 @@
         <vertex_program src="fixed8"/>
         <fragment_program src="ambientmapped_simple"/>
         
-        <texture_unit src="decal:0" default="file:white.bmp" name="diffuseMap"/>
+        <texture_unit src="decal:0" default="file:white.image" name="diffuseMap"/>
         <texture_unit src="environment" name="envMap"/>
         
         <auto_param name="light_enabled" semantic="ActiveLightsArray" optional="true"/>

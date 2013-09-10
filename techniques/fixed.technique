@@ -16,9 +16,9 @@
         <vertex_program src="fixed8"/>
         <fragment_program src="fixed"/>
         
-        <texture_unit src="decal:0" default="file:white.bmp" name="diffuseMap"/>
+        <texture_unit src="decal:0" default="file:white.image" name="diffuseMap"/>
         <texture_unit src="environment" name="envMap"/>
-        <texture_unit src="decal:1" default="file:white.bmp" name="specMap"/>
+        <texture_unit src="decal:1" default="file:white.image" name="specMap"/>
         <texture_unit src="decal:2" default="decal:0" name="damageMap"/>
         <texture_unit src="decal:3" default="file:black.image" name="glowMap"/>
         

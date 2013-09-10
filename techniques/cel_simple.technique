@@ -16,7 +16,7 @@
     <pass type="shader" sequence="10" cwrite="false">
         <vertex_program src="zwrite"/>
         <fragment_program src="zwrite"/>
-        <texture_unit src="decal:0" default="file:white.bmp" name="diffuseMap"/>
+        <texture_unit src="decal:0" default="file:white.image" name="diffuseMap"/>
     </pass>
     
     <!-- first pass - outlining -->
@@ -24,7 +24,7 @@
         <vertex_program src="fixed5"/>
         <fragment_program src="cel_outline"/>
         
-        <texture_unit src="decal:0" default="file:white.bmp" name="diffuseMap"/>
+        <texture_unit src="decal:0" default="file:white.image" name="diffuseMap"/>
         <texture_unit src="decal:2" default="decal:0" name="damageMap"/>
         
         <auto_param name="light_enabled" semantic="ActiveLightsArray" optional="true"/>
@@ -42,7 +42,7 @@
         <vertex_program src="fixed5"/>
         <fragment_program src="cel_simple"/>
         
-        <texture_unit src="decal:0" default="file:white.bmp" name="diffuseMap"/>
+        <texture_unit src="decal:0" default="file:white.image" name="diffuseMap"/>
         
         <auto_param name="envColor" semantic="EnvColor" optional="true"/>
         <auto_param name="light_enabled" semantic="ActiveLightsArray" optional="true"/>

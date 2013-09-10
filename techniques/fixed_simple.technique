@@ -16,7 +16,7 @@
         <vertex_program src="fixed5"/>
         <fragment_program src="fixed_simple"/>
         
-        <texture_unit src="decal:0" default="file:white.bmp" name="diffuseMap"/>
+        <texture_unit src="decal:0" default="file:white.image" name="diffuseMap"/>
         
         <auto_param name="light_enabled" semantic="ActiveLightsArray" optional="true"/>
         <auto_param name="max_light_enabled" semantic="NumLights" optional="true"/>

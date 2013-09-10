@@ -8,11 +8,11 @@
         <vertex_program src="highend.vp"/>
         <fragment_program src="highend.fp"/>
         
-        <texture_unit src="decal:0" target="0" default="file:white.bmp"/>
-        <texture_unit src="decal:1" target="1" default="file:white.bmp"/>
+        <texture_unit src="decal:0" target="0" default="file:white.image"/>
+        <texture_unit src="decal:1" target="1" default="file:white.image"/>
         <texture_unit src="decal:2" target="2" default="decal:0"/>
         <texture_unit src="decal:3" target="3" default="file:black.bmp"/>
-        <texture_unit src="decal:4" target="4" default="file:blue.bmp"/>
+        <texture_unit src="decal:4" target="4" default="file:blue.image"/>
         <texture_unit src="file:noise.bmp" target="5"/>
         <texture_unit src="env" target="6"/>
         
@@ -25,11 +25,11 @@
         <vertex_program src="highend.vp"/>
         <fragment_program src="highend_hdr.fp"/>
         
-        <texture_unit src="decal:0" target="0" default="file:white.bmp"/>
-        <texture_unit src="decal:1" target="1" default="file:white.bmp"/>
+        <texture_unit src="decal:0" target="0" default="file:white.image"/>
+        <texture_unit src="decal:1" target="1" default="file:white.image"/>
         <texture_unit src="decal:2" target="2" default="decal:0"/>
         <texture_unit src="decal:3" target="3" default="file:black.bmp"/>
-        <texture_unit src="decal:4" target="4" default="file:blue.bmp"/>
+        <texture_unit src="decal:4" target="4" default="file:blue.image"/>
         <texture_unit src="file:noise.bmp" target="5"/>
     </pass>
 </technique>
