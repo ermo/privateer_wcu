@@ -21,7 +21,7 @@ class spawner (Director.Mission):
             nam=self.facnames[i]+"_SPAWN"
             if (i>=len(self.facnames)/2): 
                nam+="_CAPSHIP"
-            self.fac.append(VS.launchJumppoint(nam,"neutral","75 jump.png %s (ONE ONE)"%nam,"planet","sitting_duck",1,1,Vector.Add((0.,-1000.+i*200.,1000.),VS.getPlayer().Position()),"","Gemini/Troy"))
+            self.fac.append(VS.launchJumppoint(nam,"neutral","75 jump.texture %s (ONE ONE)"%nam,"planet","sitting_duck",1,1,Vector.Add((0.,-1000.+i*200.,1000.),VS.getPlayer().Position()),"","Gemini/Troy"))
         self.delay=VS.GetGameTime()
     def Execute (self):
         if (VS.getPlayer()):

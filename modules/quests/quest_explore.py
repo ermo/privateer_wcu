@@ -15,7 +15,7 @@ class quest_explore (quest.quest):
         str=str.split('/')[-1]
         str=str[0].upper()+str[1:]
         str="Jump_To_"+str
-        self.jumppoint=VS.launchJumppoint("Base","neutral","1000 jump.png %s (ONE ONE)"%str,"planet","sitting_duck",1,1,(861946880,2132313,31337),"",self.newsys)
+        self.jumppoint=VS.launchJumppoint("Base","neutral","1000 jump.texture %s (ONE ONE)"%str,"planet","sitting_duck",1,1,(861946880,2132313,31337),"",self.newsys)
         self.notcreatedyet=2
     def __init__ (self):
         self.sysfile = VS.getSystemFile()
