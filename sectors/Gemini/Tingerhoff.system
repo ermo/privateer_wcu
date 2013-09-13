@@ -22,12 +22,12 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_CMF-A" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-7500" y="14800" day="240" destination="Gemini/CMF-A"/>
-	<planet name="Jump_To_Palan" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="6000" y="14800" day="240" destination="Gemini/Palan"/>
+	<planet name="Jump_To_CMF-A" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-7500" y="14800" day="240" destination="Gemini/CMF-A"/>
+	<planet name="Jump_To_Palan" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="6000" y="14800" day="240" destination="Gemini/Palan"/>
 	<unit name="Munchen" file="refinery" faction="confed" x="13500" y="0"/>
-	<planet name="Jump_To_Perry" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-6000" y="-14000" day="240" destination="Gemini/Perry"/>
-	<planet name="Bodensee" file="planets/agricultural.image" radius="1200" gravity="20" x="-18000" y="-7000" day="300">
+	<planet name="Jump_To_Perry" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-6000" y="-14000" day="240" destination="Gemini/Perry"/>
+	<planet name="Bodensee" file="planets/agricultural.texture" radius="1200" gravity="20" x="-18000" y="-7000" day="300">
 		<Atmosphere alpha="SRCALPHA INVSRCALPHA" file="clouds.image" radius="1009"/>
 	</planet>
-	<planet name="Jump_To_Nexus" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-2500" y="-3200" day="240" destination="Gemini/Nexus"/>
+	<planet name="Jump_To_Nexus" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-2500" y="-3200" day="240" destination="Gemini/Nexus"/>
 </system>

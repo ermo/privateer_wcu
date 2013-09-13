@@ -25,13 +25,13 @@
 <!--<attenuated red=".00000001" blue=".00000015"/>-->
 <attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Lisacc" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="11000" day="240" destination="Gemini/Lisacc"/>
+	<planet name="Jump_To_Lisacc" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="0" y="11000" day="240" destination="Gemini/Lisacc"/>
 	<planet name="Nav_2" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="11100" y="-2800" day="240"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-1" file="AFieldBasePriv" difficulty=".03" faction="neutral" x="11100" y="-2800" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="2" file="Asteroid_Field" difficulty=".03" faction="neutral" x="11100" y="-2800" day="-14000"/>
-	<planet name="Jump_To_Nitir" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="16800" y="-14000" day="240" destination="Gemini/Nitir"/>
+	<planet name="Jump_To_Nitir" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="16800" y="-14000" day="240" destination="Gemini/Nitir"/>
 	<planet name="Nav_4" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="-8200" y="0" day="240"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-1" file="AFieldBasePriv" difficulty=".03" faction="neutral" x="-8200" y="0" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="2" file="Asteroid_Field" difficulty=".03" faction="neutral" x="-8200" y="0" day="-14000"/>
-	<planet name="Jump_To_Mah'Rahn" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-14800" y="-14200" day="240" destination="Gemini/Mah_Rahn"/>
+	<planet name="Jump_To_Mah'Rahn" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-14800" y="-14200" day="240" destination="Gemini/Mah_Rahn"/>
 </system>

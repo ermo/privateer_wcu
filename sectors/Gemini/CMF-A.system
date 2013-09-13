@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Tingerhoff" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11000" day="240" destination="Gemini/Tingerhoff"/>
+	<planet name="Jump_To_Tingerhoff" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11000" day="240" destination="Gemini/Tingerhoff"/>
 	<planet name="Nav_2" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="0" day="240"/>
-	<planet name="Jump_To_Nitir" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-8000" y="-11000" day="240" destination="Gemini/Nitir"/>
+	<planet name="Jump_To_Nitir" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-8000" y="-11000" day="240" destination="Gemini/Nitir"/>
 </system>

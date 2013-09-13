@@ -22,10 +22,10 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Blockade_Point_Charlie" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-11600" y="15000" day="240" destination="Gemini/Blockade_Point_Charlie"/>
-	<planet name="Surtur" file="planets/agricultural.image" radius="1200" gravity="20" x="-8000" y="-11000" day="300">
+	<planet name="Jump_To_Blockade_Point_Charlie" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-11600" y="15000" day="240" destination="Gemini/Blockade_Point_Charlie"/>
+	<planet name="Surtur" file="planets/agricultural.texture" radius="1200" gravity="20" x="-8000" y="-11000" day="300">
 		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
-	<planet name="Jump_To_Perry" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="2800" y="-3200" day="240" destination="Gemini/Perry"/>
-	<planet name="Jump_To_41-GS" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="15000" day="240" destination="Gemini/41-gs"/>
+	<planet name="Jump_To_Perry" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="2800" y="-3200" day="240" destination="Gemini/Perry"/>
+	<planet name="Jump_To_41-GS" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="15000" day="240" destination="Gemini/41-gs"/>
 </system>

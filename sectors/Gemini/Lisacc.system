@@ -25,9 +25,9 @@
 	<unit name="Lisacc" file="mining_base" faction="confed" x="-8800" y="-2500"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-1" file="AFieldBasePriv" difficulty=".03" faction="neutral" x="-8800" y="-2500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="2" file="Asteroid_Field" difficulty=".03" faction="neutral" x="-8800" y="-2500" day="-14000"/>
-	<planet name="Jump_To_Blockade_Point_Tango" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="7500" day="240" destination="Gemini/Blockade_Point_Tango"/>
+	<planet name="Jump_To_Blockade_Point_Tango" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="7500" day="240" destination="Gemini/Blockade_Point_Tango"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-1" file="AFieldBasePriv" difficulty=".05" faction="neutral" x="11000" y="7500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="2" file="Asteroid_Field" difficulty=".05" faction="neutral" x="11000" y="7500" day="-14000"/>
-<!-- priv_009	<planet name="Jump_To_Tk'Tarak" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="1000" y="-1500" z="7400" day="240" destination="TrkPahn/TKTarak"/> priv_009 -->
-<!-- priv_009	<planet name="Jump_To_N'Der_Pak" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-2000" y="-5500" z="9400" day="240" destination="TrkPahn/NDerPak"/> priv_009 -->
+<!-- priv_009	<planet name="Jump_To_Tk'Tarak" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="1000" y="-1500" z="7400" day="240" destination="TrkPahn/TKTarak"/> priv_009 -->
+<!-- priv_009	<planet name="Jump_To_N'Der_Pak" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-2000" y="-5500" z="9400" day="240" destination="TrkPahn/NDerPak"/> priv_009 -->
 </system>

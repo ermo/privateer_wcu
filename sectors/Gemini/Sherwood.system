@@ -22,14 +22,14 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_New_Caledonia" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-10000" y="14500" day="240" destination="Gemini/New_Caledonia"/>
-	<planet name="Jump_To_Regallis" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="4800" day="240" destination="Gemini/Regallis"/>
+	<planet name="Jump_To_New_Caledonia" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-10000" y="14500" day="240" destination="Gemini/New_Caledonia"/>
+	<planet name="Jump_To_Regallis" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="0" y="4800" day="240" destination="Gemini/Regallis"/>
 	<unit name="Tuck's" file="mining_base" faction="pirates" x="9800" y="14500"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-0" file="AFieldBasePriv" difficulty=".033" faction="neutral" x="9800" y="14500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="1" file="Asteroid_Field" difficulty=".033" faction="neutral" x="9800" y="14500" day="-14000"/>
 	<planet name="Nav_4" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="-8000" y="-6500" day="240"/>
 	<planet name="Nav_5" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="0" day="240"/>
-	<planet name="Jump_To_Pollux" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="14000" y="-7500" day="240" destination="Gemini/Pollux"/>
-	<planet name="Jump_To_Famine" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="2700" y="-12500" day="240" destination="Gemini/Famine"/>
-	<planet name="Jump_To_Capella" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-14500" y="-14500" day="240" destination="Gemini/Capella"/>
+	<planet name="Jump_To_Pollux" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="14000" y="-7500" day="240" destination="Gemini/Pollux"/>
+	<planet name="Jump_To_Famine" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="2700" y="-12500" day="240" destination="Gemini/Famine"/>
+	<planet name="Jump_To_Capella" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-14500" y="-14500" day="240" destination="Gemini/Capella"/>
 </system>

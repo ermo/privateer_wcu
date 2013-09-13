@@ -22,22 +22,22 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_J900" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-2500" y="-6500" day="240" destination="Gemini/J900"/>
-	<planet name="Jump_To_Nexus" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-12500" y="-6500" day="240" destination="Gemini/Nexus"/>
-	<planet name="Burton" file="planets/agricultural.image" radius="1200" gravity="20" x="-11000" y="-22000" day="300">
-		<ring file="planets/ring.image" innerradius="1500" outerradius="1800" ri="-0.3" rj="1" rk="0.5" si="-0.669016" sj="-0.197311" sk="-0.716580" wrapx="300" wrapy="3" year="3081"/>
+	<planet name="Jump_To_J900" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-2500" y="-6500" day="240" destination="Gemini/J900"/>
+	<planet name="Jump_To_Nexus" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-12500" y="-6500" day="240" destination="Gemini/Nexus"/>
+	<planet name="Burton" file="planets/agricultural.texture" radius="1200" gravity="20" x="-11000" y="-22000" day="300">
+		<ring file="planets/ring.texture" innerradius="1500" outerradius="1800" ri="-0.3" rj="1" rk="0.5" si="-0.669016" sj="-0.197311" sk="-0.716580" wrapx="300" wrapy="3" year="3081"/>
 		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
-	<planet name="Jump_To_Castor" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="-22000" day="240" destination="Gemini/Castor"/>
-	<planet name="Jump_To_New_Constantinople" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="-11000" day="240" destination="Gemini/New_Constantinople"/>
-	<planet name="Jump_To_119CE" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="17000" y="7500" day="240" destination="Gemini/119ce"/>
-	<planet name="Speke" file="planets/guildHQ.image" radius="1200" gravity="20" x="14000" y="22000" day="3" faction="merchant">
-		<CityLights file="planets/industrial_light.image" wrapx="1" wrapy="1"/>
+	<planet name="Jump_To_Castor" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="-22000" day="240" destination="Gemini/Castor"/>
+	<planet name="Jump_To_New_Constantinople" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="-11000" day="240" destination="Gemini/New_Constantinople"/>
+	<planet name="Jump_To_119CE" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="17000" y="7500" day="240" destination="Gemini/119ce"/>
+	<planet name="Speke" file="planets/guildHQ.texture" radius="1200" gravity="20" x="14000" y="22000" day="3" faction="merchant">
+		<CityLights file="planets/industrial_light.texture" wrapx="1" wrapy="1"/>
 		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 		<unit name="Randgrior" file="Heimdall" ri="0" rj="400" rk="500" si="600" sj="500" sk="100" year=".1" position="180" faction="militia"/>
 	</planet>
-	<planet name="Jump_To_Pender's_Star" file="jump.image" citylights="planets/industrial_light.image" alpha="ONE ONE" radius="256" gravity="0" x="50" y="14500" day="240" destination="Gemini/Penders_Star"/>
-	<planet name="Victoria" file="planets/agricultural.image" radius="1200" gravity="20" x="-14500" rj="0" y="7500" day="300">
+	<planet name="Jump_To_Pender's_Star" file="jump.texture" citylights="planets/industrial_light.texture" alpha="ONE ONE" radius="256" gravity="0" x="50" y="14500" day="240" destination="Gemini/Penders_Star"/>
+	<planet name="Victoria" file="planets/agricultural.texture" radius="1200" gravity="20" x="-14500" rj="0" y="7500" day="300">
 		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
 </system>

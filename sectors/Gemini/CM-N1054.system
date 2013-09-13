@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Pyrenees" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="1500" day="240" destination="Gemini/Pyrenees"/>
+	<planet name="Jump_To_Pyrenees" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="1500" day="240" destination="Gemini/Pyrenees"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-0" file="AFieldBaseThin" difficulty=".02" faction="neutral" x="1500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="1" file="Asteroid_Field" difficulty=".02" faction="neutral" x="1500" day="-14000"/>
 </system>

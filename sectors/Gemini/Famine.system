@@ -22,9 +22,9 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Death" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="7500" day="240" destination="Gemini/Death"/>
-	<planet name="Jump_To_Sherwood" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-18500" day="240" destination="Gemini/Sherwood"/>
-	<planet name="Jump_To_Capella" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="0" day="240" destination="Gemini/Capella"/>
+	<planet name="Jump_To_Death" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="7500" day="240" destination="Gemini/Death"/>
+	<planet name="Jump_To_Sherwood" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-18500" day="240" destination="Gemini/Sherwood"/>
+	<planet name="Jump_To_Capella" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="0" day="240" destination="Gemini/Capella"/>
 	<planet name="Nav_4" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="7500" day="240"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-0" file="AFieldBasePriv" difficulty=".02" faction="neutral" x="0" y="7500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="1" file="Asteroid_Field" difficulty=".02" faction="neutral" x="0" y="7500" day="-14000"/>

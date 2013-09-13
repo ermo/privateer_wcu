@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Delta" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="-10500" day="240" destination="Gemini/Delta"/>
+	<planet name="Jump_To_Delta" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="-10500" day="240" destination="Gemini/Delta"/>
 	<planet name="Nav_2" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="-12500" y="0" day="240"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-2" file="AFieldBasePriv" difficulty=".20" faction="neutral" x="-12500" y="0" day="0"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="3" file="Asteroid_Field" difficulty=".20" faction="neutral" x="-12500" y="0" day="0"/>
@@ -30,7 +30,7 @@
 	<planet name="Nav_4" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="-3000" y="-17000" day="240"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-2" file="AFieldBasePriv" difficulty=".03" faction="neutral" x="-3000" y="-17000" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="3" file="Asteroid_Field" difficulty=".03" faction="neutral" x="-3000" y="-17000" day="-14000"/>
-	<planet name="Jump_To_Gamma" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-14500" y="17500" day="240" destination="Gemini/Gamma"/>
+	<planet name="Jump_To_Gamma" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-14500" y="17500" day="240" destination="Gemini/Gamma"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-2" file="AFieldBasePriv" difficulty=".02" faction="neutral" x="-14500" y="17500" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="3" file="Asteroid_Field" difficulty=".02" faction="neutral" x="-14500" y="17500" day="-14000"/>
 </system>

@@ -22,9 +22,9 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_New_Detroit" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-6000" y="4000" day="240" destination="Gemini/New_Detroit"/>
+	<planet name="Jump_To_New_Detroit" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-6000" y="4000" day="240" destination="Gemini/New_Detroit"/>
 	<unit name="Gracchus" file="refinery" faction="confed" x="8000" y="-6500"/>
-	<planet name="Trinsic" file="planets/agricultural.image" radius="1200" gravity="20" x="11000" y="6000" si="-3000" day="300">
+	<planet name="Trinsic" file="planets/agricultural.texture" radius="1200" gravity="20" x="11000" y="6000" si="-3000" day="300">
 		<Atmosphere alpha="SRCALPHA INVSRCALPHA" file="clouds.image" radius="1009"/>
 	</planet>
 </system>

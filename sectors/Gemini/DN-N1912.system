@@ -22,9 +22,9 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="N1912-1" file="planets/pleasure.image" radius="1200" gravity="20" x="-3000" y="0" day="300">
+	<planet name="N1912-1" file="planets/pleasure.texture" radius="1200" gravity="20" x="-3000" y="0" day="300">
 		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
 	<planet name="Nav_2" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11500" day="240"/>
-	<planet name="Jump_To_Hind's_Variable_N" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="13500" y="-14000" day="240" destination="Gemini/Hinds_Variable_N"/>
+	<planet name="Jump_To_Hind's_Variable_N" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="13500" y="-14000" day="240" destination="Gemini/Hinds_Variable_N"/>
 </system>

@@ -22,9 +22,9 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_New_Detroit" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-5500" y="12000" destination="Gemini/New_Detroit"/>
-	<planet name="Olympus" file="planets/pleasure.image" radius="1200" gravity="20" x="13500" y="7500" day="300">
+	<planet name="Jump_To_New_Detroit" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-5500" y="12000" destination="Gemini/New_Detroit"/>
+	<planet name="Olympus" file="planets/pleasure.texture" radius="1200" gravity="20" x="13500" y="7500" day="300">
 		<Atmosphere alpha="SRCALPHA INVSRCALPHA" file="clouds.image" radius="1009"/>
 	</planet> 
-	<planet name="Jump_To_Oxford" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="5500" y="-6500" destination="Gemini/Oxford"/>
+	<planet name="Jump_To_Oxford" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="5500" y="-6500" destination="Gemini/Oxford"/>
 </system>

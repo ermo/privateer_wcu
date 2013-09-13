@@ -22,12 +22,12 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Valhalla" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="10500" day="240" destination="Gemini/Valhalla"/>
-	<planet name="Gaea" file="planets/church_of_man.image" radius="1200" gravity="20" x="0" y="-7500" si="-3000" day="300">
+	<planet name="Jump_To_Valhalla" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="11500" y="10500" day="240" destination="Gemini/Valhalla"/>
+	<planet name="Gaea" file="planets/church_of_man.texture" radius="1200" gravity="20" x="0" y="-7500" si="-3000" day="300">
 		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
-	<planet name="Sanctuary_Moon" file="planets/rock.image" radius="1500" x="21500" y="-7500" si="-3000" day="300"/>
-	<planet name="Sanctuary_Moon" file="planets/rock.image" radius="1530" x="21500" y="-7500" si="-3000" day="300"/>
-	<planet name="Sanctuary_Moon" file="planets/rock.image" radius="1540" x="21500" y="-7500" si="-3000" day="300"/>
-	<jump name="Unknown" file="jump.image" alpha="ONE ONE" radius="256" x="21500" z="-1500" y="-7500" si="-3000" day="300" destination="Gemini/Rikel"/>
+	<planet name="Sanctuary_Moon" file="planets/rock.texture" radius="1500" x="21500" y="-7500" si="-3000" day="300"/>
+	<planet name="Sanctuary_Moon" file="planets/rock.texture" radius="1530" x="21500" y="-7500" si="-3000" day="300"/>
+	<planet name="Sanctuary_Moon" file="planets/rock.texture" radius="1540" x="21500" y="-7500" si="-3000" day="300"/>
+	<jump name="Unknown" file="jump.texture" alpha="ONE ONE" radius="256" x="21500" z="-1500" y="-7500" si="-3000" day="300" destination="Gemini/Rikel"/>
 </system>

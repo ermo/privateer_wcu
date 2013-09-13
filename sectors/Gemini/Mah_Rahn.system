@@ -22,9 +22,9 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Blockade_Point_Tango" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="12000" day="240" destination="Gemini/Blockade_Point_Tango"/>
+	<planet name="Jump_To_Blockade_Point_Tango" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="0" y="12000" day="240" destination="Gemini/Blockade_Point_Tango"/>
 	<asteroid name="Asteroid_Field" VarName="-asteroid_detail" VarValue="-0" file="AFieldBasePriv" difficulty=".05" faction="neutral" x="0" y="12000" day="-14000"/>
 	<asteroid name="Asteroid_Field" VarName="asteroid_detail" VarValue="1" file="Asteroid_Field" difficulty=".05" faction="neutral" x="0" y="12000" day="-14000"/>
 	<unit name="Nightingale_Station" file="hospital_base" faction="confed" x="-500" y="10000"/>
-<!-- priv_009	<planet name="Jump_To_Sum'Tlor" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="12000" y="12000" day="240" destination="TrkPahn/SumTlor"/>	priv_009 -->
+<!-- priv_009	<planet name="Jump_To_Sum'Tlor" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="12000" y="12000" day="240" destination="TrkPahn/SumTlor"/>	priv_009 -->
 </system>

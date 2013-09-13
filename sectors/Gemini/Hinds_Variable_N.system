@@ -22,11 +22,11 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_DN-N1912" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11500" day="240" destination="Gemini/DN-N1912"/>
+	<planet name="Jump_To_DN-N1912" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="8000" y="11500" day="240" destination="Gemini/DN-N1912"/>
 	<unit name="Meadow" file="refinery" faction="militia" x="11000" y="-10500"/>
 	<planet name="Nav_3" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-1500" day="240"/>
-	<planet name="Oresville" file="planets/agricultural.image" radius="1200" gravity="20" x="-12000" y="7000" day="300">
+	<planet name="Oresville" file="planets/agricultural.texture" radius="1200" gravity="20" x="-12000" y="7000" day="300">
 		<Atmosphere file="clouds.image" alpha="SRCALPHA INVSRCALPHA" radius="1211"/>
 	</planet>
-	<planet name="Jump_To_Aldebran" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="-14000" day="240" destination="Gemini/Aldebran"/>
+	<planet name="Jump_To_Aldebran" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="8200" y="-14000" day="240" destination="Gemini/Aldebran"/>
 </system>

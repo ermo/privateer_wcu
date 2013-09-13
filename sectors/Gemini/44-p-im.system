@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Rikel" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="11000" day="240" destination="Gemini/Rikel"/>
+	<planet name="Jump_To_Rikel" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="11000" day="240" destination="Gemini/Rikel"/>
 	<planet name="Nav_2" file="invisible.image" alpha="ONE ONE" radius="256" gravity="0" x="5200" y="-3200" day="240"/>
-	<planet name="Jump_To_New_Constantinople" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="-14500" day="240" destination="Gemini/New_Constantinople"/>
+	<planet name="Jump_To_New_Constantinople" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="-14500" day="240" destination="Gemini/New_Constantinople"/>
 </system>

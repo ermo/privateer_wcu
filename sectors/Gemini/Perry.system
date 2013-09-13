@@ -22,13 +22,13 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Ragnarok" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-5500" y="17500" day="240" destination="Gemini/Ragnarok"/>
-	<planet name="Jump_To_Nitir" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-17500" y="8000" day="240" destination="Gemini/Nitir"/>
-	<planet name="Jump_To_Midgard" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-7500" y="-6500" day="240" destination="Gemini/Midgard"/>
+	<planet name="Jump_To_Ragnarok" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-5500" y="17500" day="240" destination="Gemini/Ragnarok"/>
+	<planet name="Jump_To_Nitir" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-17500" y="8000" day="240" destination="Gemini/Nitir"/>
+	<planet name="Jump_To_Midgard" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-7500" y="-6500" day="240" destination="Gemini/Midgard"/>
 	<unit name="Anapolis" file="refinery" faction="confed" x="-14000" y="-17200"/>
-	<planet name="Jump_To_New_Detroit" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="16000" y="4000" day="240" destination="Gemini/New_Detroit"/>
-	<planet name="Jump_To_Newcastle" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="-17200" day="240" destination="Gemini/Newcastle"/>
-	<planet name="Jump_To_Surtur" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="14000" y="0" day="240" destination="Gemini/Surtur"/>
-	<planet name="Jump_To_Tingerhoff" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="5200" y="7500" day="240" destination="Gemini/Tingerhoff"/>
+	<planet name="Jump_To_New_Detroit" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="16000" y="4000" day="240" destination="Gemini/New_Detroit"/>
+	<planet name="Jump_To_Newcastle" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="-17200" day="240" destination="Gemini/Newcastle"/>
+	<planet name="Jump_To_Surtur" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="14000" y="0" day="240" destination="Gemini/Surtur"/>
+	<planet name="Jump_To_Tingerhoff" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="5200" y="7500" day="240" destination="Gemini/Tingerhoff"/>
 	<unit name="Perry_Naval_Base" file="perry" faction="confed" x="14000" y="17500"/>
 </system>

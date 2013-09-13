@@ -22,7 +22,7 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_Tr-Pakh" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-17500" day="240" destination="Gemini/Tr_Pakh"/>
-	<planet name="Jump_To_Hyades" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="0" y="17500" day="240" destination="Gemini/Hyades"/>
-<!-- priv_009	<planet name="Jump_To_Sumn_H'hra" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="0" z="2000" day="240" destination="TrkPahn/SumnHhra"/>	priv_009 -->
+	<planet name="Jump_To_Tr-Pakh" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="0" y="-17500" day="240" destination="Gemini/Tr_Pakh"/>
+	<planet name="Jump_To_Hyades" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="0" y="17500" day="240" destination="Gemini/Hyades"/>
+<!-- priv_009	<planet name="Jump_To_Sumn_H'hra" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="5000" y="0" z="2000" day="240" destination="TrkPahn/SumnHhra"/>	priv_009 -->
 </system>

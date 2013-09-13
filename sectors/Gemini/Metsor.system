@@ -22,6 +22,6 @@
 	<!--<attenuated red=".00000001" blue=".00000015"/>-->
 	<attenuated red="0" blue=".0000001"/>
 </Light>	
-	<planet name="Jump_To_XXN-1927" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="11000" day="240" destination="Gemini/XXN-1927"/>
-	<planet name="Jump_To_Newcastle" file="jump.image" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="-7000" day="240" destination="Gemini/Newcastle"/>
+	<planet name="Jump_To_XXN-1927" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="11000" y="11000" day="240" destination="Gemini/XXN-1927"/>
+	<planet name="Jump_To_Newcastle" file="jump.texture" alpha="ONE ONE" radius="256" gravity="0" x="-11500" y="-7000" day="240" destination="Gemini/Newcastle"/>
 </system>
