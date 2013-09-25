@@ -26,7 +26,7 @@ to be lost to the bit gods.
 
 
 How to get Privateer: Wing Commander Universe running
-=====================================================
+-----------------------------------------------------
 
   Priv:WCU is developed on top of the latest SVN version of the
 VegaStrike engine.
@@ -41,7 +41,7 @@ source code. It will likely not work on the Python 3.x branch.
 
 
 Forks
-=====
+-----
 
   I humbly ask that you do not fork this project (Priv:WCU) to make
 competing projects until such time as it is clear that I (ermo) is no
@@ -50,7 +50,7 @@ fork the project if the intent is to contribute content or bugfixes. :)
 
 
 History
-=======
+-------
 
   Privateer: Wing Comander Universe has its roots in the Privateer:
 Parallel Universe mod (which itself is a continuation of the
@@ -60,13 +60,15 @@ here), but also includes content from the Privateer: Gemini Gold mod
 engine as one is likely to get) and the Wing Commander Universe project,
 which itself spawned the Privateer Remake project.
 
+Wing Commander Universe can be found at http://wcu.solsector.net/
+
 Privateer: Gemini Gold can be found at http://privateer.sourceforge.net/
 
 Confused yet?
 
 
 Credits
-=======
+-------
 
 * Chuck Starchaser (Privateer: Parallel Universe lead)
 * John Cordell (Privateer: Gemini Gold lead)
