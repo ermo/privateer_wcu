@@ -24,6 +24,11 @@ continue the development of his baby.  Sadly, the SVN repository
 of Privateer: Parallel Universe and its development forum appears
 to be lost to the bit gods.
 
+  If you want to participate in the Priv:WCU development discussion,
+check out the development thread on the Vega Strike forums:
+
+  http://forums.vega-strike.org/viewtopic.php?f=35&t=18089
+
 
 How to get Privateer: Wing Commander Universe running
 -----------------------------------------------------
@@ -44,7 +49,7 @@ Forks
 -----
 
   I humbly ask that you do not fork this project (Priv:WCU) to make
-competing projects until such time as it is clear that I (ermo) is no
+competing projects until such time as it is clear that I (ermo) am no
 longer making any attempt to update it.  You are however welcome to
 fork the project if the intent is to contribute content or bugfixes. :)
 
