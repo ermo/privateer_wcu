@@ -27,8 +27,7 @@ to be lost to the bit gods.
   If you want to participate in the Priv:WCU development discussion,
 check out the development thread on the Vega Strike forums:
 
-  http://forums.vega-strike.org/viewtopic.php?f=35&t=18089
-
+  http://forums.vega-strike.org/viewtopic.php?p=133438#p133438
 
 How to get Privateer: Wing Commander Universe running
 -----------------------------------------------------
