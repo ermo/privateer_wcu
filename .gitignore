@@ -1,0 +1,28 @@
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+*.[oa]
+
+# Exclude backups
+*~
+
+# Privateer-specific exclude patterns
+# Exclude SVN history and SVN binaries
+# -- the repo was initialized from a checkout of the now defunct
+#    wcjunction.com SVN repo at r505
+.svn/
+svn/
+
+# Exclude compiled python scripts
+*.pyc
+
+# Exclude log files
+*.log
+stderr.txt
+stdout.txt
+
+# Exclude binaries -- these should be checked out from VegaStrike
+bin/
+
+# Exclude thumbnails
+Thumbs.db
