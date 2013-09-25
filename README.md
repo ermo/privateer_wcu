@@ -34,7 +34,8 @@ How to get Privateer: Wing Commander Universe running
 -----------------------------------------------------
 
   Priv:WCU is developed on top of the latest SVN version of the
-VegaStrike engine.
+VegaStrike engine. It is not presently in a state suitable for
+end-users.
 
   Instructions on how to fetch and compile the newest VegaStrike
 engine can be found here:
@@ -44,6 +45,28 @@ engine can be found here:
   At present, Priv:WCU depends on the Python 2.7 branch of the VS
 source code. It will likely not work on the Python 3.x branch.
 
+
+
+
+  Create a bin/ directory in the root Priv:WCU folder and create
+symbolic links to the vegastrike and vssetup binaries respectively.
+
+On my system, it looks like this:
+
+~
+[privateer_wcu/]$ ls -la bin/
+total 8
+drwx------  2 ermo ermo 4096 Sep 25 16:16 .
+drwxrwxr-x 26 ermo ermo 4096 Sep 25 16:12 ..
+lrwxrwxrwx  1 ermo ermo   39 Sep  5 00:46 vegastrike -> ../../trunk/vegastrike/build/vegastrike
+lrwxrwxrwx  1 ermo ermo   42 Sep  5 00:46 vssetup -> ../../trunk/vegastrike/build/setup/vssetup
+[privateer_wcu/]$
+~
+
+To start Priv:WCU, navigate to the root Priv:WCU folder and type bin/vegastrike <ENTER>
+
+To change the Priv:WCU configuration options, navigate to the root Priv:WCU folder
+and type bin/vssetup <ENTER>
 
 Forks
 -----
