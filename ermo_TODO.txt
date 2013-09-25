@@ -72,6 +72,8 @@ Observations:
 
 Bug notes:
  * Tarsus model is missing gun models?
+ * Tarsus hud model does not show up at the ship dealer?
+ * Why are there no shield indications on the hud when flying?!
  * Ships are parked in a weird position on the landing pad
  * The map computer appears to not be scaled correctly to the VS map
  * Patrol mission description can offer more navpoints than are in the system
