@@ -2,7 +2,7 @@ Privateer: Wing Commander Universe
 ==================================
 
   Privateer: Wing Commander Universe (Priv:WCU) is a mod for the
-Open Source VegaStrike game. It is patterned on the 1994 Privateer
+Open Source VegaStrike game. It is patterned after the 1994 Privateer
 game set in Chris Robert's Wing Commander universe.
 
   While Priv:WCU aims to include a faithful representation of the
@@ -27,8 +27,7 @@ to be lost to the bit gods.
   If you want to participate in the Priv:WCU development discussion,
 check out the development thread on the Vega Strike forums:
 
-  http://forums.vega-strike.org/viewtopic.php?f=35&t=18089
-
+  http://forums.vega-strike.org/viewtopic.php?p=133438#p133438
 
 How to get Privateer: Wing Commander Universe running
 -----------------------------------------------------
