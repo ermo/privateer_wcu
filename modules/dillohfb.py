@@ -264,7 +264,7 @@ def LoadDillohCampaign():
         [InSystemCondition("Gemini/Pollux","Remus")], # Where the mission ends.
         AddCredits(30000), # Script to add your credits
         LaunchWingmen("hunter__","fireblade",3), # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
-        'escort_local',('confed_',0,2,2,3000,0,True,'merchant__',(),priv.name+"_mission",'','raptor.blank','','drayman',["Escort ships, give up now.", "Your illegal actions will land you into jail, or much worse if you don't give up!"]), # Mission arguments.
+        'escort_local',('confed_',0,2,2,3000,0,True,'merchant__',(),priv.name+"_mission",'','raptor','','drayman',["Escort ships, give up now.", "Your illegal actions will land you into jail, or much worse if you don't give up!"]), # Mission arguments.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         dillohspeech3, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept

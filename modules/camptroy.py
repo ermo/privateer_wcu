@@ -201,7 +201,7 @@ stahlspeech7={
         ("Burrows","I like sentences containing the words 'credits' and 'you'."),
         ("Captain_Stahl","The gems-for-shares deal is now formalized and I've made sure that you are given first priority in future shipments. Further loads are necessary but now the pirates won't bother us anymore. You can make easy money by just flying gems from Achilles to Helen, back and forth. I'll pay 1200 credits for every successful trip."),
         ("Burrows","Low pay... but then again, a quick and easy route."),
-        ("Captain_Stahl","Yes. By the way, you should pass by the ship dealer and check out the TarsusMk2 for yourself. A great ship that's not yet available anywhere but right here.  About the job, are you still interested?")],
+        ("Captain_Stahl","Yes. By the way, you should swing by the ship dealer and check out the TarsusMk2 for yourself. A great ship that's not yet available anywhere but right here.  About the job, are you still interested?")],
         # ("Burrows","Any other stuff to go with it? I mean... are we 'friends' now?"),
         # ("Captain_Stahl","Ah yes, I've programmed your Quine with ES VIP information. Just enter any ship dealer and show it, and you'll be able to get a jump drive wherever there is one available. About the job, are you still interested?")],
     "reject1":[("Burrows","1200 credits is not enough."),
@@ -306,7 +306,7 @@ def LoadTroyCampaign():
         [InSystemCondition("Gemini/Troy","Achilles")], # Where the mission ends.
         AddCredits(12000), # Script to add your credits
         None, # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
-        'escort_local',('pirates_',0,1,1,3000,0,True,'merchant__',(),priv.name+"_mission",'Pirate_interceptor','talon.blank','TarsusMk2_freighter','drayman',[("We are to prevent this ship from unloading its cargo. Get out of our way!")]), # Mission arguments.
+        'escort_local',('pirates_',0,1,1,3000,0,True,'merchant__',(),priv.name+"_mission",'Pirate_interceptor','talon','TarsusMk2_freighter','drayman',[("We are to prevent this ship from unloading its cargo. Get out of our way!")]), # Mission arguments.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         stahlspeech4, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept

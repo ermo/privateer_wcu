@@ -276,16 +276,16 @@ for i in range(len(factions)): useBlank.append(0) #Add default values so entries
 useBlank[confed]=0
 useBlank[kilrathi]=0
 useBlank[nephilim]=0
-useBlank[merchant]=1
-useBlank[retro]=1
-useBlank[pirates]=1
-useBlank[hunter]=1
-useBlank[militia]=1
+useBlank[merchant]=0
+useBlank[retro]=0
+useBlank[pirates]=0
+useBlank[hunter]=0
+useBlank[militia]=0
 useBlank[unknown]=0
-useBlank[landreich]=1
-useBlank[border_worlds]=1
-useBlank[firekkan]=1
-useBlank[AWACS]=1
+useBlank[landreich]=0
+useBlank[border_worlds]=0
+useBlank[firekkan]=0
+useBlank[AWACS]=0
 #Keep entries who reference other entries below those referenced! Actual array position is set by the first parameter.
 useBlank[confed_]=useBlank[confed]
 useBlank[confed__]=useBlank[confed]

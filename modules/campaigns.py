@@ -8,7 +8,11 @@ campaignsloaders = [
                 lambda:LoadRFTaylaCampaign(),lambda:LoadRFLynchCampaign()]
 campaigns=[]
 
-## Set up PU campaigns for easy disabling
+## Set up Parallel Universe campaigns for easy disabling
+
+#import ship_upgrade_test_campaign
+#campaignsloaders.append(lambda:ship_upgrade_test_campaign.load_ship_upgrade_test_campaign())
+
 import campaign_bonus
 campaignsloaders.append(lambda:campaign_bonus.LoadBonusCampaign())
 
@@ -336,7 +340,7 @@ mastersonfailure=[("Burrows","So what's next? Evicting bookworms? Repossessing d
         ("Burrows","What do you mean?"),
         ("Masterson","Our deal is null and void. You failed a task I gave you. That's not the way to earn access to the Oxford Library, sir."),
         ("Burrows","Look, I need that access. Just give me another chance."),
-        ("Masterson","Impossible, I'm afraid. Now kindly leave... or I'll have security assist you out.")] 
+        ("Masterson","Impossible, I'm afraid. Now kindly leave... or I'll have security assist you out.")]
 
 masterson1={"intro":[("Masterson","I'm sorry, but library use is restricted to students and teachers only. ", "barspeech/campaign/masterson1intro.wav"),
             ("Burrows","Yeah? What makes you think I'm not enrolled at Oxford?"),
@@ -437,7 +441,7 @@ masterson4={"intro":[("Masterson","I don't have time to swap pleasantries. Here'
             "failure":mastersonfailure}
 mastersonhelp=[("Masterson","The freighter is safe, thanks to you."),
             ("Burrows","Skip the hearts and flowers. My library access...?"),
-        ("Masterson","Everything has been arranged. And here's your final payment of 10000 credits. Good luck with that personal business. I hope you find what you're looking for.")] 
+        ("Masterson","Everything has been arranged. And here's your final payment of 10000 credits. Good luck with that personal business. I hope you find what you're looking for.")]
 monkhouseintro=[("Burrows","Dr Monkhouse, I presume.", "barspeech/campaign/monkhouse1intro.wav"),
         ("Monkhouse","Yes, you do, greatly. I wish to be alone."),
         ("Burrows","Sorry, Doc, but I didn't run the blockade just to be treated like a vacuum salesman. I need a favour. I understand you're an expert on alien... antiquities."),
@@ -717,7 +721,7 @@ taryn4={"intro":[("Cross","Did you complete the run?", "barspeech/campaign/cross
         "accept":[("Cross","This time you'll map a newly-discovered system, designated Delta Prime for it's transpacial proximity to Delta system.", "barspeech/campaign/cross4accept1.wav"),
         ("Burrows","Transpacial, eh? So I'll be doing a little jumping to get there."),
         ("Cross","Right. You'll need to fly through Gamma to the jump point there, jump to Delta Prime and hit the nav point we've programmed into your computer. Afterwards, report back here for your pay. If it goes well, this will be the last run in this sector. Good luck.")],
-    "accept2":[("Cross","If it goes well, this will be our last run for this sector. Good luck.", "barspeech/campaign/cross4accept2.wav")], 
+    "accept2":[("Cross","If it goes well, this will be our last run for this sector. Good luck.", "barspeech/campaign/cross4accept2.wav")],
         "reject1":[("Burrows","If I'd wanted to tangle with Kilrathi, I'd have enlisted. Forget it.", "barspeech/campaign/cross4reject1.wav"),
         ("Cross","Too bad. Another run, and we'd have finished with this sector...")],
         "reconsider":[("Cross","You've changed your mind?", "barspeech/campaign/cross4reconsider.wav"),
@@ -873,7 +877,7 @@ def LoadMainCampaign():
     TaylaMission3    = CampaignClickNode() # Initialize each node
     TaylaMission4    = CampaignClickNode() # Initialize each node
     TaylaFinish      = CampaignClickNode() # Talks to you, then proceeds to Lynch missions!
-    
+
     MIGGS_SPRITE     = "miggs.spr" # miggs is a special case...
     MIGGS_POSITION   = (-0.8143125, -0.4845886363) # (-0.80625, -0.357421875) Miggs static #(-0.7820625, -0.3783)
     MIGGS_WIDTH_HEIGHT = (.2,.9)
@@ -884,7 +888,7 @@ def LoadMainCampaign():
     LynchMission2    = CampaignNode() # Initialize each node
     LynchMission3    = CampaignNode() # Initialize each node
     LynchMission4    = CampaignClickNode() # Initialize each node
-    
+
     LynchFinish      = CampaignNode()
     MastersonMission1= CampaignClickNode() # Initialize each node
     MastersonMission2= CampaignClickNode() # Initialize each node
@@ -903,7 +907,7 @@ def LoadMainCampaign():
 
     MonkhouseMission1= CampaignClickNode()
     MonkhouseFinish  = CampaignClickNode()
-    
+
     CROSS_SPRITE     = ("taryn.spr", "Talk_To_Taryn_Cross","bases/heads/cross.spr")
     CrossMission1    = CampaignClickNode() # Initialize each node
     CrossMission2    = CampaignClickNode() # Initialize each node
@@ -916,17 +920,17 @@ def LoadMainCampaign():
     TERRELL_SPRITE   = ("terrell.spr", "Talk_To_Admiral_Terrell")
     TerrellMission   = CampaignClickNode() # Initialize each node
     TerrellFinish    = CampaignNode() # Initialize each node
-    
+
     priv=Campaign("privateer_campaign") # Name of the save game variable for the entire campaign. Can't contain spaces
     priv.Init(SandovalMission1) # the first node.
-    
+
     mission_desc="Sandoval:_Transport_iron"
     MakeCargoMission(priv, # Creates a cargo mission
         SANDOVAL_SPRITE, # Campaign, sprite
         [InSystemCondition("Gemini/New_Detroit","New_Detroit")], # Where fixer meets you to start the mission
         [InSystemCondition("Gemini/Newcastle","Liverpool")], # Where the mission ends. Usually the same as starting point for next fixer.
         None, # Script to be run as you click on the fixer. A common use is to AddCredits() for the previous mission.
-        AddCargo('Artifact',1,True,SetSaveVariable('terrell_no_entry',1.0,AddRemovingSprite("artifact_1", ARTIFACT1_SPRITE, ARTIFACT_POSITION, ARTIFACT_SIZE, "Put_Away_the_Artifact",LoadMission(mission_desc,"directions_mission",(priv.name+"_mission",['Gemini/New_Constantinople', 'Gemini/Newcastle'], 'Liverpool'))))), 
+        AddCargo('Artifact',1,True,SetSaveVariable('terrell_no_entry',1.0,AddRemovingSprite("artifact_1", ARTIFACT1_SPRITE, ARTIFACT_POSITION, ARTIFACT_SIZE, "Put_Away_the_Artifact",LoadMission(mission_desc,"directions_mission",(priv.name+"_mission",['Gemini/New_Constantinople', 'Gemini/Newcastle'], 'Liverpool'))))),
         # Script to be run to start the mission (usually None if you don't have a script, but ambush is also common.)
         ("Iron",10), # Mission arguments.
         #[['Gemini/New_Constantinople', 'Gemini/Newcastle'], 'Liverpool'], # directions
@@ -936,7 +940,7 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         SandovalFinish, # If you win the mission. Usually points to the next mission
         SandovalMission1) # The current mission node.
-    
+
     mission_desc="Tayla_1:_Transport_to_Oakham"
     MakeCargoMission(priv, # Creates a cargo mission
         TAYLA_ND_SPRITE, # Campaign, sprite
@@ -951,7 +955,7 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         TaylaMission2, # If you win the mission. Usually points to the next mission
         TaylaMission1) # The current mission node.
-    
+
     mission_desc="Tayla_2:_Smuggling_to_Troy"
     MakeCargoMission(priv, # Creates a cargo mission
         TAYLA_SPRITE, # Campaign, sprite
@@ -966,7 +970,7 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         TaylaMission3, # If you win the mission. Usually points to the next mission
         TaylaMission2) # The current mission node.
-    
+
     mission_desc="Tayla_3:_Smuggling_to_New-Constantinople"
     MakeCargoMission(priv, # Creates a cargo mission
         TAYLA_SPRITE, # Campaign, sprite
@@ -981,14 +985,14 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         TaylaMission4, # If you win the mission. Usually points to the next mission
         TaylaMission3) # The current mission node.
-    
+
     mission_desc="Tayla_4:_Hidden_smuggling_to_New-Constantinople"
     MakeCargoMission(priv, # Creates a cargo mission
         TAYLA_SPRITE, # Campaign, sprite
         [InSystemCondition("Gemini/Pentonville","Oakham")], # Where fixer meets you to start the mission
         [InSystemCondition("Gemini/Pentonville","Oakham")], # Where the mission ends. Usually the same as starting point for next fixer.
         AddCredits(20000), # Script to be run as you click on the fixer. A common use is to AddCredits() for the previous mission.
-        LoadMission(mission_desc,"ambush",(priv.name+"_mission",("Gemini/Pentonville"),20,['riordian','pirates_'],[1,2],['centurion.blank','talon'],["William_Riordian","Riordian's_pal"],
+        LoadMission(mission_desc,"ambush",(priv.name+"_mission",("Gemini/Pentonville"),20,['riordian','pirates_'],[1,2],['centurion','talon'],["William_Riordian","Riordian's_pal"],
             [("#bb4400Where do you think you're going?",False,"campaign/Riordian.wav"),
             ("#996600About my business. And you?",True),
             ("#996600You don't recognise me, do you?"),
@@ -1009,7 +1013,7 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         TaylaFinish, # If you win the mission. Usually points to the next mission
         TaylaMission4) # The current mission node.
-    
+
     TaylaFinish.Init(priv,
         [InSystemCondition("Gemini/Pentonville","Oakham")],
         tayla_final,
@@ -1017,7 +1021,7 @@ def LoadMainCampaign():
         GoToSubnode(0,AddCredits(10000,AddTechnology("pirates",PopRelation('pirates')))),
         None,
         [LynchMission1])
-    
+
     mission_desc="Lynch_1:_Deliver_message_to_Captain_Seelig"
     LynchMission1.Init(
         priv, [InSystemCondition("Gemini/New_Constantinople","New_constantinople")], [], LYNCH_SPRITE, GoToSubnode(0,AddPythonSprite("miggs",MIGGS_SPRITE,MIGGS_POSITION,MIGGS_WIDTH_HEIGHT,MIGGS_LABEL,MIGGS_SCRIPT)), None, [
@@ -1027,7 +1031,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/New_Constantinople","New_constantinople")], # Where the mission ends.
         None, # Adds Miggs' sprite. This is a special case.
         None, # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
-        'ambush',(priv.name+"_mission",("Gemini/Pentonville",),0,['seelig','pirates_'],[1,2],['talon','talon.blank'],["Captain_Seelig","Seelig's_goon"],
+        'ambush',(priv.name+"_mission",("Gemini/Pentonville",),0,['seelig','pirates_'],[1,2],['talon','talon'],["Captain_Seelig","Seelig's_goon"],
             [("#996600I'm looking for a Captain Seelig.",True,"campaign/Seelig.wav"),
             ("#669900Nice ship, Captain. How about a little tour?"),
             ("#996600Sorry, but we have other business right now.",True),
@@ -1045,7 +1049,7 @@ def LoadMainCampaign():
         None, # The current mission node.
         mission_desc) # Name that describes the mission in flight and in the mission computer.
         ])
-    
+
     mission_desc="Lynch_2:_Transport_weapons"
     LynchMission2.Init(
         priv, [InSystemCondition("Gemini/New_Constantinople","New_constantinople")], [], LYNCH_SPRITE, GoToSubnode(0,AddPythonSprite("miggs",MIGGS_SPRITE,MIGGS_POSITION,MIGGS_WIDTH_HEIGHT,MIGGS_LABEL,MIGGS_SCRIPT)), None, [
@@ -1054,7 +1058,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/New_Constantinople","New_constantinople")], # Where fixer meets you to start the mission
         [InSystemCondition("Gemini/Rikel","agricultural")], # Where the mission ends. Usually the same as starting point for next fixer.
         AddCredits(10000), # Script to be run as you click on the fixer. A common use is to AddCredits() for the previous mission.
-        LoadMission(mission_desc,"ambush",(priv.name+"_mission",("Gemini/Rikel"),0,['kroiz','hunter_'],[1,2],['demon','demon.blank'],['Salman_Kroiz',"Kroiz's_associate"],
+        LoadMission(mission_desc,"ambush",(priv.name+"_mission",("Gemini/Rikel"),0,['kroiz','hunter_'],[1,2],['demon','demon'],['Salman_Kroiz',"Kroiz's_associate"],
             [("I say, would you kindly identify yourself?",False,"campaign/Kroiz1.wav"),
             ("I've never been that kind to strangers.",True),
             ("I am Salman Kroiz, Privateer Extraordinaire. Terribly sorry to interrupt your flight, but it seems as if we're a bit at odds, here."),
@@ -1072,7 +1076,7 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         LynchMission3) # If you win the mission. Usually points to the next mission
         ])
-    
+
     mission_desc="Lynch_3:_Smuggle_Regis"
     LynchMission3.Init(
         priv, [InSystemCondition("Gemini/New_Constantinople","New_constantinople")], [], LYNCH_SPRITE, GoToSubnode(0,AddPythonSprite("miggs",MIGGS_SPRITE,MIGGS_POSITION,MIGGS_WIDTH_HEIGHT,MIGGS_LABEL,MIGGS_SCRIPT)), None, [
@@ -1091,16 +1095,16 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         LynchMission4) # If you win the mission. Usually points to the next mission
         ])
-    
+
     #################### FIXME: Mission 3: Should be Regis. Escaped Political Prisoners was as close as I can get to this.
-    
+
     mission_desc="Lynch_4:_Meet_\"Smythe\""
     MakeVariableMission(priv, # Creates any type of mission
         LYNCH_SPRITE, # Campaign, sprite
         [InSystemCondition("Gemini/New_Constantinople","New_constantinople")], # Where fixer meets you to start the mission
         [InSystemCondition("Gemini/Oxford","Oxford")], # Where the mission ends.
         AddCredits(30000), # Money money money moneymoneymoneymoney $$$$$$ !!!!
-        LoadMission(mission_desc,'ambush',(priv.name+"_mission",('Gemini/Newcastle'),0,['miggs','pirates_'],[1,4],['orion','talon.blank'],['Miggs','Henchman'],
+        LoadMission(mission_desc,'ambush',(priv.name+"_mission",('Gemini/Newcastle'),0,['miggs','pirates_'],[1,4],['orion','talon'],['Miggs','Henchman'],
             [("Hey, bright boy, guess who's in deep trouble? Mr Lynch wants that artifact. I'm gonna count to ten. Then I start shootin'. One, two, uh... Forget this! Start shootin' boys!",False,"campaign/Miggs.wav"),
             ("#996600Miggs, is that you?",True),
             ("Heh, heh! Wiseguy thinks he's winnin'.",False),
@@ -1112,7 +1116,7 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         LynchFinish, # If you win the mission. Usually points to the next mission
         LynchMission4) # The current mission node.
-    
+
     LynchFinish.Init(priv,
         [],
         [],
@@ -1120,7 +1124,7 @@ def LoadMainCampaign():
         GoToSubnode(0,SetSaveVariable('access_to_library',2.000000)),
         None,
         [MastersonMission1])
-    
+
     mission_desc="Masterson_1:_Escort_Hunter_Toth"
     MakeMission(priv, # Creates any type of mission
         None, # Campaign, sprite
@@ -1128,7 +1132,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/Oxford","oxford")], # Where the mission ends.
         None, # Script to add your credits
         None, # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
-        'escort_local',('retro_',0,2,1,3000,0,True,'toth',(),priv.name+"_mission","Critic_of_Prometheus_Unplugged",'talon.blank','Hunter_Toth', 'drayman',[("Hunter Toth! You are hereby sentenced to death for your heresy. The execution should commence now.",False,"campaign/ExecutionF.wav")]), # Mission arguments.
+        'escort_local',('retro_',0,2,1,3000,0,True,'toth',(),priv.name+"_mission","Critic_of_Prometheus_Unplugged",'talon','Hunter_Toth', 'drayman',[("Hunter Toth! You are hereby sentenced to death for your heresy. The execution should commence now.",False,"campaign/ExecutionF.wav")]), # Mission arguments.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         masterson1, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept
@@ -1137,7 +1141,7 @@ def LoadMainCampaign():
         MastersonMission1, # The current mission node.
         mission_desc # Name that describes the mission in flight and in the mission computer.
         )
-    
+
     mission_desc="Masterson_2:_Destroy_hackers"
     MakeMission(priv, # Creates any type of mission
         None, # Campaign, sprite
@@ -1145,7 +1149,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/Oxford","oxford")], # Where the mission ends.
         AddCredits(10000,AdjustRelation('pirates','privateer',-2)), # Script to add your credits
         None, # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
-        'bounty_leader',(0,0,0,False,4,'pirates_',(),priv.name+"_mission",'Black_Rhombus','galaxy.blank',False,'Hacker','talon.blank',[("Oxford has no right to hoard data! Access is ours!",False,"campaign/SlicerM.wav"),"Knowledge belongs to the galaxy, you #ff999ffascist!"],["tungsten","tungsten_hull"]), # Mission arguments.
+        'bounty_leader',(0,0,0,False,4,'pirates_',(),priv.name+"_mission",'Black_Rhombus','galaxy',False,'Hacker','talon',[("Oxford has no right to hoard data! Access is ours!",False,"campaign/SlicerM.wav"),"Knowledge belongs to the galaxy, you #ff999ffascist!"],["tungsten","tungsten_hull"]), # Mission arguments.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         masterson2, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept
@@ -1181,7 +1185,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/Oxford","oxford")], # Where the mission ends.
         AddCredits(10000), # Script to add your credits
         None, # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
-        'escort_local',('pirates_',0,3,1,3000,0,True,'merchant__',(),priv.name+"_mission",'Raider','talon.blank','Supply_freighter','drayman'), # Mission arguments.
+        'escort_local',('pirates_',0,3,1,3000,0,True,'merchant__',(),priv.name+"_mission",'Raider','talon','Supply_freighter','drayman'), # Mission arguments.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         masterson4, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept
@@ -1238,7 +1242,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/Palan","Basra")], # Where the mission ends.
         AddCredits(15000), # Script to add your credits
         None, # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
-        'defend',('hunter_',0,2,5000,123456.789,0,False,True,'merchant',(),priv.name+"_mission",'Blockader','centurion.blank','Palan',3), # Mission arguments.
+        'defend',('hunter_',0,2,5000,123456.789,0,False,True,'merchant',(),priv.name+"_mission",'Blockader','centurion','Palan',3), # Mission arguments.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         murphy2, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept
@@ -1256,7 +1260,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/Palan","Basra")], # Where fixer meets you to start the mission
         [InSystemCondition("Gemini/Palan","Basra")], # Where the mission ends.
         AddCredits(10000), # Script to add your credits
-        LaunchWingmen("militia__","talon.blank",2), # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
+        LaunchWingmen("militia__","talon",2), # Script to be run to start the mission (usually None if you don't have a script. Do NOT load an ambush mission here.)
         'defend',('hunter_',0,5,5000,123456.789,0,False,True,'merchant',(),priv.name+"_mission",'Blockader','demon','Palan',0), # Mission arguments.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         murphy3, # Dictionary containing what the fixer says.
@@ -1274,7 +1278,7 @@ def LoadMainCampaign():
         GoToSubnode(0,ChangeSystemOwner("Gemini/Palan","merchant",AddCredits(15000))),
         None,
         [MonkhouseMission1])
-    
+
     mission_desc="Monkhouse:_Relocate_Mission"
     MakeCargoMission(priv, # Creates a cargo mission
         MONKHOUSE_PALAN_SPRITE, # Campaign, sprite
@@ -1297,14 +1301,14 @@ def LoadMainCampaign():
         GoToSubnode(0,AddRemovingSprite("artifact_2", ARTIFACT2_SPRITE, ARTIFACT_POSITION, ARTIFACT_SIZE, "Put_Away_the_Artifact", AddCargo('Artifact',1,True,AddCredits(5000,AddTechnology("hunter"))))),
         None,
         [CrossMission1])
-    
+
     mission_desc="Taryn_1:_Explore_Delta"
     MakeVariableMission(priv, # Creates any type of mission
         CROSS_SPRITE, # Campaign, sprite
         [InSystemCondition("Gemini/Rygannon","Rygannon")], # Where fixer meets you to start the mission
         [InSystemCondition("Gemini/Rygannon","Rygannon")], # Where the mission ends.
         None, # Add your moneys
-        LoadMission(mission_desc,'patrol_enemies',(1,3,10,0,('Gemini/Delta',),priv.name+"_mission",2,4,0.7,0.0,'pirates_',True, "Delta_bandit", {"addall":["nav"],"add":["Nav_2"]}), LoadMission(mission_desc,'ambush',(priv.name+"_mission",('Gemini/Delta',),0,'pirates_',3,'talon.blank','Delta_bandit',[("Shoulda stuck to your charts: it's dangerous out here!",False,"campaign/ChartsM.wav")], ['Gemini/Delta'], 'Gemini/Delta'))), # script to be run.
+        LoadMission(mission_desc,'patrol_enemies',(1,3,10,0,('Gemini/Delta',),priv.name+"_mission",2,4,0.7,0.0,'pirates_',True, "Delta_bandit", {"addall":["nav"],"add":["Nav_2"]}), LoadMission(mission_desc,'ambush',(priv.name+"_mission",('Gemini/Delta',),0,'pirates_',3,'talon','Delta_bandit',[("Shoulda stuck to your charts: it's dangerous out here!",False,"campaign/ChartsM.wav")], ['Gemini/Delta'], 'Gemini/Delta'))), # script to be run.
         priv.name+"_mission", # Script to be set on completion. -1=Failure, 0=Not Accepted, 1=Succeed, 2=In progress
         taryn1, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept
@@ -1318,7 +1322,7 @@ def LoadMainCampaign():
         [InSystemCondition("Gemini/Rygannon","Rygannon")], # Where fixer meets you to start the mission
         [InSystemCondition("Gemini/Rygannon","Rygannon")], # Where the mission ends.
         AddCredits(10000), # Add your moneys
-        LoadMission(mission_desc,'patrol_enemies',(2,3,10,0,['Gemini/Delta', 'Gemini/Beta'],priv.name+"_mission",2,3,0.5,0.0,'retro_',True, "Raving_lunatic", {"addall":["nav"]}), LoadMission(mission_desc,'ambush',(priv.name+"_mission",('Gemini/Beta',),0,'garrovick',1,'centurion.blank','Garrovick',[
+        LoadMission(mission_desc,'patrol_enemies',(2,3,10,0,['Gemini/Delta', 'Gemini/Beta'],priv.name+"_mission",2,3,0.5,0.0,'retro_',True, "Raving_lunatic", {"addall":["nav"]}), LoadMission(mission_desc,'ambush',(priv.name+"_mission",('Gemini/Beta',),0,'garrovick',1,'centurion','Garrovick',[
             ("#669900Unidentified vessel, request status.",True,"campaign/Garrovick.wav"),
             ("#bb4400Damn you! Keep back!", False),
             ("#996600No... #ff999FNO!", False),
@@ -1366,7 +1370,7 @@ def LoadMainCampaign():
         CampaignEndNode(priv), # If you lose the mission
         CrossFinish, # If you win the mission. Usually points to the next mission
         CrossMission4) # The current mission node.
-    
+
     CrossFinish.Init(priv,
         [InSystemCondition("Gemini/Rygannon","Rygannon")],
         taryninfo,
@@ -1400,7 +1404,7 @@ def LoadMainCampaign():
         None, # Add your moneys
         None, # script to be run.
         'defend_drone',('steltek_fighter','steltek','Gemini/Nitir','drone','unknown',10,'confed__',('Gemini/Nitir','Gemini/Blockade_Point_Tango'),priv.name+"_mission", steltekhelptext), # Mission arguments.
-        priv.name+"_mission", 
+        priv.name+"_mission",
         terrell, # Dictionary containing what the fixer says.
         None, # If you reject the mission twice. "None" means that he continues asking you forever until you accept
         CampaignEndNode(priv), # If you lose the mission
@@ -1504,7 +1508,7 @@ def LoadRFMurphyCampaign():
             [InSystemCondition("Gemini/New_Constantinople","Edom")],
             [InSystemCondition("Gemini/New_Detroit","New_Detroit")],
             AddCredits(20000),
-            LoadMission(mission_desc,"ambush",(rf.name+"_mission",("Gemini/New_Detroit",),0,'retro_',8,'talon.blank','',['Heathen! Do not attempt to deliver your goods to the industrialized world below.','Leave now or God will have no mercy on your soul.','Your death is at hand'],['Gemini/New_Detroit'], 'New_Detroit')), # Script to be run to start the mission (usually None if you don't have a script, but ambush is also common.) (having no destination will call significant unit.. oakham should be the only dockable significant in that system)
+            LoadMission(mission_desc,"ambush",(rf.name+"_mission",("Gemini/New_Detroit",),0,'retro_',8,'talon','',['Heathen! Do not attempt to deliver your goods to the industrialized world below.','Leave now or God will have no mercy on your soul.','Your death is at hand'],['Gemini/New_Detroit'], 'New_Detroit')), # Script to be run to start the mission (usually None if you don't have a script, but ambush is also common.) (having no destination will call significant unit.. oakham should be the only dockable significant in that system)
             ("Luxury_Food",30),
             rf.name+"_mission",
             murphy3,
@@ -1594,9 +1598,9 @@ def MakeDrakePirateNode(rf,creds,contingency=None):
                         [InSystemCondition("Gemini/Eden"),NotCondition(SaveVariableCondition("jones_dead",1.0))],
                         ["Greetings, convert! Welcome to the bliss of Eden. There is no suffering here. Your clothing is strange. You have just arrived, yes? You may be initiated in the temple.",("Burrows","I see. Thank you."),"Ah, soon the glory of the Church of Man will spread throughout the stars. Soon our great leader will vanquish the infidels and bring us peace.",("Burrows","Um, may I ask a question about our great leader?"),"Of course, of course!",("Burrows","Where is he? I was, er, supposed to fly with him, but I have been left behind."),"He flies directly towards our beautiful grey moon. Perhaps you should do the same. Alas that your initiation will be postponed.",("Burrows","Yeah, alas."),"Farewell. I must return to my meditation."],
                         IDIOT_SPRITE,
-                        TrueSubnode(LoadMission(mission_desc,"bounty_leader",(0,0,0,0,6,"retro_",(),"jones_dead",'',"centurion.blank",0,"","salthi",[("#ff4400Trespasser! You fly in sacred space!",False,"campaign/Jones.wav"),"The Church of Man is mighty!","We will not tolerate the transgressions, of those serving a false god!","Soon, all of Gemini will be wiped clean, with our Righteous Fire!","#ff4400Fool! My elite guards cannot be defeated!"],[("steltek_gun",0),("steltek_gun",1),("steltek_gun",2),("steltek_gun",3),"isometal","plasteel_hull"],True))),
+                        TrueSubnode(LoadMission(mission_desc,"bounty_leader",(0,0,0,0,6,"retro_",(),"jones_dead",'',"centurion",0,"","salthi",[("#ff4400Trespasser! You fly in sacred space!",False,"campaign/Jones.wav"),"The Church of Man is mighty!","We will not tolerate the transgressions, of those serving a false god!","Soon, all of Gemini will be wiped clean, with our Righteous Fire!","#ff4400Fool! My elite guards cannot be defeated!"],[("steltek_gun",0),("steltek_gun",1),("steltek_gun",2),("steltek_gun",3),"isometal","plasteel_hull"],True))),
                         JonesBountyMissionNode,[JonesBountyMissionNode])])])
-                        
+
 def LoadRFLynchCampaign():
     rf=Campaign("rf_lynch_campaign")
     LYNCH_SPRITE = ("lynch.spr","Talk_To_Lynch","bases/heads/lynch.spr") #sprite file for the fixer
@@ -1938,7 +1942,7 @@ def LoadRFCampaign():
     monte2 = {'failure': montefailure, 'intro': [('Monte', 'Thank you for the transportation.'), ('Burrows', 'No problem. Tell me what you know.'), ('Monte', 'Patience. I receive my information slowly. Besides, it would be unwise to divulge all my knowledge immediately.'), ('Burrows', "I'm starting to wonder just how much you do know, pal."), ('Monte', "Let me try to pacify you. I know that the Retros have recently been united. This unity has given them the strength to begin their conquest. It has all been possible because of a strong new Retro leader, as you may have discovered. Probably no more than ten people in Gemini, including the Retros themselves, know the identity of this new leader. I am one of those ten. The leader's name is Mordecai Jones."), ('Burrows', "I don't care about his name. What do you know about him?"), ('Monte', 'Not much, admittedly. He is some sort of scientist or engineer. He became a Retro only recently. His organisation of the Retros has been astounding. I have never heard of any organisation going from disarray to power in such a short time.'), ('Burrows', "Yeah, I think he's swell, too. The question is, where is he?"), ('Monte', 'I do not know. But I may be able to find out soon.'), ('Burrows', 'How soon?'), ('Monte', 'Patience. First, you must fly another mission.'), ('Burrows', "I guess I'm at your mercy."), ('Monte', 'I want you to go to Drake in the Capella system. You will meet a man there. Follow his instructions. That is all.')], 'reconsider': [('Monte', 'You have returned. Will you accept my mission... I want you to fly to Drake in the Capella system, and carry out the instructions of the person you will meet there.')], 'reject1': [('Monte', 'I see. Then I can give you no further information.')], 'reject2': [('Burrows', 'I tire of your ramblings. Farewell.')], 'reminder': [('Monte', 'I have not heard from my associate. Apparently you have not completed his task.'), ('Burrows', 'Yeah, I guess not. Who was that again?'), ('Monte', 'He is on the Drake base in Capella. He will give you further instructions.')], 'accept': [('Monte', 'Good luck.')]}
     monte3 = {'failure': montefailure, 'intro': [('Monte', 'Excellent. You have made the delivery as requested. Now I will give you what little additional information I have. I was hoping to find out where Mordecai Jones resides. Unfortunately, I have not been given that information. I do know, however, that he has a secret base in Gemini. Inevitably, it is well guarded by the Retros.'), ('Burrows', "That's not much to go on, Monte."), ('Monte', "No, it isn't. I apologise. If I knew more, I would tell you."), ('Burrows', "If that's it, I guess I'll be going."), ('Monte', 'I do have one more request of you. I will pay this time.'), ('Burrows', 'And how much?'), ('Monte', "5000. It's not much, but it's all I have. I too am on the Retros, most wanted list. I'm not sure why. They may have found out about my information dealing. In any case, I need to travel to the Nexus system, but I have learned that a group of Retros awaits me there. I would like you to destroy those Retros. They should be waiting to surprise me at Nav 4."), ('Burrows', '5000 is not much money.'), ('Monte', 'There is more. I am about to receive additional information that will interest you. If you return here after completing the mission, I will give it to you. That is surely worth something.')], 'reconsider': [('Burrows', "I've reconsidered."), ('Monte', 'I see. Let me describe the mission again. Fly to Nav 4 in the Nexus system. Destroy the Retros you will find there. Return here afterwards for 5000 and additional information.')], 'reject1': [('Burrows', 'Your track record is too poor. Forget it.')], 'reject2': [('Burrows', "Sorry, Monte, I'm not interested.")], 'reminder': [('Monte', 'You have not completed my mission. I cannot help you until you help me.'), ('Burrows', 'Right. Where were the Retros again?'), ('Monte', 'They await me at Nav 4 in the Nexus system. I will give you 5000 and some useful information.')], 'accept': [('Burrows', "All right. I'll do it."), ('Monte', 'Wonderful. I await your safe return.')]}
     monte4 = {'failure': montefailure, 'intro': [('Monte', 'Fine work. I will be able to return to Nexus soon.'), ('Burrows', "Let's hear the information. What else do you know about Jones?"), ('Monte', "Nothing, I'm afraid. The knowledge I referred to earlier is not about Jones. It is about someone else you may have heard of, Governor Menesch."), ('Burrows', 'That name sounds familiar.'), ('Monte', "The man is a menace. Years ago, Menesch was governor of a base in a more populated system. As his influence grew, so did his lust for money. He had used his connections to sell Confederation ships, mostly Talons, to outlaw groups such as the pirates and the Retros. It's been years since his administration collapsed, and now, he's come out of hiding to do business in Gemini. It seems more than coincidence that your gun should disappear with Menesch around. I wouldn't put anything past him. If he can stoop to becoming the Retros main supplier, I wouldn't be surprised if he had connections with the Kilrathi."), ('Burrows', 'Sounds like true slime to me.'), ('Monte', "I'll give you this tip. If you want to get to Mordecai Jones, the first step is to destroy his supply line. Eliminate Menesch, and we'll see how the Retros get their weapons."), ('Burrows', 'I can only kill him if I can find him.'), ('Monte', "The best I can do is steer you in the right direction, if you're interested."), ('Burrows', 'Are you offering a bounty?'), ('Monte', 'No. If you complete the mission, I will return to Nexus and go into hiding. I understand, however, that there may be others in Gemini offering to pay a bounty. If I was a fighting man I would try to collect the bounties myself, but, do what you will with the information. The choice and risk are yours.')], 'reconsider': [('Monte', "Have you thought it over... Do you wish to accept... The mission is to kill Governor Menesch. I know he is currently in operation somewhere near the Troy system. If you don't find him in Troy, he's bound to be hiding out in one of the neighbouring systems. Of course, I can offer no reward, but others in Gemini are offering bounties. What do you say?")], 'reject1': [('Monte', 'I see. I will await your reconsideration.')], 'reject2': [('Burrows', "Not a chance, Monte. Ship maintenance isn't free, you know.")], 'reminder': [('Monte', "Menesch lives. Did you forget his location... I will repeat it. He is currently in operation somewhere near the Troy system. If you don't find him in Troy, he's bound to be hiding out in one of the neighbouring systems. Your mission is to destroy him.")], 'accept': [('Monte', "Unfortunately, I don't know his exact location, but I can tell you he is currently in operation somewhere near the Troy system. If you don't find him in Troy, he's bound to be hiding out in one of the neighbouring systems. I believe that if you patrol all those systems, you will be able to find him. I do not know how well he defends himself. Good luck, this may be our last meeting.")]}
-    
+
     Monte=CampaignClickNode()
     masterson1 = {'failure': mastersonfailure, 'intro': [('Burrows', "Hello, Masterson. I've come looking for a little help."), ('Masterson', 'Great, we can use all the help we can get these days.'), ('Burrows', "You misunderstood. I'm looking for information that'll help me find my gun."), ('Masterson', "I heard news. I thought that gun was dangerous in your hands, but... Perhaps we can trade services. I have a friend who considers himself an expert on every fringe organisation in Gemini. He has his ear open to all underground activity, but, he's leery of meeting new people. Somewhat paranoid. I can't blame him. He's pretty unpopular from exposing certain groups. But, if you could help me out I would consider introducing you."), ('Burrows', "Meeting your friend doesn't sound too exciting, but I can check my own leads with your money. I hope you're not expecting charity work."), ('Masterson', "Well we are an academic institution, and rather needy at the moment. The constant threat from the Retros has us worried. We are disassembling the Oxford library. With the Retros on the rise, having all our knowledge in one place has become dangerous. We've become too big of a target. And with the Confederation occupied with the Kilrathi, we're virtually unprotected. I need you to deliver part of our rare books collection to a safer place, Base Edom in New Constantinople. The job pays 10000. Return here afterwards. How about it?")], 'reconsider': [('Masterson', "I had a hunch you'd return."), ('Burrows', 'Swell. Tell me about the mission again.'), ('Masterson', "You're to deliver a load of rare books to Base Edom in New Constantinople. Your reward will be 10000 credits.")], 'reject1': [('Masterson', "I know it's not many credits, but I'm offering extended employment, and the chance to meet an invaluable contact. We're desperate, but you would be crazy to pass up this opportunity. You'll be back.")], 'reject2': [('Masterson', "If you want to meet my contact, you'll have to fly my missions.")], 'reminder': [('Masterson', "I see you still haven't delivered my rare books. Why is that?"), ('Burrows', "Not your concern, Masterson. Let's hear the details again."), ('Masterson', "All right, then. You're to deliver a load of rare books to Base Edom in New Constantinople. It's that simple. Your reward will be 10000 credits.")], 'accept': [('Masterson', "Hurry back for more work, and I'll see about locating my friend.")]}
     masterson2 = {'failure': mastersonfailure, 'intro': [('Masterson', "Good to see you back. We've been needing your help."), ('Burrows', "Yeah, well, I didn't realise how dangerous research had become."), ('Masterson', 'The Retros are always at our throats trying to stop it, and the pirates trying to get to it. Which, of course, could mean money for you. We need someone to patrol Oxford.'), ('Burrows', "Well, I suppose I could take easy money from you. Don't you have less skilled help for your simple chores?"), ('Masterson', "The militia reinforcements are weeks late. They're in high demand these days. We need you to patrol each nav point, and eliminate any threats, fanatical or opportunistic. Come back here for payment."), ('Burrows', 'I could use the target practice, but not for free, of course.'), ('Masterson', 'I can offer the usual 10000.')], 'reconsider': [('Burrows', "Okay, Masterson, I've reconsidered. Tell me the details again."), ('Masterson', 'Patrol the nav points in Oxford. Destroy all Retro and pirate threats, and return for your 10000.')], 'reject1': [('Burrows', 'Sorry. Not my style.')], 'reject2': [('Masterson', "You must not value my opinion of your dependability. I'm sure my friend would not approve.")], 'reminder': [('Masterson', "Oxford Security reports increased activity in the system. Obviously, you've not held up your end of the deal."), ('Burrows', 'Could be temporary amnesia. What was I supposed to do?'), ('Masterson', 'Simply Patrol all nav points of Oxford system, and return for 10000. Deal?')], 'accept': [('Masterson', 'Good luck. See you soon')]}
@@ -2033,7 +2037,7 @@ def LoadRFCampaign():
         [InSystemCondition("Gemini/Oxford","Oxford")],
         AddCredits(10000),
         None,
-        'escort_local',('retro_',0,3,1,3000,0,False,'merchant__',(),rf.name+"_mission",'','talon.blank','','drayman',[('Drayman: Welcome volunteer. You will escort us to Nav 1. Do not abandon us until we have jumped.',False,'campaign/Oxford.wav'),"Drayman: I won't feel safe until we've jumped.",'Drayman: Hey, keep the freaks away, all right?','Drayman: I just want to make it alive.']),
+        'escort_local',('retro_',0,3,1,3000,0,False,'merchant__',(),rf.name+"_mission",'','talon','','drayman',[('Drayman: Welcome volunteer. You will escort us to Nav 1. Do not abandon us until we have jumped.',False,'campaign/Oxford.wav'),"Drayman: I won't feel safe until we've jumped.",'Drayman: Hey, keep the freaks away, all right?','Drayman: I just want to make it alive.']),
         rf.name+"_mission",
         masterson4,
         None,
@@ -2120,7 +2124,7 @@ def LoadRFCampaign():
         None,
         None,
 #Fixme: should be ambush
-        'defend',('retro_',0,10,5000,123456.789,0,False,False,'hunter__',('Gemini/Perry','Gemini/Tingerhoff','Gemini/Nexus'),rf.name+"_mission",'','talon.blank','',0),
+        'defend',('retro_',0,10,5000,123456.789,0,False,False,'hunter__',('Gemini/Perry','Gemini/Tingerhoff','Gemini/Nexus'),rf.name+"_mission",'','talon','',0),
         rf.name+"_mission",
         monte3,
         None,
@@ -2146,7 +2150,7 @@ def LoadRFCampaign():
             ('Gemini/New_Constantinople','Gemini/Junction','Gemini/Penders_Star','Gemini/Troy'),
             "menesch_dead",#vartoset
             '',#fgname
-            'centurion.blank',#Type of ship
+            'centurion',#Type of ship
             0,#displayLocation
             '',
             'salthi.particle',

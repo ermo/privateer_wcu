@@ -217,7 +217,7 @@ def LoadGosshawkCampaign():
         [InSystemCondition("Gemini/Nitir","Nitir")],
         AddCredits(15000), 
         LaunchWingmen("confed__","broadsword",2),
-        'bounty_leader',(0,0,0,False,3,'kilrathi_',(),priv.name+"_mission",'','kamekh.blank',False,'','gothri.blank',["Apes! You are disturbing a kilrathi operation! Prepare to die!"]), # Mission arguments.
+        'bounty_leader',(0,0,0,False,3,'kilrathi_',(),priv.name+"_mission",'','kamekh',False,'','gothri',["Apes! You are disturbing a kilrathi operation! Prepare to die!"]), # Mission arguments.
         priv.name+"_mission",
         gosshawkspeech2,
         None,
@@ -280,7 +280,7 @@ def LoadGosshawkCampaign():
         [InSystemCondition("Gemini/Surtur","Surtur")],
         [InSystemCondition("Gemini/Hyades","Charon")],
         AddCredits(40000),
-        LoadMission(mission_desc,"ambush",(priv.name+"_mission",("Gemini/Blockade_Point_Charlie",),0,'kilrathi_',1,'kamekh.blank','',[("This freighter and all its crew is hereby sentenced to death by command of the Kilrathi Gemini High Command!")])),
+        LoadMission(mission_desc,"ambush",(priv.name+"_mission",("Gemini/Blockade_Point_Charlie",),0,'kilrathi_',1,'kamekh','',[("This freighter and all its crew is hereby sentenced to death by command of the Kilrathi Gemini High Command!")])),
         "escort_mission",("merchant__",0,0,0,1500,0,0,0,("Gemini/Blockade_Point_Charlie","Gemini/Hyades"),priv.name+"_mission",'','drayman'),
         priv.name+"_mission",
         gosshawkspeech6,
@@ -297,7 +297,7 @@ def LoadGosshawkCampaign():
         [InSystemCondition("Gemini/Hyades","Charon")],
         AddCredits(50000,ChangeSystemOwner("Gemini/Hyades","merchant")),
         LaunchWingmen("hunter__","galaxygs",4),
-        'bounty_leader',(0,0,0,False,5,'kilrathi_',(),priv.name+"_mission",'','kamekh',False,'','sartha.blank',["Your luck has run out, ape! The glorious Kilrathi Empire will take over this system NOW!"]),
+        'bounty_leader',(0,0,0,False,5,'kilrathi_',(),priv.name+"_mission",'','kamekh',False,'','sartha',["Your luck has run out, ape! The glorious Kilrathi Empire will take over this system NOW!"]),
         priv.name+"_mission",
         gosshawkspeech7,
         None,

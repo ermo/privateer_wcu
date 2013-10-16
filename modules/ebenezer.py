@@ -1,5 +1,6 @@
 import campaign_lib
 from campaign_lib import *
+
 ebenezerspeech1={"intro":[("Ebenezer","My name is Ebenezer, I'm Commander of the local Shepperd Militia."),
                             ("Burrows","The local what?"),
                             ("Ebenezer","The Shepperd Militia. Our team aims at replacing the more and more corrupt or absent militia forces around this area which we call the 'Grey Zone'."),
@@ -23,6 +24,7 @@ ebenezerspeech1={"intro":[("Ebenezer","My name is Ebenezer, I'm Commander of the
                             ("Burrows","Don't worry.")],
                 "failure":[("Ebenezer","Well, I didn't hire you for observing an execution. We need every ship we can get... except of yours.")]
                 }
+
 ebenezerspeech2={"intro":[("Burrows","Okay, let's hope your pilot is smarter now."),
                             ("Ebenezer","That was quite a good show. Interested in participating in more missions, Mr..."),
                             ("Burrows","Burrows. Grayson Burrows. Probably, but not as a teacher."),
@@ -42,6 +44,7 @@ ebenezerspeech2={"intro":[("Burrows","Okay, let's hope your pilot is smarter now
                             ("Ebenezer","Don't try to fool me. Move out or I'll arrest you.")],
                 "failure":[("Ebenezer","The freighter is lost. Our business ends here.")]
                 }
+
 ebenezerspeech3={"intro":[("UNLOCKED: Turbo Laser."),
                             ("Burrows","Your freighter is in, and the pirate force is wiped out."),
                             ("Ebenezer","Very nice. I now have a delicate mission for you. The Confederation has learnt about our efforts to build up a new militia."),
@@ -59,6 +62,7 @@ ebenezerspeech3={"intro":[("UNLOCKED: Turbo Laser."),
                 "reminder":[("Ebenezer","Move out and escort that Broadsword.")],
                 "failure":[("Ebenezer","What did you do out there? Where's the Broadsword? You've let the meeting pass by! You're fired!")]
                 }
+
 ebenezerspeech4={"intro":[("Burrows","We need to talk."),
                             ("Ebenezer","Sure, later... where's the crew of that Broadsword."),
                             ("Burrows","They're dead."),
@@ -81,6 +85,7 @@ ebenezerspeech4={"intro":[("Burrows","We need to talk."),
                             ("Ebenezer","Man, the feds will send reinforcements. Move your ass!")],
                 "failure":[("Ebenezer","A confederate transport has docked at Edinburgh. I'll be arrested in a few minutes. Thanks to your incompetency.")]
                 }
+
 ebenezerspeech5={"intro":[("Burrows","Okay, I delivered the message to Macabee. No thanks to the confed ambush."),
                             ("Ebenezer","Thanks. My friend already clarified that little misunderstanding. Obviously the Broadsword pilot wasn't sane enough to obey his orders."),
                             ("Burrows","So everything's fine now?"),
@@ -101,6 +106,7 @@ ebenezerspeech5={"intro":[("Burrows","Okay, I delivered the message to Macabee. 
                 "reminder":[("Ebenezer","I'm not sure how long the pirates will swallow the pill. They might as well turn around and head back to New Caledonia. Better move out now.")],
                 "failure":[("Ebenezer","That freighter was of great importance to us. Most of our funds were invested in those new ships. Thanks to you, the Shepperds no longer exist.")]
                 }
+
 ebenezersuccess=[("UNLOCKED: Sparrowhawk."),
             ("Burrows","Your freighter has docked. I was ambushed by ships of kilrathi origin, piloted by retros."),
             ("Ebenezer","That was most likely coincidence, but the Confederation might be interested to learn about a possible cooperation between Retros and Kilrathis, so I sent them a message. Well now, million thanks! I've made sure that you can also grab one of those Sparrowhawks, if you like!"),
@@ -117,7 +123,7 @@ def LoadEbenezerCampaign():
 
     priv=Campaign("ebenezer_campaign") # Name of the save game variable for the entire campaign. Can't contain spaces
     priv.Init(ebenezermission1) # the first node.
-    
+
     MakeMission(priv,
         EBENEZER_SPRITE,
         [InSystemCondition("Gemini/New_Caledonia","Edinburgh")],
@@ -131,24 +137,26 @@ def LoadEbenezerCampaign():
         CampaignEndNode(priv),
         ebenezermission2,
         ebenezermission1)
+
     MakeMission(priv,
         EBENEZER_SPRITE,
         [InSystemCondition("Gemini/New_Caledonia","Edinburgh")],
         [InSystemCondition("Gemini/New_Caledonia","Edinburgh")],
-        AddCredits(5000), 
+        AddCredits(5000),
         LaunchWingmen("militia__","talon",2),
-        'escort_local',('pirates_',0,6,1,3000,0,True,'merchant__',(),priv.name+"_mission",'','talon.blank','','drayman'), # Mission arguments.
+        'escort_local',('pirates_',0,6,1,3000,0,True,'merchant__',(),priv.name+"_mission",'','talon','','drayman'), # Mission arguments.
         priv.name+"_mission",
         ebenezerspeech2,
         None,
         CampaignEndNode(priv),
         ebenezermission3,
         ebenezermission2)
+
     MakeMission(priv,
         EBENEZER_SPRITE,
         [InSystemCondition("Gemini/New_Caledonia","Edinburgh")],
         [InSystemCondition("Gemini/New_Caledonia","Edinburgh")],
-        AddCredits(10000,AddTechnology("turbolas")), 
+        AddCredits(10000,AddTechnology("turbolas")),
         None,
         'bounty_leader',(0,0,0,False,0,'merchant_',(),priv.name+"_mission",'','broadsword',False,'',["You won't prevent us from arresting Ebenezer! Die!"]), # Mission arguments.
         priv.name+"_mission",
@@ -157,6 +165,7 @@ def LoadEbenezerCampaign():
         CampaignEndNode(priv),
         ebenezermission4,
         ebenezermission3)
+
     MakeCargoMission(priv,
         EBENEZER_SPRITE,
         [InSystemCondition("Gemini/New_Caledonia","Edinburgh")],
@@ -170,6 +179,7 @@ def LoadEbenezerCampaign():
         CampaignEndNode(priv),
         ebenezermission5,
         ebenezermission4)
+
     MakeMission(priv,
         EBENEZER_SPRITE,
         [InSystemCondition("Gemini/New_Caledonia","Edinburgh")],
@@ -183,6 +193,7 @@ def LoadEbenezerCampaign():
         CampaignEndNode(priv),
         ebenezerfinish,
         ebenezermission5)
+
     ebenezerfinish.Init(priv,
         [],
         None,
