@@ -1,5 +1,6 @@
 import Base
 import VS
+import debug
 import universe
 
 # move generic shipdealer to showroom from upgrades
@@ -110,10 +111,10 @@ def MakeWeapon(concourse, timeofdayignored='_day', dealername="bases/repair_upgr
 
 def ShipPurchase(shipname):
     """ Allow the player to purchase a ship.
-        
+
         If the player has enough funds, present a choice and play a dialogue.
-        Otherwise, inform the player that he hasn't get enough funds.
-        
+        Otherwise, inform the player that he hasn't got enough funds.
+
     """
     import fixers
     import campaign_lib
@@ -159,10 +160,10 @@ def CargoValue(un):
 
 def CanBuyShip(shipname):
     """ Return whether the player can afford a given ship
-        
+
         The player's current ship, current ship cargo load and credit balance
         are all taken into account.
-        
+
     """
     creds = VS.getPlayer().getCredits()
     return creds + ShipValue(VS.getPlayer().getName(), used=True) + CargoValue(VS.getPlayer()) >= ShipValue(shipname, used=False)
@@ -170,10 +171,10 @@ def CanBuyShip(shipname):
 
 def BuyShip(shipname):
     """ Return whether the player could buy shipname.blank.
-        
+
         Sell or don't sell the current ship according to the above
         and play the accompanying speech.
-        
+
     """
     name = VS.getPlayer().getName()
     value = CargoValue(VS.getPlayer()) + ShipValue(name, used=True)
@@ -183,13 +184,13 @@ def BuyShip(shipname):
         c = oldun.GetCargoIndex(i)
         if c.GetCategory().find("upgrades") != 0:
             oldcargo.append(c)
-    #print value
-    #print VS.getPlayer().getCredits()
+    debug.debug("value: %.1f" % (value))
+    debug.debug("player credits before purchase: %.1f" % (VS.getPlayer().getCredits()))
     success = Base.BuyShip(shipname, False, True)
     if success:
         VS.getPlayer().addCredits(value)
         Base.SellShip(name)
-        #print VS.getPlayer().getCredits()
+        debug.debug("player credits after selling current ship: %.1f" % (VS.getPlayer().getCredits()))
         #VS.getPlayer().addCredits(-ShipValue(shipname,False))
         #print VS.getPlayer().getCredits()
         #for carg in oldcargo:
