@@ -1,15 +1,18 @@
-import universe
-from go_to_adjacent_systems import go_to_adjacent_systems
-from go_somewhere_significant import go_somewhere_significant
-import vsrandom
-import Vector
-import launch
-import faction_ships
-import Director
 import Briefing
-import unit
+import Director
+import Vector
 import VS
+import debug
+import faction_ships
+import launch
 import quest
+import unit
+import universe
+import vsrandom
+from go_somewhere_significant import go_somewhere_significant
+from go_to_adjacent_systems import go_to_adjacent_systems
+
+
 class bounty (Director.Mission):
     def SetVar (self,val):
         if (self.var_to_set!=''):
@@ -33,6 +36,7 @@ class bounty (Director.Mission):
         mysys=VS.getSystemFile()
         sysfile = VS.getSystemFile()
         self.you=VS.getPlayer()
+        #debug.debug("VS.Unit()")
         self.enemy=VS.Unit()
         self.adjsys=go_to_adjacent_systems (self.you,vsrandom.randrange(minnumsystemsaway,maxnumsystemsaway+1),jumps)
         self.dockable_unit=dockable_unit
@@ -43,25 +47,25 @@ class bounty (Director.Mission):
             self.adjsys.Print("From %s system","Procede to %s","Search for target at %s, your final destination","bounty mission",1)
             VS.IOmessage (1,"bounty mission",self.mplay,"Target is a %s unit." % (self.faction))
         else:
-            print "aboritng bounty constructor..."
+            default.info("aboritng bounty constructor...")
             VS.terminateMission (0)
 
     def AdjLocation(self):
-        print "ADJUSTING LOC"
+        debug.info("ADJUSTING LOCATION")
         self.enemy.SetPosition(Vector.Add(self.enemy.LocalPosition(),Vector.Scale(self.enemy.GetVelocity(),-40))) #eta 20 sec
     def Win (self,un,terminate):
         self.SetVar(1)
         VS.IOmessage (0,"bounty mission",self.mplay,"[Computer] #00ff00Bounty Mission Accomplished!")
         un.addCredits(self.cred)
         if (terminate):
-            print "you win bounty mission!"
+            debug.info("you win bounty mission!")
             VS.terminateMission(1)
 
     def Lose (self,terminate):
         VS.IOmessage(0,"bounty mission",self.mplay,"[Computer] #ff0000Bounty Mission Failed.")
         self.SetVar(-1)
         if (terminate):
-            print "lose bounty mission"
+            debug.info("you lose bounty mission")
             VS.terminateMission(0)
     def LaunchedEnemies(self,significant):
         pass
@@ -90,7 +94,7 @@ class bounty (Director.Mission):
         elif (self.arrived==1):
             significant=self.adjsys.SignificantUnit()
             if (significant.isNull ()):
-                print "sig null"
+                debug.info("significant is null")
                 VS.terminateMission(0)
                 return
             else:
@@ -117,7 +121,6 @@ class bounty (Director.Mission):
                         pass
                     self.enemy=L.launch(significant)
                     self.you.SetTarget(self.enemy)
-                    import universe
                     universe.greet(self.greetingText,self.enemy,self.you)
                     self.obj=VS.addObjective("Destroy the %s ship." % (self.enemy.getName ()))
                     if (self.enemy):
@@ -129,7 +132,7 @@ class bounty (Director.Mission):
                         self.LaunchedEnemies(significant)
                         self.arrived=2
                     else:
-                        print "enemy null"
+                        debug.info("enemy is null")
                         VS.terminateMission(0)
                         return
         else:
@@ -152,17 +155,17 @@ class bounty (Director.Mission):
                     VS.IOmessage (4,"bounty mission",self.mplay,"Scanners detect bounty target!")
                     VS.IOmessage (5,"bounty mission",self.mplay,"Coordinates appear near %s" % (localdestination))
                 else:
-                    print "Location "+str(self.displayLocation)
+                    debug.info("Location is "+str(self.displayLocation))
                     VS.IOmessage (4,"bounty mission",self.mplay,"[Computer] Mission description indicates bounty target may be in this system.")
     def initbriefing(self):
-        print "ending briefing"
+        debug.info"init bounty briefing")
 
     def loopbriefing(self):
-        print "loop briefing"
+        print "loop bounty briefing"
         Briefing.terminate();
 
     def endbriefing(self):
-        print "ending briefing"
+        print "ending bounty briefing"
 
 def initrandom (minns, maxns, credsmin, credsmax, run_away, minshipdifficulty, maxshipdifficulty,jumps=(),var_to_set=''):
     you=VS.getPlayer()
@@ -179,6 +182,6 @@ def initrandom (minns, maxns, credsmin, credsmax, run_away, minshipdifficulty, m
         sd = vsrandom.random()*(maxshipdifficulty-minshipdifficulty)+minshipdifficulty
         return bounty (minns,maxns,(1.0+(sd*0.5))*(vsrandom.random ()*(credsmax-credsmin)+credsmin),run_away,sd,tempfaction,jumps,var_to_set)
     else:
-        print "aborting bounty initrandom"
+        debug.info("aborting bounty initrandom")
         VS.terminateMission(0)
 
