@@ -1,4 +1,4 @@
-= Goals
+# Goals
 
 The overarching goal is two-fold:
 
@@ -7,19 +7,22 @@ The overarching goal is two-fold:
  2. Make PU a suitable base for Privateer: Wing Commander Universe
 
 
-== 1. Update PU to run on the newest VS on Linux
+## 1. Update PU to run on the newest VS on Linux
 
 Facts:
  * Sadly, it seems we've lost access to the PU SVN history.
- * PU r505 does not work on Linux due to case-sensitivity issues
- * The PU assets are not all working (sprites reference missing assets)
- * The Windows support stuff is outdated
- * PU does not use cube-maps (?)
+ * PU r505 does not work on Linux due to case-sensitivity issues (FIXED)
+ * The r505 PU assets are not all working, in that sprites reference
+   missing assets (FIXED)
+ * The Windows support stuff is outdated (the VS Windows support is
+   fine, however)
+ * PU used cube-maps in r505 as far as I can tell, so cubemaps vs.
+   spheremaps is a non-issue.
 
 In summary, the issues outlined above are solvable. :-)
 
 
-== 2. Make PU a suitable base for Privateer: Wing Commander Universe
+## 2. Make PU a suitable base for Privateer: Wing Commander Universe
 
 I think it is important to recognize and acknowledge that this goal is
 more about "taste", which implies someone setting a standard for "good"
@@ -28,16 +31,19 @@ vs. "not good enough".
 For now, this will likely be a meritocracy, where whoever does the work
 gets to set the standard -- at least initially.
 
-Personally, I support not deleting anything right away.
+Personally, I support not deleting anything (extra campaign missions,
+non-canon ship variants) right away.
 
-Observations:
- * PU is not super well balanced currently. Anything more
-   than 2 opposing ships is a challenge.
+### Observations:
+
+ * PU is not super well balanced currently. Anything more than 2
+   opposing ships can be a challenge due to funky ship upgrade
+   decisions.
  * The extra PU campaign stuff needs a bit of TLC
- * The PU assets are not all working
+ * The PU assets are not all working (mostly fixed as of now)
  * I prefer the GG space backgrounds over the VS space backgrounds.
  * Confed/Militia AI ships don't appear to be particularly effective at
-   killing bad guys, which is odd.
+   killing bad guys, which is odd
  * It would be nice to have the in-system map display which facilities
    are available on each station (ship dealer, guilds)
  * It would be nice to have the quadrant maps display the base names of
@@ -46,14 +52,15 @@ Observations:
    assets are 1px wide, which is not enough.
  * Sometimes, systems become too brigt or too red -- why? Local issue?
  * Tarsus Mk2 uses a rather, er, unflattering texture
+ ** Now that I've updated the vegastrike.config file, things do look better!
  * It would be cool to be able to plot a route even when not in the cockpit
- ** which implies that one's personal system would have an uplink with the
+ ** Which implies that one's personal system would have an uplink with the
     ship computer and one could plot mission routes sitting in the bar, for
     instance.
  ** The rationale is that the original game placed a burden on the player to
     keep tabs on stuff that one would expect to be able to do with a computer.
     Why not have support systems?
- * The lure of Privater for me is the voice acting, the  music, the 'ambience'.
+ * The lure of Privater for me is the voice acting, the music, the 'ambience'.
    And the art is of course something I remember fondly. But most of all, the
    space combat was fast and furious, giving you a sense of accomplishment.
  * There is no facility for deleting save games?
@@ -65,10 +72,9 @@ Observations:
    for parts that I've lifted off with, but as long as I have not lifted off,
    I want the same price if I decide to return a part.
  * If adversary ships are upgraded too aggressively, fights become boring/protracted
+ ** I've turned off upgrading for now and plan to revamp the ship
+    upgrade logic ASAP
  * It's tedious to sell missiles -- create Buy/Sell 1, 5 and 10 buttons?
- * Ensure that Talons can only get up to Light upgrades
-   (start w/L0, upgrade to max L1, either 3xLasers or 2xLasers + Mass Driver)
- * SparrowHawks could get up to L2 upgrades and get 2xLasers + 1xMeson
 
 Bug notes:
  * Tarsus model is missing gun models?
@@ -77,20 +83,22 @@ Bug notes:
  * Ships are parked in a weird position on the landing pad
  * The map computer appears to not be scaled correctly to the VS map
  * Patrol mission description can offer more navpoints than are in the system
- ** The mission is scaled down correctly by the patrol mission script.
+ ** The mission is scaled down correctly by the patrol mission script
+    though
  * The mission computer does not display the name of the current planet(!)
    -- PO does and so does GG.
  * Wingmen fire all the time -- can I tell them to cease fire? Can they
    be taught to cease fire if no hostiles are nearby?
+ ** This might be releated to the 'attack my target' command?
 
 Changes:
  * Default Tarsus size modified from 1 to 6 (was too small before)
  * Changed master_parts_list.csv to avoid mismatched categories for parts
    (seen with the starting Tarsus)
- ** Hull and Armor => Hull, Armor 
+ ** Hull and Armor => Hull, Armor
  ** Sensors => Radar
  ** Shields => Shield Systems
- * Upped default {game,gun}_speed from 0.1 to 0.2 (should be enough) 
+ * Upped default {game,gun}_speed from 0.1 to 0.2 (should be enough)
  * Tarsus Mk2 should be similar to the Tarsus in most respects except having upgraded armor
    and being able to fit a lvl 2 reactor and a belly turret. Let's pretend that its
    slight increase in armor is offset by smarter construction
