@@ -1,9 +1,12 @@
-import VS
 import Director
+import VS
+import debug
+import dynamic_news
+import faction_ships
 import fg_util
 import vsrandom
-import faction_ships
-import dynamic_news
+
+
 global dnewsman_
 dnewsman_ = dynamic_news.NewsManager()
 #hashed by system, then contains lists of pairs of (flightgroup,faction) pairs
@@ -17,6 +20,8 @@ lookorsiege=1
 stardatelen = Director.getSaveDataLength(0,"stardate")
 if (stardatelen==0):
     Director.pushSaveData(0,"stardate",151.2)
+
+
 def UpdateCombatTurn():
     stardateinc=0.05/24.0
     Director.putSaveData(0,"stardate",0,Director.getSaveData(0,"stardate",0)+stardateinc)
@@ -39,6 +44,7 @@ def UpdateCombatTurn():
                         lookorsiege=1
                 #first look for trouble, then go ahead and simulate all the battles
 
+
 siegenumber=0
 siegenumtimes=0
 siegeprob=0
@@ -48,11 +54,14 @@ def getImportanceOfSystem(sys):
         return .5
     else:
         return .1
+
+
 def getImportanceOfType (typ):
     import faction_ships
     if (faction_ships.isCapital(typ)):
         return 1
     return .5
+
 
 def moveSurroundingCapshipsToSiege(fac,sys):
     suc=0
@@ -68,13 +77,15 @@ def moveSurroundingCapshipsToSiege(fac,sys):
                 suc=1
     return suc
 
+
 def neighborFaction(sys,fac):
     for i in range (VS.GetNumAdjacentSystems(sys)):
         asys=VS.GetAdjacentSystem(sys,i)
         if (VS.GetGalaxyFaction(asys)==fac):
             return True
     return False
- 
+
+
 #returns false if Siege is done going through all its vehicles
 def Siege(fac):
     global siegenumber
@@ -104,7 +115,7 @@ def Siege(fac):
                     #fg_util.CheckAllShips(fac)
                     #fg_util.CheckAllShips(enfac)
                     if enfac == "unknown":
-                        print "exploration: "+sys
+                        debug.info("exploration: "+sys)
                         fgleader = fg_util.getFgLeaderType(fg,fac)
                         exploration = 1
 
@@ -113,28 +124,28 @@ def Siege(fac):
                     if (VS.GetRelation(fac,enfac)<0 and neighborFaction(sys,fac)):#FIXME maybe even less than that
                         numenemyfg = fg_util.NumFactionFGsInSystem(enfac,sys)
                         numfriendfg = fg_util.NumFactionFGsInSystem(fac,sys)
-                        #print 'siegarol enemioes '+str(numenemyfg)+ ' friends '+str(numfriendfg)
+                        #debug.debug('siegarol enemioes '+str(numenemyfg)+ ' friends '+str(numfriendfg))
                         global dnewsman_
                         if exploration:
                             if sys != 'nil':
                                 import generate_dyn_universe
                                 generate_dyn_universe.TakeoverSystem(fac,sys)
-                                #HACK, regenerate bases instnatly
+                                #HACK, regenerate bases instantly
                                 dnewsman_.writeDynamicString([str(Director.getSaveData(0,"stardate",0)),dnewsman_.TYPE_EXPLORATION,dnewsman_.STAGE_END,fac,enfac,dnewsman_.SUCCESS_WIN,str(getImportanceOfSystem(sys)),sys,dnewsman_.KEYWORD_DEFAULT,fg,fgleader,"unknown","unknown"])
                                                                         #FIXME use keyword (ignore
                                                                         #keyword for now Daniel)
 
                         elif (numenemyfg==0 and numfriendfg==0): #If both annihalate each other completely (unlikely but possible)
                             facnum = VS.GetFactionIndex (fac)
-                            print 'cehcking started'
-                            print "DRAW error "+fg+" sys has "+sys+" has " +str(fg_util.NumFactionFGsInSystem(fac,sys))+" String is "+Director.getSaveString(0,fg_util.MakeStarSystemFGKey(sys),facnum)
+                            debug.debug('checking started')
+                            debug.error("DRAW error "+fg+" sys has "+sys+" has " +str(fg_util.NumFactionFGsInSystem(fac,sys))+" String is "+Director.getSaveString(0,fg_util.MakeStarSystemFGKey(sys),facnum))
                             if sys != 'nil':
                                 dnewsman_.writeDynamicString([str(Director.getSaveData(0,"stardate",0)),dnewsman_.TYPE_SIEGE,dnewsman_.STAGE_END,fac,enfac,dnewsman_.SUCCESS_WIN,str(getImportanceOfSystem(sys)),sys,dnewsman_.KEYWORD_DEFAULT,fg,"unknown","unknown","unknown"])
                                                                         #FIXME use keyword (ignore
                                                                         #keyword for now Daniel)
 
                         elif (numenemyfg==0 and (fg_util.CapshipInFG(fg,fac) or moveSurroundingCapshipsToSiege(fac,sys))):      #If aggressor succeeded
-                            print fac + ' took over '+ sys + ' originally owned by '+enfac
+                            debug.debug(fac + ' took over '+ sys + ' originally owned by '+enfac)
                             #ok now we have him... while the siege is going on the allies had better initiate the battle--because we're now defending the place...  so that means if the owners are gone this place is ours at this point in time
                             fgs = fg_util.FGsInSystem(fac,sys)
                             if (len(fgs)>0):
@@ -151,7 +162,7 @@ def Siege(fac):
                             #HACK, regenerate bases instnatly
 
                         elif (numfriendfg==0):  #If aggressor lost
-                            print 'wtf!!'
+                            debug.warn('wtf!!')
                             fgs = fg_util.FGsInSystem(enfac,sys)
                             if (len(fgs)>0):
                                 fgs=fgs[0]
@@ -168,7 +179,6 @@ def Siege(fac):
         return 1
     else:
         return 0
-
 
 
 #returns false if SimulateBattles gets through all its vehicles
@@ -197,6 +207,7 @@ def SimulateBattles():
 
     try:
     #if (1):
+        #debug.debug("simulateiter.next()")
         ally = simulateiter.next()
         godoit=1
     except:
@@ -204,7 +215,8 @@ def SimulateBattles():
         deadbattlesiter = len(deadbattles)-1
         godoit=0
         import sys
-        print str(sys.exc_info()[0])+str(sys.exc_info()[1])
+        e = str(sys.exc_info()[0])+str(sys.exc_info()[1])
+        debug.debug("caught exception '%s'" % (e))
     if (godoit):
         enemy = ally[1]
         ally = ally[0]
@@ -216,11 +228,15 @@ def SimulateBattles():
                 cpsal[sys]=[]
             cpsal[sys]+=[((ally[0],ally[1]),(enemy[0],enemy[1]))]#continue the battle
     return 1
+
+
 def BattlesInSystem(sys):
     if sys in cpsal:
         return cpsal[sys]
     #return {}  #used to be  a hash table
     return []
+
+
 def LookForSystemWideTrouble(faction,sys):
     fg = fg_util.FGsInSystem(faction,sys)
     for i in fg:
@@ -229,6 +245,7 @@ def LookForSystemWideTrouble(faction,sys):
         if (len(efg)):
             index=vsrandom.randrange(0,len(efg))#FIXME include some sort of measure "can I win"
             initiateAttack(fg,faction,sys,efg[index],enemyfac)
+
 
 def randomMovement(fg,fac):
     import universe
@@ -246,14 +263,15 @@ def randomMovement(fg,fac):
                 elif (VS.GetRelation(fac,ifac)<0):
                     fg_util.TransferFG(fg,fac,i)
                     return
-            #                       print 'moving '+fg+' from '+sys+' to '+ newsys
-            fg_util.TransferFG( fg,fac,suggestednewsys);
+            #debug.debug('moving '+fg+' from '+sys+' to '+ suggestednewsys)
+            fg_util.TransferFG(fg, fac, suggestednewsys);
         else:
-            pass #print "flightgroup "+fg+" in system "+sys + " is stuck"
+            debug.debug("flightgroup "+fg+" in system "+sys + " is stuck")
+            pass
 
 def AddFighterTo(fgname,fac,isNew=False):
     sys = VS.getSystemFile()
-    #print 'add fighter'
+    #debug.debug('add fighter')
     import generate_dyn_universe
     numsystems = generate_dyn_universe.systemcount[fac]
     if (VS.GetGalaxyFaction(sys)!=fac):
@@ -275,9 +293,9 @@ def AddFighterTo(fgname,fac,isNew=False):
     if (numfighters<1):
         if (vsrandom.uniform(0,1)<numfighters):
             numfighters=1
-    #print "Generating "+str(numfighters)+ " fighters for "+fac+" at "+sys
+    #debug.debug("Generating "+str(numfighters)+ " fighters for "+fac+" at "+sys)
     if isNew:
-        fgk=fg_util.AllFGsInSystem(fac,sys)        
+        fgk=fg_util.AllFGsInSystem(fac,sys)
         if len(fgk):
             fgname=fgk[vsrandom.randrange(0,len(fgk))]
             stat=6
@@ -308,12 +326,12 @@ def AddFighterTo(fgname,fac,isNew=False):
             else:
                 sys=homeworlds[fac][vsrandom.randrange(0,len(homeworlds[fac]))]
     cap =faction_ships.getRandomCapitol(fac)
-    #print "Generating "+str(numcapships)+ " capship "+cap+" for "+fac+" at "+sys
+    #debug.debug("Generating "+str(numcapships)+ " capship "+cap+" for "+fac+" at "+sys)
     fg_util.AddShipsToFG(fgname,fac,((cap,int(numcapships)),),sys)
+
 
 #returns false if done with vehicles
 lftiter=0
-import Director
 def LookForTrouble (faction):
     global lftiter
     key = fg_util.MakeFactionKey(faction)
@@ -342,28 +360,32 @@ def LookForTrouble (faction):
             randomMovement (i,faction)
     return 1
 
+
 def StopTargettingEachOther (fgname,faction,enfgname,enfaction):
-    i=VS.getUnitList()
-    un=i.current()
-    while (un):
+    i = VS.getUnitList()
+    while (not i.isDone()):
+        #debug.debug("i.next()")
+        un = i.next()
         if ((un.getFactionName()==enfaction and un.getFlightgroupName()==enfgname) or
                 (un.getFactionName()==faction and un.getFlightgroupName()==fgname)):
             un.setFgDirective ('b')
-        #check to see that its' in this flightgroup or something :-)
-        un=i.next()
+        #check to see that it's in this flightgroup or something :-)
+
+
 
 def TargetEachOther (fgname,faction,enfgname,enfaction):
-    i=VS.getUnitList()
-    un=i.current()
+    i = VS.getUnitList()
     en=None
     al=None
-    while (un and ((not en) or (not al))):
+    while (not i.isDone() and ((not en) or (not al))):
+        #debug.debug("i.next()")
+        un = i.next()
         if (un.getFactionName()==enfaction and un.getFlightgroupName()==enfgname):
             if ((not en) or (vsrandom.randrange(0,3)==0)):
                 en=un
         if (un.getFactionName()==faction and un.getFlightgroupName()==fgname):
             al=un
-        un=i.next()
+
     if (en and al):
         al.setFlightgroupLeader(al)
         al.SetTarget(en)
@@ -371,6 +393,8 @@ def TargetEachOther (fgname,faction,enfgname,enfaction):
         en.setFlightgroupLeader(en)
         en.SetTarget(al)
         en.setFgDirective ('h')#help me out here!
+
+
 ejectbuildup=0
 def KillOne (fg,fac,tn,num,enfg,enfac):
     sys = fg_util.FGSystem(fg,fac)
@@ -380,17 +404,18 @@ def KillOne (fg,fac,tn,num,enfg,enfac):
     if (ejectbuildup>=(1-chancetoeject)**numkilled):
         global rescuelist
         rescuelist[sys]=(fac,enfg,enfac)
-        #print rescuelist[sys]
+        #debug.debug(rescuelist[sys])
         ejectbuildup=0
     else:
         ejectbuildup+=chancetoeject
     return numkilled
 
+
 def HowMuchDamage (shiptypes,defenseroll):
     dam=0
     for i in shiptypes:
         stats=faction_ships.GetStats(i[0])
-        #print str(stats[0])+ ' needs above '+str(defenseroll)
+        #debug.debug(str(stats[0])+ ' needs above '+str(defenseroll))
         if (vsrandom.uniform(0,stats[0])>defenseroll):
             dam+=stats[2]*i[1] #guns
         if (len(stats)>3):
@@ -398,15 +423,17 @@ def HowMuchDamage (shiptypes,defenseroll):
                 dam+=stats[3]*i[1] #missiles
     return dam
 
+
 def ApplyDamage (fg,fac,shiptypes,rnum,stats,damage,enfg,enfac):
     dampool=fg_util.GetDamageInFGPool(fg,fac)
     tmpdam=damage+int(dampool/len(shiptypes))
     numshipstokill=int(tmpdam/stats[3])
     if (numshipstokill):
-        #print enfg+'f:'+enfac+' killing '+str(numshipstokill)+ ' from the '+fac+' '+fg
+        #debug.debug(enfg+'f:'+enfac+' killing '+str(numshipstokill)+ ' from the '+fac+' '+fg)
         damage -= KillOne(fg,fac,shiptypes[rnum],numshipstokill,enfg,enfac)*stats[3]#returns how many ships killed
     if (damage!=0):
         fg_util.SetDamageInFGPool(fg,fac,dampool+damage)
+
 
 def SimulatedDukeItOut (fgname,faction,enfgname,enfaction):
     ally=fg_util.LandedShipsInFG(fgname,faction)
@@ -418,26 +445,33 @@ def SimulatedDukeItOut (fgname,faction,enfgname,enfaction):
         enstats = faction_ships.GetStats(enemy[envictim][0])
         endam = HowMuchDamage(enemy,vsrandom.uniform(0,allystats[1]))
         if (enfgname==fgname and enfaction==faction):
-            print "FAULT FAULT FAULT"
+            debug.error("FAULT FAULT FAULT")
         ApplyDamage(enfgname,enfaction,enemy,envictim,enstats,HowMuchDamage(ally,vsrandom.uniform(0,enstats[1])),fgname,faction)
         ApplyDamage(fgname,faction,ally,allyvictim,allystats,endam,enfgname,enfaction)
+
+
 def numShips(i):
     if (faction_ships.isCapital(i[0])):
         return i[1]*10
     return i[1]
+
+
 def countTn (l):
     count=0
     for i in l:
         count+=numShips(i)
     return count
+
+
 def findLaunchedShipInFGInSystem (fgname,faction):
     uni = VS.getUnitList()
-    un=uni.current()
     while (not uni.isDone()):
-        if un:
-            if (un.getFlightgroupName()==fgname and un.getFactionName()==faction):
-                return un
-        un= uni.next()
+        #debug.debug("uni.next()")
+        un = uni.next()
+        if (un.getFlightgroupName() == fgname and un.getFactionName() == faction):
+            return un
+
+
 def LaunchMoreShips(fgname,faction,landedtn,nums):
     shiplaunchlist=[]
     while nums>0 and len(landedtn)>0:
@@ -460,9 +494,7 @@ def LaunchMoreShips(fgname,faction,landedtn,nums):
 
 
 def LaunchEqualShips (fgname, faction, enfgname, enfaction):
-    print "DYNAMO"
-    print "DYNAMO"
-    print "DYNAMO"
+    debug.info("DYNAMO x3")
     land=fg_util.LandedShipsInFG(fgname,faction)
     launch=fg_util.ShipsInFG(fgname,faction)
     enland=fg_util.LandedShipsInFG(enfgname,enfaction)
@@ -478,6 +510,7 @@ def LaunchEqualShips (fgname, faction, enfgname, enfaction):
     else:
         LaunchMoreShips (enfgname,enfaction,enland,int((numenland*numlaunch/numland)-numenlaunch))
 
+
 def stopAttack (fgname,faction):
     ally=(fgname,faction)
     if ally in attacklist:
@@ -489,6 +522,7 @@ def stopAttack (fgname,faction):
             VS.popSystem()
         del defendlist[(enemy[0],enemy[1])]
         del attacklist[ally]
+
 
 reportbegin=0
 def initiateAttack (fgname,faction,sys,enfgname,enfaction):
@@ -518,6 +552,7 @@ def initiateAttack (fgname,faction,sys,enfgname,enfaction):
         attacklist[fg]=(efg[0],efg[1],iscap)
         defendlist[efg]=(fg[0],fg[1],iscap)
 
+
 #only works for FG's that are not the base FG...the base FG cannot initiate attacks as far as I know.
 #though initiateAttack switches them around appropriately
 def attackFlightgroup (fgname, faction, enfgname, enfaction,iscap):
@@ -537,7 +572,7 @@ def attackFlightgroup (fgname, faction, enfgname, enfaction,iscap):
             LaunchEqualShips (fgname,faction,enfgname,enfaction)
             VS.TargetEachOther (fgname,faction,enfgname,enfaction)
             VS.popSystem()
-        #print 'duke '+fgname + ' '+enfgname
+        #debug.debug('duke '+fgname + ' '+enfgname)
         SimulatedDukeItOut (fgname,faction,enfgname,enfaction)
     elif (sys!='nil' and ensys!='nil'):
         #pursue other flightgroup
@@ -548,7 +583,8 @@ def attackFlightgroup (fgname, faction, enfgname, enfaction,iscap):
         else:
             return 0
     else:
-        return 0 #print 'nil DRAW error'
+        #debug.error('nil DRAW error')
+        return 0
     if (fg_util.NumShipsInFG(fgname,faction)==0):
         if (fg_util.NumShipsInFG(enfgname,enfaction)==0):
             dnewsman_.writeDynamicString([str(Director.getSaveData(0,"stardate",0)),battlename,dnewsman_.STAGE_END,faction,enfaction,dnewsman_.SUCCESS_DRAW,str(getImportanceOfSystem(sys)),sys,dnewsman_.KEYWORD_DEFAULT,fgname,leader,enfgname,enleader])

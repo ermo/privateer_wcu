@@ -1,16 +1,20 @@
-import VS
 import Director
-import fg_util
-import vsrandom
-import faction_ships
-import universe
-import dynamic_universe
+import VS
+import debug
 import dynamic_news
+import dynamic_universe
+import faction_ships
+import fg_util
+import universe
+import vsrandom
+
+
 global dnewsman_
 dnewsman_ = dynamic_news.NewsManager()
 baseship=None
 plr=0
 basefac='neutral'
+
 def formatShip(ship):
     where=ship.find(".blank")
     if (where!=-1):
@@ -25,10 +29,10 @@ def formatCargoCategory(ship):
 
 #Credit to Peter Trethewey, master of python and all things nefarious
 def getSystemsKAwayNoFaction( start, k ):
-    set = [start]#set of systems that have been visited
-    pathset = [[start]]#parallel data structure to set, but with paths
-    pathtor = [[start]]#parallel data structure to raw return systems with path
-    r = [start] #raw data structure containing systems n away where n<=k
+    set = [start]  #set of systems that have been visited
+    pathset = [[start]]  #parallel data structure to set, but with paths
+    pathtor = [[start]]  #parallel data structure to raw return systems with path
+    r = [start]  #raw data structure containing systems n away where n<=k
     for n in range(0,k):
         set.extend(r)
         pathset.extend(pathtor)
@@ -65,7 +69,7 @@ syscreds=750
 
 def GetRandomCompanyName():
     bnl=[]
-    print 'reading company names '
+    debug.info('reading company names')
     filename = '../universe/companies.txt'
     try:
         f = open (filename,'r')
@@ -78,11 +82,11 @@ def GetRandomCompanyName():
     import vsrandom
     idx = vsrandom.randint(0,len(bnl)-1)
     return bnl[idx]
-    
+
 def GetRandomCargoBrief():
     bnl=[]
     brief=''
-    print 'generating cargo briefing'
+    debug.info('generating cargo briefing')
     filename = '../universe/cargo_brief.txt'
     try:
         f = open (filename,'r')
@@ -92,11 +96,10 @@ def GetRandomCargoBrief():
         return ''
     for i in range(len(bnl)):
         bnl[i]=bnl[i].rstrip()
-    import vsrandom
     idx = vsrandom.randint(0,len(bnl)-1)
     brief = bnl[idx]
     return brief
-    
+
 def getCargoName(category):
     l=category.split('/')
     if len(l)>1:
@@ -105,7 +108,6 @@ def getCargoName(category):
         cargo = category
     cargo = cargo.replace('_',' ')
     return cargo
-
 
 def getMissionDifficulty ():
     import difficulty
@@ -138,7 +140,7 @@ def processSystem(sys):
     else:
         k=k[0]
     return k
-totalMissionNumber=0
+
 insysMissionNumber=0
 def checkInsysNum():
     global insysMissionNumber
@@ -146,16 +148,20 @@ def checkInsysNum():
         insysMissionNumber=0
         return True
     return False
+
+totalMissionNumber=0
 def checkMissionNum():
     global totalMissionNumber
     if totalMissionNumber:
         totalMissionNumber=0
         return True
     return False
+
 def checkCreatedMission():
     if (checkMissionNum()+checkInsysNum()>0):
         return True
     return False
+
 def isFixerString(s):
     k=str(s)
     if (len(k)<2):
@@ -165,6 +171,7 @@ def isFixerString(s):
     if (k[1]=='G'):
         return 2
     return 0
+
 def writemissionname(name,path,isfixer):
     if (isfixer==0):
         if path[-1]==VS.getSystemFile():
@@ -176,16 +183,17 @@ def writemissionname(name,path,isfixer):
             totalMissionNumber+=1
     Director.pushSaveString(plr, "mission_names", name)
 
-    
 def writedescription(name):
     Director.pushSaveString(plr, "mission_descriptions", name.replace("_"," "))
+
 def writemissionsavegame (name):
     Director.pushSaveString(plr, "mission_scripts", name)
+
 def eraseExtras():
     import sys
     len=Director.getSaveStringLength(plr, "mission_scripts")
     if (len!=Director.getSaveStringLength(plr, "mission_names") or len!=Director.getSaveStringLength(plr, "mission_descriptions")):
-        sys.stdout.write("Warning: Number of mission descs., names and scripts are unequal.\n")
+        debug.info("Warning: Number of mission descs., names and scripts are unequal.\n")
     if len>0:
         for i in range(len-1,-1,-1):
             Director.eraseSaveString(plr, "mission_scripts", i)
@@ -199,6 +207,7 @@ def restoreFixerPct():
     global guildpct
     fixerpct=.0625
     guildpct=.4
+
 def mungeFixerPct():
     global fixerpct
     global guildpct
@@ -239,13 +248,12 @@ def generateCleansweepMission(path,numplanets,enemy):
         additionalinstructions+="  Eliminate all such forces encountered to receive payment."
     if (capshipprob):
         additionalinstructions+="  Capital ships possibly in the area."
-
     writemissionsavegame (addstr+"import %s\ntemp=%s.%s(0, %d, %d, %d, %s,'',%d,%d,%f,%f,'%s',%d%s)\ntemp=0\n"%(missiontype,missiontype,missiontype,numplanets, dist, creds, str(path),minships,maxships,fighterprob,capshipprob,enemy,forceattack,additional))
     writedescription("Authorities would like a detailed scan of the %s system. We require %d nav locations be visited on the scanning route.  The pay for this mission is %d. Encounters with %s forces likely.%s"%(processSystem(path[-1]),numplanets,creds,enemy,additionalinstructions))
     ispoint="s"
     if numplanets==1:
         ispoint=""
-    writemissionname("%s/%s_%d_Point%s_in_%s"%(patrolorclean,patrolorclean,numplanets,ispoint, processSystem(path[-1])),path,isFixerString(addstr))   
+    writemissionname("%s/%s_%d_Point%s_in_%s"%(patrolorclean,patrolorclean,numplanets,ispoint, processSystem(path[-1])),path,isFixerString(addstr))
 
 def generatePatrolMission (path, numplanets):
     dist=400
@@ -264,10 +272,11 @@ def generatePatrolMission (path, numplanets):
     ispoint="s"
     if numplanets==1:
         ispoint=""
-    writemissionname("Patrol/Patrol_%d_Point%s_in_%s"%(numplanets,ispoint, processSystem(path[-1])),path,isFixerString(addstr))   
+    writemissionname("Patrol/Patrol_%d_Point%s_in_%s"%(numplanets,ispoint, processSystem(path[-1])),path,isFixerString(addstr))
 
 def isNotWorthy(fac):
     return VS.GetRelation(fac,VS.getPlayer().getFactionName())<0
+
 def generateEscortLocal(path,fg,fac):
     if (isNotWorthy(fac)):
         return
@@ -288,7 +297,7 @@ def generateEscortLocal(path,fg,fac):
     addstr=""
     if isFixer<fixerpct:
         creds*=2
-        addstr+="#F#bases/fixers/merchant.spr#Talk to the Merchant#Thank you. I entrust that you will safely guide my collegue until he reaches the destination.#\n"
+        addstr+="#F#bases/fixers/merchant.spr#Talk to the Merchant#Thank you. I trust that you will safely guide my colleague until he reaches the destination.#\n"
     elif isFixer<guildpct:
         creds*=1.5
         addstr+="#G#Escort#\n"
@@ -306,7 +315,7 @@ def generateEscortMission (path,fg,fac):
     typ = fg_util.RandomShipIn(fg,fac)
     if typ in faction_ships.unescortable:
         return
-    diff=vsrandom.randrange(0,6)    
+    diff=vsrandom.randrange(0,6)
     creds=500*diff+1.2*syscreds*len(path)
     creds*=getPriceModifier(False)
     addstr=""
@@ -319,7 +328,7 @@ def generateEscortMission (path,fg,fac):
         addstr+="#G#Escort#\n"
     writemissionsavegame (addstr+"import escort_mission\ntemp=escort_mission.initrandom('%s', %d, %g, 0, 0, %s, '','%s','%s')\ntemp=0\n"%(fac, diff, float(creds), str(path),fg,typ))
     writedescription("The %s %s in the %s flightgroup requres an escort to %s. The reward for a successful escort is %d credits."%(fac,formatShip(typ),fg, processSystem(path[-1]),creds))
-    writemissionname("Escort/Escort_%s_%s_to_%s"%(fac,fg,processSystem(path[-1])),path,isFixerString(addstr))     
+    writemissionname("Escort/Escort_%s_%s_to_%s"%(fac,fg,processSystem(path[-1])),path,isFixerString(addstr))
 
 def changecat(category):
     l=category.split('/')
@@ -346,15 +355,17 @@ def pathWarning(path,isFixer):
             message+="following factions: "
             jj=0
             for fac in factions:
-                jj+=1               
+                jj+=1
                 message+=dnewsman_.data.getFactionData(fac,'full')[0]
                 if jj<len(factions)-1:
                     message+=", "
                 elif jj<len(factions):
                     message+=" and "
     return message
+
 def adjustQuantityDifficulty(max):
    return 3+int((max-3)*VS.GetDifficulty())
+
 def isHabitable (system):
     planetlist=VS.GetGalaxyProperty(system,"planets")
     if (len(planetlist)==0):
@@ -363,11 +374,12 @@ def isHabitable (system):
     for planet in planets:
         if planet=="i" or planet=="a" or planet=="am" or planet=="u" or planet=="com" or planet=="bd" or planet=="s" or planet=="o" or planet=="at" or planet=="bs" or planet=="bdm" or planet=="bsm" or planet=="f" or planet=="fm" or planet=="t":
             return True
-    print str(planets)+ " Not in Habitable List"
+    debug.info(str(planets)+ " Not in Habitable List")
     return False
+
 def generateCargoMission (path, numcargos,category, fac):
     #if (isNotWorthy(fac)):
-    #    return  
+    #    return
     launchcap=(vsrandom.random()>=.97)
     if (not launchcap) and not isHabitable(path[-1]):
         return
@@ -389,7 +401,7 @@ def generateCargoMission (path, numcargos,category, fac):
     if (randCompany==''):
         strStart = "We need to deliver some "
     else:
-          strStart = randCompany+" seeks delivery of "        
+          strStart = randCompany+" seeks delivery of "
     brief = GetRandomCargoBrief()
     if (brief<>''):
         composedBrief = brief.replace('$CL',randCompany)
@@ -422,7 +434,6 @@ def generateBountyMission (path,fg,fac):
     creds=1200+1000*runaway+450*diff+syscreds*len(path)
     if (cap):
         creds*=4
-
     finalprice=creds+syscreds*len(path)
     finalprice*=getPriceModifier(False)
     addstr=""
@@ -450,7 +461,7 @@ def generateDefendMission (path,defendfg,defendfac, attackfg,attackfac):
     if (isNotWorthy(defendfac)):
         return
     #defendtyp = fg_util.RandomShipIn(defendfg,defendfac)
-    attacktyp = fg_util.RandomShipIn(attackfg,attackfac)                    
+    attacktyp = fg_util.RandomShipIn(attackfg,attackfac)
     isbase=fg_util.BaseFGInSystemName(path[-1])==defendfg
     creds=1200
     minq = 1
@@ -478,7 +489,6 @@ def generateDefendMission (path,defendfg,defendfac, attackfg,attackfac):
     writedescription("A %s assault wing named %s has jumped in and is moving for an attack on one of our %sassets in the %s system.\nYour task is to eradicate them before they eliminate our starship.\nIntelligence shows that they have %d starships of type %s. Your reward is %d credits."%(attackfac, attackfg, iscapitol, processSystem(path[-1]),quantity, formatShip(attacktyp),creds))
     writemissionname("Defend/Defend_%s_from_%s"%(defendfac, attackfac),path,isFixerString(addstr))
 
-
 def generateWingmanMission(fg, faction):
     numships=vsrandom.randrange(1,4)
     creds=10000+15000*numships
@@ -492,8 +502,7 @@ def generateWingmanMission(fg, faction):
         are="are"
     writedescription(s+" in the %s faction %s willing to help you out and fight with you as long as you pay %d credits."%(faction, are, creds))
     writemissionname("Wingmen/Hire_%d_%s_Wingm%sn"%(numships,faction,EorA),[VS.getSystemFile()],0)
-    
-    
+
 def GetFactionToDefend(thisfaction, fac, cursys):
     m = fg_util.FGsInSystem ("merchant",cursys)
     nummerchant=len(m)
@@ -543,7 +552,7 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                 if (VS.GetRelation(fac,k[1][1])>=0):
                     if ((j[-1]==VS.getSystemFile() and num_idefend<=0) or (j[-1]!=VS.getSystemFile() and num_defend<=0)):
                         mungeFixerPct()
-                        print "Munged"
+                        debug.info("Munged")
                     else:
                         nodefend=0
                     generateDefendMission(j,k[1][0],k[1][1],k[0][0],k[0][1])
@@ -552,7 +561,7 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                         num_idefend-=1
                     if checkMissionNum():
                         num_defend-=1
-                    print "Generated defendX with insys at: "+str(num_idefend)+" and outsys at "+str (num_defend)
+                    debug.info("Generated defendX with insys at: "+str(num_idefend)+" and outsys at "+str (num_defend))
             (m,nummerchant,numthisfac)=GetFactionToDefend(thisfaction, fac, j[-1])
 
             if preferredfaction:
@@ -580,7 +589,7 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                                         num_idefend-=1
                                     if checkMissionNum():
                                         num_defend-=1
-                                    print "Generated defendY with insys at: "+str(num_idefend)+" and outsys at "+str (num_defend)
+                                    debug.info("Generated defendY with insys at: "+str(num_idefend)+" and outsys at "+str (num_defend))
                                 nodefend=0
                             elif ((i==0 or vsrandom.random()<.5)):
                                 if ((j[-1]==VS.getSystemFile() and num_ibounty<=0) or (j[-1]!=VS.getSystemFile() and num_bounty<=0)):
@@ -588,14 +597,12 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                                 generateBountyMission(j,mm,k)
                                 restoreFixerPct()
                                 if checkInsysNum():
-                                    print " decrementing INSYS bounty to "+str(num_ibounty)
+                                    debug.info(" decrementing INSYS bounty to "+str(num_ibounty))
                                     num_ibounty-=1
                                 if checkMissionNum():
-                                    print " decrementing bounty to "+str(num_bounty)
+                                    debug.info(" decrementing bounty to "+str(num_bounty))
                                     num_bounty-=1
-
-
-
+            #
             mincount=-2
             if i==0:
                 mincount=1
@@ -617,10 +624,8 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                         num_ipatrol-=1
                     if checkMissionNum():
                         num_patrol-=1
-                        
                 else:   # 50% - Cargo mission
                     numcargos=vsrandom.randrange(1,25)
-
                     playership=VS.getPlayer().getName()
                     try:
                         hold=int(VS.LookupUnitStat(playership,"privateer","Hold_Volume"))
@@ -631,7 +636,6 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                     if hold > 32000:
                         hold = 32000
                     numcargos=vsrandom.randrange(hold/5, hold/2)
-
                     if numcargos < 20:
                         numcargos=vsrandom.randrange(hold/2, hold)
                     category=''
@@ -642,7 +646,7 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                             carg=VS.getRandCargo(numcargos,category)
                             category=carg.GetCategory()
                             if (category[:9] != 'Fragments' and category[:10]!='Contraband' and category.find('upgrades')!=0 and (category.find('starships')!=0 or rnd>.999)):
-                                break 
+                                break
                             if (myiter!=99):
                                 category=''
                         if baseship:
@@ -651,16 +655,14 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                             if baseship.isPlanet():
                                 faction="planets"
                                 name=baseship.getFullname()
-                            print "TRADING"
+                            debug.info("TRADING")
                             import trading
-                            print name
-                            print faction
+                            debug.info("name: %s, faction: %s" % (name, faction))
                             exports=trading.getNoStarshipExports(name,faction,20)
-                            print exports
+                            debug.info("exports: %s" % (exports))
                             if (category.find("assengers")==-1 and len(exports)):
                                 category=exports[vsrandom.randrange(0,len(exports))][0]
-
-#                    print "CATEGORY OK "+category
+                    #debug.debug("CATEGORY OK "+category)
                     generateCargoMission(j,numcargos,category,fac)
                 numescort = vsrandom.randrange(0,2)
                 if (numescort>len(m)):
@@ -689,16 +691,15 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                                 mungeFixerPct()
                             generateEscortLocal(j,k,f)
                             restoreFixerPct()
-                            if checkCreatedMission():                    
+                            if checkCreatedMission():
                                 num_iescort-=1
                     else:
                         if num_escort<=0:
                             mungeFixerPct()
                         generateEscortMission(j,k,f)
                         restoreFixerPct()
-                        if checkCreatedMission():                    
+                        if checkCreatedMission():
                             num_escort-=1
-
                     count+=1
 
 def CreateMissions(minsys=0,maxsys=4):

@@ -1,4 +1,6 @@
 import VS
+import debug
+
 def isLandable (un):
     if (un):
         me = VS.getPlayer()
@@ -77,34 +79,37 @@ def getSignificant (whichsignificant, landable_only, capship_only):
 
   #this one terminates if fewer than so many planets exist with null
 
-def inSystem (unit):
-    i=VS.getUnitList ()
+def inSystem(unit):
+    i = VS.getUnitList ()
     while (not i.isDone()):
-        if (i.current()==unit):
+        #debug.debug("i.next()")
+        un = i.next()
+        if (un == unit):
             return 1
-        i.advance()
     return 0
-def getPlanet (whichsignificant, sig):
-    un=VS.Unit()
-    signum=0
+
+def getPlanet(whichsignificant, sig):
+    signum = 0
     i = VS.getUnitList()
-    while (signum<=whichsignificant):
-        un=i.current()
+    #debug.debug("VS.Unit() #1")
+    un = VS.Unit()
+    #un = None
+    while (signum <= whichsignificant):
+        if i.isDone():
+            break
+        #debug.debug("i.next() #2")
+        un = i.next()
         if (un):
             if(sig):
-                if (un.isSignificant ()):
-                    signum=signum+1
+                if un.isSignificant():
+                    signum = signum + 1
             else:
-                if (un.isPlanet ()):
-                    signum=signum+1
-            i.advance()
-        elif (i.isDone()):
-            break
-        else:
-            i.advance()
+                if un.isPlanet():
+                    signum = signum + 1
     return un
 
 def getJumpPoint(whichsignificant):
+    #debug.debug("VS.Unit() #2")
     un=VS.Unit()
     which=0
     signum=0
@@ -124,6 +129,7 @@ def getJumpPoint(whichsignificant):
 def obsolete_getNearestEnemy(my_unit,range):
     ship_nr=0
     min_dist=9999999.0
+    #debug.debug("VS.Unit() #3")
     min_enemy=VS.Unit()
     un=VS.getUnit(ship_nr)
     while(unit):
@@ -200,6 +206,7 @@ def getUnitByName (name):
 
 def getUnitByFgIDFromNumber(fgid, ship_nr):
     unit=VS.getUnit(ship_nr)
+    #debug.debug("VS.Unit() #4")
     found_unit=VS.Unit()
     while(unit and not found_unit):
         unit_fgid=unit.getFgID()

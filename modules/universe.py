@@ -4,12 +4,14 @@
 ##old_system=""
 ##system_map={}
 ##outstr=""
-
-import VS
-import vsrandom
-import faction_ships
 import Director
+import VS
+import debug
+import faction_ships
 import launch
+import vsrandom
+
+
 def catInCatList (cat,catlist):
     for i in catlist:
         loc =cat.find (i)
@@ -91,6 +93,7 @@ def getRandomJumppoint():
     if (size>0):
         return jp_list[vsrandom.randrange(0,size)]
     else:
+        #debug.debug("VS.Unit()")
         return VS.Unit()
 
 def getJumppointList():
@@ -130,13 +133,13 @@ def _tmpint(str,default):
 
 def significantUnits():
     uni = VS.getUnitList()
-    un = uni.current()
     ret = []
     while (not uni.isDone()):
+        #debug.debug("uni.next() #1")
+        un = uni.next()
         if (un):
             if (un.isSignificant()):
                 ret += [un]
-        un = uni.next()
     return ret
 
 def GetNumSignificantsForSystem (cursys):
@@ -232,11 +235,13 @@ def greet(greetingText, enemy=None, you=None, friendly=None):
 
 def getDockedBase():
     uni = VS.getUnitList()
+    un = None
     while (not uni.isDone()):
-        if VS.getPlayer().isDocked(uni.current()) or uni.current().isDocked(VS.getPlayer()):
-            return uni.current()
-        uni.advance()
-    return uni.current()
+        #debug.debug("uni.next() #2")
+        un = uni.next()
+        if VS.getPlayer().isDocked(un) or un.isDocked(VS.getPlayer()):
+            return un
+    return un
 
 def getDockedBaseName():
     un = getDockedBase()

@@ -1,11 +1,14 @@
+import Briefing
+import VS
+import debug
+import faction_ships
+import launch
+import launch_recycle
 import unit
 import universe
-import VS
-import faction_ships
 import vsrandom
-import launch
-import Briefing
-import launch_recycle
+
+
 def moveUnitTo(un,place,radius):
     where=place.LocalPosition()
     print "moving "+un.getName() +" to "+place.getName()
@@ -16,6 +19,8 @@ def moveUnitTo(un,place,radius):
     where=(where[0]+un.rSize()+prsize+radius,where[1],where[2]);
     un.SetPosition(VS.SafeEntrancePoint(where,un.rSize()))
     return un
+
+
 class go_somewhere_significant:
 # frameoffset=0 #see note at bottom
 # begsigdis=1.0 #same note
@@ -36,6 +41,7 @@ class go_somewhere_significant:
         self.you = you
         self.arrivedarea=0
         self.distfrombase=distance_away_to_trigger+100
+        #debug.debug("VS.Unit()")
         significant=VS.Unit()
         aroundthe=""
         self.sysfil=VS.getSystemFile()

@@ -1,8 +1,9 @@
-import vsrandom
-import unit
-import launch
 import VS
 import faction_ships
+import launch
+import unit
+import vsrandom
+
 
 def NextPos (un, pos):
     rad=un.rSize ()
@@ -15,6 +16,7 @@ def NextPos (un, pos):
   
 def move_to (un, where):
     un.SetPosition(where)
+    #debug.debug("VS.Unit()")
     un.SetTarget (VS.Unit())
     return NextPos (un,where)
   

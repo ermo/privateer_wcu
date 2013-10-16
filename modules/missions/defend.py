@@ -1,15 +1,22 @@
-from go_to_adjacent_systems import *
-from go_somewhere_significant import *
-import vsrandom
-import launch
-import faction_ships
-import VS
 import Briefing
+import Director
+import VS
+import debug
+import faction_ships
+import launch
+import quest
 import universe
 import unit
-import Director
-import quest
+import vsrandom
+from go_to_adjacent_systems import *
+from go_somewhere_significant import *
+
+
 class defend (Director.Mission):
+    """ Defend a base and/or a flightgroup from enemies and earn a reward.
+
+        On mission failure, deduct credits from the player's account.
+    """
     def __init__ (self, factionname, numsystemsaway, enemyquantity, distance_from_base, escape_distance, creds, defendthis, defend_base, protectivefactionname='', jumps=(), var_to_set='', dynamic_attack_fg='', dynamic_type='', dynamic_defend_fg='', waves=0, greetingText=['We will defeat your assets in this battle, privateer...','Have no doubt!']):
         Director.Mission.__init__(self)
         self.dedicatedattack=vsrandom.randrange(0,2)
@@ -49,9 +56,11 @@ class defend (Director.Mission):
         VS.IOmessage (0,"defend",self.mplay,"%s: Your mission is as follows:" % name)
         self.adjsys.Print("You are in the %s system,","Proceed swiftly to %s.","Your arrival point is %s.","defend",1)
         VS.IOmessage (2,"defend",self.mplay,"And there eliminate any %s starships." % self.faction)
+
     def SetVarValue (self,value):
         if (self.var_to_set!=''):
             quest.removeQuest (self.you.isPlayerStarship(),self.var_to_set,value)
+
     def SuccessMission (self):
         self.you.addCredits (self.cred)
         VS.AdjustRelation(self.you.getFactionName(),self.faction,.03,1)
@@ -60,6 +69,7 @@ class defend (Director.Mission):
         if (self.cred>0):
             VS.IOmessage(0,"defend",self.mplay,"[Computer] Bank account has been credited as agreed.")
         VS.terminateMission(1)
+
     def FailMission (self):
         self.you.addCredits (-self.cred)
         VS.AdjustRelation(self.you.getFactionName(),self.faction,-.02,1)
@@ -68,13 +78,13 @@ class defend (Director.Mission):
         VS.IOmessage (0,"defend",self.mplay,"[Computer] Mission failed!")
         VS.IOmessage (1,"defend",self.mplay,"[Computer] Bank has been informed of failure to assist asset. They have removed a number of your credits as a penalty to help pay target insurance.")
         VS.terminateMission(0)
+
     def NoEnemiesInArea (self,jp):
         if (self.adjsys.DestinationSystem()!=VS.getSystemFile()):
             return 0
         if (self.ship_check_count>=len(self.attackers)):
             VS.setCompleteness(self.objective,1.0)
             return 1
-
         un= self.attackers[self.ship_check_count]
         self.ship_check_count+=1
         if (un.isNull() or (un.GetHullPercent()<.7 and self.defendee.getDistance(un)>7000)):
@@ -83,14 +93,14 @@ class defend (Director.Mission):
             VS.setObjective(self.objective,"Destroy the %s"%un.getName())
             self.ship_check_count=0
         return 0
-        
+
     def GenerateEnemies (self,jp,you):
         VS.IOmessage (0,"escort mission",self.mplay,"You must protect %s." % jp.getName ())
         count=0
         VS.addObjective ("Protect %s %s from %s" % (jp.getFullname(), jp.getName(),self.faction.capitalize()))
         self.objective = VS.addObjective ("Destroy All %s Hostiles" % self.faction)
         VS.setCompleteness(self.objective,0.0)
-        print "quantity "+str(self.quantity)
+        debug.debug("quantity "+str(self.quantity))
         while (count<self.quantity):
             L = launch.Launch()
             if self.dynatkfg == "":
@@ -130,12 +140,11 @@ class defend (Director.Mission):
             count+=1
         if (self.respawn==0 and len(self.attackers)>0):
             self.respawn=1
-            import universe
             universe.greet(self.greetingText,self.attackers[0],you, self.dyndeffg)
         else:
             VS.IOmessage (0,"escort mission",self.mplay,"Eliminate all %s ships here" % self.faction)
-
         self.quantity=0
+
     def Execute (self):
         if (self.you.isNull() or (self.arrived and self.defendee.isNull())):
             VS.IOmessage (0,"defend",self.mplay,"#ff0000You were unable to arrive in time to help. Mission failed.")
@@ -187,13 +196,17 @@ class defend (Director.Mission):
                         self.waves-=1
                     else:
                         self.SuccessMission()
+
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("defend ending briefing")
+
     def loopbriefing(self):
-        print "loop briefing"
+        debug.info("defend loop briefing")
         Briefing.terminate()
+
     def endbriefing(self):
-        print "ending briefing"
+        debug.debug("defend ending briefing")
+
 
 def initrandom(factionname,numsysaway,minenquant,maxenquant,credperen,defendit,defend_base,p_faction='',jumps=(),var_to_set=''):
     enq=minenquant
