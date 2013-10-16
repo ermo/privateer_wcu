@@ -158,14 +158,14 @@ class bounty (Director.Mission):
                     debug.info("Location is "+str(self.displayLocation))
                     VS.IOmessage (4,"bounty mission",self.mplay,"[Computer] Mission description indicates bounty target may be in this system.")
     def initbriefing(self):
-        debug.info"init bounty briefing")
+        debug.info("init bounty briefing")
 
     def loopbriefing(self):
-        print "loop bounty briefing"
-        Briefing.terminate();
+        debug.info("loop bounty briefing")
+        Briefing.terminate()
 
     def endbriefing(self):
-        print "ending bounty briefing"
+        debug.info("ending bounty briefing")
 
 def initrandom (minns, maxns, credsmin, credsmax, run_away, minshipdifficulty, maxshipdifficulty,jumps=(),var_to_set=''):
     you=VS.getPlayer()
