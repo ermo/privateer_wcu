@@ -1,6 +1,34 @@
+"""
+    It is important to build in some intelligence in the ship upgrade
+    process.  Otherwise, ships will become overpowered very quickly.
+
+    The goal is to maintain a relatively 'fast and fun' type of gameplay.
+
+    This outlines the class of upgrades which will be available to
+    various ships.
+
+    rabble = no ECM, no extra armor, no extra shields, weaker weapons, (Troy at the beginning)
+    normal = no ECM, no extra armor, no extra shields, normal weapons
+    experienced = ECM Level 1, plasteel armor, no extra shields, normal weapons, possibility of lowest repair bot
+    hardcore = ECM Level 2, tungsten armor, no extra shields, normal weapons, possibility of up to 2nd lowest repair bot
+
+    So essentially, survivability (and therefore damage dealt over time)
+    of the opponents goes up as difficulty level increases.
+
+    Ships ordered after reactor level for the non-blank version in question:
+
+    light_1 = ["tarsus", "fireblade"]
+    light_2 = ["dralthi", "salthi", "demon", "gladius", "talon", "tarsusMk2", "sparrowhawk", "hornet", "hornetCVL", "sartha", "ferret", "ferretCVL"]
+    medium_3 = ["galaxy", "kukhri", "krant", "scimitar", ]
+    medium_4 = ["gothri", "centurion", "galaxyhk", "raptor", "sabre" ]
+    heavy_5 = ["broadsword", "orion", "orionMk2", "orionMk2b", "orionMk2H", "grikath"]
+    heavy_6 = ["galaxygs", ]
+    capship = ["kamekh", "paradigm", "freetrader"]
+
+"""
 import VS
-import vsrandom
 import debug
+import vsrandom
 
 
 def GetDiffInt(diff):
@@ -23,10 +51,10 @@ def GetDiffInt(diff):
 
 def GetDiffCargo(diff, base_category, all_category, use_all, dont_use_all=0):
     """ This function makes a string based on the difficulty.
-    
-        In this way it can be restricted to light or medium mounts 
+
+        In this way it can be restricted to light or medium mounts
         when the difficulty is low, avoiding unaffordable weapons
-        
+
     """
     cat = all_category
     ch = dont_use_all
@@ -52,18 +80,19 @@ def GetDiffCargo(diff, base_category, all_category, use_all, dont_use_all=0):
 
 def getItem(cat, parentcat=None):
     """Get a random cargo item listed on the master part list"""
-    list = VS.getRandCargo(1, cat)  # try to get a cargo from said category
-    if (list.GetQuantity() <= 0):  # if no such cargo exists in this cateogry
+    cargo_item = VS.getRandCargo(1, cat)  # try to get a cargo from said category
+    if (cargo_item.GetQuantity() <= 0):  # if no such cargo exists in this cateogry
         if (parentcat is not None):
             debug.debug("UpgradeError: Can't find %s"
-                        "              -- using %s instead" % (cat, parentcat))
+                        " -- using %s instead" % (cat, parentcat))
             # get it from the parent category
-            list = VS.getRandCargo(1, parentcat)
-        if (list.GetQuantity() <= 0):  # otherwise get cargo from upgrades category
+            cargo_item = VS.getRandCargo(1, parentcat)
+        if (cargo_item.GetQuantity() <= 0):  # otherwise get cargo from upgrades category
             debug.debug("UpgradeError: terrible error lasers instead")
             # this always succeeds
-            list = VS.getRandCargo(1, "upgrades")
-    return list
+            cargo_item = VS.getRandCargo(1, "upgrades")
+    debug.debug("getItem: %s" % (cargo_item.GetContent()))
+    return cargo_item
 
 
 def GetRandomWeapon(diff):
@@ -76,7 +105,6 @@ def GetRandomWeapon(diff):
         cat = GetDiffCargo(diff, "upgrades/Weapons/Mounted_Guns_", "upgrades/Weapons", 1)
     debug.debug("Getting item: %s" % (str(cat)))
     item = getItem(cat, "upgrades/Weapons")
-    debug.debug("Got item: %s" % (str(item)))
     return item
 
 
@@ -102,7 +130,7 @@ def GetRandomShield(faces, type):
     if type == 0:
         return GetShieldLevelZero(faces)
     cat = "shield_%d_Level%d" % (faces, type)
-    debug.debug("Got Shield: %s" % (cat))    
+    debug.debug("Got Shield: %s" % (cat))
     return cat
 
 
@@ -110,7 +138,6 @@ def GetRandomAfterburner(diff):
     """Get a random afterburner from master part list"""
     cat = GetDiffCargo(diff, "upgrades/Engines/Engine_Enhancements_", "upgrades/Engines", 0, 1)
     item = getItem(cat, "upgrades/Engines")
-    debug.debug("Got Afterburner: %s" % (str(item)))
     return item
 
 
@@ -122,7 +149,7 @@ def getRandomRadar():
         item = "StarScanner_2545"
     elif (myint == 1):
         item = "Hawkeye_ZX-86"
-    debug.debug("Got Radar: %s" % (str(item)))
+    debug.debug("Got Radar: %s" % (item))
     return item
 
 
@@ -139,7 +166,7 @@ def UpgradeAfterburner(un, diff):
     while (i < diff*3.0):
         cat = GetRandomAfterburner(diff)
         temp = un.upgrade(cat.GetContent(), 0, 0, 1, 0)
-        debug.debug("Upgrading Afterburner %s percent %.3f" % (cat, temp))        
+        debug.debug("Upgrading Afterburner %s percent %.3f" % (cat.GetContent(), temp))
         i = i+1
 
 
@@ -170,40 +197,35 @@ def UpgradeEngine(un, diff):
             return True
     cat = GetShieldLevelZero(2)
     temp = un.upgrade(cat, 0, 0, 1, 0)
-    debug.debug("Upgrading Shield2 level 0... percent=%s" % (str(temp)))
+    debug.debug("Upgrading Shield2 level 0... percent=%s" % (temp))
     cat = GetShieldLevelZero(4)
     temp = un.upgrade(cat, 0, 0, 1, 0)
-    debug.debug("Upgrading Shield4 level 0... percent=%s" % (str(temp)))
+    debug.debug("Upgrading Shield4 level 0... percent=%s" % (temp))
     return False
 
 
 def GetRandomHull():
     item = getItem("upgrades/Hull_Upgrades")
-    debug.debug("Got Hull: %s" % (str(item)))
     return item
 
 
 def GetRandomTurret():
     item = getItem("upgrades/Weapons/Turrets", "upgrades/Weapons")
-    debug.debug("Got Turret: %s" % (str(item)))
     return item
 
 
 def GetRandomArmor():
     item = getItem("upgrades/Armor_Modification", "upgrades/Hull_Upgrades")
-    debug.debug("Got Armor: %s" % (str(item)))
     return item
 
 
 def GetRandomAmmo():
     item = getItem("upgrades/Ammunition/3pack", "upgrades/Ammunition")
-    debug.debug("Got Ammo: %s" % (str(item)))
     return item
 
 
 def GetRandomRepairSys():
     item = getItem("upgrades/Repair_Systems/Research", "upgrades/Repair_Systems")
-    debug.debug("Got Repair System: %s" % (str(item)))
     return item
 
 
@@ -235,11 +257,11 @@ def basicUnit(un, diff):
 
 def upgradeHelper(un, mycargo, curmount, creds, force, cycle):
     """This does the dirty work of the upgrade unit function.
-    
+
         Given the list that contains a piece of cargo, it upgrades it,
         subtracts the price, and slaps it on your ship,
         and returns the new number of creds the computer player has.
-        
+
         It may well be negative because we thought that these guys may
         go into debt or something
 
@@ -251,7 +273,7 @@ def upgradeHelper(un, mycargo, curmount, creds, force, cycle):
     else:
         str = mycargo.GetContent()  # otherwise our name is the GetQuantity() function
         newcreds = mycargo.GetPrice()  # and the price is the GetPrice() function
-        newcreds = newcreds*un.upgrade(str, curmount, curmount, force, cycle)
+        newcreds = newcreds * un.upgrade(str, curmount, curmount, force, cycle)
         creds = creds - newcreds  # we added some newcreds and subtracted them from credit ammt
     return creds  # return new creds
 
@@ -262,32 +284,37 @@ def upgradeUnit(un, diff):
     curmount = 0
     mycargo = VS.Cargo("", "", 0, 0, 0, 0)
     str = ""
+    debug.debug("Calling basicUnit(%s, %.2f)" % (un.getName(), float(diff)))
     basicUnit(un, diff)
+    debug.debug("'- basicUnit returned")
     mycargo = GetRandomHull()  # ok now we get some hull upgrades
     creds = upgradeHelper(un, mycargo, 0, creds, 1, 0)
     mycargo = GetRandomArmor()  # and some random armor
     creds = upgradeHelper(un, mycargo, 0, creds, 1, 0)
     inc = 0
-    rndnum = vsrandom.random()*2
+    rndnum = vsrandom.random() * 2
     if (rndnum < diff):
         # there is a small chance that you will get a repair system.
         mycargo = GetRandomRepairSys()
         creds = upgradeHelper(un, mycargo, 0, creds, 1, 0)
     turretz = un.getSubUnits()
     turretcount = 0
-    while (turretz.current()):
-        turretz.advance()
+    while (not turretz.isDone()):
         turretcount += 1
-    turretcount -= 1
+        turretz.advance()
+    #turretcount -= 1
+    debug.debug("Iterating through turrets...")
     for i in range(turretcount):
         for j in range(4):
             mycargo = GetRandomTurret()  # turrets as 3rd...
             creds = upgradeHelper(un, mycargo, i, creds, 0, 0)
+    debug.debug("'- Done iterating through turrets.")
     turretcount = diff*50
     if (turretcount > 24):
         turretcount = 24
     elif (turretcount < 3):
         turretcount = 3
+    debug.debug("Iterating through difficulty-based turretcount...")
     for i in range(int(turretcount)):
         for j in range(10):
             if (vsrandom.random() < 0.66):
@@ -300,3 +327,4 @@ def upgradeUnit(un, diff):
                 creds = upgradeHelper(un, mycargo, curmount, creds, 0, 1)  # we pass this in to the credits...and we only loop through all mounts if we're adding a weapon
                 break
         curmount += 1  # increase starting mounts hardpoint
+    debug.debug("'- Done interating through difficulty-based turretcount.")
