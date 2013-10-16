@@ -1,6 +1,7 @@
-from faction_ships_lists import *
-import vsrandom
 import VS
+import debug
+import vsrandom
+from faction_ships_lists import *
 
 def Precache():
     pass
@@ -24,64 +25,14 @@ def Precache():
 #               VS.precacheUnit(s,fac)
 #           i+=1
 
+
+BLANKIFY_FACTOR = 0.75
 def blankify(tup):
     ret=[]
     for i in tup:
-        ret.append(i*.75)
+        ret.append(i * BLANKIFY_FACTOR)
     return tuple(ret)
 
-for i in tuple(stattable.keys()):
-    stattable[i+".blank"]=blankify(stattable[i])
-
-def GetStats( name):
-    try:
-        return stattable[name]
-    except:
-        print 'cannot find '+name
-        return(.5,.5,1,1,1)
-
-capitols=capitals
-capitaldict={}
-for i in capitols:
-    for j in i:
-        capitaldict[j]=1
-for i in capitols:
-    for j in i:
-        capitaldict[j+'.blank']=1
-
-def isCapital(type):
-    return type in capitaldict
-
-basedict={}
-for i in bases:
-    for j in i:
-        basedict[j]=1
-
-def appendName(faction):
-    from difficulty import usingDifficulty
-    if(useBlank[faction]>vsrandom.random() and usingDifficulty()):
-        return ".blank"
-    else:
-        return ""
-
-def factionToInt(faction):
-    try:
-        return factiondict[faction]
-    except:
-        return 0
-    return 0
-
-def intToFaction(faction):
-    return factions[faction]
-
-def getMaxFactions():
-    return len(factions)
-
-def blankify(tup):
-    ret=[]
-    for i in tup:
-        ret.append(i*.75)
-    return tuple(ret)
 for i in tuple(stattable.keys()):
         stattable[i+".blank"]=blankify(stattable[i])
 
@@ -92,9 +43,8 @@ def GetStats(name):
     try:
         return stattable[name]
     except:
-        import VS
         shipclass = VS.LookupUnitStat(name,"default","Combat_Role")
-        print 'cannot find '+name+' in stattable, using defaults for class ' + shipclass +' - fix faction_ships_lists.py'
+        debug.info('cannot find '+name+' in stattable, using defaults for class ' + shipclass +' - fix faction_ships_lists.py')
         if((shipclass == "INTERCEPTOR") or (shipclass == "FIGHTER") or (shipclass == "SCAVENGER")):
              return(0.62,0.66,18,52.5,48)
         if(shipclass == "TROOP"):
@@ -131,14 +81,20 @@ for i in bases:
     for j in i:
         basedict[j]=1
 
-# allows for deciding when to use blanks, e.g. for semimilitary factions, confed would have 0 and, say, militia may have 0.33
+# allows for deciding when to use blanks, e.g. for semimilitary factions,
+# confed would have 0 and, say, militia may have 0.33
 
 def appendName(faction):
-    import vsrandom
     from difficulty import usingDifficulty
-    if((useBlank[faction] >= vsrandom.random()) and usingDifficulty()):
+    use_diff = usingDifficulty()
+    use_blank = useBlank[faction]
+    _random = vsrandom.random()
+    debug.debug("faction %s: use_blank = %d, _random = %.3f" % (intToFaction(faction), use_blank, _random))
+    if use_diff and use_blank >= _random:
+        debug.debug("'-> using .blank")
         return ".blank"
     else:
+        debug.debug("'-> NOT using .blank")
         return ""
 
 def factionToInt(faction):
@@ -156,7 +112,6 @@ def getMaxFactions():
 
 def get_X_of(mylist, index):
     x_list = mylist[index]
-    import vsrandom
     newindex = vsrandom.randrange(0,len(x_list))
     return intToFaction(x_list[newindex])
 
@@ -202,18 +157,17 @@ def get_militaryenemy_of(faction_name):
 
 # Simple way to make sure that a ship is only spawned if it exists in units.csv
 def getRandomShipType(ship_list):
-    import vsrandom
-    #print "fishingship"
+    debug.debug("getRandomShipType(%s)" % (ship_list))
     ffvalidate = ""
     while(ffvalidate == ""):
         index=vsrandom.randrange(0,len(ship_list))
         fishedship = ship_list[index]
         ffvalidate = str(VS.LookupUnitStat(fishedship,"default","Default_Speed_Governor"))
         if(ffvalidate == ""):
-            print "Warning: Ship type "+str(fishedship)+" does not have a flight model!"
-    #print "shipdata: "+str(fishedship) +" is "+str(ffvalidate)
+            debug.warning("Ship type "+str(fishedship)+" does not have a flight model!")
+    debug.debug("shipdata: "+str(fishedship) +" has speed governor: "+str(ffvalidate))
     return fishedship
-    
+
 def getFigher(faction_name, fighter):
     fighterlist = fighters[faction_name]
     fighterlist = fighterlist[fighter]
