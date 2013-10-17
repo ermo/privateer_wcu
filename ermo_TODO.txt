@@ -80,7 +80,7 @@ Bug notes:
  * Tarsus model is missing gun models?
  * Tarsus hud model does not show up at the ship dealer?
  * Why are there no shield indications on the hud when flying?!
- * Ships are parked in a weird position on the landing pad
+ * Ships are often parked in a weird position on the landing pad
  * The map computer appears to not be scaled correctly to the VS map
  * Patrol mission description can offer more navpoints than are in the system
  ** The mission is scaled down correctly by the patrol mission script
@@ -90,6 +90,11 @@ Bug notes:
  * Wingmen fire all the time -- can I tell them to cease fire? Can they
    be taught to cease fire if no hostiles are nearby?
  ** This might be releated to the 'attack my target' command?
+ * When the FerretCVL is selected on game start, the game loads. However,
+   the fixer text displayed appears to change color (green becomes red,
+   blue becomes violet)
+ * New Detroit planet texture is a boring dark slate color -- naming
+   issue?
 
 Changes:
  * Default Tarsus size modified from 1 to 6 (was too small before)
@@ -99,7 +104,8 @@ Changes:
  ** Sensors => Radar
  ** Shields => Shield Systems
  * Upped default {game,gun}_speed from 0.1 to 0.2 (should be enough)
- * Tarsus Mk2 should be similar to the Tarsus in most respects except having upgraded armor
-   and being able to fit a lvl 2 reactor and a belly turret. Let's pretend that its
-   slight increase in armor is offset by smarter construction
-   (keeping mass and inertia the same as the original Tarsus, and thus keeping its handling)
+ * Tarsus Mk2 should be similar to the Tarsus in most respects except having
+   upgraded armor and being able to fit a lvl 2 reactor and a belly turret.
+   Let's pretend that its slight increase in armor is offset by smarter
+   construction (keeping mass and inertia the same as the original Tarsus,
+   and thus keeping its handling)
