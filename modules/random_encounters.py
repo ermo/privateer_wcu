@@ -26,11 +26,11 @@ class random_encounters:
             return self.prob_amplitude*(.6+.4*VS.cos ((self.prob_phase*3.1415926536*2)/self.prob_period))
 
         def __init__(self,sig_distance,det_distance):
-            debug.info("init playerdat")
+            debug.debug("init playerdata")
             try:
                 faction_ships.Precache()
             except:
-                debug.info(str(sys.exc_info()[0])+str(sys.exc_info()[1]))
+                debug.debug(str(sys.exc_info()[0])+str(sys.exc_info()[1]))
             self.quests=[]
             self.curquest=0
             self.last_ship=0
@@ -42,12 +42,12 @@ class random_encounters:
             self.significant_distance=sig_distance
             self.detection_distance=det_distance
             self.GeneratePhaseAndAmplitude()
-            debug.info("done playerdat")
+            debug.debug("done playerdat")
 
 
     def __init__(self, sigdis, detectiondis, gendis,  minnships, gennships, unitprob, enemyprob, capprob, capdist):
         unitprob=1
-        debug.info("init random enc")
+        debug.debug("init random enc")
         self.capship_gen_distance=capdist
         #    player_num=player
         self.enprob = enemyprob
@@ -61,12 +61,12 @@ class random_encounters:
         self.capship_prob=capprob
         self.cur_player=0
         self.sig_distance_table = {"enigma_sector/heavens_gate":(2000,4000,.4)}
-        debug.info("end random enc")
+        debug.debug("end random enc")
 
     def AddPlayer (self):
-        debug.debug("begin add player")
+        #debug.debug("begin add player")
         self.players+=[random_encounters.playerdata(self.sig_distance,self.det_distance)]
-        debug.debug("end add player")
+        #debug.debug("end add player")
 
     def NewSystemHousekeeping(self,oldsystem,newsystem):
         fg_util.launchBases(newsystem)
@@ -100,26 +100,22 @@ class random_encounters:
             self.cur.detection_distance=minsig*0.2
         else:
             self.cur.detection_distance=self.det_distance
-        debug.info("resetting sigdist=%f detdist=%f" % (self.cur.significant_distance,self.cur.detection_distance))
+        debug.debug("resetting sigdist=%f detdist=%f" % (self.cur.significant_distance,self.cur.detection_distance))
 
     def SetEnemyProb (self,enp):
         self.enprob = enp
 
     def AsteroidNear (self,uni, how):
-        num_ships=0
-        count=0
-        #debug.debug("VS.getUnit() #1")
-        un = VS.getUnit (count)
-        while (un):
-            dd = self.cur.detection_distance
+        i = VS.getUnitList()
+        dd = self.cur.detection_distance
+        un = i.current()
+        while (not i.isDone()):
             if (uni.getSignificantDistance(un)<how):
                 if (unit.isAsteroid (un)):
-                    debug.info("asteroid near")
+                    debug.debug("asteroid near")
                     return 1
-            count=count+1
-            if (un):
-                #debug.debug("VS.getUnit() #2")
-                un = VS.getUnit(count)
+            #debug.debug("i.next()")
+            un = i.next()
         return 0
 
     def TrueEnProb(self,enprob):
@@ -128,12 +124,12 @@ class random_encounters:
         while (nam>0):
             ret*=(1-enprob)
             nam-=1
-        debug.info("True enemy probability: 1-ret = %d" % (1-ret))
+        debug.debug("True enemy probability: 1-ret = %d" % (1-ret))
         return 1-ret;
 
     def launch_near(self,un):
         if (VS.GetGameTime()<10):
-            debug.info("launch_near called too soon!")
+            debug.debug("launch_near called too soon!")
             return
         cursys=VS.getSystemFile()
         #numsigs=universe.GetNumSignificantsForSystem(cursys)
@@ -141,7 +137,7 @@ class random_encounters:
             faction=faction_ships.intToFaction(factionnum)
             fglist=fg_util.FGsInSystem(faction,cursys)
             if not len(fglist):
-                debug.info('no flight group for faction: '+faction+' in system '+cursys+'.')
+                debug.debug('no flight group for faction: '+faction+' in system '+cursys+'.')
                 continue
             num=len(fglist)
             debug.info('Probability numbers: %d %d' % (num, fg_util.MaxNumFlightgroupsInSystem(cursys)))#,numsigs
@@ -149,33 +145,31 @@ class random_encounters:
             fortress_level=0
             if cursys in faction_ships.fortress_systems:
                 foretress_level=faction_ships.fortress_systems[cursys]
-            avg*=(not (VS.GetRelation(VS.GetGalaxyFaction(cursys),faction)<0 and cursys in faction_ships.fortress_systems))*fortress_level+(1-fortress_level)
-            debug.info('Chance for %s ship: %g'%(faction, avg))
+                avg*=(not (VS.GetRelation(VS.GetGalaxyFaction(cursys),faction)<0 and cursys in faction_ships.fortress_systems))*fortress_level+(1-fortress_level)
+            debug.debug('Chance for %s ship: %g'%(faction, avg))
             rndnum=vsrandom.random()
-            debug.info('Random number: %g; will generate ship: %d'%(rndnum,rndnum<avg))
+            debug.debug('Random number: %g; will generate ship: %d'%(rndnum,rndnum<avg))
             if rndnum<avg:
                 #now we know that we will generate some ships!
                 flightgroup=fglist[vsrandom.randrange(len(fglist))]
                 typenumbers=fg_util.GetShipsInFG(flightgroup,faction)
-                debug.info('FG Name: "%s", ShipTypes: %s'%(flightgroup,str(typenumbers)))
+                debug.debug('FG Name: "%s", ShipTypes: %s'%(flightgroup,str(typenumbers)))
                 launch_recycle.launch_types_around(flightgroup,faction,typenumbers,'default',self.generation_distance*vsrandom.random()*0.9,un,self.generation_distance*vsrandom.random()*2,'')
 
     def atLeastNInsignificantUnitsNear (self,uni, n):
         num_ships=0
-        count=0
         leadah = uni.getFlightgroupLeader ()
-        #debug.debug("VS.getUnit() #3")
-        un = VS.getUnit (count)
+        i = VS.getUnitList()
         dd = self.cur.detection_distance
-        while (un):
+        i.advanceNInsignificant(0)
+        while (not i.isDone()):
+            un = i.current()
             if (uni.getSignificantDistance(un)<dd*1.6):
-                if ((not un.isSignificant()) and (not un.isSun())):
+                if (not un.isSun()):
                     unleadah = un.getFlightgroupLeader ()
                     if (leadah!=unleadah):
                         num_ships+=1
-            count+=1
-            #debug.debug("VS.getUnit() #4")
-            un = VS.getUnit(count)
+            i.advanceInsignificant()
         return num_ships>=n
 
     def SetModeZero(self):
@@ -208,7 +202,7 @@ class random_encounters:
 #        un=VS.getUnit(0);
 #        i=0
 #        while (un):
-#            print un.getName()
+#            debug.debug(un.getName())
 #            i+=1
 #            un=  VS.getUnit(i)
 
@@ -231,7 +225,7 @@ class random_encounters:
             #significant_unit is something.... lets see what it is
             cursys = VS.getSystemFile()
             if (self.DifferentSystemP()):
-                debug.info("different")
+                debug.debug("different")
                 self.SetModeZero()
                 significant_unit.setNull ()
             else:
@@ -268,16 +262,16 @@ class random_encounters:
         if (self.cur.curmode!=self.cur.lastmode):
             #lastmode=curmode#processed this event don't process again if in critical zone
             self.cur.lastmode=self.cur.curmode
-            debug.info("curmodechange %d" % (self.cur.curmode))#?
+            debug.debug("curmodechange %d in progress" % (self.cur.curmode))#?
             if un:
 #      if ((vsrandom.random()<(self.fighterprob*self.cur.UpdatePhaseAndAmplitude())) and un):
                 if (not self.atLeastNInsignificantUnitsNear (un,self.min_num_ships)):
                     #determine whether to launch more ships next to significant thing based on ships in that range
-                    debug.info("Execute: launch near")
+                    debug.debug("Execute: launch near")
                     self.launch_near (VS.getPlayerX(self.cur_player))
         self.cur_player+=1
         if (self.cur_player>=VS.getNumPlayers()):
             self.cur_player=0
         VS.setMissionOwner(self.cur_player)
 
-debug.info("done loading rand enc")
+debug.debug("done loading rand enc")

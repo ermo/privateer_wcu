@@ -1,8 +1,11 @@
-import VS
+# -*- coding: utf-8 -*-
+from __future__ import division
 import Director
-import vsrandom
-import fg_util
+import VS
 import campaigns
+import debug
+import fg_util
+import vsrandom
 from universe import getAdjacentSystemList
 
 cp=fg_util.ccp
@@ -21,9 +24,9 @@ def GenerateFgShips (shipinfg,factionnr,friendly):
     fac = faction_ships.intToFaction(factionnr)
     fpr=XProductionRate(fac,faction_ships.fighterProductionRate)
     cpr=XProductionRate(fac,faction_ships.capitalProductionRate)
-    if cpr>0 and (friendly==2 or (friendly==1 and vsrandom.random()<cpr/fpr)):
+    if cpr>0 and (friendly==2 or (friendly==1 and vsrandom.random()<cpr//fpr)):
         capship=((faction_ships.getRandomCapitolInt(factionnr),1),)
-        print "Generating capital "+str(capship)
+        debug.debug("Generating capital "+str(capship))
     return ((faction_ships.getRandomFighterInt(factionnr),shipinfg),)+capship
 
 def GenerateAllShips ():
@@ -51,7 +54,7 @@ def AddBasesToSystem (faction,sys):
                 numbases=1
         elif (vsrandom.random()>=.005):
             if (numjumppoints<7):
-                numbases=vsrandom.randrange(1,int(numjumppoints/2)+1)
+                numbases=vsrandom.randrange(1,int(numjumppoints//2)+1)
             elif numjumppoints==7:
                 numbases=vsrandom.randrange(1,6)
             else:
@@ -66,7 +69,7 @@ def AddBasesToSystem (faction,sys):
                 nums[shiplist.index(whichbase)]+=1
             else:
                 shiplist+=[whichbase]
-                nums+=[1]
+                nums.append(1)
         tn =[]
         for i in range (len(shiplist)):
             tn+=[ (shiplist[i],nums[i])]
@@ -78,7 +81,7 @@ def GetNewFGName(faction):
     factionnr=faction_ships.factionToInt(faction)
     global numericalfaction
     if(factionnr>=len(fgnames)):
-        print "Faction "+faction+" unable to create fgname"
+        debug.error("Faction "+faction+" unable to create fgname")
 
         numericalfaction+=1
         return "Alpha_"+str(numericalfaction)
@@ -91,7 +94,7 @@ def GetNewFGName(faction):
     return fgname
 def AddSysDict (cursys):
     #pick random fighter from insysenemies with .3 probability OR pick one from the friendlies list.
-#       print 'Addsysdict'
+#       debug.debug('Addsysdict')
     sysfaction=VS.GetGalaxyFaction(cursys)
     global fgnames, fglists
     i=0
@@ -101,7 +104,7 @@ def AddSysDict (cursys):
         friendly=0
         if vsrandom.random()<.3 or sysfaction=='unknown' or sysfaction=='':
             faction=faction_ships.get_rabble_of(sysfaction)
-        else:            
+        else:
             faction=faction_ships.get_friend_of(sysfaction)
             if (faction==sysfaction):
                 friendly=1
@@ -109,7 +112,7 @@ def AddSysDict (cursys):
                 if (cursys in faction_ships.production_centers[sysfaction]):
                     friendly=2
             #if (friendly):
-            #    print faction+" "+sysfaction+" "+cursys
+            #    debug.debug(faction+" "+sysfaction+" "+cursys)
         factionnr=faction_ships.factionToInt(faction)
         global maxshipsinfg
         typenumbertuple=GenerateFgShips(vsrandom.randrange(maxshipsinfg)+1,factionnr,friendly)
@@ -138,7 +141,7 @@ def CountSystems(sys):
         systemcount[fac]+=1
     else:
         systemcount[fac]=1
-        print "FATAL ERROR "+fac+" not in list;"
+        debug.error("FATAL ERROR "+fac+" not in list;")
 def TakeoverSystem(fac,sys):
     systemcount[VS.GetGalaxyFaction(sys)]-=1
     VS.SetGalaxyFaction(sys,fac)
@@ -147,38 +150,38 @@ def TakeoverSystem(fac,sys):
 
 genUniverse=-1
 if cp>=0:
-    print 'Purging...'
+    debug.debug('Purging...')
     for i in fg_util.AllFactions():
         fg_util.PurgeZeroShips(i)
         systemcount[i]=0
-    print 'StartSystemCount'
+    debug.debug('StartSystemCount')
     sys=VS.getSystemFile()
     if (VS.GetGalaxyProperty("Sol/Sol","jumps")!="" and VS.GetGalaxyProperty("Sol/Sol","faction")!=""):
-        print "He's got SOL"
+        debug.debug("He's got SOL")
         sys="Sol/Sol"
     ForEachSys(sys,CountSystems)
-    print systemcount
-    print 'EndSystemCount'
+    debug.debug(systemcount)
+    debug.debug('EndSystemCount')
     genUniverse=0
     curfaclist = fg_util.AllFactions()
     reflist = fg_util.ReadStringList(cp,"FactionRefList")
     if (reflist !=curfaclist):
-        print 'reflist is '+str(reflist)
-        print 'curfaclist is '+str(curfaclist)
+        debug.debug('reflist is '+str(reflist))
+        debug.debug('curfaclist is '+str(curfaclist))
 
         fg_util.WriteStringList(cp,"FactionRefList",curfaclist)
-        print 'generating ships... ... ...'
+        debug.debug('generating ships... ... ...')
         GenerateAllShips () ###Insert number of flight groups and max ships per fg
-        print 'placing ships... ... ...'
+        debug.debug('placing ships... ... ...')
         genUniverse=Makesys(sys)
         #now every system has distributed ships in the save data!
     else:
         GenerateAllShips()
-        print "Second Load"
+        debug.debug("Second Load")
         for i in range(len(fgnames)):
             fgnames[i]=fg_util.TweakFGNames(origfgnames[i])
         fg_util.origfgoffset+=1
     campaigns.loadAll(cp)
     #TODO: add ships to current system (for both modes)  uru?
 else:
-    print 'fatal error: no cockpit'
+    debug.error('fatal error: no cockpit')

@@ -165,7 +165,7 @@ def getRandomShipType(ship_list):
         ffvalidate = str(VS.LookupUnitStat(fishedship,"default","Default_Speed_Governor"))
         if(ffvalidate == ""):
             debug.warning("Ship type "+str(fishedship)+" does not have a flight model!")
-    debug.debug("shipdata: "+str(fishedship) +" has speed governor: "+str(ffvalidate))
+    debug.debug("shipdata: "+str(fishedship) +" has speed governor = "+str(ffvalidate))
     return fishedship
 
 def getFigher(faction_name, fighter):
