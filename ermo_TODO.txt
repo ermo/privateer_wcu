@@ -19,8 +19,6 @@ Facts:
  * PU used cube-maps in r505 as far as I can tell, so cubemaps vs.
    spheremaps is a non-issue.
 
-In summary, the issues outlined above are solvable. :-)
-
 
 ## 2. Make PU a suitable base for Privateer: Wing Commander Universe
 
@@ -34,7 +32,7 @@ gets to set the standard -- at least initially.
 Personally, I support not deleting anything (extra campaign missions,
 non-canon ship variants) right away.
 
-### Observations:
+### Observations on PU r505:
 
  * PU is not super well balanced currently. Anything more than 2
    opposing ships can be a challenge due to funky ship upgrade
@@ -52,7 +50,8 @@ non-canon ship variants) right away.
    assets are 1px wide, which is not enough.
  * Sometimes, systems become too brigt or too red -- why? Local issue?
  * Tarsus Mk2 uses a rather, er, unflattering texture
- ** Now that I've updated the vegastrike.config file, things do look better!
+ ** Now that I've updated the reflectivity setting in vegastrike.config,
+    things do look better!
  * It would be cool to be able to plot a route even when not in the cockpit
  ** Which implies that one's personal system would have an uplink with the
     ship computer and one could plot mission routes sitting in the bar, for
