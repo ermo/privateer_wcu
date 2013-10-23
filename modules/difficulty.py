@@ -27,55 +27,55 @@ class difficulty:
             VS.SetDifficulty(diff)
 
     def __init__(self,credsMax):
-        debug.debug("init difficulty")
+        #debug.debug("init difficulty")
         global unbounddiff
         self.diff=[]
         unbounddiff=[]
         self.creds=[]
         self.credsToMax=credsMax
-        debug.debug("unlogical start")
+        #debug.debug("unlogical start")
         un=VS.getPlayerX(0)
-        debug.debug("unlogical end")
+        #debug.debug("unlogical end")
         self.i=0
         while (not un.isNull()):
             newunbounddiff=0
             newdiff=0
-            debug.debug("get save data length")
+            #debug.debug("get save data length")
             #(open ("/tmp/vswroteship","w")).close()
             diffsavelen=Director.getSaveDataLength(self.i,_key)
             if (diffsavelen):
                 #(open ("/tmp/vsgotdata","w")).close()
-                debug.debug("get save data")
+                #debug.debug("get save data")
                 newdiff=Director.getSaveData(self.i,_key,0)
                 if (diffsavelen>1):
                     newunbounddiff=Director.getSaveData(self.i,_key,1)
                 else:
                     newunbounddiff=newdiff
                     Director.pushSaveData(self.i,_key,newunbounddiff)
-                debug.debug("get save data end")
+                #debug.debug("get save data end")
             else:
                 #(open ("/tmp/vsmakedata","w")).close()
-                debug.debug("get difficulty start")
+                #debug.debug("get difficulty start")
                 newdiff=VS.GetDifficulty()
-                debug.debug("get difficulty done")
+                #debug.debug("get difficulty done")
                 Director.pushSaveData(self.i,_key,newdiff)
                 newunbounddiff=newdiff
                 Director.pushSaveData(self.i,_key,newunbounddiff)
-            debug.debug("done director")
+            #debug.debug("done director")
             #(open ("/tmp/vsdonedir","w")).close()
             #(open ("/tmp/vssetdifficulty","w")).close()
             self.diff.append(newdiff)
             unbounddiff.append(newunbounddiff)
-            debug.debug("set diff start")
+            #debug.debug("set diff start")
             SetDiff(newdiff)
-            debug.debug("set diff end")
+            #debug.debug("set diff end")
             self.creds+=[un.getCredits()]
             self.i+=1
-            debug.debug("save unit")
+            #debug.debug("save unit")
             un=VS.getPlayerX(self.i)
-            debug.debug("done init diff")
+            #debug.debug("done init diff")
             #(open ("/tmp/vsdoneinitdiff","w")).close()
-            debug.debug("done init diff FINAL")
+            #debug.debug("done init diff FINAL")
 
     def usingDifficulty(self):
         return (VS.GetDifficulty()!=1.0)
@@ -95,7 +95,7 @@ class difficulty:
                     if (self.creds[self.i]<newcreds):
                         delta=((newcreds-self.creds[self.i])/self.credsToMax)
                         newdiff=self.getPlayerDifficulty(self.i)+delta
-                        debug.debug("delta: %.4f, newdiff: %.4f" % (delta, newdiff))
+                        debug.debug("Difficulty delta: %.4f, newdiff: %.4f" % (delta, newdiff))
                         if (newdiff>.5999):
                             debug.debug("Clamped difficulty to 0.5999")
                             newdiff=.5999
