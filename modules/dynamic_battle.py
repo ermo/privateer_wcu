@@ -369,7 +369,7 @@ def StopTargettingEachOther (fgname,faction,enfgname,enfaction):
     i = VS.getUnitList()
     un = i.current()
     while (not i.isDone()):
-        if un.notNull():
+        if un:
             if ((un.getFactionName()==enfaction and un.getFlightgroupName()==enfgname) or
                     (un.getFactionName()==faction and un.getFlightgroupName()==fgname)):
                 un.setFgDirective ('b')
@@ -384,7 +384,7 @@ def TargetEachOther (fgname,faction,enfgname,enfaction):
     en=None
     al=None
     while (not i.isDone() and ((not en) or (not al))):
-        if un.notNull():
+        if un:
             if (un.getFactionName()==enfaction and un.getFlightgroupName()==enfgname):
                 if ((not en) or (vsrandom.randrange(0,3)==0)):
                     en=un
@@ -473,7 +473,7 @@ def findLaunchedShipInFGInSystem (fgname,faction):
     uni = VS.getUnitList()
     un = uni.current()
     while (not uni.isDone()):
-        if un.notNull():
+        if un:
             if (un.getFlightgroupName() == fgname and un.getFactionName() == faction):
                 return un
         #debug.debug("uni.next()")
