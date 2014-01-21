@@ -12,7 +12,7 @@ of the original game.
 
   Similarly, the aim is to include and allow the purchase of ships
 not available for purchase in the original Privateer game.  The
-rationale is that all ships on the market in the wider Wing
+rationale is that all ships flying around in the wider Wing
 Commander Universe should be available for purchase.
 
   It should be noted that Privateer: Wing Commander Universe is
