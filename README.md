@@ -36,10 +36,15 @@ How to get Privateer: Wing Commander Universe running
 VegaStrike engine. It is not presently in a state suitable for
 end-users.
 
-  It is worth noting that Priv:WCU is developed on Linux
-and that, as such, no attempt has currently been made to test it
-under Windows, though VegaStrike development binaries for Windows
-appear to be available.
+  It is worth noting that Priv:WCU is developed on Linux.
+  
+### Windows:
+
+  Priv:WCU does not currently run under Windows.  Last I checked, the 
+VegaStrike development binaries for Windows did not work with the
+Priv:WCU code base. 
+
+### Linux:
 
   Instructions on how to fetch and compile the newest VegaStrike
 engine can be found here:
