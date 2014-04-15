@@ -1,4 +1,6 @@
+import debug
 import sys
+
 def tovariable(v):
     v=v.strip()
     v=v.rstrip()
@@ -8,6 +10,7 @@ def tovariable(v):
     for a in k:
         ret+=a
     return ret
+
 def replacePred(l):
     st=""
     while (len(l)):
@@ -20,7 +23,7 @@ def replacePred(l):
                 elif (v==len(l)-2):
                     st+="?"
                 else:
-                    #print l[v-2:v+2]
+                    #debug.debug(l[v-2:v+2])
                     if (l[v+1]==' ' and l[v+2]==l[v+2].capitalize()):
                         st+="..."
                     elif (l[v+1]==' '):
@@ -33,12 +36,14 @@ def replacePred(l):
             l=""
         
     return st
+
 def AddQuoth(l):
     w=l.find(": ")
     if (w==-1 or w>=len(l)-3):
         return l
     else:
         return (l[0:w],l[w+2:])
+
 def processText(l):
     l=replacePred(l)
     return [AddQuoth(l)]
@@ -48,6 +53,7 @@ def AddVar(m,k,v):
         m[k]+=v;
     else:
         m[k]=v
+
 def fixupMap(s):
     where=s.find("'failure'")
     if (where==-1):
@@ -60,7 +66,7 @@ def fixupMap(s):
     val=val.replace('"',"")
     ret+=val+early[where:]
     return ret
-    
+
 def NoNumber(var):
     var=var.replace("0","");
     var=var.replace("1","");
@@ -73,6 +79,8 @@ def NoNumber(var):
     var=var.replace("8","");
     var=var.replace("9","");
     return var
+
+
 for a in sys.argv[1:]:
     f=open(a)
     lines = f.readlines()
@@ -85,7 +93,7 @@ for a in sys.argv[1:]:
             l=l.rstrip()
             if stage==0:
                 if (len(m)):
-                    print var+" = "+ fixupMap(str(m))
+                    debug.info(var+" = "+ fixupMap(str(m)))
                 var= tovariable(l)          
                 m={}
                 stage=1
@@ -125,7 +133,5 @@ for a in sys.argv[1:]:
                 stage=4
             if (stage==6):
                 stage=7
-    print var+" = "+fixupMap(str(m))
-            
-            
-        
+    debug.info(var+" = "+fixupMap(str(m)))
+

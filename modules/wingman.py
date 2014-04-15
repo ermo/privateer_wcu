@@ -1,13 +1,16 @@
 from go_to_adjacent_systems import *
 from go_somewhere_significant import *
-import vsrandom
-import launch
-import faction_ships
-import VS
 import Briefing
-import universe
-import unit
 import Director
+import VS
+import debug
+import faction_ships
+import launch
+import unit
+import universe
+import vsrandom
+
+
 class wingman (Director.Mission):
     def __init__ (self,price,factionname,numships,difficulty):
         Director.Mission.__init__(self)
@@ -50,15 +53,19 @@ class wingman (Director.Mission):
                     VS.IOmessage (0,lead.getName(),"all","You don't have the agreed money... prepare to DIE!")
                 else:
                     VS.IOmessage (0,lead.getName(),"all","You don't have the money. A fool like you won't last long!")
-    def Execute (self):
 
+    def Execute (self):
         if (self.adjsys.Execute()):
             self.GenerateWingmen()
             VS.terminateMission(1)
+
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("init briefing")
+
     def loopbriefing(self):
-        print "loop briefing"
-        Briefing.terminate();
+        debug.info("loop briefing")
+        Briefing.terminate()
+
     def endbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")
+

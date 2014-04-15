@@ -1,14 +1,17 @@
 import Director
-import patrol
-import cargo_mission
+import VS
 import bounty
-import plunder
+import cargo_mission
+import debug
 import defend
 import escort_mission
-import vsrandom
-import universe
 import faction_ships
-import VS
+import patrol
+import plunder
+import universe
+import vsrandom
+
+
 last_constructor={}
 saved_args = (1,1,1,1,)#nice patrol args
 last_args ={}
@@ -19,7 +22,7 @@ lastMission=None
 def SetLastMission(which):
     global lastMission
     lastMission=str(which)
-    print 'set last mission to "'+str(which)+'"'
+    debug.info('set last mission to "%s"' % (lastMission))
 
 def LoadLastMission():
     global lastMission
@@ -41,7 +44,7 @@ def LoadLastMission():
         del last_args[which]
         del last_constructor[which]
     else:
-        print 'No last mission with name "'+str(which)+'"'
+        debug.info('No last mission with name "'+str(which)+'"')
     if which in last_briefing[0]:
         del last_briefing[0][which]
     if which in last_briefing[1]:
@@ -81,6 +84,7 @@ def MakePlunder(which):
     last_briefing[0][which] = 'Arr Matey. We have a target in this system that needs a lil roughin up. We need you to bag a merchant and deliver her cargo into our hands.  It\'s worth '+str(creds)+ ' to us. Up to you, ya space pirate.'
     last_briefing[1][which] = 'Ahoy! We\'ll be lookin for that cargo mighty soon!'
     return ("bases/fixers/pirate.spr","Talk with the Pirate")
+
 def MakeContraband(which):
     last_constructor[which] = cargo_mission.cargo_mission
     numsys=vsrandom.randrange(2,5)
@@ -183,4 +187,3 @@ def CreateGuildMissions(guildname,nummissions,accepttypes):
         Director.eraseSaveString(plr,"misson_descriptions",i)
         Director.eraseSaveString(plr,"misson_names",i)
     return nummissions
-

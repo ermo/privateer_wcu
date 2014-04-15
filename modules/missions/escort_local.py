@@ -1,14 +1,15 @@
-from go_to_adjacent_systems import *
 from go_somewhere_significant import *
-import vsrandom
-import launch
-import faction_ships
-import VS
+from go_to_adjacent_systems import *
 import Briefing
-import universe
-import unit
 import Director
+import VS
+import debug
+import faction_ships
+import launch
 import quest
+import unit
+import universe
+import vsrandom
 
 
 class escort_local (Director.Mission):
@@ -76,7 +77,7 @@ class escort_local (Director.Mission):
                 un = unit.getSignificant(vsrandom.randrange(0, 40), 1, 0)
             if (un.getName() != self.defendee.getName()):
                 self.defendee.performDockingOperations(un, 0)
-                print "docking with "+un.getName()
+                debug.info("docking with "+un.getName())
         else:
             self.defendee.ActivateJumpDrive(0)
             self.defendee.SetTarget(self.adjsys.SignificantUnit())
@@ -128,7 +129,7 @@ class escort_local (Director.Mission):
         self.objective = VS.addObjective(
             "Destroy All %s Hostiles" % self.faction)
         VS.setCompleteness(self.objective, 0.0)
-        print "quantity "+str(self.quantity)
+        debug.info("quantity "+str(self.quantity))
         while (count < self.quantity):
             L = launch.Launch()
             if self.dynatkfg == "":
@@ -262,11 +263,11 @@ class escort_local (Director.Mission):
                         self.SuccessMission()
 
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("init briefing")
 
     def loopbriefing(self):
-        print "loop briefing"
+        debug.info("loop briefing")
         Briefing.terminate()
 
     def endbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")

@@ -1,15 +1,18 @@
 import VS
+import debug
 import sys
+
 class MyAI(VS.PythonAI):
     def init(self,un):
 #        self.XMLScript ("++turntowards.xml")
-         print 'init'
+         debug.info('init')
 #        self.AddReplaceLastOrder(1)
     def Execute(self):
         VS.PythonAI.Execute(self);
-        sys.stdout.write('h')
+        debug.info('h')
         return ''
+
 hi1 = MyAI()
-print 'AI creation successful'
+debug.info('AI creation successful')
 hi1 = 0
 #: 1.7; previous revision: 1.6

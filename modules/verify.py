@@ -1,11 +1,16 @@
 from campaign_lib import *
+import debug
 import campaigns
 import verify_missions
+
+
 campaigns.loadAll(0)
 global traverser
 traverser=[]
+
 def isType(a,typ):
     return a.__init__.im_func==typ.__init__.im_func
+
 exnonescript=None
 
 class MyCondition:
@@ -13,7 +18,6 @@ class MyCondition:
         self.system=("","")
         self.vars=var
     def pre(self,precond):
-
         #FIXME
         return True
     def script(self,scriptname,trav):
@@ -24,21 +28,25 @@ class MyCondition:
     def post(self,postcond):
         #FIXME
         return True
+
+
 def EndNode(node):
     return CampaignEndNode(node.campaign).subnodes[0]
+
 def IsEnd(node):
     precond=CampaignEndNode(node.campaign).subnodes[0].preconditions[0]
     try:
         if (len(node.preconditions)!=1):
             return False
     except:
-        print node
-        print dir(node)
-        print node.preconditions
+        debug.info("node: "+node)
+        debug.info("dir(node): "+dir(node))
+        debug.info("node.preconditions: ")+node.preconditions)
 # Ignore this, don't try and replace it with isinstance because it won't work!
     if (node.preconditions[0].__init__.im_func!=precond.__init__.im_func):
         return False
-    return node.preconditions[0].system==precond.system and  node.preconditions[0].dockedshipname==precond.dockedshipname
+    return node.preconditions[0].system==precond.system and node.preconditions[0].dockedshipname==precond.dockedshipname
+
 def IsSuperimposition(node):
     precons=node.preconditions
     currnodesys=[]
@@ -50,13 +58,14 @@ def IsSuperimposition(node):
     if not len(currnodesys):
         return False
     if len(currnodesys)>1:
-        print "Two system checks for the same node.  Impossible to evaluate as True."
+        debug.info("Two system checks for the same node.  Impossible to evaluate as True.")
         return True
     selector=node.script
     if selector is None:
         return False
     elif isinstance(selector,TrueSubnode):
-        pass#print "TrueSubnode found ... evaluating."
+        #debug.debug("TrueSubnode found ... evaluating.")
+        pass
     else:
         return False
     subnodes=node.subnodes
@@ -82,9 +91,10 @@ def IsSuperimposition(node):
     if valid:
         return False
     else:
-        print currnodesys+currnodeship
-        print subnodesys+subnodeship
+        debug.info(currnodesys+currnodeship)
+        debug.info(subnodesys+subnodeship)
         return True
+
 def ValidMissions(node):
     missions=[]
     sc=node.script
@@ -98,11 +108,12 @@ def ValidMissions(node):
         return True
     valid = True
     for m in missions:
-#       print m.mname + " :: " + str(m.args) + " :: " + m.name
-        print " ++ Mission '%s'"%m.mname
+        #debug.debug(m.mname + " :: " + str(m.args) + " :: " + m.name)
+        debug.info(" ++ Mission '%s'"%m.mname)
         if not verify_missions.verifyMission(m.mname,m.args):
             valid = False
     return valid
+
 class Traverser:
     def __init__(self,campaign):
         self.node=campaign.root
@@ -115,7 +126,7 @@ class Traverser:
         tmp.visitednodes=self.visitednodes
         return tmp
     def warn(self,strin):
-        print strin
+        debug.info(strin)
     def cont(self,newnode):
         if newnode in self.visitednodes:
             self.node=EndNode(self.node)
@@ -163,6 +174,8 @@ class Traverser:
         else:
             return None#cannot make progres
         return cond.vars;
+
+
 def IsFinished():
     global traverser
     for i in range(len(traverser)-1,-1,-1):
@@ -171,11 +184,14 @@ def IsFinished():
             del traverser[i]
 
     return len(traverser)>0
+
 for iter in campaigns.campaigns:
     import verify_missions
     verify_missions.campaign_name[iter.name]=1
     traverser.append(Traverser(iter))
-print len(traverser)
+
+debug.info(len(traverser))
+
 while len(traverser):
     IsFinished()
     progress=False
@@ -186,5 +202,5 @@ while len(traverser):
             variables=var
             progress=True
     if not progress and len(traverser):
-        print "Deadlock "
+        debug.info("Deadlock ")
         break

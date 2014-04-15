@@ -1,9 +1,12 @@
-import VS
-import universe
-import unit
 import Briefing
-import vsrandom
 import Director
+import VS
+import debug
+import unit
+import universe
+import vsrandom
+
+
 def formatSystemName(ship):
     where=ship.rfind("/")
     if (where!=-1):
@@ -59,8 +62,10 @@ class go_to_adjacent_systems:
             for i in range(len(self.jumps)-1):
                 VS.IOmessage(wait,fro,msgply,midstr % (formatSystemName(self.jumps[i])))
             VS.IOmessage(wait,fro,msgply,endstr % (formatSystemName(self.jumps[len(self.jumps)-1])))
+
     def HaveArrived(self):
         return self.arrivedsys       
+
     def Execute (self):
         cursys=VS.getSystemFile()
         if (cursys in self.jumps):
@@ -83,7 +88,7 @@ class go_to_adjacent_systems:
         self.added_warp=1
         self.brief_stage=0
         self.begintime= VS.GetGameTime()-6.0
-        print "starting briefing"
+        debug.info("starting briefing")
         if (self.you.isNull()):
             Briefing.terminate()
             return
@@ -119,8 +124,9 @@ class go_to_adjacent_systems:
             VS.IOmessage (0,"cargo mission","briefing","You must go to the '%s' jump point" % (myname))
             self.brief_stage+=1
         return -1
+
     def endbriefing(self):
-        print "endinging briefing"
+        debug.info("ending briefing")
         del self.jump_ani
         del self.rnd_y
         del self.added_warp

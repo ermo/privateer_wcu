@@ -1,20 +1,22 @@
-from go_to_adjacent_systems import *
 from go_somewhere_significant import *
-import vsrandom
-import launch
-import faction_ships
-import VS
+from go_to_adjacent_systems import *
 import Briefing
-import universe
-import unit
 import Director
+import VS
+import debug
+import faction_ships
+import launch
 import quest
+import unit
+import universe
+import vsrandom
+
+
 class cargo_mission (Director.Mission):
     def initbriefing(self):
         VS.IOmessage (0,"cargo mission","briefing","Your mission for today will be to run some %s cargo" % self.cargoname)
         self.briefgametime = 0
         self.adjsys.initbriefing()
-
 
     def loopbriefing(self):
         brief_you=self.adjsys.loopbriefing()
@@ -24,12 +26,15 @@ class cargo_mission (Director.Mission):
                 self.briefgametime = VS.GetGameTime()
             elif ((VS.GetGameTime()-self.briefgametime)>5):
                 Briefing.terminate()
+
     def endbriefing(self):
         self.adjsys.endbriefing()
         del self.briefgametime
+
     def SetVar (self,val):
         if (self.var_to_set!=''):
             quest.removeQuest (self.you.isPlayerStarship(),self.var_to_set,val)
+
     def __init__ (self,factionname, numsystemsaway, cargoquantity, missiondifficulty, creds, launchoncapship, time_to_complete, category,jumps=(),var_to_set=''):
         Director.Mission.__init__(self);
         self.you=VS.Unit()
@@ -38,7 +43,7 @@ class cargo_mission (Director.Mission):
         self.arrived=0
         self.var_to_set=var_to_set
         self.mplay="all"
-#         self.mission_time=VS.GetGameTime()+time_to_complete*100*float(1+numsystemsaway)
+        # self.mission_time=VS.GetGameTime()+time_to_complete*100*float(1+numsystemsaway)
         self.capship= launchoncapship
         self.faction=factionname
         self.cred=creds
@@ -54,7 +59,7 @@ class cargo_mission (Director.Mission):
             carg = VS.getRandCargo(self.quantity,"") #oh no... could be starships...
             i=0
             while i<50 and carg.GetCategory()[:10]=="Contraband":
-                print "contraband==bad"
+                debug.info("contraband==bad")
                 carg = VS.getRandCargo(self.quantity,"")
                 i+=1
         tempquantity=self.quantity
@@ -74,35 +79,33 @@ class cargo_mission (Director.Mission):
             VS.IOmessage (2,"cargo mission",self.mplay,"#ff0000Unable to establish communications. Mission failed.")
             VS.terminateMission (0)
             return
-#         creds_deducted = (carg.GetPrice()*float(self.quantity)*vsrandom.random()+1)
-#         self.cred += creds_deducted
+        # creds_deducted = (carg.GetPrice()*float(self.quantity)*vsrandom.random()+1)
+        # self.cred += creds_deducted
         if (tempquantity>0):
             self.cred*=float(self.quantity)/float(tempquantity)
         else:
             VS.IOmessage (2,"cargo mission",self.mplay,"#ff0000You do not have space to add our %s cargo to your ship. Mission failed."%self.cargoname)
             VS.terminateMission(0)
             return
-
         if (self.quantity==0):
             VS.IOmessage (2,"cargo mission",self.mplay,"#ff0000You do not have space to add our cargo to the mission. Mission failed.")
             VS.terminateMission(0)
             return
-
         VS.IOmessage (0,"cargo mission",self.mplay,"Good Day, %s. Your mission is as follows:" % (name))
         self.adjsys.Print("You should start in the system named %s","Then jump to %s","Finally, jump to %s, your final destination","cargo mission",1)
         VS.IOmessage (2,"cargo mission",self.mplay,"Give the cargo to a %s unit or planet." % (self.faction))
         VS.IOmessage (3,"cargo mission",self.mplay,"You will receive %d of the %s cargo" % (self.quantity,self.cargoname))
-#         VS.IOmessage (4,"cargo mission",self.mplay,"We will deduct %.2f credits from your account for the cargo needed." % (creds_deducted))
+        # VS.IOmessage (4,"cargo mission",self.mplay,"We will deduct %.2f credits from your account for the cargo needed." % (creds_deducted))
         VS.IOmessage (4,"cargo mission",self.mplay,"You will earn %.2f credits when you deliver our cargo." % (creds))
         VS.IOmessage (4,"cargo mission",self.mplay,"#00ff00Good luck!")
-#         self.you.addCredits (-creds_deducted)
+        # self.you.addCredits (-creds_deducted)
 
     def takeCargoAndTerminate (self,you, remove):
         removenum=0 #if you terminate without remove, you are SKREWED
         self.base.setCombatRole(self.role)
         if (remove):
             removenum=you.removeCargo(self.cargoname,self.quantity,1)
-            print "removed %d" % removenum
+            debug.info("removed %d" % removenum)
             mpart=VS.GetMasterPartList()
             newcarg=mpart.GetCargo(self.cargoname)
             newcarg.SetQuantity(removenum)
@@ -135,7 +138,6 @@ class cargo_mission (Director.Mission):
             self.SetVar(-1)
             VS.terminateMission(0)
             return
-
 
     def Execute (self):
 ##        if (VS.getGameTime()>mission_time):
@@ -172,15 +174,7 @@ class cargo_mission (Director.Mission):
             self.base=self.adjsys.SignificantUnit()
             self.role=self.base.getCombatRole()
             self.base.setCombatRole("INERT")
+
 def initrandom (factionname, missiondifficulty,creds_per_jump, launchoncapship, sysmin, sysmax, time_to_complete, category,jumps=(),var_to_set=''):
     numsys=vsrandom.randrange(sysmin,sysmax)
     return cargo_mission(factionname,numsys, vsrandom.randrange(4,15), missiondifficulty,creds_per_jump*float(1+numsys),launchoncapship, 10.0, category,jumps,var_to_set)
-
-
-
-
-
-
-
-
-

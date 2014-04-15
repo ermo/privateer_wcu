@@ -41,16 +41,16 @@ def getSignificant (whichsignificant, landable_only, capship_only):
     signum=0
     rez = []
     un=VS.getUnit(0)
-    #print "is this null "+str(un.isNull())
+    #debug.debug("is this null "+str(un.isNull()))
     while (not un.isNull()):
-        #print "is this null "+str(un.isNull())
+        #debug.debug("is this null "+str(un.isNull()))
         un=VS.getUnit(which)
         if (un.isNull()):
             which=0
             if (signum==0):
                 signum=whichsignificant+1
         else:
-            #print "checking "+un.getName()
+            #debug.debug("checking "+un.getName())
             if ((landable_only) or (capship_only)):
                 if(capship_only):
                     if (isBase (un)):
@@ -61,7 +61,7 @@ def getSignificant (whichsignificant, landable_only, capship_only):
                         signum=signum+1
                         rez.append(un)
                     else:
-                        print "not landable "+un.getName()+" fg "+un.getFlightgroupName()
+                        debug.info("not landable "+un.getName()+" fg "+un.getFlightgroupName())
             else:
                 if (un.isSignificant()):
                     signum=signum+1
@@ -71,9 +71,9 @@ def getSignificant (whichsignificant, landable_only, capship_only):
         if (capship_only):
             return getSignificant(whichsignificant,landable_only,0)
         elif(landable_only):
-            return getSignificant (whichsignificant,0,0)
+            return getSignificant(whichsignificant,0,0)
         else:
-            print "fatal error, no significants in system "+VS.getSystemFile()
+            debug.warning("fatal error, no significants in system "+VS.getSystemFile())
             return VS.getPlayer()
     return rez[vsrandom.randrange(0,len(rez))]
 

@@ -1,21 +1,24 @@
+import debug # we use this below so this needs to go first
+from difficulty import difficulty
 from trading import trading
 from random_encounters import random_encounters
-#print "done ran"
-from difficulty import difficulty
+debug.debug("imported random_encounters")
 import dynamic_universe
 import total_jump
-#print "difficulty begin"
+#debug.debug("difficulty begin")
 #from garbage_collect import garbage_collect
 import Director
-#print "directing"
+#debug.debug("directing")
 import Briefing
-#print "briefd"
+#debug.debug("briefd")
+
+
 class jump_privateer (Director.Mission):
     loops=()
     def __init__ (self,sigdis, detectiondis, gendis, minships, genships, fighterprob, enemyprob, capprob, credits_to_maximize_difficulty, capdist):#negative garbage collect dist disables that feature
-#print "initing direct"
+        debug.debug("initing direct")
         Director.Mission.__init__(self)
-#print "done direct"
+        debug.debug("done initing direct")
         self.loops=(difficulty (credits_to_maximize_difficulty),
               random_encounters (sigdis, detectiondis, gendis, minships,genships,fighterprob,enemyprob,capprob,capdist),
               trading (),
@@ -28,13 +31,16 @@ class jump_privateer (Director.Mission):
     def Execute(self): #this execute function should not need to be changed...
         for i in self.loops:
             i.Execute()
+
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("init briefing")
+
     def loopbriefing(self):
-        print "loop briefing"
-        Briefing.terminate();
+        debug.info("loop briefing")
+        Briefing.terminate()
+
     def endbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")
 
 #def initstarsystem():
 #  random_encounters.initstarsystem() #??? that isn't there

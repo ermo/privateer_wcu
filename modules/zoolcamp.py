@@ -1,5 +1,6 @@
 import campaign_lib
 from campaign_lib import *
+
 zoolspeech1={"intro":[("Burrows","Greetings.  My name is Grayson Burrows; I'm looking for work."),
                             ("Zool","You're in luck, cause I'm hiring. My name is Zool, unaffiliated Hunter."),
                             ("Burrows","How may I be of service?"),

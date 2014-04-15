@@ -1,11 +1,13 @@
-import vsrandom
-import launch
-import faction_ships
-import VS
 import Briefing
-import universe
-import unit
 import Director
+import VS
+import debug
+import faction_ships
+import launch
+import unit
+import universe
+import vsrandom
+
 class total_jump:
     def __init__(self):
         VS.SetDifficulty(.1)
@@ -21,21 +23,21 @@ class total_jump:
                     cursys=VS.GetAdjacentSystem(currentsystem,vsrandom.randrange(0,numadj))
                 else:
                     cursys = 'enigma_sector/heavens_gate'
-                print "TJ: jumping to "+cursys
+                debug.info("TJ: jumping to "+cursys)
                 un.JumpTo(cursys)
             else:
-                print "TJ: jumping to [ERROR: you are null]"
+                debug.warn("TJ: jumping to [ERROR: you are null]")
             return
         else:
             siglist=universe.significantUnits()
             if len(siglist)==0:
-                print "TJ: siglist empty"
+                debug.info("TJ: siglist empty")
                 return
             sig=siglist[vsrandom.randrange(0,len(siglist))]
             if (not sig):
-                print "TJ: sig null"
+                debug.info("TJ: sig null")
                 return
-            print "TJ: autopiloting to "+sig.getName()
+            debug.info("TJ: autopiloting to "+sig.getName())
             un.AutoPilotTo(sig,True)
             un.SetTarget(sig)
 
@@ -57,7 +59,7 @@ class total_jump:
 #        un=VS.getUnit(0);
 #        i=0
 #        while (un):
-#            print un.getName()
+#            debug.info(un.getName())
 #            i+=1
 #            un=  VS.getUnit(i)
         time = VS.GetGameTime()
@@ -66,9 +68,9 @@ class total_jump:
             self.waittime=vsrandom.randrange(10.0,30.0)
             self.lasttime=time
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")
     def loopbriefing(self):
-        print "loop briefing"
+        debug.info("loop briefing")
         Briefing.terminate();
     def endbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")

@@ -1,16 +1,18 @@
 from go_somewhere_significant import go_somewhere_significant
-import vsrandom
-import universe
-import launch
-import faction_ships
 import Director
-import unit
-import quest
 import VS
+import debug
+import faction_ships
 import go_to_adjacent_systems
 import go_somewhere_significant
-class rescue (Director.Mission):
+import launch
+import quest
+import unit
+import universe
+import vsrandom
 
+
+class rescue (Director.Mission):
     def __init__ (self, creds,numsysaway, fac,numenemy,enfac,enfg='', jumps=(),var_when_done=''):
         Director.Mission.__init__ (self)
         self.arrived=0
@@ -27,6 +29,7 @@ class rescue (Director.Mission):
         self.enemy=None
         self.numejectors=0
         self.obj=0
+
     def Execute(self):
         if (not self.you):
             VS.terminateMission(0)
@@ -72,7 +75,6 @@ class rescue (Director.Mission):
             self.you.SetTarget(self.eject)
             VS.IOmessage(0,"eject",self.mplay,"This is ejector pod 0x4032 requesting immediate rescue and pickup")
             self.obj=VS.addObjective("Tractor Ejected Pilot")
-
         elif (self.arrived==2):
             if (self.eject):
                 if (self.enemy):
@@ -82,7 +84,7 @@ class rescue (Director.Mission):
                 if (self.enemy):
                     self.enemy.SetTarget(self.you)
                     self.enemy.setFgDirective("A.")
-                print 'numej '+str(self.numejectors)
+                debug.info("numej "+str(self.numejectors))
                 if (self.numejectors<self.you.GetCargo("Pilot").GetQuantity()):
                     self.you.removeCargo("Pilot",1,1)
                     carg=VS.getRandCargo(1,"Passengers/Economy")
@@ -93,7 +95,7 @@ class rescue (Director.Mission):
                     else:
                         self.arrived=3
                         self.cargname=carg.GetContent()
-                        print 'adding '+self.cargname
+                        debug.info("adding "+self.cargname)
                         self.adjsys = go_somewhere_significant.go_somewhere_significant(self.you,1,25000)
                         VS.IOmessage(0,"Passenger",self.mplay,"Please take me to my home base: %s so I may begin to recover. Thank you!"%self.adjsys.SignificantUnit().getName())
                 else:
@@ -108,6 +110,7 @@ class rescue (Director.Mission):
                     self.Win(self.you,1)
                 else:
                     self.Lose(1)
+
     def Win (self,un,terminate):
         VS.IOmessage (0,"Passenger",self.mplay,"#00ff00Excellent work pilot.")
         VS.IOmessage (0,"Passenger",self.mplay,"#00ff00You have been rewarded for your effort as agreed.")
@@ -125,13 +128,15 @@ class rescue (Director.Mission):
         if len(self.donevar):
             quest.removeQuest(int(self.mplay[1:]),self.donevar,-1)
         if (terminate):
-            print "lose plunder mission"
+            debug.info("lose plunder mission")
             VS.terminateMission(0)
+
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")
+
     def loopbriefing(self):
-        print "loop briefing"
-        Briefing.terminate();
+        debug.info("loop briefing")
+        Briefing.terminate()
 
     def endbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")

@@ -1,6 +1,8 @@
+from XGUIDebug import *
 import Base
 import VS
-from XGUIDebug import *
+import debug
+
 
 GUIRootSingleton = None
 _doWhiteHack = 1
@@ -563,7 +565,7 @@ class GUIStaticImage(GUIElement):
     def draw(self):
         """ Creates the element """
 #       if (self.visible == 0):
-#           print "::: GUIStaticImage draw called when self.visible == 0"
+#           debug.info("::: GUIStaticImage draw called when self.visible == 0")
         if (self.visible == 1) and (self.spritestate==0) and self.spriteIsValid():
             (x,y,w,h) = self.sprite[1].getSpriteRect()
             Base.Texture(self.room.getIndex(),self.index,self.sprite[0],x,y)
@@ -697,7 +699,7 @@ class GUILineEdit(GUIGroup):
             Base.EraseObj(self.room.getIndex(),self.index+"_white_hack")
 
     def keyDown(self,key):
-        print "got key: %i" % key 
+        debug.debug("got key: %i" % key)
         if key == 13 or key == 10: #should be some kind of return
             self.action(self)
         elif key == 27: #escape is always 27, isn't it?
@@ -709,7 +711,7 @@ class GUILineEdit(GUIGroup):
             try:
                 self.text.setText(self.getText() + ('%c' % key) + '-');
             except:
-                print "Character value too high "+str(key)
+                debug.info("Character value too high "+str(key))
         #self.notifyNeedRedraw()
 
 """------------------------------------------------------------------"""
@@ -1212,7 +1214,7 @@ class GUISimpleListPicker(GUIElement):
         
     @staticmethod
     def _notifySelectionChange(group,newval,caller):
-        print "New selection: %s" % newval
+        debug.debug("New selection: %s" % newval)
         caller.owner.selection = newval + caller.owner.firstVisible
         
     def _radiogroup(self):

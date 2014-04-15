@@ -1,10 +1,12 @@
-import quest
 import Vector
 import VS
+import debug
+import faction_ships
+import launch
+import quest
 import unit
 import vsrandom
-import launch
-import faction_ships
+
 
 class quest_shipyard_bomb (quest.quest):
     def __init__ (self):
@@ -17,18 +19,17 @@ class quest_shipyard_bomb (quest.quest):
             if (playa):
                 if (self.shipyard):
                     if (self.shipyard.getSignificantDistance(playa) > 1000):
-                        print 'shipy ret'
-                        print self.shipyard.getSignificantDistance(playa)
+                        debug.info("shipy ret")
+                        debug.info(self.shipyard.getSignificantDistance(playa))
                         return 1
                     else:
-                        print 'killing'
+                        debug.info("killing")
                         pos=self.shipyard.Position()
                         size=10*self.shipyard.rSize()
                         VS.playAnimation("explosion_orange.ani",pos,size)
                         pos=(pos[0]+.5*size,pos[1],pos[2])
                         VS.playAnimation("explosion_orange.ani",pos,size)
                         pos=(pos[0]-size,pos[1],pos[2])
-
                         VS.playAnimation("explosion_orange.ani",pos,size)
                         VS.playSound("explosion.wav",pos,(1,0,0))
                         self.shipyard.DealDamageToHull ((10,0,0),self.shipyard.GetHull()*.9)

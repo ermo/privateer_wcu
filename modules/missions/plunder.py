@@ -1,12 +1,14 @@
 from go_somewhere_significant import go_somewhere_significant
-import vsrandom
-import universe
-import launch
-import faction_ships
 import Director
-import unit
-import quest
 import VS
+import debug
+import faction_ships
+import launch
+import quest
+import unit
+import universe
+import vsrandom
+
 
 class plunder (Director.Mission):
 
@@ -36,19 +38,19 @@ class plunder (Director.Mission):
             VS.IOmessage (2,"plunder mission",self.mplay,"After it is destroyed, pick up all %s cargo that got ejected."%self.category)
             VS.IOmessage (3,"plunder mission",self.mplay,"Then return to a %s base with your cargo. #00ff00Good luck!"%self.faction)
         else:
-            print "aboritng plunder constructor..."
+            debug.info("aborting plunder constructor...")
             VS.terminateMission (0)
 
     def Win (self,un,terminate):
         VS.IOmessage (0,"plunder mission",self.mplay,"#00ff00Excellent work pilot.")
         VS.IOmessage (0,"plunder mission",self.mplay,"#00ff00You have been rewarded for your effort as agreed.")
         VS.IOmessage (0,"plunder mission",self.mplay,"#00ff00Your contribution to the war effort will be remembered.")
-        print "do you win?"
+        debug.info("do you win?")
         un.addCredits(self.cred)
         if len(self.donevar):
             quest.removeQuest(self.you.isPlayerStarship(),self.donevar,1)
         if (terminate):
-            print "you win plunder mission!"
+            debug.info("you win plunder mission!")
             VS.terminateMission(1)
 
     def Lose (self,terminate):
@@ -56,7 +58,7 @@ class plunder (Director.Mission):
         if len(self.donevar):
             quest.removeQuest(int(self.mplay[1:]),self.donevar,-1)
         if (terminate):
-            print "lose plunder mission"
+            debug.info("lose plunder mission")
             VS.terminateMission(0)
 
     def Execute (self):
@@ -68,15 +70,15 @@ class plunder (Director.Mission):
             self.gosig.Execute()
             cargquant=self.you.GetCargo(self.content).GetQuantity()
             if cargquant<self.quantity:
-#             print "ohnooohnoohno!!!!!!!"
+                # debug.debug("ohnooohnoohno!!!!!!!")
                 VS.IOmessage(0,"plunder mission",self.mplay,'Not enough of %s cargo... Get more until you have %d.'%(self.quantity))
                 VS.setCompleteness(self.obj,0.)
             elif self.you.isDocked(self.gosig.SignificantUnit()) or self.gosig.SignificantUnit().isDocked(self.you):
-#             print "du hast gewonnen!"
+                # debug.debug("du hast gewonnen!")
                 self.you.removeCargo(self.content,self.quantity,1)
                 self.Win(self.you,1)
-#           else:
-#             print 'hihohohiho'
+            # else:
+            #     debug.debug('hihohohiho')
         elif (self.arrived==2):
             cargquant=self.you.GetCargo(self.content).GetQuantity()
             VS.setCompleteness(self.obj,float(cargquant)/float(self.quantity))
@@ -105,7 +107,7 @@ class plunder (Director.Mission):
         else:
             significant=self.gosig.SignificantUnit()
             if (significant.isNull ()):
-                print "sig null"
+                debug.info("significant is null")
                 VS.terminateMission(0)
                 return
             else:
@@ -126,19 +128,19 @@ class plunder (Director.Mission):
                     if (self.enemy):
                         self.arrived=1
                     else:
-                        print "enemy null"
+                        debug.info("enemy null")
                         VS.terminateMission(0)
                         return
 
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("init briefing")
 
     def loopbriefing(self):
-        print "loop briefing"
+        debug.info("loop briefing")
         Briefing.terminate();
 
     def endbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")
 
 
 ##def initrandom (minns, maxns, credsmin, credsmax, run_away, minshipdifficulty, maxshipdifficulty):
@@ -156,5 +158,5 @@ class plunder (Director.Mission):
 ##    sd = vsrandom.random()*(maxshipdifficulty-minshipdifficulty)+minshipdifficulty
 ##    return bounty (minns,maxns,(1.0+(sd*0.5))*(vsrandom.random ()*(credsmax-credsmin)+credsmin),run_away,sd,tempfaction)
 ##  else:
-##    print "aborting bounty initrandom"
+##    debug.info("aborting bounty initrandom")
 ##    VS.terminateMission(0)

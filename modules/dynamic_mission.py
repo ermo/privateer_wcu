@@ -708,7 +708,7 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                             import trading
                             debug.debug("name: %s, faction: %s" % (name, faction))
                             exports=trading.getNoStarshipExports(name,faction,20)
-                            debug.debug("exports: %s" % (exports))
+                            debug.debug("exports:\n%s" % (debug.pp(exports)))
                             if (category.find("assengers")==-1 and len(exports)):
                                 category=exports[vsrandom.randrange(0,len(exports))][0]
                     #debug.debug("CATEGORY OK "+category)

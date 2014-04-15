@@ -1,15 +1,18 @@
 _seed=0
 RAND_MAX = 0x7fffffff
+
 def getallchar ():
     rez = ""
     for i in range(256):
         rez += "%c"% i
     return rez
+
 allchar = getallchar()
 aye = allchar.find('a')
 AAYE= allchar.find('A')
 Uhun= allchar.find('0')
 totalnormchar=26+26+10
+
 def getNumFromChar(c):
     global allchar,aye,AAYE, Uhun
     charnum=allchar.find(c)
@@ -22,6 +25,7 @@ def getNumFromChar(c):
             if (charnum-Uhun<10):
                 charnum = charnum-Uhun+26+26
     return charnum
+
 def seedstring (stru):
     num=long(0)
     l=len (stru)
@@ -33,8 +37,9 @@ def seedstring (stru):
     try:
         num = int(num)
     except:
-        print 'warning'
+        debug.warn('warning')
     return num
+
 def interleave (slist):
     touch=1
     index=0
@@ -47,7 +52,9 @@ def interleave (slist):
                 rez+=s[index]
         index+=1
     return rez
+
 _seed=0
+
 def rands(intseed):
     global RAND_MAX
     intseed = long( long(intseed) * long(1103515245) + long(12345))
@@ -57,10 +64,12 @@ def rands(intseed):
     except:
         return intseed
     return intseed
+
 def rand():
     global _seed
     _seed = rands (_seed)
     return _seed
+
 def seed (seednum):
     global _seed
     _seed = seednum

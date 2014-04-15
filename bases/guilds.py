@@ -1,25 +1,31 @@
-import mission_lib
-import vsrandom
 import Base
-import VS
-import quest
 import Director
+import VS
+import campaign_lib
+import debug
 import fixers
+import mission_lib
+import quest
+import universe
+import vsrandom
+
 letters="123456789a0bcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 def hashLetter(l):
     return letters.find(l[0])+1
+
 def CanMerchantGuild():
-    import universe
     basename=universe.getDockedBaseName()
     if (len(basename[0])==0 or len(basename[1])==0):
         return 0
     return (hashLetter(basename[0][0])+hashLetter(basename[1][0]))%2==0
+
 def CanMercenaryGuild():
-    import universe
     basename=universe.getDockedBaseName()
     if (len(basename[0])==0 or len(basename[1])==0):
         return 0    
     return (hashLetter(basename[0][0])+hashLetter(basename))%4<=1
+
 class Guild:
     """Stores information about the guild itself (name, mission types, number of missions)"""
     def __init__(self, name, min, max, missiontypes, membership,tech=[]):
@@ -56,7 +62,6 @@ class Guild:
             quest.removeQuest(plrnum,self.savestring,1)
             plr.addCredits(-1*self.membership)
             for tt in self.tech:
-                import universe
                 universe.addTechLevel(tt)
 
             Base.Message('Thank you for joining the '+str(self.name)+' Guild! Feel free to accept any of our large quantity of high-paying missions.')
@@ -85,10 +90,10 @@ class Button:
         if self.state==0:
             Base.Python(self.room,self.index,self.x,self.y,self.wid,self.hei,self.linkdesc,self.pythonstr,True)
             if self.sprite and type(self.sprite)==tuple and len(self.sprite)>2:
-                print 'Drawing sprite!'
+                debug.info("Drawing sprite!")
                 Base.Texture(self.room,self.index,self.sprite[0],self.sprite[1],self.sprite[2])
             else:
-                print "no sprite!"
+                debug.info("no sprite!")
             self.state=1
     
     def removeobjs(self):
@@ -178,21 +183,18 @@ class GuildRoom:
             self.buttons[self.missionnum].select()
     
     def drawobjs(self):
-        print 'len buttons'
-        print len(self.buttons)
-        print 'num missions'
-        print self.guild.nummissions
-        print 'button list'
-        print self.buttons
+        debug.debug("len buttons: %d" % (len(self.buttons)))
+        debug.debug("num missions: %d" % (self.guild.nummissions))
+        debug.debug("button list:\n %s" % (debug.pp(self.buttons)))
         for m in range(min(len(self.buttons),self.guild.nummissions)):
-            print 'draw button'
-            self.buttons[m].drawobjs()
+            debug.debug("draw button: %s" % (self.buttons[m].drawobjs()))
 
 guildrooms={}
 guilds={
     'Merchant'  :  Guild('Merchant',  6, 9, ['Cargo', 'Escort', ], 1000.00,[]),#["merchant"]), #no more tech, [] instead
     'Mercenary' :  Guild('Mercenary', 6, 9, ['Bounty', 'Defend', ], 5000.00,[])#["hunter"]) # no more tech, [] instead
     }
+
 def AcceptMission(room,guildname):
     if guildname in guildrooms:
         for guildroom in guildrooms[guildname]:
@@ -208,21 +210,22 @@ def SetCurrentMission(room,guildname,missionnum):
                 guildroom.SetCurrentMission(missionnum)
                 return True
     return False
+
 def JoinGuild(guildname):
     guilds[guildname].Join()
     fixers.DestroyActiveButtons()
-    print 'Create it ' + guildname
+    debug.info("Create it " + guildname)
     if guildname in guildrooms:
-        print 'Create it ' + str(guildrooms[guildname])
+        debug.info("Create it " + str(guildrooms[guildname]))
         for guildroom in guildrooms[guildname]:
-            print "drawing"
+            debug.info("drawing")
             guildroom.drawobjs()
+
 def TalkToReceptionist(guildname,introtext):
     text=introtext
-    import campaign_lib
     if campaign_lib.doTalkingHeads():
         campaign_lib.AddConversationStoppingSprite("Receptionist","bases/heads/"+guildname.lower()+".spr",(0,0),(3.2,2.0),"Return_To_Guild").__call__(Base.GetCurRoom(),None)
-    print 'start ('+str(guildname)+','+str(introtext)+')'
+    debug.info("start ("+str(guildname)+", "+str(introtext)+")")
     if guildname in guilds:
         guild=guilds[guildname]
         if not guild.HasJoined():
@@ -237,7 +240,6 @@ def TalkToReceptionist(guildname,introtext):
                 fixers.CreateChoiceButtons(Base.GetCurRoom(),[
                     fixers.Choice("bases/fixers/yes.spr","#G#\nimport guilds\nguilds.JoinGuild('"+guildname+"')","Accept This Agreement"),
                     fixers.Choice("bases/fixers/no.spr","bases/fixers/no.py","Decline This Agreement")])
-
                 VS.playSound("guilds/"+str(guild.name).lower()+"invite.wav",(0,0,0),(0,0,0))
             else:
                 VS.playSound("guilds/"+str(guild.name).lower()+"notenoughmoney.wav",(0,0,0),(0,0,0))            
@@ -245,17 +247,17 @@ def TalkToReceptionist(guildname,introtext):
 
 def CreateGuild(guildroom):
     guildname=guildroom.guild.name
-    print 'Create it ' + guildname
+    debug.info("Create it " + guildname)
 #   if guildname in guildrooms:
 #       guildrooms[guildname].append(guildroom)
 #   else:
     if True:
-        print 'make missions'
+        debug.info("make missions")
         guildroom.guild.MakeMissions()
         guildrooms[guildname]=[guildroom]
-        print 'true'
+        debug.info("true")
         if guildroom.guild.HasJoined():
-            print 'has joined.'
+            debug.info("has joined.")
             guildroom.drawobjs()
 
 def Clear():

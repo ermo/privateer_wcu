@@ -1,13 +1,14 @@
-import quest
+import Director
 import Vector
 import VS
-import unit
-import vsrandom
-import save_util
+import debug
 import faction_ships
-import universe
 import launch
-import Director
+import quest
+import save_util
+import unit
+import universe
+import vsrandom
 #import tuples_fg
 
 class dantestmission_factory (quest.quest_factory):
@@ -19,9 +20,6 @@ class dantestmission_factory (quest.quest_factory):
         return 1
 
 class dantestmission (quest.quest):
-
-
-
     def __init__ (self):
         self.playa = VS.getPlayer()
         if (self.playa):
@@ -38,7 +36,7 @@ class dantestmission (quest.quest):
 
             self.triggkey = [1,1,1,1]
 
-            print "Sending News"
+            debug.info("Sending News")
 
             Director.pushSaveString(0,"dynamic_news","#TEST STORY!\\Will this thing ever work!\\    Dan.a")
 
@@ -47,25 +45,24 @@ class dantestmission (quest.quest):
             Director.pushSaveString(0,"dynamic_news","my,arse,rlaan,aera,-1,0.8,is_sector/sore,all")
 
 
-
     def Execute (self):
         if 0 in self.triggkey and self.triggkey[3] == 1:
-            print "0 in triggkey"
+            debug.info("0 in triggkey")
             unit.setTfgDirective(self.guard,self.playa,'A')
             self.triggkey[3] = 0
 
         if self.un0.isNull() and self.triggkey[0]:
-            print "siege_win"
+            debug.info("siege_win")
             self.triggkey[0] = 0
             Director.pushSaveString(0,"dynamic_news","siege,start,rlaan,aera,1,0.8,enigma_sector/boondoggles,all")
 
         if self.un1.isNull() and self.triggkey[1]:
-            print "siege_loss"
+            debug.info("siege_loss")
             self.triggkey[1] = 0
             Director.pushSaveString(0,"dynamic_news","siege,start,rlaan,aera,-1,0.8,enigma_sector/boondoggles,all")
 
         if self.un2.isNull() and self.triggkey[2]:
-            print "siege_draw"
+            debug.info("siege_draw")
             self.triggkey[2] = 0
             Director.pushSaveString(0,"dynamic_news","siege,start,rlaan,aera,-1,0.8,enigma_sector/boondoggles,all")
 

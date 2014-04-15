@@ -1,16 +1,20 @@
-import quest
-import VS
-import vsrandom
 import Base
 import Director
-import mission_lib
-import fixer_lib
+import VS
 import code
+import debug
+import fixer_lib
+import mission_lib
+import quest
+import vsrandom
+
+
 activelinks=[]
 activeobjs=[]
 
 def checkSaveValue (playernum,questname, value):
     return quest.checkSaveValue(playernum,questname,value)
+
 def setSaveValue (playernum,name,value):
     quest.removeQuest(playernum,name,value);
 
@@ -21,23 +25,27 @@ def payCheck(playernum,savevalue,value,money):
 
 class Choice:
     _number=0
+
     def __init__(self,pics,actions,name):
         self.pics=pics
         self.name=name
         self.index=name.replace('/','_')+'/'+str(Choice._number)
         Choice._number+=1
         self.actions=actions
+
     def drawobjs(self,room,x,y,wid,hei):
         Base.Texture(room,self.index,self.pics,x+(wid/2.),y+(wid/2.))
         Base.Python(room,self.index,x,y,wid,hei,self.name,self.actions,1)
         global activelinks
         global activeobjs
         activelinks.append((room,self.index))
-        print '*** add link: '+str((room,self.index))
-        print activelinks
+        debug.info('*** add link: '+str((room,self.index)))
+        debug.info(activelinks)
         activeobjs.append((room,self.index))
-        print '*** add obj: '+str((room,self.index))
-        print activeobjs
+        debug.info('*** add obj: '+str((room,self.index)))
+        debug.info(activeobjs)
+
+
 class Fixer:
     """A class that draws nobody."""
     def __init__(self,name,text,precondition,image,choices):
@@ -49,17 +57,19 @@ class Fixer:
         if pos>=0:
             image=image[:pos]
         self.image = image
+
     def abletodraw(self):
         for cond in self.precondition:
             var= cond[0]
             value = cond[1]
             if not checkSaveValue(VS.getCurrentPlayer(),var,value):
                 return 0
-            
         return 1
+
     def drawobjs(self,room,x,y,wid,hei,imageappend=''):
         Base.Texture(room,self.name,self.image+imageappend+".spr",x+(wid/2.),y+(hei/2.))
         Base.Python(room,self.name,x,y,wid,hei,self.text,self.choices,False)
+
 class CFixer(Fixer):
     """A class class for \'Campaign\' Fixers."""
     
@@ -175,7 +185,7 @@ def queueFixer(playernum, name, scripttext, overwrite=0):
             if overwrite:
                 Director.putSaveString(int(playernum),str("CFixers"),i,name + '|' + scripttext)
                 return
-            print "WARNING: Fixer already exists."
+            debug.info("WARNING: Fixer already exists.")
             return
 #            raise RuntimeError("Campaign Fixer already exists with reference \'%s\'"%name)
     Director.pushSaveString(int(playernum),str("CFixers"),name + '|' + scripttext)
@@ -188,14 +198,15 @@ def DestroyActiveButtons ():
     global activeobjs
     for button in activelinks:
         Base.EraseLink(button[0],button[1])
-        print '*** erase link: '+str(button)
-        print activelinks
+        debug.info('*** erase link: '+str(button))
+        debug.info(activelinks)
     for button in activeobjs:
         Base.EraseObj(button[0],button[1])
-        print '*** erase obj: '+str(button)
-        print activeobjs
+        debug.info('*** erase obj: '+str(button))
+        debug.info(activeobjs)
     activeobjs=[]
     activelinks=[]
+
 def CreateChoiceButtons (room,buttonlist,vert=0,spacing=.025,wid=.2,hei=.2):
     x=0
     if (vert):
@@ -204,9 +215,9 @@ def CreateChoiceButtons (room,buttonlist,vert=0,spacing=.025,wid=.2,hei=.2):
     else:
         y=-.75-(hei/2.)
         x=-(wid*len(buttonlist)+(len(buttonlist)-1)*spacing)/2.
-    print x,y
+    debug.info("%d, %d" % (x, y))
     for button in buttonlist:
-        print '*** draw: '+str(button.index)
+        debug.info("*** draw: "+str(button.index))
         button.drawobjs(room,x,y,wid,hei)
         if (vert):
             y-=(spacing+hei)
@@ -275,7 +286,7 @@ class Conversation:
             name = self.ROOT_KEY
         if self.nodes.has_key(name):
             return self.nodes[name]
-        print "Error: Node with name \'%s\' does not exist."%name
+        debug.info("Error: Node with name \'%s\' does not exist." % (name))
 
     def addNode(self, node, name=str()):
         """Add a Node to the conversation.  Only one RootNode can exist in a
@@ -284,11 +295,11 @@ class Conversation:
             self.nodes[self.ROOT_KEY] = node
         elif isinstance(node, Node):
             if name==str():
-                print "Error: Node must be added with a name argument."
+                debug.info("Error: Node must be added with a name argument.")
             else:
                 self.nodes[name] = node
         else:
-            print "Error: Node is not of a valid type."
+            debug.info("Error: Node is not of a valid type.")
 
     def getFixerStrings(self):
         """Gets the required strings for the construction of the CFixer class."""
@@ -330,7 +341,6 @@ class Conversation:
             Base.Message(text)
 
 class SubNode:
-    
     def __init__(self, text=str(), conditions=list(), choices=list(), sprite=str(), motext=str()):
         self.conditions = list(conditions)
         self.text = str(text)
@@ -343,17 +353,16 @@ class SubNode:
         try:
             self.conditions.append(condition)
         except:
-            print "Error: Condition could not be added."
+            debug.warn("Error: Condition could not be added.")
 
     def addChoice(self, choice):
         """Adds the choice (a string) to the choices list."""
         try:
             self.choices.append(choice)
         except:
-            print "Error: Choice could not be added."
+            debug.warn("Error: Choice could not be added.")
 
 class Node:
-
     def __init__(self, subnodes=list()):
         self.subnodes = list(subnodes)
 
@@ -377,16 +386,16 @@ class Node:
             le = len(self.subnodes)
             for i in range(le):
                 if fixer_lib.evaluateConditions(self.subnodes[i].conditions):
-                    print "Returning subnode with text=" + self.subnodes[i].text
+                    debug.info("Returning subnode with text=" + self.subnodes[i].text)
                     return self.subnodes[i]
-                print "Rejecting subnode with text=" + self.subnodes[i].text
+                debug.info("Rejecting subnode with text=" + self.subnodes[i].text)
             return self.subnodes[le - 1]
 
 class RootNode(Node):
-
     def getInitialInfo(self, index=-1):
         """Gets the required information to setup the initial fixer.  The data
         is retrieved using the getSubNode method using, if applicable, the
         provided index."""
         sub = self.getSubNode(index)
         return sub.sprite, sub.motext
+

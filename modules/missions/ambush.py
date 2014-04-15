@@ -1,5 +1,6 @@
 import VS
 import Director
+import debug
 import directions_mission
 
 class ambush(directions_mission.directions_mission):
@@ -11,7 +12,7 @@ class ambush(directions_mission.directions_mission):
 
     def __init__(self, savevar, systems, delay, faction, numenemies, dyntype='', fgname='', greetingText=["Hello there, smuggler. Prepare to die!", "The price on your head is big enough that I missed my lunch."], directions=[], destination='', AdjustFaction=True):
         directions_mission.directions_mission.__init__ (self, savevar, directions, destination)
-        print 'Ambush: Starting'
+        debug.info('Ambush: Starting')
         if type(faction)!=tuple and type(faction)!=list:
             self.faction=(faction,)
         else:
@@ -41,7 +42,7 @@ class ambush(directions_mission.directions_mission):
         else:
             self.AdjustFaction=AdjustFaction
     def setupPlayer(self,cp):
-        print "ambush setting player up"
+        debug.info("ambush setting player up")
         directions_mission.directions_mission.setupPlayer(self,cp)
         self.privateSetupPlayer()
 
@@ -72,7 +73,7 @@ class ambush(directions_mission.directions_mission):
                 else:
                     dyntype=self.dyntype[0]
                 for z in range(numenemies):
-                    print 'Ambush: Launch ships!'
+                    debug.info('Ambush: Launch ships!')
                     self.havelaunched=1
                     import launch
                     L=launch.Launch()
@@ -113,7 +114,7 @@ class ambush(directions_mission.directions_mission):
                         VS.AdjustRelation("privateer",faction,-.02-rel,1.0)
                     if (i==0 and z==0):
                         universe.greet(self.greetingText,enemy,you)
-                    print 'Ambush: Ships have been launched. Exiting...'
+                    debug.info('Ambush: Ships have been launched. Exiting...')
     def terminate(self):
         self.terminated=1#VS.terminateMission(0)
     def Execute(self):
@@ -131,11 +132,11 @@ class ambush(directions_mission.directions_mission):
                     if (sys[where-1]=='/'):
                         where=0
                 if (where==0):
-                    #print 'Ambush: wait before launching ship...'
+                    #debug.debug('Ambush: wait before launching ship...')
                     self.inescapable=1
                     self.timer=VS.GetGameTime()
         if (self.inescapable and ((self.delay==0) or (VS.GetGameTime()-self.timer>=self.delay))):
             self.Launch(you)
             self.terminate()
-#                   print "it's unavoidable, my young apprentice... in "+str(self.delay)+" seconds from "+str(self.timer)
+            # debug.debug("it's unavoidable, my young apprentice... in "+str(self.delay)+" seconds from "+str(self.timer))
             

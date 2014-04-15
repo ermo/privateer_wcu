@@ -13,7 +13,7 @@ def launch (fgname, faction, type, ai, nr_ships, nr_waves, vec, logo='',useani=1
     debug.debug("type: %s" % (type))
     debug.debug("ai: %s, nr_ships: %d, nr_waves: %d" % (ai, nr_ships, nr_waves))
     debug.debug("vec: %s, logo: %s, useani: %d" % (vec, logo, useani))
-    #print 'log'+ str( logo) + ' useani '+ str(useani)
+    #debug.debug('log'+ str( logo) + ' useani '+ str(useani))
     use_diff = usingDifficulty()
 #   if useani:
 #       VS.playAnimation ("warp.ani",vec,300.0)

@@ -1,10 +1,13 @@
+from quest import checkSaveValue
 import Base
 import Director
-import code
 import VS
-from quest import checkSaveValue
+import code
+import debug
+
 global b
 b=1
+
 # To be merged with fixers.py???
 #
 # How to di it all:
@@ -81,12 +84,12 @@ def evaluateCondition(condition):
     elif condition[0] == '#':
         tempd = dict()
         exec condition[1:] in tempd
-        print "Custom condition code, returning: " + str(tempd["result"])
+        debug.info("Custom condition code, returning: " + str(tempd["result"]))
         return tempd["result"]
     else:
         con = condition.split('#')
-        print "Checking \'%s : %s\'"%(con[0],con[1])
-        print "Returning: " + str(checkSaveValue(VS.getCurrentPlayer(),con[0],int(con[1])))
+        debug.info("Checking \'%s : %s\'"%(con[0],con[1]))
+        debug.info("'-> Returning: " + str(checkSaveValue(VS.getCurrentPlayer(),con[0],int(con[1]))))
         return checkSaveValue(VS.getCurrentPlayer(),con[0],int(con[1]))
 
 def evaluateConditions(conditions):
@@ -105,9 +108,6 @@ def sampleNode():
 
 def sampleCon():
     return ["Node2^#b==1|\"Aar!  This ale is mighty fine.  You there, walk the plank!\"|choices^#b==2|\"Land Ahoy!\"|choices","Root|#a==2^#b==1|\"Aar!  This RootBeer is mighty fine.  You are scummvm.\"|choices|sprite|mouseover^#b==2|\"Land AhoyRoot!\"|choices2|sprite2|mouseover2"]
-
-
-
 
 
 #Root Node:

@@ -1,5 +1,8 @@
-import campaign_lib
 from campaign_lib import *
+import VS
+import debug
+import quest
+import universe
 
 ## Set up the main Privateer and Righteous Fire campaigns
 campaignsloaders = [
@@ -1435,22 +1438,18 @@ class StealGun(InSystemCondition):
         self.guntype=guntype
         self.stoleit=False
     def __call__(self):
-        import VS
-        print "CHECKING INSYSTEM COND"
+        debug.info("CHECKING INSYSTEM COND")
         if (InSystemCondition.__call__(self)):
-            print "CHECKING GUN"
+            debug.info("CHECKING GUN")
             if (VS.getPlayer().removeWeapon(self.guntype,0,True)!=-1):
-                import universe
                 universe.addTechLevel("tech",False)
                 #add sprite!
-                import quest
                 quest.removeQuest(VS.getCurrentPlayer(),"removed_"+self.guntype,1)
-                print "REMOVED GUN"
+                debug.info("REMOVED GUN")
                 self.stoleit=True
                 return True
             else:
-                print "CANNOT REMOVE GUN"
-        import quest
+                debug.info("CANNOT REMOVE GUN")
         if (quest.checkSaveValue(VS.getCurrentPlayer(),"removed_"+self.guntype,1)):
             return True
         return False

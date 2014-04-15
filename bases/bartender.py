@@ -1,3 +1,8 @@
+import Base
+import VS
+import debug
+import vsrandom
+
 
 tender={"agricultural_rf":("You're the guy who blew up the big green egg, right? I heard the space aliens gave you a super-gun. I wish I had something like that. I'd make me some serious money","I hear the battle against the Kilrathi is heating up. I'm no sympathiser or anything, but I don't think we stand much of a chance.","Some Confeds were walking around here last week. They were asking if anyone knew about some guy called Menesch. I don't think they got much out of the crowd here."),
         "mining_rf":("The situation's real bad for the Confederation. I think they'll have to make some concessions real soon, or else fall to either the Retros or the Kilrathi. I wonder which bases they'll give up first?","I hear the Retro blockades have become almost impossible to break. Some blockades have lasted for weeks. Without adequate supplies, Gemini becomes all the weaker."),
@@ -134,11 +139,8 @@ tender={"agricultural_rf":("You're the guy who blew up the big green egg, right?
         }
 for tend in tender:
     if (tend!="default" and tend!="pleasure" and tend.find("_rf")==-1 and tend.find("_out")==-1):
-        print "ADDING TENDER " + tend 
+        debug.info("ADDING TENDER " + tend)
         tender[tend]=tender["default"]+tender[tend]
-import Base
-import VS
-import vsrandom
 
 def GetOutOfInfo(str):
    str+="_out"
@@ -199,10 +201,8 @@ def Drink(turns=100,cost=10):
             text='Here you go.'
     else:
             text='Sorry pal, I don\'t keep tabs.'
-    print "DRINK: "+text
+    debug.info("DRINK: "+text)
     Base.Message (text)
-
-
         
 def Speak(thingstosay):
     (text,sound)=Base.GetRandomBarMessage()
@@ -225,5 +225,5 @@ def Speak(thingstosay):
     VS.StopAllSounds()
     Base.Message (text)
     if sound and (sound!=''):
-        print "playing sound "+str(sound)
+        debug.info("playing sound "+str(sound))
         VS.playSound (sound, (0.,0.,0.), (0.,0.,0.))

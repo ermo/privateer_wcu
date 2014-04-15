@@ -1,13 +1,16 @@
 from go_to_adjacent_systems import *
-import vsrandom
-import launch
-import faction_ships
-import VS
 import Briefing
-import universe
-import unit
-import quest
 import Director
+import VS
+import debug
+import faction_ships
+import launch
+import quest
+import unit
+import universe
+import vsrandom
+
+
 class patrol (Director.Mission):
     def __init__ (self, numsystemsaway, num_significants_to_patrol, scan_object_distance, creds, jumps=(), donevar='', scan_objects=None):
         Director.Mission.__init__(self)
@@ -98,7 +101,7 @@ class patrol (Director.Mission):
                 uname = un.getFullname()
                 ufac = un.getFactionName()
                 ufg = un.getFlightgroupName()
-                print "Unit name:'" + uname + "' flightgroup:'" + ufg + "' faction:'" + ufac + "'"
+                debug.info("Unit name:'" + uname + "' flightgroup:'" + ufg + "' faction:'" + ufac + "'")
                 if uname in scan_objects["except"]: # Exclude those
                     excepted = True
                 for obj in scan_objects["exceptall"]: # Exclude all of those
@@ -176,14 +179,14 @@ class patrol (Director.Mission):
                     self.SuccessMission()
 
     def initbriefing(self):
-        print "ending briefing"
+        debug.info("init briefing")
 
     def loopbriefing(self):
-        print "loop briefing"
+        debug.info("loop briefing")
         Briefing.terminate();
 
     def endbriefing(self):
-        print "ending briefing"
+        debug.info("ending briefing")
 
 def initrandom (minsysaway,maxsysaway,minsigtopatrol,maxsigtopatrol,mincred,maxcred):
     nsys = vsrandom.randrange (minsysaway, maxsysaway)

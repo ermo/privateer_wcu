@@ -11,7 +11,7 @@ import vsrandom
 
 def moveUnitTo(un,place,radius):
     where=place.LocalPosition()
-    print "moving "+un.getName() +" to "+place.getName()
+    debug.info("moving "+un.getName() +" to "+place.getName())
     prsize=place.rSize();
     prp = VS.getPlanetRadiusPercent()
     if (place.isPlanet()):
@@ -66,7 +66,7 @@ class go_somewhere_significant:
                     significant=you
                 self.orbitee="%s" % (significant.getName())
                 self.capship=1
-                print "orbitee %s " % self.orbitee
+                debug.info("orbitee %s " % self.orbitee)
                 if (dyn_fg==""):
                     newship=faction_ships.getRandomCapitol(capshipfaction)
                     testun=VS.getUnit(0)
@@ -112,7 +112,7 @@ class go_somewhere_significant:
         else:
             significant = universe.getRandomJumppoint ()
         if (significant.isNull()):
-            print "ERROR: no significants found in starsystem %s" % (self.sysfil)
+            debug.info("ERROR: no significants found in starsystem %s" % (self.sysfil))
             self.significantun=VS.getPlayer()
         else:
             self.significantun=significant
@@ -129,10 +129,13 @@ class go_somewhere_significant:
             visitstr+=(dockstr % (self.orbitee))
         thename=self.getSignificantFullName()
         VS.IOmessage(time,fro,universe.getMessagePlayer(self.you),visitstr % (thename) )
+
     def DestinationSystem(self):
         return self.significantun.getUnitSystemFile();
+
     def JumpPoints (self):
         return self.DestinationSystem()
+
     def Execute(self):
         if (self.significantun.isNull() or self.you.isNull() or VS.getSystemFile()!=self.DestinationSystem()):
             return 0
@@ -145,6 +148,7 @@ class go_somewhere_significant:
 #   if ((not self.arrivedarea) and (self.frameoffset%25)):
 #       VS.setCompleteness(self.obj,(1-(float(sigdis)/float(self.begsigdis)))) #doesn't work too well... for now, it will be 0 until you dock
         return self.HaveArrived()
+
     def initbriefing (self):
         self.mytime = VS.GetGameTime();
         faction=self.you.getFactionName();
@@ -154,10 +158,12 @@ class go_somewhere_significant:
         name = self.significantun.getName()
         self.brief_sig=Briefing.addShip(name,faction,(-40,0.0,8000.0))
         Briefing.enqueueOrder (self.brief_you,(-30,0.0,7900.0),5.0)
+
     def loopbriefing (self):
         if (VS.GetGameTime()-self.mytime>5):
             return self.brief_you
         return -1
+
     def endbriefing(self):
         del self.mytime
         del self.brief_you

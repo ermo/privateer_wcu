@@ -1,14 +1,16 @@
-from go_to_adjacent_systems import *
 from go_somewhere_significant import *
-import vsrandom
-import launch
-import faction_ships
-import VS
+from go_to_adjacent_systems import *
 import Briefing
-import universe
-import unit
 import Director
+import VS
+import faction_ships
+import launch
 import quest
+import unit
+import universe
+import vsrandom
+
+
 class go_none:
     def Execute(self):
         return 1
@@ -23,25 +25,27 @@ isambushrunning={}
 
 class directions_mission (Director.Mission):
     def dir_privateSetupPlayer(self,cp):
-        print "setting up mission"
-        print self.jumps
+        debug.info("setting up mission")
+        debug.info("jumps:"+self.jumps)
         self.arrived=0
         self.wasnull=0
         self.you=VS.getPlayerX(cp)
         self.adjsys=go_to_adjacent_systems(self.you,0,self.jumps)
         self.adjsys.Print("You should start in the system named %s","Then jump to %s","Lastly, jump to %s, your final destination","cargo mission",1)
+
     def setupPlayer(self,cp):
         self.dir_privateSetupPlayer(cp)
+
     def __init__ (self,savevar,jumps=(),destination=''):
         Director.Mission.__init__(self);
-        print 'Directions: Starting'
+        debug.info("Directions: Starting")
         global isambushrunning
         self.var=savevar
         self.savedCargo=self.getCargo(VS.getPlayer())
-#       print self.savedCargo
+        debug.debug("self.savedCargo:"+self.savedCargo)
         if (self.var,self.savedCargo) in isambushrunning:
             #VS.terminateMission(0)
-            print 'Directions: Stopping: directions already running! (before mission restore)'
+            debug.info("Directions: Stopping: directions already running! (before mission restore)")
         isambushrunning[(self.var,self.savedCargo)]=True
         self.jumps=jumps
         self.cp=VS.getCurrentPlayer()
@@ -79,15 +83,17 @@ class directions_mission (Director.Mission):
             testun=VS.getUnit(itt)
             itt+=1
         return VS.getUnit(0)
+
     def getCargo(self,un):
         lis=[]
         for i in range(un.numCargo()):
             if (un.GetCargoIndex(i).GetMissionFlag()):
                 lis.append(un.GetCargoIndex(i).GetContent())
         return tuple(lis)
+
     def checkCargo(self,un):
-        import quest
         return not (quest.checkSaveValue(self.cp,self.var,0) or quest.checkSaveValue(self.cp,self.var,1) or quest.checkSaveValue(self.cp,self.var,-1) or self.getCargo(un)!=self.savedCargo)
+
     def Execute (self):
         if (VS.getPlayerX(self.cp).isNull()):
             self.wasnull=1
@@ -95,7 +101,7 @@ class directions_mission (Director.Mission):
         if (self.arrived and self.base.isNull()):
             return
         if (self.wasnull):
-            print "INEQUALITY"
+            debug.info("INEQUALITY")
             if (not self.checkCargo(VS.getPlayerX(self.cp))):
                 self.takeCargoAndTerminate(self.you,1)
                 return

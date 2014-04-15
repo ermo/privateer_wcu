@@ -1,21 +1,27 @@
-from go_to_adjacent_systems import *
 from go_somewhere_significant import *
-import vsrandom
-import launch
-import faction_ships
-import VS
+from go_to_adjacent_systems import *
 import Briefing
+import Director
+import VS
+import debug
+import faction_ships
+import launch
+import quest
 import universe
 import unit
-import Director
-import quest
+import vsrandom
+
+# global
 escort_num=0
+
+
 class escort_mission (Director.Mission):
     you=VS.Unit()
     escortee=VS.Unit()
     adjsys=0
     arrived=0
     mplay="all"
+
     def __init__ (self, factionname, missiondifficulty, our_dist_from_jump, dist_from_jump, distance_from_base, creds, enemy_time, numsysaway, jumps=(), var_to_set='', fgname='', dyntype=''):
         Director.Mission.__init__(self);
         self.you = VS.getPlayer();
@@ -23,11 +29,11 @@ class escort_mission (Director.Mission):
         self.gametime=VS.GetGameTime()
         self.adjsys=go_to_adjacent_systems(self.you, numsysaway,jumps)
         self.var_to_set = var_to_set;
-        print "e"
+        debug.debug("e")
         self.adjsys.Print("You should start in the system named %s","Then jump to %s","Finally, jump to %s, your final destination","escort mission",1)
-        print "f"
+        debug.debug("f")
         self.distfrombase=distance_from_base
-        print "g"
+        debug.debug("g")
         self.faction=factionname
         global escort_num
         escort_num+=1
@@ -61,18 +67,22 @@ class escort_mission (Director.Mission):
             self.escortee=L.launch(self.you)
             self.escortee.upgrade("jump_drive",0,0,0,1)
             self.you.SetTarget(self.escortee)
-            print "h"
+            debug.debug("h")
             self.escortee.setFlightgroupLeader(self.you)
-            print "dd"
+            debug.debug("dd")
             self.difficulty=missiondifficulty
             self.creds = creds
+
     def initbriefing(self):
-        print "ending briefing"                
+        debug.info("init briefing")
+
     def loopbriefing(self):
-        print "loop briefing"
+        debug.info("loop briefing")
         Briefing.terminate();
+
     def endbriefing(self):
-        print "ending briefing"        
+        debug.info("ending briefing")
+
     def Execute (self):
         if (VS.GetGameTime()-self.gametime>10):
             self.escortee.setFgDirective('F')
@@ -81,7 +91,7 @@ class escort_mission (Director.Mission):
             VS.terminateMission(0)
             return
         self.escortee.setFlightgroupLeader(self.you)
-        #print 'name: '+self.escortee.getFlightgroupLeader().getName()
+        debug.debug('name: '+self.escortee.getFlightgroupLeader().getName())
         #self.escortee.SetVelocity(self.you.GetVelocity())
         if (self.escortee.isNull()):
             VS.IOmessage (0,"escort",self.mplay,"#ff0000You were to protect your escort. Mission failed.")
@@ -112,5 +122,6 @@ class escort_mission (Director.Mission):
             if (self.var_to_set!=''):
                 quest.removeQuest (self.you.isPlayerStarship(),self.var_to_set,1)
             VS.terminateMission(1)
+
 def initrandom (factionname, difficulty, creds, entime, numsysaway, jumps=(), var_to_set='', fgname='', dyntype=''):
     return escort_mission(factionname, difficulty, 20000, vsrandom.randrange(5000,7000), vsrandom.randrange(10,300), creds, entime, numsysaway, jumps, var_to_set, fgname, dyntype)

@@ -76,6 +76,8 @@ _pi = 3.1415926536
 _e = 2.7182818284590451
 from VS import log as _log, exp as _exp
 from VS import sqrt as _sqrt, acos as _acos, cos as _cos, sin as _sin
+import debug
+
 
 __all__ = ["Random","seed","random","uniform","randint","choice",
            "randrange","shuffle","normalvariate","lognormvariate",
@@ -577,7 +579,7 @@ class Random:
 
 def _test_generator(n, funccall):
     import VS
-    print n, 'times', funccall
+    debug.info(n+' times '+funccall)
     code = compile(funccall, funccall, 'eval')
     sum = 0.0
     sqsum = 0.0
@@ -591,17 +593,17 @@ def _test_generator(n, funccall):
         smallest = min(x, smallest)
         largest = max(x, largest)
     t1 = VS.timeofday()
-    print round(t1-t0, 3), 'sec,',
+    debug.info(round(t1-t0, 3) + ' sec,')
     avg = sum/n
     stddev = _sqrt(sqsum/n - avg*avg)
-    print 'avg %g, stddev %g, min %g, max %g' % \
-              (avg, stddev, smallest, largest)
+    debug.info('avg %g, stddev %g, min %g, max %g' % \
+              (avg, stddev, smallest, largest))
 
 def _test(N=200):
-    print 'TWOPI         =', TWOPI
-    print 'LOG4          =', LOG4
-    print 'NV_MAGICCONST =', NV_MAGICCONST
-    print 'SG_MAGICCONST =', SG_MAGICCONST
+    debug.info('TWOPI         = '+ TWOPI)
+    debug.info('LOG4          = '+ LOG4)
+    debug.info('NV_MAGICCONST = '+ NV_MAGICCONST)
+    debug.info('SG_MAGICCONST = '+ SG_MAGICCONST)
     _test_generator(N, 'random()')
     _test_generator(N, 'normalvariate(0.0, 1.0)')
     _test_generator(N, 'lognormvariate(0.0, 1.0)')

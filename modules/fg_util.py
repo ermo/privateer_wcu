@@ -1,6 +1,7 @@
 import Director
 import VS
 import debug
+import faction_ships
 import vsrandom
 
 
@@ -12,39 +13,48 @@ ccp=VS.getCurrentPlayer()
 #Uln adVerbs
 #klkk Adjectives
 def MaxNumFlightgroupsInSystem (syst):
-    import faction_ships
     try:
         return faction_ships.max_flightgroups[syst]
     except:
         return 3
+
 def MinNumFlightgroupsInSystem (syst):
-    import faction_ships
     try:
         return faction_ships.min_flightgroups[syst]
     except:
         return 1
+
 def MaxNumBasesInSystem():
     return 10
+
 def MinNumBasesInSystem():
     return 0
+
 def MakeFactionKey (faction):
     return 'FF:'+str(VS.GetFactionIndex(faction))
+
 def MakeFGKey (fgname,faction):
     return 'FG:'+str(fgname)+'|'+str(VS.GetFactionIndex(faction))
+
 def MakeStarSystemFGKey (starsystem):
     return 'SS:'+str(starsystem)
+
 def ShipListOffset ():
     return 3
+
 def PerShipDataSize ():
     return 3
+
 def AllFactions ():
     facs =[]
     for i in range (VS.GetNumFactions()):
         facs+= [VS.GetFactionName(i)]
     return facs
+
 basenamelist={}
 flightgroupnamelist={}
 genericalphabet=['Alpha','Beta','Gamma','Delta','Epsilon','Zeta','Phi','Omega']
+
 def ReadBaseNameList(faction):
     bnl=[]
     debug.info('reading base names '+str(faction))
@@ -153,7 +163,6 @@ def RandomFlightgroup (faction):
     i = Director.getSaveStringLength(ccp,MakeFactionKey(faction))
     if (i==0):
         return ''
-    import vsrandom
     return Director.getSaveString(ccp,key,vsrandom.randrange(0,i))
 
 def ListToPipe (tup):
@@ -408,7 +417,7 @@ def AllFGsInSystem(faction,system):
     key = MakeStarSystemFGKey (system)
     leg = Director.getSaveStringLength (ccp,key)
 #       if 1:#(not (Director.dontdoprint)):
-#               print faction
+#               debug.info(faction)
     facnum = VS.GetFactionIndex (faction)
     ret=[]
     if (leg>facnum):
@@ -575,7 +584,8 @@ def launchBase (type,num,faction,system,sig_units,numfighters):
 
 def zeros (le):
     shipcount=[];
-    for i in range(le): shipcount+=[0];
+    for i in range(le):
+        shipcount+=[0]
     return shipcount
 
 def launchBases(sys):
@@ -676,5 +686,4 @@ def getFgLeaderType(fgname,faction):
     if (len(l)):
         if (len(l[0])):
             return l[0][0];
-    import faction_ships
     return faction_ships.getRandomFighter(faction)

@@ -1,7 +1,10 @@
-import VS
 import Director
 import Vector
+import VS
+import debug
 import vsrandom
+
+
 def isCar(c):
     nam = c.getName()
     return nam=='car' or nam == 'spectre' or nam=='porsche' or nam=='skart'
@@ -12,18 +15,23 @@ class Environment(Director.Mission):
         if (Vector.Dot(vec,vec)<1000):
             return True
         return False
+
     def nearflag(self,un,flag):
         return un.getDistance(flag)<0
+
     def TwoDdis (self,uvec,f):
         fvec=f.Position()
         x=fvec[0]-uvec[0];
         y=fvec[2]-uvec[2];
         return x*x+y*y
+
     def tweakHeight (playa,sub):
         self.unitheight= sub.Position()[1]
+
     def scoreFlag(self,un,f):
         f.Kill()
         VS.IOmessage(0,"game","all","Got a flag")
+
     def checkUn (self):
         for X in range (getNumPlayers()):
             un=getPlayerX (X)
@@ -54,14 +62,12 @@ class Environment(Director.Mission):
                         return
 
     def randomFlagLocation(self):
-        import vsrandom
         if (len(self.flags)):
             i = vsrandom.randrange(0,len(self.flags))
             return Vector.Add((vsrandom.uniform(-20,20),vsrandom.uniform(-20,20),vsrandom.uniform(-20,20)),self.flags[i].Position())
         return (0,0,0)
 
     def randomLocation(self):
-        import vsrandom
         for i in range (50):
             vec=(vsrandom.uniform(-self.arenasize,self.arenasize),
                      0,
@@ -74,6 +80,7 @@ class Environment(Director.Mission):
                     continue
             return vec
         return vec
+
     def CreateFlag (self,name):
         un = VS.launch("flags",name,"neutral","unit","default",1,1,self.randomLocation(),'')
         self.flags.append(un)
@@ -81,6 +88,7 @@ class Environment(Director.Mission):
     def CreateObstacle(self,name):
         un = VS.launch("flags",name,"neutral","unit","default",1,1,self.randomLocation(),'')
         self.obstacles.append(un)
+
     def CreateSub(self,name):
         un = VS.launch("flags",name,"neutral","unit","default",1,1,self.randomLocation(),'')
         self.subs.append(un)
@@ -96,6 +104,7 @@ class Environment(Director.Mission):
         un = VS.launch ("cybernet",name,"unknown", "unit",mod,1,1,vec,'')
         un.SetOrientation ((0,1,0),(0,0,evenodd))
         self.num_un+=1
+
     def __init__ (self,numobst, numflag,numspec,numseek, numsubs):
         Director.Mission.__init__(self)
         self.unitheight=0
@@ -103,20 +112,20 @@ class Environment(Director.Mission):
         self.flags=[]
         self.obstacles=[]
         self.subs=[]
-        print 'initing'
+        debug.info("initing")
         self.iter=0
         self.num_un=0
         for i in range(numobst):
             self.CreateObstacle("box")
         for i in range(numflag):
             self.CreateFlag("flag")
-        import vsrandom
         for i in range(numspec):
             self.CreateUnit ("spectre",vsrandom.randrange(0,2))
         for i in range(numseek):
             self.CreateUnit ("skart",0)
         for i in range (numsubs):
             self.CreateSubs("subs");
+
     def Execute(self):
         un = VS.getUnit (self.iter)
         if (un):
@@ -125,8 +134,10 @@ class Environment(Director.Mission):
             self.iter+=1
         else:
             self.iter=0
+
     def EventualExecture (self):
         self.Execute()
+
     def AlwaysExecute(self):
         self.EventualExecute()
         iter = VS.getUnitList ()
@@ -137,6 +148,7 @@ class Environment(Director.Mission):
                 self.ApplyPerFrameEnvironment (un,playa)
             iter.advance()
             un = iter.current()
+
     def ApplyEventualEnvironment(self,un,playa):
         unheight=0
         if (un.getName()=='skart' or un.isPlayerStarship()!=-1):

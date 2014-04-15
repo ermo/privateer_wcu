@@ -1,20 +1,23 @@
-import universe
 from go_to_adjacent_systems import go_to_adjacent_systems
 from go_somewhere_significant import go_somewhere_significant
-import vsrandom
-import Vector
-import launch
-import faction_ships
 import Director
 import Briefing
-import unit
+import Vector
 import VS
+import faction_ships
+import launch
 import quest
 import quest_drone
+import universe
+import unit
+import vsrandom
+
+
 class defend_drone (Director.Mission):
     def SetVar (self,val):
         if (self.var_to_set!=''):
             quest.removeQuest (self.you.isPlayerStarship(),self.var_to_set,val)
+
     def __init__ (self,helpship,helpfac,helpsystem,attackship,attackfac,numgood,goodfac,jumps,var_to_set='',helptext=[]):
         Director.Mission.__init__ (self)
         self.firsttime=VS.GetGameTime()
@@ -54,28 +57,29 @@ class defend_drone (Director.Mission):
             self.adjsys.Print("From %s system","Procede to %s","Search for target at %s, your final destination","defend mission",1)
             VS.IOmessage (1,"defend mission",self.mplay,"Target is a %s unit." % (self.attackfaction))
         else:
-            print "aborting defend_drone constructor..."
+            debug.info("aborting defend_drone constructor...")
             VS.terminateMission (0)
 
     def AdjLocation(self):
-        print "ADJUSTING LOC"
+        debug.info("ADJUSTING LOC")
         quest_drone.drone.SetPosition(Vector.Add(quest_drone.drone.LocalPosition(),Vector.Scale(quest_drone.drone.GetVelocity(),-40)))     #eta 20 sec
+
     def Win (self,un,terminate):
         self.SetVar(1)
         quest.removeQuest(self.you.isPlayerStarship(),"quest_drone")
         VS.IOmessage (0,"defend mission",self.mplay,"[Computer] #00ff00Defend Mission Accomplished!")
         un.addCredits(self.cred)
         if (terminate):
-            print "you win defend mission!"
+            debug.info("you win defend mission!")
             VS.terminateMission(1)
-          
+
     def Lose (self,terminate):
         VS.IOmessage(0,"defend mission",self.mplay,"[Computer] #ff0000Defend Mission Failed.")
         self.SetVar(-1)
         if (terminate):
-            print "lose defend mission"
+            debug.info("lose defend mission")
             VS.terminateMission(0)
-          
+
     def Execute (self):
         isSig=0
         if (self.you.isNull()):
@@ -96,7 +100,7 @@ class defend_drone (Director.Mission):
         elif (self.arrived==2):
             #significant=self.adjsys.SignificantUnit()
             #if (significant.isNull ()):
-            #    print "sig null"
+            #    debug.debug("sig null")
             #    VS.terminateMission(0)
             #    return
             if (1):
@@ -137,18 +141,16 @@ class defend_drone (Director.Mission):
                             except:
                                 pass
                             quest_drone.drone=L.launch(self.you)
-
                     if quest_drone.drone.getUnitSystemFile()!=VS.getSystemFile():
                         quest_drone.drone.JumpTo(VS.getSystemFile())
                     goodguysC.SetTarget(quest_drone.drone)
                     goodguysA.SetTarget(quest_drone.drone)
-                        
                     self.you.SetTarget(quest_drone.drone)
                     self.obj=VS.addObjective("Destroy the %s ship." % (quest_drone.drone.getName ()))
                     if (quest_drone.drone):
                         self.arrived=3
                     else:
-                        print "enemy null"
+                        debug.info("enemy null")
                         VS.terminateMission(0)
                         return
                     #quest_drone.drone.SetHull(40.0)
@@ -178,7 +180,7 @@ class defend_drone (Director.Mission):
                 VS.playSound("campaign/Reismann.wav",(0.,0.,0.),(0.,0.,0.))
         else:
             if VS.getSystemFile()==self.helpsystem:
-                    print "Launching helper ship!"
+                    debug.info("Launching helper ship!")
                     if (self.newshiphelp==""):
                         self.newshiphelp=faction_ships.getRandomFighter(self.helpfaction)
                     L = launch.Launch()
@@ -198,20 +200,19 @@ class defend_drone (Director.Mission):
                     self.helper=L.launch(self.you)
                     self.helperpos=self.helper.Position()
                     self.you.SetTarget(self.helper)
-                    import universe
                     universe.greet(self.greetingText,self.helper,self.you)
                     whichmount=self.you.removeWeapon("Steltek",0,True)
                     if (whichmount!=-1):
                         self.you.upgrade('steltek_gun_boosted',whichmount,whichmount,True,True)
                     self.jumpingtime=VS.GetGameTime()                
                     self.arrived=1
+
     def initbriefing(self):
-        print "ending briefing"                
+        debug.info("init briefing")
 
     def loopbriefing(self):
-        print "loop briefing"
+        debug.info("loop briefing")
         Briefing.terminate();
 
     def endbriefing(self):
-        print "ending briefing"           
-
+        debug.info("ending briefing")

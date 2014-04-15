@@ -4,6 +4,7 @@ import Director
 import VS
 #import custom
 import debug
+import fixers
 import quest
 
 class Condition:
@@ -106,8 +107,6 @@ class HasUndocked(Condition):
 
     def __call__(self):
         global fixerloaded
-
-        import fixers
         debug.debug('*** HasUndocked check false')
         if self.count==-1:
             self.count=fixerloaded
@@ -253,7 +252,7 @@ def textline(strs):
 #depends on Base
 def displayText(room,textlist,enqueue=False):
     debug.debug("displayText()")
-    debug.debug("Displaying campaign text "+str(textlist))
+    debug.debug("Displaying campaign text:\n%s" % (debug.pp(textlist)))
     if room==-1:
         debug.debug("Room is -1!!!")
     room = Base.GetCurRoom()
@@ -840,8 +839,8 @@ class Campaign:
                 if int(Director.getSaveData(plr,self.name,i))!=self.savegame[i]:
                     self.readPositionFromSavegame()
                     break
-        debug.debug('*** :-) ***')
-        debug.debug(self.savegame)
+        debug.debug("*** :-) ***")
+        debug.debug("savegame state:\n%s" % (self.savegame))
         while True:
             try:
                 if self.current.checkPreconditions():
@@ -894,7 +893,6 @@ class CampaignNode:
     #depends on Base
     def getFixer(self,room):
         if self.spritelink and self.checkPreconditions():
-            import fixers
             debug.debug('*** create fixer'+ str(self.spritelink))
             tmpscript="#\nimport campaign_lib\n"
             if self.talkinghead and doTalkingHeads():
@@ -955,9 +953,8 @@ class CampaignChoiceNode(CampaignNode):
     def evaluate(self,room):
         debug.debug('***')
         debug.debug('***')
-        debug.debug(self.text)
+        debug.debug(debug.pp(self.text))
         displayText(room,self.text)
-        import fixers
         arr=[]
         debug.debug('*** create buttons +'+str(self.choices))
         for x in range(len(self.choices)):
@@ -1324,7 +1321,6 @@ def clickFixer(room):
 
 #depends on Base
 def clickChoice(room,choicenum):
-    import fixers
     cnodelist=getActiveCampaignNodes(-1)
     # Should only evaluate first one?
     VS.StopAllSounds()

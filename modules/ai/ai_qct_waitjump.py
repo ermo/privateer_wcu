@@ -1,18 +1,18 @@
-import VS
-import sys
-import quest
 import Vector
-import unit
-import vsrandom
-import save_util
+import VS
+import debug
 import faction_ships
-import universe
 import launch
+import quest
 import quest_contraband_truck
+import save_util
+import sys
+import unit
+import universe
+import vsrandom
 
 
 class waitjump(VS.PythonAI):
-
     def init(self,un):
         self.XMLScript ("++flystraight.xml")
         self.AddReplaceLastOrder(1)
@@ -37,7 +37,7 @@ class waitjump(VS.PythonAI):
 
             if self.timer == 0:
                 self.timer = VS.GetGameTime()
-                print "Timer Set"
+                debug.info("Timer Set")
             elif self.timer + 30 < VS.GetGameTime() and self.autoed == 0:
                 self.GetParent().ActivateJumpDrive(1)
                 self.GetParent().AutoPilotTo(self.trucktarget,1)
@@ -48,9 +48,9 @@ class waitjump(VS.PythonAI):
 #                       elif self.timer + 60 < VS.GetGameTime():
 # gets him to auto to the jump and jump out
 #                               self.GetParent().ActivateJumpDrive(1)
-            print self.GetParent().getMinDis(self.trucktarget.Position())
-
+            debug.info(self.GetParent().getMinDis(self.trucktarget.Position()))
         return 1
+
 hi1 = waitjump()
-print 'AI creation successful'
+debug.info("AI creation successful")
 hi1 = 0

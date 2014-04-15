@@ -1,12 +1,16 @@
-import vsrandom
-import VS
-import unit
-import launch
 from Vector import Add
 from wc1 import findOriginAndMove
+import VS
+import debug
+import launch
+import unit
+import vsrandom
+
+
 class wc1_mis1:
     def __init__(self):
         pass
+
     def Start(self,carrier):
         self.inflight=0
         self.jump = findOriginAndMove(carrier,(0,0,-20000));
@@ -21,12 +25,13 @@ class wc1_mis1:
         self.nav=[launch.launch("nav1","neutral","eject","sitting_duck",1,1,Add(self.origin,(20000,000,10000))),
                   self.jump]
         self.roids = [VS.launch("Asteroids","AFieldSparse","neutral","asteroid","default",1,1,Add(self.origin,(0000,00000,10000)),"")]
+
     def moveTrans (self,targ):
-        print "moving trans"
+        debug.info("moving trans")
         self.transport.SetPosAndCumPos(Add(targ.Position(),(0,0,-1000)))
 
     def LaunchNav (self,i,playa):
-        print "launching %d" % i
+        debug.info("launching %d" % i)
         if (i==0):
             launch.launch_wave_around_unit("BadGuys","aera","lekra","default",3,100,1000,playa)
             self.moveTrans(self.nav[0])
@@ -34,8 +39,9 @@ class wc1_mis1:
             if (self.launched[0]):
                 self.moveTrans(self.nav[1])
                 launch.launch_wave_around_unit("BadGuys","aera","kyta","default",2,100,1000,playa)
+
     def EndMission (self):
-        print "endmission"
+        debug.info("endmission")
         self.wingman.Kill()
         for n in self.nav:
             n.Kill()
@@ -44,10 +50,11 @@ class wc1_mis1:
         VS.terminateMission(1)
         if (self.transport):
             if (not unit.inSystem(self.transport)):
-                print "success"
+                debug.info("success")
                 return ("vega_sector/vega",0)
             #success (change debrief maybe?)
         return ("vega_sector/hellskitchen",0)
+
     def Execute(self):
         playa= VS.getPlayer()
         if (playa):

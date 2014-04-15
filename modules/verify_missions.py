@@ -1,5 +1,5 @@
-
 import VS
+import debug
 import faction_ships
 
 campaign_name={}
@@ -47,7 +47,7 @@ def verifyMission(name,args,campaign=None):
     elif name=='ambush_scan':
         mission=AmbushScan(args)
     if mission is None:
-        print 'Unsupported mission type'
+        debug.warn('Unsupported mission type')
         return False
     else:
         return mission.isValid()
@@ -74,7 +74,7 @@ class Argument:
             arg.set(self.value)
 
     def isValid(self):
-#        print "valid %s?"%self.NAME
+#       debug.debug("valid %s?" % (self.NAME))
         if isinstance(self.value, NoDefault):
             self.warn("No default exists for unset argument")
             return False
@@ -96,7 +96,7 @@ class Argument:
 
     def printwarnings(self):
         for warning in self.warnings:
-            print "\'%s\' Argument Warning: "%self.NAME + warning
+            debug.warn("\'%s\' Argument Warning: " % (self.NAME + warning))
 
 class PositiveInt(Argument):
 
@@ -397,12 +397,12 @@ class MissionVerifier:
     def isValid(self):
         for a in self.args:
             if not a.isValid():
-                print self.origargs
+                debug.warn(self.origargs)
                 return False
         return True
 
     def warn(self, text):
-        print "Mission Warning: " + text
+        debug.warn("Mission Warning: " + text)
 
 class AmbushVerifier(MissionVerifier):
     MISSION_ARGS=[SaveVar(),SystemTuple(System()),PositiveNumber(),FactionList(),PositiveInt(PositiveIntList()),ShipType(ShipTypeList(Empty()),Default()),DynFG(None,Default()),TextList(None,Default()),SystemTuple(None,Default()),Destination(None,Default()),Boolean(None,Default())]

@@ -7,8 +7,10 @@
 import Director
 import VS
 import debug
+import earnable_upgrades
 import faction_ships
 import launch
+import unit
 import vsrandom
 
 
@@ -252,24 +254,19 @@ def getDockedBaseName():
 
 def addTechLevel(level, addToBase=True):
     try:
-        import earnable_upgrades
         upgrades=earnable_upgrades.earnable_upgrades[level]
     except:
-        print "No tech level named "+str(level)
+        debug.info("No tech level named "+str(level))
         return
     bas=getDockedBase()
     if (not bas):
-        import unit
-        import vsrandom
-        print "getting significant for upgrade addage"
+        debug.info("getting significant for upgrade addage")
         bas = unit.getSignificant(vsrandom.randrange(1,20),1,0);
     for upgrade in upgrades:
         if (len(upgrade)<5):
-            print "Upgrade list not big enough to add to tech"
-            print upgrade
+            debug.info("Upgrade list not big enough to add to tech")
+            debug.info(upgrade)
             continue
-        import Director
-        import VS
         cp = VS.getCurrentPlayer()
         siz = Director.getSaveStringLength(cp,"master_part_list_content")
         doIt=True
@@ -277,8 +274,8 @@ def addTechLevel(level, addToBase=True):
             if (Director.getSaveString(cp,"master_part_list_content",index)==upgrade[0]):
                 doIt=False
         if (doIt):
-            print "added UPGRADE AS FOLLOWS to tech level "
-            print upgrade
+            debug.info("added UPGRADE AS FOLLOWS to tech level ")
+            debug.info(upgrade)
             Director.pushSaveString(cp,"master_part_list_content",str(upgrade[0]))
             Director.pushSaveString(cp,"master_part_list_category",str(upgrade[1]))
             Director.pushSaveString(cp,"master_part_list_price",str(upgrade[2]))
@@ -289,6 +286,6 @@ def addTechLevel(level, addToBase=True):
             else:
                 Director.pushSaveString(cp,"master_part_list_description","No description")             
             if (bas and addToBase):
-                print " adding "+str(upgrade[0]) +" to base "+bas.getName()
+                debug.info(" adding "+str(upgrade[0]) +" to base "+bas.getName())
                 cargo=VS.Cargo(str(upgrade[0]),str(upgrade[1]),float(upgrade[2]),1,float(upgrade[3]),float(upgrade[4]))
                 bas.forceAddCargo(cargo)
