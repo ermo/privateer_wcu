@@ -5,33 +5,38 @@ from __future__ import division
     By default, the fixer is in Gemini/Troy on the Achilles mining base.
 
     Talking to the fixer will launch a defend mission with a single
-    waypoint (Hector by default), at which a single Confed AI controlled
+    waypoint (Helen by default), at which a single Confed AI controlled
     ship (the type of which is configured below) will initiate an attack.
 
     * The first mission will have an opponent classified as 'Rabble'.
-    * The second mission will have an opponent classified as 'Average'.
-    * The third mission will have an opponent classified as 'Experienced'.
-    * The fourth and final mission will have an opponent classified 'Hardcore'.
 
     The fixer can be reset at any time by twice rejecting the mission she
     offers.
 
     Upon beating all the missions, the fixer will reset as well.
+
+    In the future, the following will be added:
+
+    * The second mission** will have an opponent classified as 'Average'.
+    * The third mission** will have an opponent classified as 'Experienced'.
+    * The fourth and final mission** will have an opponent classified as 'Hardcore'.
+
 """
 
+from campaign_lib import *
 import VS
 #import campaign_lib
 import debug
 import quest
-from campaign_lib import *
+
 
 # Difficulty tiers
 # ================
 #
-# Rabble := [0; 2/9[
-# Average := [2/9; 6/9[
-# Experienced := [6/9; 8/9[
-# Hardcore := [8/9; 9/9]
+# Rabble := [0/9; 1/9]       (2/10 probability)
+# Average := [2/9; 6/9]      (5/10 probability)
+# Experienced := [7/9; 8/9]  (2/10 probability)
+# Hardcore := [9/9; 9/9]     (1/10 probability)
 
 difficulty_ = 0  # will be incremented at some point. Range is [0/9; 9/9]
 
@@ -102,7 +107,7 @@ hardcore_speech = {
             }
 
 def load_ship_upgrade_test_campaign():
-    debug.debug("Entering load_ship_upgrade_testpriv() ...")
+    debug.debug("Entering load_ship_upgrade_test_campaign() ...")
     global system_
     global base_
     global waypoint_
