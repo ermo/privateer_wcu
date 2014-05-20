@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
+from universe import getAdjacentSystemList
 import Director
 import VS
 import campaigns
 import debug
 import fg_util
 import vsrandom
-from universe import getAdjacentSystemList
+
 
 cp=fg_util.ccp
 maxshipsinfg=20
@@ -127,7 +127,7 @@ def ForEachSys (startingsys,functio):
     todo=getAdjacentSystemList(startingsys)
     while len(todo):
         tmptodo=todo.pop(-1)
-        if (not systemdict.has_key(tmptodo)):
+        if (tmptodo not in systemdict):
             todo+=getAdjacentSystemList(tmptodo)
             systemdict[tmptodo]=functio(tmptodo)
     return len(systemdict)

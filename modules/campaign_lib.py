@@ -7,6 +7,7 @@ import debug
 import fixers
 import quest
 
+
 class Condition:
     def __init__(self):
         pass
@@ -28,6 +29,7 @@ def incSaveValue(playernum,name):
     val+=1
     setSaveValue(playernum,name,val)
 
+
 class SaveVariableCondition(Condition):
     def __init__(self,varname,varvalue):
         Condition.__init__(self)
@@ -39,6 +41,7 @@ class SaveVariableCondition(Condition):
         checked=checkSaveValue(VS.getCurrentPlayer(),self.name,self.value)
         debug.debug("*** Returning: " + str(checked))
         return checked
+
 
 class HaveCredits(Condition):
     def __init__(self,numcreds):
@@ -53,6 +56,7 @@ class HaveCredits(Condition):
             debug.debug("Have at least "+str(self.creds)+" credits? "+str(cc)+" >= it? "+str(ret))
             return ret
         return False
+
 
 class InSystemCondition(Condition):
     def __init__(self,system,shipname=None):
@@ -78,10 +82,10 @@ class InSystemCondition(Condition):
             if type(self.dockedshipname)==str:
                 debug.debug('*** Test if docked to: '+ self.dockedshipname)
                 iter = VS.getUnitList()
-                testun = iter.current()
                 while (not iter.isDone()):
+                    testun = next(iter)
                     #debug.debug("iter.next()")
-                    if (VS.getPlayer().isDocked(testun) or testun.isDocked(VS.getPlayer())):
+                    if (not testun.isNull() or VS.getPlayer().isDocked(testun) or testun.isDocked(VS.getPlayer())):
                         #Not sure why both have to be checked, it seems to second gives a more consistantly correct response
                         #find unit with name and check
                         debug.info('*** Compare ' + testun.getName().replace(' ','_').lower() + " == " + self.dockedshipname)
@@ -91,12 +95,12 @@ class InSystemCondition(Condition):
                             return True
                     else:
                         debug.info(testun.getName() + ' not docked to unit')
-                    testun = iter.next()
         else:
             debug.debug('*** inSystem return true, no self.dockedshipname')
             return True
         debug.debug('*** insystem return false!!')
         return False
+
 
 fixerloaded=0
 
@@ -112,8 +116,9 @@ class HasUndocked(Condition):
             self.count=fixerloaded
             return False
         else:
-	    debug.debug("FIXER LOADED:"+str(fixerloaded)+', '+str(self.count))
+            debug.debug("FIXER LOADED:"+str(fixerloaded)+', '+str(self.count))
             return fixerloaded!=self.count
+
 
 class CargoSpaceCondition(Condition):
     def __init__(self,type,num=1):
@@ -135,6 +140,7 @@ class CargoSpaceCondition(Condition):
         debug.debug('*** CargoSpace return true')
         return True
 
+
 class AtMostActiveMissionsCondition(Condition):
     def __init__(self,num=0):
         Condition.__init__(self)
@@ -147,6 +153,7 @@ class AtMostActiveMissionsCondition(Condition):
         debug.debug('*** '+str(isactive))
         return isactive
 
+
 class AtLeastActiveMissionsCondition(Condition):
     def __init__(self,num=1):
         Condition.__init__(self)
@@ -158,6 +165,7 @@ class AtLeastActiveMissionsCondition(Condition):
         isactive=((VS.numActiveMissions()-1)>=self.num)
         debug.debug('*** '+str(isactive))
         return isactive
+
 
 class OrCondition(Condition):
     def __init__(self,conds,cond2=None):
@@ -173,6 +181,7 @@ class OrCondition(Condition):
                 return True
         return False
 
+
 class AndCondition(Condition):
     def __init__(self,conds,cond2=None):
         Condition.__init__(self)
@@ -187,6 +196,7 @@ class AndCondition(Condition):
                 return False
         return True
 
+
 class InvertCondition(Condition):
     def __init__(self,cond):
         Condition.__init__(self)
@@ -196,6 +206,7 @@ class InvertCondition(Condition):
         if self.cond():
             return False
         return True
+
 
 InverseCondition=InvertCondition
 NotCondition=InvertCondition
@@ -278,6 +289,7 @@ def displayText(room,textlist,enqueue=False):
             #   debug.debug('*** Base.enqueuEmessage('+str(x)+')')
             #   Base.EnqueueMessageToRoom(room,str(x))
 
+
 class Script:
     def __init__(self,nextscript=None):
         self.nextscript=nextscript
@@ -288,6 +300,7 @@ class Script:
             self.nextscript(room,subnodes)
         return True
 
+
 class EnqueueMoreText(Script):
     def __init__(self,text,nextscript=None):
         Script.__init__(self,nextscript)
@@ -295,6 +308,7 @@ class EnqueueMoreText(Script):
     def __call__(self,room,subnodes):
         Script.__call__(self,room,subnodes)
         displayText(room,self.text,True)
+
 
 # Should use this with GoToSubnodeIfTrue.
 class RemoveCargo(Script):
@@ -325,6 +339,7 @@ class RemoveCargo(Script):
             debug.debug('        ...really failed :-(')
             return False
         return True
+
 
 # Should use this with GoToSubnodeIfTrue.
 class AddCargo(Script):
@@ -383,6 +398,7 @@ class AddCargo(Script):
             return True
         return False
 
+
 class SetSaveVariable(Script):
     def __init__(self,varname,varvalue,nextscript=None):
         Script.__init__(self,nextscript)
@@ -395,6 +411,7 @@ class SetSaveVariable(Script):
         setSaveValue(VS.getCurrentPlayer(),self.name,self.value)
         return True
 
+
 class IncSaveVariable(Script):
     def __init__(self,varname,nextscript=None):
         Script.__init__(self,nextscript)
@@ -406,6 +423,7 @@ class IncSaveVariable(Script):
         incSaveValue(VS.getCurrentPlayer(),self.name)
         return True
 
+
 class AddTechnology(Script):
     def __init__(self,technology,nextscript=None):
         Script.__init__(self,nextscript)
@@ -414,6 +432,7 @@ class AddTechnology(Script):
         Script.__call__(self,room,subnodes)
         import universe
         universe.addTechLevel(self.tech)
+
 
 class AdjustRelation(Script):
     def __init__(self,us,them,change,nextscript=None):
@@ -426,6 +445,7 @@ class AdjustRelation(Script):
         VS.AdjustRelation(self.us,self.them,self.change,1.0)
         return True
 
+
 class ClearFactionRecord(Script):
     def __init__(self,fac,newrelation,nextscript=None):
         Script.__init__(self,nextscript)
@@ -437,6 +457,7 @@ class ClearFactionRecord(Script):
         VS.AdjustRelation(self.faction,"privateer",self.newval-rel,1.0)
         rel=VS.GetRelation("privateer",self.faction)
         VS.AdjustRelation("privateer",self.faction,self.newval-rel,1.0)
+
 
 class ClearRecord(Script):
     def __init__(self,nextscript=None):
@@ -451,6 +472,7 @@ class ClearRecord(Script):
         self.FixRelation("merchant",room,subnodes)
         self.FixRelation("hunter",room,subnodes)
 
+
 class PushRelation(Script):
     def __init__(self,faction,nextscript=None):
         Script.__init__(self,nextscript)
@@ -461,17 +483,19 @@ class PushRelation(Script):
         key=self.faction+"_relation_stack"
         Director.pushSaveData(cp,key,VS.GetRelation(self.faction,"privateer"))
 
+
 class PopRelation(Script):
     def __init__(self,faction,nextscript=None):
         Script.__init__(self,nextscript)
         self.faction=faction
     def __call__(self,room,subnodes):
         Script.__call__(self,room,subnodes)
-	cp=VS.getCurrentPlayer()
+        cp=VS.getCurrentPlayer()
         key=self.faction+"_relation_stack"
         length=Director.getSaveDataLength(cp,key)
         ClearFactionRecord(self.faction,Director.getSaveData(cp,key,length-1))(room,subnodes)
         Director.eraseSaveData(cp,key,length-1);
+
 
 class LaunchWingmen(Script):
     def __init__(self,faction,shiptype,num,nextscript=None):
@@ -494,6 +518,7 @@ class LaunchWingmen(Script):
         wing.setFgDirective('A')
         wing.setFlightgroupLeader(you)
 
+
 class ChangeSystemOwner(Script):
     def __init__(self,system,faction,nextscript=None):
         Script.__init__(self,nextscript)
@@ -503,6 +528,7 @@ class ChangeSystemOwner(Script):
         Script.__call__(self,room,subnodes)
         VS.SetGalaxyFaction(self.system,self.faction);
 
+
 class ChangeShipOwners(Script):
     def __init__(self,oldfaction,faction,nextscript=None):
         Script.__init__(self,nextscript)
@@ -511,11 +537,12 @@ class ChangeShipOwners(Script):
     def __call__(self,room,subnodes):
         Script.__call__(self,room,subnodes)
         i = VS.getUnitList()
-        un = i.current()
         while(not i.isDone()):
-            if un.getFactionName()==self.oldfaction:
+            un = next(i)
+            if (not un.isNull()) and un.getFactionName()==self.oldfaction:
                 un.setFactionName(self.faction)
-            un = i .next()
+
+            
 class AddCredits(Script):
     def __init__(self,numcreds,nextscript=None):
         Script.__init__(self,nextscript)
@@ -523,12 +550,13 @@ class AddCredits(Script):
         self.added=False
     def __call__(self,room,subnodes):
         Script.__call__(self,room,subnodes)
-	un=VS.getPlayer()
+        un=VS.getPlayer()
         if not un.isNull():
             if not self.added:
                 un.addCredits(self.creds)
                 self.added=True
         return True
+
 
 class SaveVariableGreaterScript(Script):
     def __init__(self,var,val,nextscript=None):
@@ -539,13 +567,13 @@ class SaveVariableGreaterScript(Script):
         Script.__call__(self,room,subnodes)
         playernum=VS.getCurrentPlayer()
         mylen=Director.getSaveDataLength(playernum,self.var)
-
         if (mylen>0):
             myfloat=Director.getSaveData(playernum,self.var,0)
         else:
             myfloat=0
         debug.debug("myfloat %.3f > self.val %.3f ?" % (myfloat, self.val))
         return myfloat>self.val
+
 
 class DisplayTextIfTrueScript(Script):
     def __init__(self,text,nextscript=None):
@@ -560,6 +588,7 @@ class DisplayTextIfTrueScript(Script):
             displayText(room,self.text)
         return val
 
+
 class RemoveCredits(Script):
     def __init__(self,numcreds,nextscript=None):
         Script.__init__(self,nextscript)
@@ -571,6 +600,7 @@ class RemoveCredits(Script):
             un.addCredits(-self.creds)
         return True
 
+
 class SetCredits(Script):
     def __init__(self,numcreds,nextscript=None):
         Script.__init__(self,nextscript)
@@ -581,6 +611,7 @@ class SetCredits(Script):
         if not un.isNull():
             un.addCredits(self.creds-un.getCredits())
         return True
+
 
 class PushCredits(Script):
     def __init__(self,nextscript=None):
@@ -594,6 +625,7 @@ class PushCredits(Script):
             key="credits_stack"
             Director.pushSaveData(cp,key,creds)
         return True
+
 
 class PopCredits(Script):
     def __init__(self,nextscript=None):
@@ -609,6 +641,7 @@ class PopCredits(Script):
             Director.eraseSaveData(cp,key,length-1);
         return True
 
+
 class PushNews(Script):
     def __init__(self,story,nextscript=None):
         Script.__init__(self,nextscript)
@@ -617,6 +650,7 @@ class PushNews(Script):
         Script.__call__(self,room,subnodes)
         cp=VS.getCurrentPlayer()
         Director.pushSaveString(cp,"dynamic_news",'#'+self.story)
+
 
 #LoadMission(varname,missionname,missionargs,SetSaveVariable(varname,2,script)) # jay
 class LoadMission(Script):
@@ -718,6 +752,7 @@ class Cutscene(AddPythonSprite):
             VS.musicPlaySong(self.music)
         return True
 
+
 class GoToSubnodeIfTrue(Script):
     def __init__(self,script,iftrue=0,iffalse=-1):
         Script.__init__(self,script)
@@ -734,6 +769,7 @@ class GoToSubnodeIfTrue(Script):
             debug.debug('*** False! '+str(self.iffalse))
             return self.iffalse
 
+
 class TrueSubnode(Script):
     def __init__(self,nextscript=None):
         Script.__init__(self,nextscript)
@@ -744,6 +780,7 @@ class TrueSubnode(Script):
                 return i
         return -1
 
+
 class TrueBackwardsSubnode(Script):
     def __init__(self,nextscript=None):
         Script.__init__(self,nextscript)
@@ -753,6 +790,7 @@ class TrueBackwardsSubnode(Script):
             if subnodes[i].checkPreconditions():
                 return i
         return -1
+
 
 class GoToSubnode(Script):
     def __init__(self,const,nextscript=None):
@@ -766,6 +804,7 @@ class GoToSubnode(Script):
 
 YES_SPRITE='yes.spr'
 NO_SPRITE='no.spr'
+
 
 class Campaign:
     def __init__(self,savegamename,rootnode=None):
@@ -853,7 +892,7 @@ class Campaign:
                     return None
                 debug.debug('*** current room contingency!')
                 self.setCurrentNode(room,-2)
-            except Exception, inst:
+            except Exception as inst:
                 debug.debug("!!! Error evaluating room: '" + str(room) + "'")
                 import traceback
                 traceback.print_stack()
@@ -861,6 +900,7 @@ class Campaign:
                 return None
         debug.warn('*** Your Python is broken. Please fix it now!!!!')
         return None
+
 
 class CampaignNode:
     def __init__(self):
@@ -1036,7 +1076,7 @@ def AskToAcceptMission(campaign,sprite,conditiontoappear,conditiontobegin,script
                             conditiontobegin,
                             [],
                             sprite,
-#                           TrueSubnode(),
+                            #TrueSubnode(),
                             GoToSubnode(0),
                             None,
                             [IfThenElse(RejectNode,RejectNode,MissionFirstRefusal)])])),
@@ -1297,6 +1337,7 @@ def getActiveCampaignNodes(room):
             clist = [tmp]+clist;# doesn't change list length
     debug.debug(str(clist))
     return clist
+
 #depends on Base
 def getFixersToDisplay(room):
     debug.debug('*** Get the fixers to display!!!')
@@ -1330,4 +1371,3 @@ def clickChoice(room,choicenum):
             c.gotoChoice(room,choicenum)
             fixers.DestroyActiveButtons()
             break
-

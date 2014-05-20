@@ -15,28 +15,28 @@ def saveVal(str):
 class NotZero:
     def __init__ (self,str):
         self.str = str
-    def __nonzero__ (self):
+    def __bool__ (self):
         debug.info("nonzeroing")
         return saveVal(self.str)!=0
 
 class IsZero:
     def __init__ (self,str):
         self.str = str
-    def __nonzero__ (self):
+    def __bool__ (self):
         debug.info("nonzeroing")
         return saveVal(self.str)==0
 
 class GreaterZero:
     def __init__ (self,str):
         self.str = str
-    def __nonzero__ (self):
+    def __bool__ (self):
         debug.info("nonzeroing")
         return saveVal(self.str)>0
 
 class LessZero:
     def __init__ (self,str):
         self.str = str
-    def __nonzero__ (self):
+    def __bool__ (self):
         debug.info("nonzeroing")
         return saveVal(self.str)<0
 
@@ -73,6 +73,7 @@ def processNews(plr):
     if (howmuchnews>4000):
         minnews=howmuchnews-4000
     for i in range (minnews,howmuchnews):
+        debug.debug("plr=%s, i=%d" % (plr, i))
         noos=Director.getSaveString(plr,"dynamic_news",i)
         if (len(noos)):
             if (noos.startswith('#')):

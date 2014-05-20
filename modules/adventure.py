@@ -1,23 +1,24 @@
+import VS  #VS is only for news
+import debug
 import quest
 import quest_drone
-import vsrandom
-import quest_racene
-import quest_disappear
-import quest_rlaan_spy
-import quest_slaver
-import quest_shipyard_bomb
-import quest_abu_dhabi
-import quest_rogue_militia
-import quest_contraband_truck
-import dantestmission
-import quest_teleport
 import quest_surplus
-import VS
-import quest_isowing
-#VS is only for news
+import vsrandom
+## The below modules are not used in privateer... /ermo
+#import dantestmission
+#import quest_abu_dhabi
+#import quest_contraband_truck
+#import quest_disappear
+#import quest_isowing
+#import quest_racene
+#import quest_rlaan_spy
+#import quest_rogue_militia
+#import quest_shipyard_bomb
+#import quest_slaver
+#import quest_teleport
+
 
 adventures = {}
-
 persistent_adventures = list()
 
 adventures = {
@@ -45,16 +46,16 @@ persistent_adventures = [
 def removePersistentAdventure(newq):
     mylen = len(persistent_adventures)
     if (mylen):
-        for x in range (mylen):
-            if (persistent_adventures[x]==newq):
+        for x in range(mylen):
+            if (persistent_adventures[x] == newq):
                 del persistent_adventures[x]
                 return
 
 def newAdventure(playernum,oldsys,newsys):
-    newfac=adventures.get (newsys)
+    newfac = adventures.get(newsys)
     if (newfac):
         newq = newfac.factory(playernum)
-        if (newq):#only remove it if that player hasn't done it before
+        if (newq):  #only remove it if that player hasn't done it before
             del adventures[newsys]
             removePersistentAdventure(newfac)
         return newq
@@ -67,8 +68,8 @@ def persistentAdventure(playernum):
         if (ret):
             del persistent_adventures[index]
             return ret
-    if (0 and vsrandom.randrange(0,4)==0):
-        (key,val,news)=quest_surplus.makeSurplusShortage()
+    if (0 and vsrandom.randrange(0,4) == 0):
+        (key,val,news) = quest_surplus.makeSurplusShortage()
         if (not adventures.get(key)):
             adventures.setdefault(key,val)
             VS.IOmessage (0,"game","news",news)

@@ -17,6 +17,7 @@ class go_none:
     def HaveArrived(self):
         return 1
     def SignificantUnit(self):
+        debug.debug("return VS.getUnit(0)")
         return VS.getUnit(0);
     def __init__(self):
         pass
@@ -69,19 +70,24 @@ class directions_mission (Director.Mission):
         return
         
     def findUnit(self, name):
+        debug.debug("testun=VS.getUnit(0)")
         testun=VS.getUnit(0)
         itt=1
-        while(testun):
+        while(not testun.isNull()):
             if testun.getName().lower()==name.lower() or testun.getFullname().lower()==name.lower():
                 return testun
+            debug.debug("testun=VS.getUnit(%d)" % (itt))
             testun=VS.getUnit(itt)
             itt+=1
+        debug.debug("testun=VS.getUnit(0)")
         testun=VS.getUnit(0)
-        while(testun):
+        while(not testun.isNull()):
             if testun.isDockableUnit():
                 return testun
+            debug.debug("testun=VS.getUnit(%d)" % (itt))
             testun=VS.getUnit(itt)
             itt+=1
+        debug.debug("return VS.getUnit(0)")
         return VS.getUnit(0)
 
     def getCargo(self,un):

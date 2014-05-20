@@ -1,13 +1,14 @@
-import Base
-import GUI
 from XGUIDebug import *
+import Base
 import Director
-import universe
-import VS
+import GUI
 import ShowProgress
+import VS
+import debug
 import methodtype
 import mission_lib
 import os
+import universe
 
 pirate_bases = {
     'Gemini/Capella': 'Drake',
@@ -93,7 +94,7 @@ class NewSaveGame: pass
 def savelist():
     global savefilters
     from os import listdir
-    return [ GUI.GUISimpleListPicker.listitem(path,path) 
+    return [ GUI.GUISimpleListPicker.listitem(path,path)
         for path in listdir(VS.getSaveDir())
         if path[:1] != '.' and path not in savefilters ]
 
@@ -106,10 +107,10 @@ def makeNewSaveName():
     return "%s_%02d" % (prefix,i)
 
 def MakePersonalComputer(room_landing_pad, room_concourse, make_links=1, enable_missions=1, enable_finances=1, enable_manifest=1, enable_load=1, enable_save=1, return_room_map=0):
-     
+
     # create the screen
     room_id = Base.Room ('XXXQuine_4025')
-    
+
     # create an object to keep the state
     comp = QuineComputer(room_id, room_concourse, enable_missions, enable_finances, enable_manifest, enable_load, enable_save)
 
@@ -119,7 +120,7 @@ def MakePersonalComputer(room_landing_pad, room_concourse, make_links=1, enable_
         Base.Link (room_concourse,   'quine_pc', -1, 0.75, 0.25, 0.25, 'Quine_4025', room_id)
         Base.Link (room_landing_pad, 'quine_pc', -1, 0.75, 0.25, 0.25, 'Quine_4025', room_id)
 
-    if return_room_map: 
+    if return_room_map:
         # They want a room map, pointing to each section separately (right now... only root,
         # but eventually, something else...) and the computer object, so you can do stuff
         room = GUI.GUIRootSingleton.getRoomById(room_id)
@@ -148,7 +149,6 @@ class QuineComputer:
 
         # add background sprite; no need to keep a variable around for this, as it doesn't change
         GUI.GUIStaticImage(guiroom, 'background', ( 'interfaces/quine/main.spr' , GUI.GUIRect(0, 0, 1, 1, "normalized") )).draw()
-    
 
         # add buttons
         self.buttons = {}
@@ -161,41 +161,36 @@ class QuineComputer:
             spr = ("interfaces/quine/fin_pressed.spr",spr_loc)
             spr_disabled = ("interfaces/quine/fin_disabled.spr",spr_loc)
             sprites = { 'enabled':None, 'disabled':spr_disabled, 'down':spr }
-            self.add_button( GUI.GUIButton(guiroom,'XXXFinances','btn_finances',
-                               sprites, hot_loc), change_text_click )
+            self.add_button( GUI.GUIButton(guiroom,'XXXFinances','btn_finances', sprites, hot_loc), change_text_click )
         if enable_manifest:
             hot_loc = GUI.GUIRect(646, 279, 96, 64, "pixel", (800,600))
             spr_loc = hot_loc
             spr = ("interfaces/quine/man_pressed.spr",spr_loc)
             spr_disabled = ("interfaces/quine/man_disabled.spr",spr_loc)
             sprites = { 'enabled':None, 'disabled':spr_disabled, 'down':spr }
-            self.add_button( GUI.GUIButton(guiroom,'XXXManifest','btn_manifest', 
-                               sprites, hot_loc), change_text_click )
+            self.add_button( GUI.GUIButton(guiroom,'XXXManifest','btn_manifest', sprites, hot_loc), change_text_click )
         if enable_load:
             hot_loc = GUI.GUIRect(635, 166, 97, 55, "pixel", (800,600))
             spr_loc = hot_loc
             spr = ("interfaces/quine/load_pressed.spr",spr_loc)
             spr_disabled = ("interfaces/quine/load_disabled.spr",spr_loc)
             sprites = { 'enabled':None, 'disabled':spr_disabled, 'down':spr }
-            self.add_button( GUI.GUIButton(guiroom,'XXXLoad'    ,'btn_load'    , 
-                               sprites, hot_loc), change_text_click )
+            self.add_button( GUI.GUIButton(guiroom,'XXXLoad'    ,'btn_load'    , sprites, hot_loc), change_text_click )
         if enable_save:
             hot_loc = GUI.GUIRect(541, 166, 97, 55, "pixel", (800,600))
             spr_loc = hot_loc
             spr = ("interfaces/quine/save_pressed.spr",spr_loc)
             spr_disabled = ("interfaces/quine/save_disabled.spr",spr_loc)
             sprites = { 'enabled':None, 'disabled':spr_disabled, 'down':spr }
-            self.add_button( GUI.GUIButton(guiroom,'XXXSave'    ,'btn_save'    , 
-                               sprites, hot_loc), change_text_click )
+            self.add_button( GUI.GUIButton(guiroom,'XXXSave'    ,'btn_save'    , sprites, hot_loc), change_text_click )
         if enable_missions:
             hot_loc = GUI.GUIRect(543, 220, 100, 60,"pixel", (800,600))
             spr_loc = hot_loc
             spr = ("interfaces/quine/missions_pressed.spr",spr_loc)
             spr_disabled = ("interfaces/quine/missions_disabled.spr",spr_loc)
             sprites = { 'enabled':None, 'disabled':spr_disabled, 'down':spr }
-            self.add_button( GUI.GUIButton(guiroom,'XXXMissions','btn_missions', 
-                               sprites, hot_loc), change_text_click )
-        
+            self.add_button( GUI.GUIButton(guiroom,'XXXMissions','btn_missions', sprites, hot_loc), change_text_click )
+
         if enable_load or enable_save:
             hot_loc = [ GUI.GUIRect(631, 346, 51, 69, "pixel", (800,600)), #up-arrow
                         GUI.GUIRect(629, 410, 55, 69, "pixel", (800,600)), #down-
@@ -205,30 +200,29 @@ class QuineComputer:
             spr = [ ("interfaces/quine/up_pressed.spr"   ,spr_loc[0]),
                     ("interfaces/quine/down_pressed.spr" ,spr_loc[1]),
                     ("interfaces/quine/left_pressed.spr" ,spr_loc[2]),
-                    ("interfaces/quine/right_pressed.spr",spr_loc[3]) ]
+                    ("interfaces/quine/right_pressed.spr",spr_loc[3])
+                  ]
             spr_disabled = [ ("interfaces/quine/up_disabled.spr"   ,spr_loc[0]),
-                    ("interfaces/quine/down_disabled.spr" ,spr_loc[1]),
-                    ("interfaces/quine/left_disabled.spr" ,spr_loc[2]),
-                    ("interfaces/quine/right_disabled.spr",spr_loc[3]) ]
+                             ("interfaces/quine/down_disabled.spr" ,spr_loc[1]),
+                             ("interfaces/quine/left_disabled.spr" ,spr_loc[2]),
+                             ("interfaces/quine/right_disabled.spr",spr_loc[3])
+                           ]
             sprites = [ { 'enabled':None, 'disabled':spr_disabled[0], 'down':spr[0] },
                         { 'enabled':None, 'disabled':spr_disabled[1], 'down':spr[1] },
                         { 'enabled':None, 'disabled':spr_disabled[2], 'down':spr[2] },
-                        { 'enabled':None, 'disabled':spr_disabled[3], 'down':spr[3] } ]
-            self.add_button( GUI.GUIButton(guiroom,'XXXUp'   ,'btn_up'   , 
-                               sprites[0], hot_loc[0]), scroll_click )
-            self.add_button( GUI.GUIButton(guiroom,'XXXDown' ,'btn_down' , 
-                               sprites[1], hot_loc[1]), scroll_click )
-            self.add_button( GUI.GUIButton(guiroom,'XXXLeft' ,'btn_left' , 
-                               sprites[2], hot_loc[2]), scroll_click )
-            self.add_button( GUI.GUIButton(guiroom,'XXXRight','btn_right', 
-                               sprites[3], hot_loc[3]), scroll_click )
-    
+                        { 'enabled':None, 'disabled':spr_disabled[3], 'down':spr[3] }
+                      ]
+            self.add_button( GUI.GUIButton(guiroom,'XXXUp'   ,'btn_up'   , sprites[0], hot_loc[0]), scroll_click )
+            self.add_button( GUI.GUIButton(guiroom,'XXXDown' ,'btn_down' , sprites[1], hot_loc[1]), scroll_click )
+            self.add_button( GUI.GUIButton(guiroom,'XXXLeft' ,'btn_left' , sprites[2], hot_loc[2]), scroll_click )
+            self.add_button( GUI.GUIButton(guiroom,'XXXRight','btn_right', sprites[3], hot_loc[3]), scroll_click )
+
         current_base = universe.getDockedBase()
         player = VS.getPlayer()
-        
+
         # this doesn't change while docked, so only call it once
         self.str_start = get_location_text(current_base)
-        
+
         screen_loc = GUI.GUIRect(80,90,350,380,"pixel",(800,600))
         screen_color = GUI.GUIColor(20/255.0, 22/255.0 ,10/255.0)
         self.screen_color = screen_color;
@@ -238,9 +232,9 @@ class QuineComputer:
         screen_bgcolor = GUI.GUIColor.clear()
         screen_bgcolor_nc = GUI.GUIColor(0.44,0.47,0.17)
         self.screen_bgcolor = screen_bgcolor;
-    
+
         # text screen
-        self.txt_screen = GUI.GUIStaticText(guiroom, 'txt_screen', self.str_start, screen_loc, 
+        self.txt_screen = GUI.GUIStaticText(guiroom, 'txt_screen', self.str_start, screen_loc,
             color=screen_color,
             bgcolor=screen_bgcolor)
         self.txt_screen.hide()
@@ -250,11 +244,11 @@ class QuineComputer:
             textcolor    =screen_color     , textbgcolor    =screen_bgcolor,
             selectedcolor=screen_bgcolor_nc, selectedbgcolor=screen_color   )
         self.picker_screen.hide()
-            
-        # 
+
+        #
         # much of this is temporary, until something better can be worked out:
-        # 
-    
+        #
+
         # Save/Load screen
         #if enable_save:
         #   x, y, w, h = GUI.GUIRect(217, 56, 40, 18).getHotRect()
@@ -262,23 +256,22 @@ class QuineComputer:
         #if enable_load:
         #   x, y, w, h = GUI.GUIRect(257, 56, 39, 18).getHotRect()
         #   Base.Comp (room_start, 'load_comp', x, y, w, h, 'XXXSave/Load/Quit', 'LoadSave')
-    
+
         # Missions
-        #if enable_missions: 
+        #if enable_missions:
         #   x, y, w, h = GUI.GUIRect(217, 75, 79, 18).getHotRect()
         #   Base.Comp (room_start, 'missions', x, y, w, h, 'XXXMissions', 'Missions Info Cargo ')
-    
+
         # Finances
         #if enable_finances:
         #   x, y, w, h = GUI.GUIRect(219, 94, 40, 18).getHotRect()
         #   Base.Comp (room_start, 'missions', x, y, w, h, 'Finances', 'Info ')
-    
+
         # Manifest
         #if enable_manifest:
         #   x, y, w, h = GUI.GUIRect(260, 94, 40, 18).getHotRect()
         #   Base.Comp (room_start, 'missions', x, y, w, h, 'Manifest', 'Cargo ')
-    
-    
+
         # Exit button, returns us to concourse
         self.room_id = room_start
         self.exit_room_id = room_exit_to
@@ -290,12 +283,12 @@ class QuineComputer:
             rect = GUI.GUIRect(224, 167, 35, 14)
             x, y, w, h = rect.getHotRect()
             #       Base.Link (room_start, 'exit', x, y, w, h, 'Exit', room_exit_to)
-            Base.LinkPython (self.room_id, 'exit', 
-                     "#\nimport GUI\nGUI.GUIRootSingleton.getRoomById(%s).owner.reset()\n" 
+            Base.LinkPython (self.room_id, 'exit',
+                     "#\nimport GUI\nGUI.GUIRootSingleton.getRoomById(%s).owner.reset()\n"
                      % (self.guiroom.getIndex()), x, y, w, h, 'XXXExit', self.exit_room_id)
         else:
             Base.EraseLink (self.room_id, 'exit')
-        
+
 
     def reset(self):
         trace(TRACE_DEBUG,"::: QuineComputer.reset()")
@@ -303,7 +296,7 @@ class QuineComputer:
             self.saveGameNameEntryBox.hide()
             self.saveGameNameEntryBox.focus(False)
             self.saveGameNameEntryBox = None
-            for id in self.buttons.keys():
+            for id in list(self.buttons.keys()):
                 button = self.buttons[id]
                 button.enable()
                 button.redraw()
@@ -336,14 +329,14 @@ class QuineComputer:
                 self.txt_screen.hide()
             elif self.picker_screen.visible and self.picker_screen.items[self.picker_screen.selection].data is not NewSaveGame:
                 self.picker_screen.hide()
-                self.txt_screen.setText( 
+                self.txt_screen.setText(
                     "\n"*7+
                     "Are you sure you want to overwrite the savegame?\n(%s)"%
                         self.picker_screen.items[self.picker_screen.selection]
                     +"\n"*3
                     +"Press SAVE again to do it." )
                 self.txt_screen.show()
-            elif self.picker_screen.selection is not None:      
+            elif self.picker_screen.selection is not None:
                 savename = ''
                 if self.picker_screen.items[self.picker_screen.selection].data is NewSaveGame:
                     savename = makeNewSaveName()
@@ -356,10 +349,10 @@ class QuineComputer:
                 boxloc = GUI.GUIRect(120,130,200,20,"pixel",(800,600))
                 self.saveGameNameEntryBox = GUI.GUILineEdit(self.saveNameEntryEntered,
                                         self.guiroom,"box_save",
-                                        savename, boxloc, 
+                                        savename, boxloc,
                                         self.screen_color,
                                         bgcolor=self.screen_bgcolor)
-                for id in self.buttons.keys():
+                for id in list(self.buttons.keys()):
                     button = self.buttons[id]
                     button.disable()
                     button.redraw()
@@ -371,12 +364,12 @@ class QuineComputer:
                 self.picker_screen.hide()
                 self.lastEnteredSavegameName = None
                 self.guiroom.redraw()
-                
+
         else:
             self.picker_screen.hide()
             self.txt_screen.hide()
         self.mode = button_index
-    
+
     #line editor callback
     def saveNameEntryEntered(self,textbox):
         # this is a bit awkward, mostly since we have to emulate modal behaviour through state machines...
@@ -384,7 +377,7 @@ class QuineComputer:
             savename = textbox.getText()
             if savename in savelist() and savename is not self.oldSaveName:
                 if savename is not self.lastEnteredSavegameName:
-                    self.txt_screen.setText( 'warning: overwriting another game with the same name\n' + 
+                    self.txt_screen.setText( 'warning: overwriting another game with the same name\n' +
                           'press Enter again to really do it')
                     return
                 else:
@@ -394,7 +387,7 @@ class QuineComputer:
                 try:
                     os.remove(VS.getSaveDir() + os.sep + self.oldSaveName)
                 except:
-                    trace(TRACE_DEBUG,"could not remove old savegame at " 
+                    trace(TRACE_DEBUG,"could not remove old savegame at "
                           + VS.getSaveDir() + os.sep + self.oldSaveName)
             self.picker_screen.items = [
                 GUI.GUISimpleListPicker.listitem("New Game",NewSaveGame)
@@ -402,7 +395,7 @@ class QuineComputer:
         self.txt_screen.hide()
         textbox.hide()
         textbox.focus(False)
-        for id in self.buttons.keys():
+        for id in list(self.buttons.keys()):
             button = self.buttons[id]
             button.enable()
             button.redraw()
@@ -423,13 +416,12 @@ class QuineComputer:
             elif direction == 'right':
                 self.picker_screen.viewMove(1)
 
-
     def add_button(self, guibutton, onclick_handler):
         # add the button to the "buttons" dictionary, draw it, and add onclick handler
         self.buttons[guibutton.index] = guibutton
         guibutton.draw()
         guibutton.onClick = methodtype.methodtype(onclick_handler, guibutton, type(guibutton))
-    
+
     def setMode(self,mode):
         aliases = dict(load='btn_load',save='btn_save')
         mode = aliases.get(mode,mode)
@@ -456,19 +448,18 @@ def get_system_text(str_system_file=None, current_base=None):
         str_quadrant = quadrants[str_system_file]
     except KeyError:
         str_quadrant = 'Unknown'
-        
+
     return (str_quadrant,str_sector,str_system)
-    
+
 def get_base_text(current_base = None, str_system_file = None):
     if current_base is None:
         current_base = universe.getDockedBase()
-        
     if not current_base:
         return ((0,"neutral"),("Unknown","Main Menu"))
     if str_system_file is None:
         # get sector, quadrant, system, and base name
         str_system_file = current_base.getUnitSystemFile()
-    
+
     # get faction
     int_faction = current_base.getFactionIndex()
     str_faction = current_base.getFactionName()
@@ -501,7 +492,7 @@ def get_base_text(current_base = None, str_system_file = None):
 def get_ship_text(unit = None):
     if unit is None:
         player = VS.getPlayer()
-    
+
     name = player.getName()
     if name.index('.') is None:
         return name.capitalize()
@@ -510,16 +501,16 @@ def get_ship_text(unit = None):
 
 def get_missions_text():
     missionlist = mission_lib.GetMissionList()
-    
+
     parth = lambda s:(s and "("+s+")") or s
-    
+
     full_layout = "\n\nMissions:\n\n%(ENTRIES)s\n\nTotal active missions: %(NUM_MISSIONS)s\n";
-    entry_process = lambda e: { 
-        'MISSION_TYPE'      :e.get('MISSION_TYPE','MISSION').replace('_',' ').capitalize(), 
+    entry_process = lambda e: {
+        'MISSION_TYPE'      :e.get('MISSION_TYPE','MISSION').replace('_',' ').capitalize(),
         'SHORT_DESCRIPTION' :e.get('MISSION_SHORTDESC','').split('/',1)[-1],
         'GUILD_NAME'        :parth(e.get('GUILD_NAME',e.get('MISSION_NAME','').split('/',1)[0]).replace('_',' ').title()) }
     entry_layout = "%(MISSION_TYPE)s %(GUILD_NAME)s:\n%(SHORT_DESCRIPTION)s\n\n"
-    
+
     return full_layout % {
         'NUM_MISSIONS':len(missionlist),
         'ENTRIES':''.join( entry_layout % entry_process(entry) for entry in missionlist ) }
@@ -532,7 +523,6 @@ def get_location_text(current_base):
     str_quadrant, str_sector, str_system = get_system_text(current_base=current_base)
     (int_faction,str_faction),(str_base,str_base_type) = get_base_text(current_base)
 
-    
     str_location = """
 Location:
    %s
@@ -578,7 +568,7 @@ def get_manifest_text(player):
             int_total_quantity += quantity
 
     int_space_left = int_hold_volume - int_total_quantity
-    keys = cargo_dict.keys()
+    keys = list(cargo_dict.keys())
     if len(keys) > 0:
         str_manifest = "Space left: %s\n\n" %(int_space_left)
         keys.sort()
@@ -596,7 +586,7 @@ def get_manifest_text(player):
         str_manifest = "Space left: %s\nNo cargo loaded.\n" %(int_space_left)
 
     return str_manifest
-        
+
 
 def get_relations_text(player):
     str_relations = "Cash:  %s\n\nKill breakdown:\n" %( int(player.getCredits()) )
@@ -606,7 +596,7 @@ def get_relations_text(player):
     faction_kills = [];
     for i in range(Director.getSaveDataLength( VS.getCurrentPlayer(), 'kills' )):
         faction_kills.append( Director.getSaveData( VS.getCurrentPlayer(), 'kills', i ) )
-    
+
     displayed_factions = ['confed', 'kilrathi', 'merchant', 'retro', 'pirates', 'hunter', 'militia']
 
     for i in range(VS.GetNumFactions()):
@@ -635,8 +625,8 @@ def get_relations_text(player):
                 kills = int( faction_kills[i] )
             except:
                 kills = 0
-            
-            # try to pad the columns 
+
+            # try to pad the columns
             # (this doesn't work perfectly, since we're using a variable-width font)
             str_pad = "    "
             int_pad_len = len(str_pad) - len(str(kills))

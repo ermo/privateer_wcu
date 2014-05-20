@@ -27,13 +27,13 @@ def getNumFromChar(c):
     return charnum
 
 def seedstring (stru):
-    num=long(0)
+    num=int(0)
     l=len (stru)
     for i in range(l):
         global totalnormchar,RAND_MAX
-        num+=long(getNumFromChar(stru[l-i-1]))
-        num*=long(totalnormchar);
-        num = (num % long(RAND_MAX))
+        num+=int(getNumFromChar(stru[l-i-1]))
+        num*=int(totalnormchar);
+        num = (num % int(RAND_MAX))
     try:
         num = int(num)
     except:
@@ -57,8 +57,8 @@ _seed=0
 
 def rands(intseed):
     global RAND_MAX
-    intseed = long( long(intseed) * long(1103515245) + long(12345))
-    intseed = long(intseed) %long(RAND_MAX)
+    intseed = int( int(intseed) * int(1103515245) + int(12345))
+    intseed = int(intseed) %int(RAND_MAX)
     try:
         intseed=int(intseed)
     except:

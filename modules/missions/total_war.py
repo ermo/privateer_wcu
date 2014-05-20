@@ -46,10 +46,12 @@ class total_war (Director.Mission):
             launch.launch_wave_around_unit ("ShadowCap",faction,faction_ships.getRandomCapitol(faction),ai,1,2000.0,4000.0,VS.getPlayer(),'')
 
     def Execute (self):
+        debug.debug("un=VS.getUnit(0)")
         un=VS.getUnit(0);
         i=0
-        while (un):
+        while (not un.isNull()):
             i+=1
+            debug.debug("un=  VS.getUnit(%d)" % (i))
             un=  VS.getUnit(i)
         time = VS.GetGameTime()
         if (time-self.lasttime>self.waittime):

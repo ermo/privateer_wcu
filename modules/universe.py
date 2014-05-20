@@ -37,15 +37,14 @@ def adjustUnitCargo(un,cat,pr,qr):
     carglist=0
 #universe.systemCargoDemand (("Natural_Products","starships",),.0001,1000)
 def systemCargoDemand (category,priceratio,quantratio,ships=1,planets=1):
-    i = VS.getUnitList()
-    un = i.current()
-    while (not un.isNull()):
-        if (un.isPlayerStarship()==-1):
+    debug.debug("uni = VS.getUnitList()")
+    uni = VS.getUnitList()
+    while (not uni.isDone()):
+        un = next(uni)
+        if ((not un.isNull()) and un.isPlayerStarship()==-1):
             isplanet = un.isPlanet()
             if ( (isplanet and planets) or ((not isplanet) and ships)):
                 adjustUnitCargo(un,category,priceratio,quantratio)
-        i.advance()
-        un=i.current()
 
 def setFirstSaveData(player,key,val):
     mylen = Director.getSaveDataLength(player,key)
@@ -101,11 +100,13 @@ def getRandomJumppoint():
 def getJumppointList():
     jp_list=()
     ship_nr=0
+    debug.debug("uni=VS.getUnit(0)")
     uni=VS.getUnit(0)
-    while(uni):
+    while(not uni.isNull()):
         if(uni.isJumppoint()):
             jp_list+=(uni,)
         ship_nr+=1
+        debug.debug("uni=VS.getUnit(%d)" % (ship_nr))
         uni=VS.getUnit(ship_nr)
     return jp_list
 
@@ -134,12 +135,13 @@ def _tmpint(str,default):
         return default
 
 def significantUnits():
+    debug.debug("uni = VS.getUnitList()")
     uni = VS.getUnitList()
     ret = []
     while (not uni.isDone()):
         #debug.debug("uni.next() #1")
-        un = uni.next()
-        if (un):
+        un = next(uni)
+        if (not un.isNull()):
             if (un.isSignificant()):
                 ret += [un]
     return ret
@@ -236,12 +238,13 @@ def greet(greetingText, enemy=None, you=None, friendly=None):
         VS.IOmessage (8+i*4,fromcolor+fromname,tocolor+toname,fromcolor+text+"#000000")
 
 def getDockedBase():
+    debug.debug("uni = VS.getUnitList()")
     uni = VS.getUnitList()
-    un = None
+    un = VS.Unit()
     while (not uni.isDone()):
         #debug.debug("uni.next() #2")
-        un = uni.next()
-        if VS.getPlayer().isDocked(un) or un.isDocked(VS.getPlayer()):
+        un = next(uni)
+        if (not un.isNull()) and (VS.getPlayer().isDocked(un) or un.isDocked(VS.getPlayer())):
             return un
     return un
 
@@ -256,7 +259,7 @@ def addTechLevel(level, addToBase=True):
     try:
         upgrades=earnable_upgrades.earnable_upgrades[level]
     except:
-        debug.info("No tech level named "+str(level))
+        debug.info("No tech level named '%s'" % (str(level)))
         return
     bas=getDockedBase()
     if (not bas):

@@ -33,11 +33,11 @@ def getNewInfo(conversation, ref="Root"):
     return text, choices
 
 def getNode(conversation, ref="Root"):
-    """Gets the node in the conversation corresponding to \'ref\'"""
+    """Gets the node in the conversation corresponding to 'ref'"""
     for node in conversation:
         if node.split('^')[0].split('|')[0] == ref:
             return node
-    raise RuntimeError("Node with reference \'%s\' not found in conversation."%ref)
+    raise RuntimeError("Node with reference '%s' not found in conversation." % (ref))
 
 def getPreconditions(conversation):
     """Gets the preconditions for the conversation."""
@@ -83,12 +83,12 @@ def evaluateCondition(condition):
         return 1
     elif condition[0] == '#':
         tempd = dict()
-        exec condition[1:] in tempd
+        exec(condition[1:], tempd)
         debug.info("Custom condition code, returning: " + str(tempd["result"]))
         return tempd["result"]
     else:
         con = condition.split('#')
-        debug.info("Checking \'%s : %s\'"%(con[0],con[1]))
+        debug.info("Checking '%s : %s'" % (con[0],con[1]))
         debug.info("'-> Returning: " + str(checkSaveValue(VS.getCurrentPlayer(),con[0],int(con[1]))))
         return checkSaveValue(VS.getCurrentPlayer(),con[0],int(con[1]))
 

@@ -1,12 +1,16 @@
-from __future__ import division
+
 """ This module provides different mission types. """
 import Director
 import VS
 import debug
+import difficulty
+import dynamic_battle
 import dynamic_news
 import dynamic_universe
 import faction_ships
 import fg_util
+import news
+import trading
 import universe
 import vsrandom
 
@@ -80,7 +84,6 @@ def GetRandomCompanyName():
         return ''
     for i in range(len(bnl)):
         bnl[i]=bnl[i].rstrip()
-    import vsrandom
     idx = vsrandom.randint(0,len(bnl)-1)
     return bnl[idx]
 
@@ -111,14 +114,12 @@ def getCargoName(category):
     return cargo
 
 def getMissionDifficulty ():
-    import difficulty
     tmp=difficulty.getPlayerUnboundDifficulty(VS.getCurrentPlayer())
     if (tmp>1.5):
         tmp=1.5
     return tmp
 
 def getPriceModifier(isUncapped):
-    import difficulty
     if (not difficulty.usingDifficulty()):
         return 1.0
     if (isUncapped):
@@ -126,7 +127,6 @@ def getPriceModifier(isUncapped):
     return VS.GetDifficulty()/.5+.9
 
 def howMuchHarder(makeharder):
-    import difficulty
     if  (makeharder==0):
         return 0
     udiff = getMissionDifficulty()
@@ -191,7 +191,6 @@ def writemissionsavegame (name):
     Director.pushSaveString(plr, "mission_scripts", name)
 
 def eraseExtras():
-    import sys
     len=Director.getSaveStringLength(plr, "mission_scripts")
     if (len!=Director.getSaveStringLength(plr, "mission_names") or len!=Director.getSaveStringLength(plr, "mission_descriptions")):
         debug.debug("Warning: Number of mission descs., names and scripts are unequal.\n")
@@ -416,7 +415,7 @@ def generateCargoMission (path, numcargos,category, fac,
         cargoprice*numcargos +
         baseprice*diff +
         syscreds*len(path) +
-        contrabandprice*(category[:10]=="Contraband") + 
+        contrabandprice*(category[:10]=="Contraband") +
         starshipprice*(category[:9]=="starships")
     )
     addstr=""
@@ -572,7 +571,7 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
     thisfaction = VS.GetGalaxyFaction (cursystem)
     preferredfaction=None
     if (VS.GetRelation (fac,thisfaction)>=0):
-        preferredfaction=thisfaction#try to stay in this territory
+        preferredfaction=thisfaction  #try to stay in this territory
     l=[]
     num_wingmen=2
     num_rescue=2
@@ -587,7 +586,6 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
     mincount=2
     for i in range (minsysaway,maxsysaway+1):
         for j in getSystemsNAway(cursystem,i,preferredfaction):
-            import dynamic_battle
             if (i<2 and num_rescue>0):
                 if j[-1] in dynamic_battle.rescuelist:
                     generateRescueMission(j,dynamic_battle.rescuelist[j[-1]])
@@ -705,7 +703,6 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                                 faction="planets"
                                 name=baseship.getFullname()
                             debug.info("TRADING")
-                            import trading
                             debug.debug("name: %s, faction: %s" % (name, faction))
                             exports=trading.getNoStarshipExports(name,faction,20)
                             debug.debug("exports:\n%s" % (debug.pp(exports)))
@@ -756,15 +753,15 @@ def CreateMissions(minsys=0,maxsys=4):
     global plr,basefac,baseship
     plrun=VS.getPlayer()
     plr=plrun.isPlayerStarship()
+    debug.debug("VS.getUnitList()")
     i = VS.getUnitList()
     un = i.current()
     while(not i.isDone() and not un.isDocked(plrun)):
-        un = i.next()  # iterate until the docked player unit is found
-    if (un):  # we don't want a NULL unit
+        un = next(i)  # iterate until the docked player unit is found
+    if (not un.isNull()):
         baseship=un
         basefac=un.getFactionName()
     if (basefac=='neutral'):
         basefac=VS.GetGalaxyFaction(VS.getSystemFile())
     contractMissionsFor(basefac,baseship,minsys,maxsys)
-    import news
     news.processNews(plr)

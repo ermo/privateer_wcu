@@ -55,14 +55,17 @@ def PlayMusik(forcechange=1, hostile_dist=0):
         debug.info("Ppeace")
     else:
         perfect = 1
+        debug.debug("before 'iter = VS.getUnitList()'")
         iter = VS.getUnitList()
-        target = None
+        debug.debug("after 'iter = VS.getUnitList()'")
         unlist = []
         asteroid = 0
         while (not iter.isDone()):
-            #debug.debug("iter.next()")
-            target = iter.next()
+            debug.debug("before 'target = next(iter)'")
+            target = next(iter)
+            debug.debug("after 'target = next(iter)'")            
             if (target):
+                debug.debug("inside 'if (target):'")
                 ftmp = 2 * target.getRelation(un)
                 nam = target.getName().lower()
                 if un.getSignificantDistance(target) <= 2 * target.rSize() and ('afield' == nam[:6] or 'asteroid'== nam[:8]):

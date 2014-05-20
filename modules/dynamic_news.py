@@ -1,8 +1,9 @@
 import VS
-import vsrandom
-import string
-import stardate
 import debug
+import stardate
+import string
+import vsrandom
+
 
 def fixShipName(stri): # removes suffixes from ship names, looks silly otherwise
     try:
@@ -75,7 +76,7 @@ class NewsTranslator:
     def lookupInfo(self, var, tag):
         """Returns the information corresponding to the
         given var and tag pair."""
-#       debug.debug("LOOKING UP %s %s" % (var, tag))
+        #debug.debug("LOOKING UP %s %s" % (var, tag))
         try:
             return self.vars[var][tag]
         except:
@@ -134,7 +135,7 @@ class NewsTranslator:
         self.vars['system'] = syste_
         for i in range(len(self.item)):
             self.item[i] = self.translateWord(self.item[i])
-        return string.join(self.item) + self.STARDATE_TEXT + stardate.formatStarDate(self.vars['dockedat']['faction'],self.vars['stardate']['value'])
+        return ' '.join(self.item) + self.STARDATE_TEXT + stardate.formatStarDate(self.vars['dockedat']['faction'],self.vars['stardate']['value'])
 
     def formatText(self, text, punc=[' ' , '_' , '.'], capitalise=True):
         """Runs a quick formatting algorithm over the
@@ -147,7 +148,7 @@ class NewsTranslator:
                     tex[i] = tex[i][0].capitalize() + tex[i][1:]
                 else:
                     tex[i] = tex[i].capitalize()
-            text = string.join(tex)
+            text = ' '.join(tex)
         return text
 
 class DynamicNewsData:
@@ -171,7 +172,7 @@ class DynamicNewsData:
                 else:
                     return self.faction_dict['unknown'][variable]
             except:
-#               raise ValueError("Invalid Faction Specified")
+                #raise ValueError("Invalid Faction Specified")
                 debug.error("ERROR: FACTION LOOKUP ERROR faction %s variable %s" % (faction, variable))
                 return self.faction_dict['unknown'][variable]
         else:
@@ -375,18 +376,19 @@ class NewsManager:
         """Updates the current self.dockedat_faction to its
         current value.  Should be called before translating
         a batch of stores."""
+        debug.debug("i = VS.getUnitList()")
         i = VS.getUnitList()
         playa=VS.getPlayer()
         while (not i.isDone()):
-            un = i.next()
-            if (un.isDocked(playa) or playa.isDocked(un)):
+            un = next(i)
+            if ((not un.isNull()) and (un.isDocked(playa) or playa.isDocked(un))):
                 if not (un.isPlanet() or (un.getFactionName() == "neutral")):
                     fac = un.getFactionName()
-#                   debug.debug('returning '+un.getName()+' s faction as '+fac+' from flightgroup '+un.getFlightgroupName())
+                    #debug.debug('returning '+un.getName()+' s faction as '+fac+' from flightgroup '+un.getFlightgroupName())
                     self.dockedat_faction = fac
                 break
         retfac = VS.GetGalaxyFaction(VS.getSystemFile())
-#       debug.debug("Returning " + retfac + " as the systems faction")
+        #debug.debug("Returning " + retfac + " as the systems faction")
         self.dockedat_faction = retfac
 
     def isStoryRelevant(self, strin):
@@ -419,8 +421,8 @@ class NewsManager:
     def writeDynamicString(self, varlist):
         """Stores a news story list into the \"dynamic news\"
         key in the save game."""
-#       debug.debug('Dynamic news Event')
-        varlist = string.join([str(vsrandom.randrange(0,4194304))]+varlist,',')
-        import Director     
+        #debug.debug('Dynamic news Event')
+        varlist = ','.join([str(vsrandom.randrange(0,4194304))]+varlist)
+        import Director
         Director.pushSaveString(0,"dynamic_news",varlist)
 

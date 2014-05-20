@@ -1,6 +1,7 @@
 import Base
 import VS
 import debug
+import dynamic_mission
 import vsrandom
 
 
@@ -81,7 +82,7 @@ tender={"agricultural_rf":("You're the guy who blew up the big green egg, right?
                        ("Any news of local interest?..........Sorry man,  I don't have anything for you right now... except a good Manchester Rum!","barspeech/bartenders/femanynewsoflocalinterest.wav"),
                        ("Any good missions out there?..........If you're looking for a mission, talk to the guys who sometimes sit at the front tables there.","barspeech/bartenders/femanygoodmissionsoutthere.wav"),
                        ("Any tips for a new kid in town?..........Don't get blown up!  That's all I've got right now.","barspeech/bartenders/femanytipsforanewkid.wav")),
-        "pleasure":(("Get this... the Confed has lost another carrier! I'm afraid it might be related to that Kilrathi secret weapon we've been hearing about. I'm thinking of shutting down the bar awhile, leaving this place... maybe heading deeper into Confed space. The thought of something that nasty creeping around, well, it makes you think, doesn't it?","barspeech/bartenders/femgetthistheconfed.wav"),                  
+        "pleasure":(("Get this... the Confed has lost another carrier! I'm afraid it might be related to that Kilrathi secret weapon we've been hearing about. I'm thinking of shutting down the bar awhile, leaving this place... maybe heading deeper into Confed space. The thought of something that nasty creeping around, well, it makes you think, doesn't it?","barspeech/bartenders/femgetthistheconfed.wav"),
                   ("I may hear a few rumours now and then, but I'm just a bartender. If you want important information, try Oxford University. I hear they got a library there so big that, if they don't got it, it don't exist.","barspeech/bartenders/femimayhearafewrumors.wav"),
                   ("Boy, I'd hate to be in Hunter Toth's shoes. Have you heard about him? He wrote Prometheus Unplugged. Surely you've read it. That's the book that attacked the Church of Man, remember? He coined the term 'Retros', labelling the faithful as backward for their hatred of technology. Now all those anti-tech freaks are gunning for him, and he's been forced into hiding. Wonderful society we live in, where scholars can be silenced by freaks...","barspeech/bartenders/femboyidhatetobeinhunter.wav"),
                   ("Blasted Confed hotshots! I hate it when they show up here on leave. You wouldn't believe the ruckus they raised in here. I barely had time to clean up before we opened this morning. And the 17th floor, it's a shambles! These jocks are nuts! Mooning, jumping off balconies into the pool, ballwalking... Listen, take my advice. Avoid the 17th floor. It's not pretty.","barspeech/bartenders/femdamnconfedhotshots.wav"),
@@ -107,7 +108,7 @@ tender={"agricultural_rf":("You're the guy who blew up the big green egg, right?
                   ("Better watch your step, Mister. The... business community here is leery of strangers these days. We've had a lot of problems with undercover Militia agents lately. I'm not saying you're one of 'em, but I'd do my best to look as innocent as possible, if I were you.","barspeech/bartenders/betterwatchyourstepmister.wav"),
 #                  "Happy days are here again! You heard? The Confed is slipping in the war effort. Seems the sector is lousy with Kilrathi, and they're giving the Confed fits. Hey, I'm as patriotic as the next guy. I don't want the Confed to give it up, but this means they're diverting their efforts away from law enforcement! That's good news! The less Confed around, the better!",
                   ("Looking for a job? Must be if you're hanging around here. Ever heard of a guy named Roman Lynch? He's a... well, a real mover. Seems he's looking for a wet spesh to whack a guy named Seelig. Lynch runs his empire out of New Constantinople. No thanks, that's what bartenders do. Just remember me when it's time to tip.","barspeech/bartenders/lookingforajobmustbeif.wav"),
-                  ("Hey, Mister, have a seat. The first one's on me. No big deal. We're having a boom here, times are good. With all the fighting out along the borders, there's a lot of loot just floating around out there, waiting to be salvaged! Used to be a pirate had to do some shooting to earn his daily bread... nowadays, the only trigger he's gotta pull is wired to a tractor beam!","barspeech/bartenders/heymisterhaveaseatthefirst.wav"), 
+                  ("Hey, Mister, have a seat. The first one's on me. No big deal. We're having a boom here, times are good. With all the fighting out along the borders, there's a lot of loot just floating around out there, waiting to be salvaged! Used to be a pirate had to do some shooting to earn his daily bread... nowadays, the only trigger he's gotta pull is wired to a tractor beam!","barspeech/bartenders/heymisterhaveaseatthefirst.wav"),
 #                  "I hope you're gonna buy a drink and not just sit here trawling for a job. Business is slow at the bar. People are spending too much time out there on those stressful missions. They need to be in here relaxing, like you. So... what'll it be?",
                   ("Hey, I heard a good one the other day. Seems that there's this hollow asteroid along the Kilrathi border... The thing of it is, the Kilrathi use it as a munitions dump! The guy who finds that dump can help himself to as much ordnance as he can haul!","barspeech/bartenders/heyiheardagoodone.wav"),
 #                  "You've got a lot of nerve coming in here looking like that, pal! This joint enforces a strict dress-code. Here, put this eye-patch on before you cause a scene. And ruffle your hair a bit, or someone might think you're with the Navy!",
@@ -151,7 +152,7 @@ def GetOutOfInfo(str):
    return ("Sorry, no new info")
 
 speaklimit=2
-speaktimes=0             
+speaktimes=0
 
 def GetDefaultBartenderText():
     global speaklimit
@@ -159,7 +160,7 @@ def GetDefaultBartenderText():
     speaktimes+=1
     if (speaktimes>speaklimit):
         speaklimit=vsrandom.randrange(1,4)
-        return GetOutOfInfo("default")    
+        return GetOutOfInfo("default")
     txt =tender.get("default")
     if (not txt):
         return ("Hello")
@@ -173,11 +174,10 @@ def GetBartenderText(str):
         return GetOutOfInfo(str)
     txt = tender.get (str)
     rf_campaign_txt=()
-    import VS
     cp=VS.getCurrentPlayer()
     plrun=VS.getPlayerX(cp)
     plr=plrun.isPlayerStarship()
-    
+
     import quest
     if (quest.getQuestLength(cp,"rf_campaign")):
         tmp=tender.get(str+"_rf")
@@ -190,20 +190,22 @@ def GetBartenderText(str):
     return GetDefaultBartenderText()+rf_campaign_txt
 
 def Drink(turns=100,cost=10):
-    import VS
+    """ When you get a drink from the bartender, new dynamic missions are generated. """
     cp=VS.getCurrentPlayer()
     plrun=VS.getPlayerX(cp)
     plr=plrun.isPlayerStarship()
-    if (plrun.getCredits>=cost):
-            plrun.addCredits(-cost)
-            import dynamic_mission
-            dynamic_mission.CreateMissions(0,6,turns)
-            text='Here you go.'
+    if (plrun.getCredits() >= cost):
+        plrun.addCredits(-cost)
+        # dynamic_mission.CreateMissions takes two, not three arguments.
+        # I wonder what 'turns' variable was meant to signify?
+        #dynamic_mission.CreateMissions(0,6,turns)
+        dynamic_mission.CreateMissions(0,6)
+        text="Here you go."
     else:
-            text='Sorry pal, I don\'t keep tabs.'
+        text="Sorry pal, I don't keep tabs."
     debug.info("DRINK: "+text)
     Base.Message (text)
-        
+
 def Speak(thingstosay):
     (text,sound)=Base.GetRandomBarMessage()
     rndnum=vsrandom.randrange(0,2)

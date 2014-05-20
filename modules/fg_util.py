@@ -451,7 +451,11 @@ def NumFactionFGsInSystem(faction,system):
     facnum = VS.GetFactionIndex (faction)
     st=''
     if (leg>facnum):
+        #debug.debug("ccp=%s" % (ccp))
+        #debug.debug("key=%s" % (key))
+        #debug.debug("facnum=%s" % (facnum))
         st=Director.getSaveString(ccp,key,facnum)
+        debug.debug(">>%s<< = Director.getSaveString(ccp=%s, key=%s, facnum=%s)" % (st, ccp, key, facnum))
     if (st):
         return st.count('|')+1
     return 0

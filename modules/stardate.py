@@ -10,17 +10,17 @@ def formatStarDate(fac,stdt):
     """Formats the stardate for news"""
     stdtf=getFacCal(fac,stdt)
     if fac == "confed":
-        return string.join([fillZeros(fac,stdtf[2]),str(stdtf[1]),str(stdtf[0]),formatTime(fac,stdt)])
+        return ' '.join([fillZeros(fac,stdtf[2]),str(stdtf[1]),str(stdtf[0]),formatTime(fac,stdt)])
     else:
-        return string.join([fillZeros(fac,stdtf[2]),str(stdtf[1]),str(stdtf[0]),formatTime(fac,stdt)])
+        return ' '.join([fillZeros(fac,stdtf[2]),str(stdtf[1]),str(stdtf[0]),formatTime(fac,stdt)])
 
 def formatTime(fac,stdt):
     """Formate the stardate time for news"""
     stdtf=getFacCal(fac,stdt)
     if fac == "confed":
-        return string.join([fillZeros(fac,stdtf[3]),fillZeros(fac,stdtf[4]),fillZeros(fac,stdtf[5])],":")
+        return ':'.join([fillZeros(fac,stdtf[3]),fillZeros(fac,stdtf[4]),fillZeros(fac,stdtf[5])])
     else:
-        return string.join([fillZeros(fac,stdtf[3]),fillZeros(fac,stdtf[4]),fillZeros(fac,stdtf[5])],":")
+        return ':'.join([fillZeros(fac,stdtf[3]),fillZeros(fac,stdtf[4]),fillZeros(fac,stdtf[5])])
 
 def fillZeros(fac,tim):
     """Returns a string with the required number of zeros for each faction"""
@@ -86,14 +86,12 @@ def getMDDHMS(frac,system,year,fac):
     seconds = int(sectemp)
     return [mon,days+1,hours,minutes,seconds]
 
-
 def getDateSystem(faction):
     """returns a particlar races standard date system (not including leap years)"""
-    if facDateSystems().has_key(faction):
+    if faction in facDateSystems():
         return facDateSystems()[faction]
     else:
         return facDateSystems()["standard"]
-
 
 def getStarToDay(monthsystem):
     """returns a particlar races stardate to day ratio"""
@@ -134,4 +132,3 @@ def facDateSystems():
     ([("January",31),("February",28),("March",31),("April",30),("May",31),("June",30),("July",31),("August",31),("September",30),("October",31),("November",30),("December",31)],(24,60,60),["year","month","week","day","hour","minute","second"],1)
 
     }
-

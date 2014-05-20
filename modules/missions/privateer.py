@@ -34,6 +34,8 @@ class privateer (Director.Mission):
 
     def Execute(self): #this execute function should not need to be changed...
         for i in self.loops:
+            #ti = type(i)
+            #debug.debug("%s.Execute()" % (ti))
             i.Execute()
     def initbriefing(self):
         debug.info("init briefing")

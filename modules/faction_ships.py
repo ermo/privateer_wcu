@@ -89,12 +89,12 @@ def appendName(faction):
     use_diff = usingDifficulty()
     use_blank = useBlank[faction]
     _random = vsrandom.random()
-    debug.debug("faction %s: use_blank = %d, _random = %.3f" % (intToFaction(faction), use_blank, _random))
+    #debug.debug("faction %s: (use_blank=%d >= _random=%.3f) ?" % (intToFaction(faction), use_blank, _random))
     if use_diff and use_blank >= _random:
-        debug.debug("'-> using .blank")
+        #debug.debug("'-> using .blank")
         return ".blank"
     else:
-        debug.debug("'-> NOT using .blank")
+        #debug.debug("'-> NOT using .blank")
         return ""
 
 def factionToInt(faction):
@@ -157,7 +157,7 @@ def get_militaryenemy_of(faction_name):
 
 # Simple way to make sure that a ship is only spawned if it exists in units.csv
 def getRandomShipType(ship_list):
-    debug.debug("getRandomShipType(%s)" % (ship_list))
+    #debug.debug("getRandomShipType(%s)" % (ship_list))
     ffvalidate = ""
     while(ffvalidate == ""):
         index=vsrandom.randrange(0,len(ship_list))
@@ -165,7 +165,7 @@ def getRandomShipType(ship_list):
         ffvalidate = str(VS.LookupUnitStat(fishedship,"default","Default_Speed_Governor"))
         if(ffvalidate == ""):
             debug.warning("Ship type "+str(fishedship)+" does not have a flight model!")
-    debug.debug("shipdata: "+str(fishedship) +" has speed governor = "+str(ffvalidate))
+    #debug.debug("shipdata: "+str(fishedship) +" has speed governor = "+str(ffvalidate))
     return fishedship
 
 def getFigher(faction_name, fighter):

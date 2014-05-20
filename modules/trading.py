@@ -31,7 +31,7 @@ def getImports(name,faction):
                     except:
                         prodlist[-1][1]=0.0
                     try:
-                        prodlist[-1][2]=float(prodlist[-1][2]) # price variance 
+                        prodlist[-1][2]=float(prodlist[-1][2]) # price variance
                     except:
                         prodlist[-1][2]=0.0
                     try:
@@ -49,7 +49,7 @@ def getImports(name,faction):
     except:
         import sys
         print("GetImportFailure")
-        print(str(sys.exc_info()[0])+str(sys.exc_info()[1]))
+        print( str(sys.exc_info()[0]) + str(sys.exc_info()[1]) )
     return []
 
 def getExports(name,faction, twice=1000000):
@@ -79,16 +79,17 @@ class trading:
         self.count=0
     def SetPriceInstability(self, inst):
         self.price_instability=inst
-      
+
     def SetMaxQuantity (self,quant):
         self.quantity=quant
-      
+
     def Execute(self):
         self.count+=1
         if (self.count<3):
             return
         self.count=0
         quant = (vsrandom.random()*(self.quantity-1))+1
+        #debug.debug("un = VS.getUnit (%d)" % (self.last_ship))
         un = VS.getUnit (self.last_ship)
         if (un.isNull()):
             self.last_ship=0
@@ -117,7 +118,7 @@ class trading:
                                 #    debug.debug("Mining "+str(quant)+" from "+str(prod[3])+" to "+str(prod[4]))
                                 if (quant<prod[3]-prod[4] or quant==0):
                                     quant=int(prod[3]+vsrandom.uniform(-1,1)*prod[4])
-                                    #if un.getName()=="mining_base" and (cargo.GetContent()=="Tungsten" or cargo.GetContent()=="Space_Salvage"):                                   
+                                    #if un.getName()=="mining_base" and (cargo.GetContent()=="Tungsten" or cargo.GetContent()=="Space_Salvage"):
                                     #    debug.debug("Will add quant "+str(quant))
                                     if (quant>0):
                                         cargo.SetQuantity(quant)

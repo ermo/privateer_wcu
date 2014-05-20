@@ -52,11 +52,15 @@ def verifyMission(name,args,campaign=None):
     else:
         return mission.isValid()
 
+
 class Default:
     pass
 
+
 class NoDefault:
     pass
+
+
 class Argument:
 
     NAME="Argument"
@@ -74,7 +78,7 @@ class Argument:
             arg.set(self.value)
 
     def isValid(self):
-#       debug.debug("valid %s?" % (self.NAME))
+        # debug.debug("valid %s?" % (self.NAME))
         if isinstance(self.value, NoDefault):
             self.warn("No default exists for unset argument")
             return False
@@ -96,21 +100,23 @@ class Argument:
 
     def printwarnings(self):
         for warning in self.warnings:
-            debug.warn("\'%s\' Argument Warning: " % (self.NAME + warning))
+            debug.warn("'%s' Argument Warning: " % (self.NAME + warning))
+
 
 class PositiveInt(Argument):
 
     NAME="PositiveInt"
 
     def checkValidity(self):
-        if isinstance(self.value,long) or isinstance(self.value,int):
+        if isinstance(self.value,int):
             if self.value < 0:
-                self.warn("Value %s is not a positive integer"%str(self.value))
+                self.warn("Value '%s' is not a positive integer" % (str(self.value)))
                 return False
         else:
-            self.warn("Value %s is not an integer, much less positive."%str(self.value))
+            self.warn("Value '%s' is not an integer, much less positive." % (str(self.value)))
             return False
         return True
+
 
 class PositiveIntList(Argument):
 
@@ -119,17 +125,18 @@ class PositiveIntList(Argument):
     def checkValidity(self):
         if isinstance(self.value,list):
             for val in self.value:
-                if isinstance(val,long) or isinstance(val,int):
+                if isinstance(val,int):
                     if self.value < 0:
-                        self.warn("Value %s is not a positive integer"%str(val))
+                        self.warn("Value '%s' is not a positive integer" % (str(val)))
                         return False
                 else:
-                    self.warn("Value %s is not an integer, much less positive."%str(val))
+                    self.warn("Value '%s' is not an integer, much less positive." % str((val)))
                     return False
         else:
-            self.warn("Value %s is not a list, much less a list of integers."%str(self.value))
+            self.warn("Value '%s' is not a list, much less a list of integers." % (str(self.value)))
             return False
         return True
+
 
 class PositiveFraction(Argument):
 
@@ -139,9 +146,10 @@ class PositiveFraction(Argument):
         if not isinstance(self.value,float) or self.value < 0 or self.value > 1:
             if isinstance(self.value,int) and (self.value == 0 or self.value == 1):
                 return True
-            self.warn("Value %s is not a positive fraction"%str(self.value))
+            self.warn("Value '%s' is not a positive fraction" % (str(self.value)))
             return False
         return True
+
 
 class String(Argument):
 
@@ -149,9 +157,10 @@ class String(Argument):
 
     def checkValidity(self):
         if not isinstance(self.value,str):
-            self.warn("Value "+str(self.value)+"is not a string")
+            self.warn("Value '%s' is not a string" % (str(self.value)))
             return False
         return True
+
 
 class PositiveNumber(Argument):
 
@@ -163,29 +172,32 @@ class PositiveNumber(Argument):
             return False
         return True
 
+
 class ZeroInt(Argument):
 
     NAME="ZeroInt"
 
     def checkValidity(self):
-        if isinstance(self.value,long) or isinstance(self.value,int):
+        if isinstance(self.value,int):
             if self.value != 0:
-                self.warn("Value %s is not 0"%str(self.value))
+                self.warn("Value '%s' is not 0" % (str(self.value)))
                 return False
         else:
-            self.warn("Value %s is not an integer, much less 0"%str(self.value))
+            self.warn("Value '%s' is not an integer, much less 0" % (str(self.value)))
         return True
+
 
 class System(Argument):
 
     NAME="System"
 
     def checkValidity(self):
-        v = ( VS.universe.has_key(self.value) )
+        v = ( self.value in VS.universe )
         if not v:
-            self.warn("System %s does not exist in universe"%self.value)
+            self.warn("System '%s' does not exist in universe" % (self.value))
             return False
         return True
+
 
 class SystemTuple(Argument):
 
@@ -193,11 +205,12 @@ class SystemTuple(Argument):
 
     def checkValidity(self):
         for sys in self.value:
-            v = ( VS.universe.has_key(sys) )
+            v = ( sys in VS.universe )
             if not v:
-                self.warn("System %s does not exist in universe"%sys)
+                self.warn("System '%s' does not exist in universe" % (sys))
                 return False
         return True
+
 
 class Destination(Argument):
 
@@ -206,6 +219,7 @@ class Destination(Argument):
     def checkValidity(self):
         self.warn("No way to test destination exists")
         return True
+
 
 class SaveVar(Argument):
 
@@ -222,8 +236,9 @@ class SaveVar(Argument):
                 return True
         elif self.value=="menesch_dead" or self.value=="jones_dead" or self.value=="awacs_escort":
             return True
-        self.warn("%s is not valid"%self.value)
+        self.warn("'%s' is not valid" % (self.value))
         return False
+
 
 class Faction(Argument):
 
@@ -231,30 +246,37 @@ class Faction(Argument):
 
     def checkValidity(self):
         if self.value not in VS._factions:
-            self.warn("'%s' is not a valid faction"%self.value)
+            self.warn("'%s' is not a valid faction" % (self.value))
             return False
         return True
+
+
 class FactionTuple(Argument):
 
     NAME="Faction"
 
     def checkValidity(self):
         if type(self.value)!=type(()) and type(self.value)!=type([]):
-            self.warn(str(self.value)+" is not a tuple")
+            self.warn("'%s' is not a tuple" % (str(self.value)))
             return False
         for value in self.value:
             if value not in VS._factions:
-                self.warn("'%s' is not a valid faction"%value)
+                self.warn("'%s' is not a valid faction" % (value))
                 return False
         return True
 
+
 class DynFG(String):
     NAME="DynFG"
+
+
 class DynFGTuple(String):
+
     NAME="DynFG"
+
     def checkValidity(self):
         if type(self.value)!=type(()) and type(self.value)!=type([]):
-            self.warn(str(self.value)+" is not a tuple");
+            self.warn("'%s' is not a tuple" % (str(self.value)));
             return False;
         return True
 
@@ -268,15 +290,16 @@ class ShipFactionPair(Argument):
             self.warn("is not a tuple")
             return False
         if len(self.value) != 2:
-            self.warn("%s does not have a length of 2")
+            self.warn("'%s' does not have a length of 2" % (str(self.value)))
             return False
-        if self.value[0] not in faction_ships.stattable.keys():
-            self.warn("%s is not a valid shiptype")%str(self.value[0])
+        if self.value[0] not in faction_ships.stattable:
+            self.warn("'%s' is not a valid shiptype" % (str(self.value[0]))
             return False
         if self.value[1] not in VS._factions:
-            self.warn("%s is not a valid faction")%str(self.value[1])
+            self.warn("'%s' is not a valid faction" % (str(self.value[1]))
             return False
         return True
+
 
 class FactionList(Argument):
 
@@ -287,19 +310,21 @@ class FactionList(Argument):
             self.value=[self.value]
         for val in self.value:
             if val not in VS._factions:
-                self.warn("%s is not a valid faction"%val)
+                self.warn("'%s' is not a valid faction" % (val))
                 return False
         return True
+
 
 class ShipType(Argument):
 
     NAME="ShipType"
 
     def checkValidity(self):
-        if self.value not in faction_ships.stattable.keys():
-            self.warn(str(self.value)+" ship type unknown")
+        if self.value not in faction_ships.stattable:
+            self.warn("'%s' ship type unknown" % (str(self.value)))
             return False
         return True
+
 
 class ShipTypeList(Argument):
 
@@ -309,12 +334,16 @@ class ShipTypeList(Argument):
         if type(self.value)==type(""):
             self.value=[self.value]
         for val in self.value:
-            if val not in faction_ships.stattable.keys():
-                self.warn("%s is not a valid shiptype"%val)
+            if val not in faction_ships.stattable:
+                self.warn("'%s' is not a valid shiptype" % (val))
                 return False
         return True
+
+
 class TextListTuple(Argument):
+
     NAME="TupleTextList"
+
     def checkValidity(self):
         try:
             for value in self.value:
@@ -322,36 +351,39 @@ class TextListTuple(Argument):
                 if temparg.isValid():
                     return True
         except:
-            self.warn (str(self.value)+" is not iterable")
+            self.warn ("'%s' is not iterable" % (str(self.value)))
             return False
+
+
 class TextList(Argument):
 
     NAME="TextList"
 
     def checkValidity(self):
         if not isinstance(self.value,list):
-            self.warn(str(self.value)+"is not a list type")
+            self.warn("'%s' is not a list type" % (str(self.value)))
             return False
         for item in self.value:
             if not isinstance(item,str):
                 if isinstance(item,tuple):
                     if len(item) == 2:
                         if not isinstance(item[0],str) and isinstance(item[1],type(bool(True))):
-                            self.warn("item is not a (str,bool) pair")
+                            self.warn("item '%s' is not a (str,bool) pair" % (str(item)))
                             return False
                     elif len(item) == 3:
                         if not (isinstance(item[0],str) and isinstance(item[1],type(bool(True))) and isinstance(item[2],str)):
-                            self.warn("item %s is not a (str,bool,str) triplet"%str(item))
+                            self.warn("item '%s' is not a (str,bool,str) triplet" % (str(item)))
                             return False
                     elif len(item) == 0:
                         pass
                     else:
-                        self.warn("item %s has too many entries"%str(item))
+                        self.warn("item '%s' has too many entries" % (str(item)))
                         return False
                 else:
                     self.warn("is not a list of strings")
                     return False
         return True
+
 
 class Boolean(Argument):
 
@@ -367,6 +399,7 @@ class Boolean(Argument):
             return False
         return True
 
+
 class Empty(Argument):
 
     NAME="Empty"
@@ -375,6 +408,7 @@ class Empty(Argument):
         if self.value is list() or self.value is tuple() or self.value is str():
             return True
         return False
+
 
 class MissionVerifier:
 
@@ -404,63 +438,86 @@ class MissionVerifier:
     def warn(self, text):
         debug.warn("Mission Warning: " + text)
 
+
 class AmbushVerifier(MissionVerifier):
     MISSION_ARGS=[SaveVar(),SystemTuple(System()),PositiveNumber(),FactionList(),PositiveInt(PositiveIntList()),ShipType(ShipTypeList(Empty()),Default()),DynFG(None,Default()),TextList(None,Default()),SystemTuple(None,Default()),Destination(None,Default()),Boolean(None,Default())]
+
 
 class BountyLeaderVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(),PositiveInt(),PositiveInt(),Boolean(),PositiveInt(),Faction(),SystemTuple(None,Default()),SaveVar(None,Default()),DynFG(None,Default()),ShipType(Empty(),Default()),Boolean(None,Default()),DynFG(None,Default()),ShipType(ShipFactionPair(Empty()),Default()),TextList(None,Default()),Argument(None,Default())]#FIXME: last argument is leader_upgrades=[]
 
+
 class BountyTroopVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(),PositiveInt(),PositiveInt(),Boolean(),PositiveInt(),Faction(),SystemTuple(None,Default()),SaveVar(None,Default()),DynFG(None,Default()),ShipType(Empty(),Default()),Boolean(None,Default()),DynFG(None,Default()),ShipType(ShipFactionPair(Empty()),Default()),TextList(None,Default()),Argument(None,Default()),PositiveInt(None,Default()),PositiveInt(None,Default()),PositiveInt(None,Default())]#FIXME: last argument is leader_upgrades=[]
+
 
 class BountyVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(),PositiveInt(),PositiveInt(),Boolean(),PositiveInt(),Faction(),SystemTuple(None,Default()),SaveVar(None,Default()),DynFG(None,Default()),ShipType(Empty(),Default()),Boolean(None,Default()),TextList(None,Default())]
 
+
 class CargoVerifier(MissionVerifier):
     MISSION_ARGS=[Faction(),PositiveInt(),PositiveInt(),PositiveInt(),PositiveInt(),Boolean(),PositiveInt(),Argument(),SystemTuple(None,Default()),SaveVar(None,Default())]#FIXME: Argument is cargo 'category'
+
 
 class CleansweepVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(),PositiveInt(),PositiveNumber(),PositiveInt(),SystemTuple(),SaveVar(),PositiveInt(),PositiveInt(),PositiveFraction(),PositiveFraction(),Faction(FactionList()),Boolean(),Boolean()]
 
+
 class CleansweepEscortVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(),PositiveInt(),PositiveNumber(),PositiveInt(),SystemTuple(),SaveVar(),PositiveInt(),PositiveInt(),PositiveFraction(),PositiveFraction(),Faction(),Boolean(),Boolean(),Faction(),TextList(None,Default()),PositiveInt(None,Default()),TextList(None,Default())]
 
+
 class DefendVerifier(MissionVerifier):
     MISSION_ARGS=[Faction(),PositiveInt(),PositiveInt(),PositiveNumber(),PositiveNumber(),PositiveInt(),Boolean(),Boolean(),Faction(None,Default()),SystemTuple(None,Default()),SaveVar(None,Default()),DynFG(None,Default()),ShipType(Empty(),Default()),ShipType(Empty(),Default()),PositiveInt(None,Default()), TextList(None,Default())]
+
+
 class DefendDroneVerifier(MissionVerifier):
     MISSION_ARGS=[ShipType(Empty()),Faction(),System(),ShipType(),Faction(), PositiveInt(),Faction(),SystemTuple(),SaveVar(Empty(),Default()),TextList(None,Default())]
+
 
 class DirectionsVerifier(MissionVerifier):
     MISSION_ARGS=[SaveVar(),SystemTuple(None,Default()),Destination(None,Default())]
 
+
 class EscortLocalVerifier(MissionVerifier):
     MISSION_ARGS=[Faction(),PositiveInt(),PositiveInt(),PositiveInt(),PositiveNumber(),PositiveInt(),Boolean(), Faction(Empty(),Default()),SystemTuple(Empty(),Default()),SaveVar(Empty(),Default()),DynFG(Empty(), Default()),ShipType(Empty(),Default()),DynFG(Empty(), Default()),ShipType(Empty(),Default()),TextList(String(),Default())]
+
 
 class EscortVerifier(MissionVerifier):
     MISSION_ARGS=[Faction(),PositiveInt(), PositiveNumber(), PositiveNumber(), PositiveNumber(), PositiveInt(), ZeroInt(), PositiveInt(),SystemTuple(),SaveVar(Empty(), Default()),DynFG(Empty(), Default()), ShipType(Empty(), Default())]
 
+
 class WrongEscortVerifier(MissionVerifier):
     MISSION_ARGS=[Faction(),PositiveInt(), PositiveNumber(), PositiveNumber(), PositiveInt(),SystemTuple(),SaveVar(Empty(), Default()),DynFG(Empty(), Default()), ShipType(None, Default()),SystemTuple(None,Default()),FactionTuple(None,Default()),DynFGTuple(None,Default()),ShipTypeList(None,Default()),TextListTuple(String(),Default()),SaveVar(Empty(),Default())]
+
 
 class PatrolAmbushVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(), PositiveNumber(), PositiveInt(), SaveVar(),SystemTuple(),PositiveInt(),Faction(),PositiveInt(),ShipType(Empty(), Default()),DynFG(Empty(), Default()),TextList(String(), Default()),SystemTuple(Empty(), Default()),Destination(Empty(), Default())]
 
+
 class PatrolEnemiesVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(), PositiveInt(), PositiveNumber(), PositiveInt(), SystemTuple(), SaveVar(),PositiveInt(),PositiveInt(),PositiveFraction(),PositiveFraction(),Faction(),Boolean()]
+
 
 class PatrolVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(), PositiveInt(), PositiveNumber(), PositiveInt(), SystemTuple(), SaveVar()]
 
+
 class PlunderVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(), Faction(), Argument(), PositiveNumber(), Argument(), SaveVar()]#FIXME: first Argument is cargo 'category', second is not used
+
 
 class RescueVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(), PositiveInt(), Faction(), PositiveInt(), Faction(), DynFG(Empty(), Default()),SystemTuple(Empty(), Default()), SaveVar(Empty(), Default())]
 
+
 class TailVerifier(MissionVerifier):
     MISSION_ARGS=[SaveVar(),PositiveInt(),SystemTuple(),PositiveNumber(),PositiveNumber(),Faction(),Faction(),DynFG(),DynFG(),PositiveInt(None,Default()),ShipType(Empty(),Default()),ShipType(Empty(),Default()),DynFG(None,Default()),DynFG(None,Default()),TextList(None,Default()),TextList(None,Default()),TextList(None,Default())]
 
+
 class TripatrolVerifier(MissionVerifier):
     MISSION_ARGS=[PositiveInt(),PositiveInt(),PositiveNumber(),PositiveInt(),SystemTuple(),SaveVar(),PositiveInt(),PositiveInt(),PositiveFraction(),PositiveFraction(),Faction(FactionList()),Boolean(),Boolean(),TextList()]
+
+
 class AmbushScan(MissionVerifier):
     MISSION_ARGS=[SaveVar(),SystemTuple(System()),PositiveNumber(),FactionList(),PositiveInt(PositiveIntList()),ShipType(ShipTypeList(Empty()),Default()),DynFG(None,Default()),TextList(None,Default()),SystemTuple(None,Default()),Destination(None,Default()),Boolean(None,Default()),String(),TextList(None,Default())]

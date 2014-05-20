@@ -78,6 +78,7 @@ class bounty (Director.Mission):
             if (not self.runaway):
                 if (not self.istarget):
                     if (self.enemy):
+                        debug.debug("curun=VS.getUnit(self.curiter)")
                         curun=VS.getUnit(self.curiter)
                         self.curiter+=1
                         if (curun==self.enemy):

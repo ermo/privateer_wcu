@@ -45,16 +45,20 @@ class ambush_scan(ambush.ambush):
                 self.timer=VS.GetGameTime();
             if you.GetCargo(self.cargotype).GetQuantity()==0:
                 self.inescapable=0
+            debug.debug("un=VS.getUnit(%d)" % (self.counter))
             un=VS.getUnit(self.counter)
-            if(un):
+            if(not un.isNull()):
                 if un.getName()==self.cargotype or un.getName()=="Mission_Cargo":
                     self.counter=0
+                    debug.debug("un=VS.getUnit(0)")
                     un=VS.getUnit(0)
-                    while(un):
+                    while(not un.isNull()):
                         self.counter+=1
+                        debug.debug("un=VS.getUnit(%d)" % (self.counter))
                         un=VS.getUnit(self.counter)
                     while (self.counter>0):
                         self.counter-=1
+                        debug.debug("un=VS.getUnit(%d)" % (self.counter))
                         un=VS.getUnit(self.counter)
                         if (un):
                             if un.getName()==self.cargotype or un.getName()=="Mission_Cargo":

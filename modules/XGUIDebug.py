@@ -6,7 +6,7 @@ TRACE_NORMAL = 0
 TRACE_WARNING = -1
 TRACE_ERROR = -5
 
-__xgui_trace_level = TRACE_NORMAL
+__xgui_trace_level = TRACE_VERBOSE
 
 def trace(level,msg):
     global __xgui_trace_level

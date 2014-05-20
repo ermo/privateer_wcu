@@ -90,6 +90,7 @@ class plunder (Director.Mission):
         elif (self.arrived==1):
             if (self.enemy):
                 self.pos=self.enemy.Position()
+                debug.debug("curun=VS.getUnit(%d)" % (self.curiter))
                 curun=VS.getUnit(self.curiter)
                 self.curiter+=1
                 if (curun==self.enemy):

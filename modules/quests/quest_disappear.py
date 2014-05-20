@@ -1,8 +1,11 @@
-import quest
 import Vector
 import VS
+import debug
+import quest
 import unit
 import vsrandom
+
+
 class quest_disappear (quest.quest):
     def __init__ (self):
         self.sysfile = VS.getSystemFile()
@@ -36,12 +39,14 @@ class quest_disappear (quest.quest):
         if (not self.drone.isNull()):
             self.drone.SetCurPosition(vec)
             self.drone.SetTarget(playa)
+
     def SignificantsNear(self,sig):
         self.significants=0
         if (VS.getSystemFile()==self.sysfile):
             self.significants=1
             if (vsrandom.randrange(0,10)==0):
                 self.launchNewDrone()
+    
     def unitRipe (self,playa,un):
         if (un!=self.drone):
             if (un.isPlayerStarship()==-1):
@@ -51,16 +56,17 @@ class quest_disappear (quest.quest):
                             if (playa.InRange(un,0,1)):
                                 return 1
         return 0
+    
     def killUnit (self,un):
         pos=un.Position()
         size=4*un.rSize()
         if (size<1000):
             size=1000
-        print "kill"
-        print un.getName()
+        debug.info("kill %s" % (un.getName())
         un.Kill()
         VS.playAnimation("explosion_wave.ani",pos,size)
         VS.playSound("cloak.wav",pos,(1,0,0))
+    
     def DestroyUnit (self):
         playa = VS.getPlayer()
         if (not playa.isNull()):
@@ -70,14 +76,14 @@ class quest_disappear (quest.quest):
                     if (self.unitRipe(playa,un)):
                         self.killUnit(un)
                         return
-            i=VS.getUnitList ()
-            un = i.current()
-            while (not un.isNull()):
-                if (self.unitRipe(playa,un)):
+            debug.debug("uni=VS.getUnitList ()")        
+            uni=VS.getUnitList ()
+            while (not uni.isDone()):
+                un = next(uni)
+                if ((not un.isNull()) and self.unitRipe(playa,un)):
                     self.killUnit(un)
                     return
-                i.advance()
-                un=i.current()
+    
     def Execute (self):
         if (VS.getSystemFile()==self.sysfile):
             mytime = VS.GetGameTime();

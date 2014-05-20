@@ -69,6 +69,7 @@ class go_somewhere_significant:
                 debug.info("orbitee %s " % self.orbitee)
                 if (dyn_fg==""):
                     newship=faction_ships.getRandomCapitol(capshipfaction)
+                    debug.debug("testun=VS.getUnit(0)")
                     testun=VS.getUnit(0)
                     itt=1
                     found=False
@@ -80,11 +81,12 @@ class go_somewhere_significant:
                     except:
                         pass
 
-                    while(testun):
+                    while(not testun.isNull()):
                         if testun.getFactionName()==capshipfaction and faction_ships.isCapital(testun.getName()):
                             significant=moveUnitTo(testun,significant,near)
                             found=True
                             break
+                        debug.debug("testun=VS.getUnit(%d)" % (itt))
                         testun=VS.getUnit(itt)
                         itt+=1
                     if (not found):
@@ -97,13 +99,15 @@ class go_somewhere_significant:
                         pass
                     found=False
                     aroundthe=" near "+unit.getUnitFullName(significant);
+                    debug.debug("testun=VS.getUnit(0)")
                     testun=VS.getUnit(0)
                     itt=1
-                    while(testun):
+                    while(not testun.isNull()):
                         if testun.getFactionName()==capshipfaction and faction_ships.isCapital(testun.getName()):
                             significant=moveUnitTo(testun,significant,near)
                             found=True
                             break
+                        debug.debug("testun=VS.getUnit(%d)" % (itt))
                         testun=VS.getUnit(itt)
                         itt+=1
                     if (not found):

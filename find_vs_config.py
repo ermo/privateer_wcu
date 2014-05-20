@@ -34,17 +34,17 @@ if basedir == "": # Search all parent directories to find vs dir
         if os.path.exists(curdir) and os.path.isdir(curdir):
             break
         if basedir == "/":
-            print "Could not find vegastrike/src directory anywhere below file location."
+            print("Could not find vegastrike/src directory anywhere below file location.")
             sys.exit(-1)
         basedir = os.path.dirname(basedir)
 if basedir != "":
     curdir = os.path.join(basedir, seekdir)
     if os.path.exists(curdir) and os.path.isdir(curdir):
         basedir = curdir # Found seekdir in basedir, will use that instead
-print "Will use vegastrike source at: " + basedir
+print("Will use vegastrike source at: " + basedir)
 vegastrike_dir = os.path.realpath(basedir)
 out_file = os.path.join(filedir, "default_values_vegastrike_config.xml") # Save output in filedir
-print "Will create output at: " + out_file
+print("Will create output at: " + out_file)
 search_strings = ["vs_config->g"]
 config = {"bindings":[], "colors":[], "variables":[]}
 pre_config = {"bindings":"", "colors":"""       <section name="absolute">
@@ -158,7 +158,7 @@ for dirpath, dirnames, filenames in os.walk(vegastrike_dir, topdown=True):
                         nb_subsection = 0
                         info_dict["subsection"] = ""
                     if nb_subsection > 2:
-                        print info[1] # Todo: should add subsubsection support if you see some printed on execution.
+                        print(info[1]) # Todo: should add subsubsection support if you see some printed on execution.
                     putValInDict("variable", nb_subsection + 1, info_dict, info, linebroken)
                     putValInDict("value", nb_subsection + 2, info_dict, info, linebroken)
                     info_dict["method"] = method
@@ -184,7 +184,7 @@ def sortListOfDict(list_to_sort, sortkeystuple=("section", "subsection", "variab
     for info_list in prepare_list:
         sorted_list.append(info_list[len(sortkeystuple)])
     return sorted_list
-for metasec in config.iterkeys():
+for metasec in config.keys():
     config[metasec] = sortListOfDict(config[metasec])
 
 i = 0
@@ -198,17 +198,17 @@ while(True): # Merge lines with duplicate section/variable/value combination
                 for key in testkeystuple:
                     same = same and inf[key] == inf_next[key]
                 if same:
-                    for f, ln in inf_next["reference"].iteritems():
+                    for f, ln in inf_next["reference"].items():
                         if f in inf["reference"]:
                             inf["reference"][f] += "," + ln
                         else:
                             inf["reference"][f] = ln
                     list_to_merge.pop(i+1)
-    for metasec in config.iterkeys():
+    for metasec in config.keys():
         mergeReference(config[metasec], i)
     i += 1
     finished = True
-    for metasec in config.iterkeys():
+    for metasec in config.keys():
         finished = finished and i > len(config[metasec]) - 2
     if finished:
         break
@@ -216,7 +216,7 @@ while(True): # Merge lines with duplicate section/variable/value combination
 # Write config from the lists of dictionaries
 data = open(out_file, 'wU') # Open file to send output to
 data.write('<vegaconfig>\n')
-sortedkeys = config.keys()
+sortedkeys = list(config.keys())
 sortedkeys.sort()
 for key in sortedkeys:
     data.write('\t<' + key + '>\n')
@@ -301,7 +301,7 @@ for key in sortedkeys:
         if linebroken != []:
             data.write(' -->')
         data.write('\t<!-- ')
-        for file_name, line_number in ref.iteritems():
+        for file_name, line_number in ref.items():
             data.write(file_name+':'+str(line_number)+' ')
         if linebroken != []:
             data.write(str(linebroken)+' ')

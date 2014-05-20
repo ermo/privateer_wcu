@@ -12,8 +12,8 @@ import unit
 import universe
 import vsrandom
 
-class random_encounters:
 
+class random_encounters:
 
     class playerdata:
         def GeneratePhaseAndAmplitude(self):
@@ -106,16 +106,18 @@ class random_encounters:
         self.enprob = enp
 
     def AsteroidNear (self,uni, how):
+        debug.debug("i = VS.getUnitList()")
         i = VS.getUnitList()
         dd = self.cur.detection_distance
-        un = i.current()
         while (not i.isDone()):
+            #debug.debug("next(i)")
+            un = next(i)
+            if un.isNull():  # ignore it
+                continue
             if (uni.getSignificantDistance(un)<how):
                 if (unit.isAsteroid (un)):
                     debug.debug("asteroid near")
                     return 1
-            #debug.debug("i.next()")
-            un = i.next()
         return 0
 
     def TrueEnProb(self,enprob):
@@ -159,6 +161,7 @@ class random_encounters:
     def atLeastNInsignificantUnitsNear (self,uni, n):
         num_ships=0
         leadah = uni.getFlightgroupLeader ()
+        debug.debug("i = VS.getUnitList()")
         i = VS.getUnitList()
         dd = self.cur.detection_distance
         i.advanceNInsignificant(0)
@@ -207,7 +210,7 @@ class random_encounters:
 #            un=  VS.getUnit(i)
 
         if (not significant_unit):
-            #debug.debug("VS.getUnit() #5")
+            debug.debug("un=VS.getUnit(%d)" % (self.cur.last_ship))
             un=VS.getUnit(self.cur.last_ship)
             if (self.DifferentSystemP()):
                 un.setNull()

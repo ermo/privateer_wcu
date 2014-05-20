@@ -92,12 +92,12 @@ class patrol (Director.Mission):
         elif self.quantity != 0: # Only pick some in-system targets as specified in scan_objects
             excepted = False
             toadd = False
+            debug.debug("units_in_sys = VS.getUnitList()")
             units_in_sys = VS.getUnitList()
             while (not units_in_sys.isDone()):
-                un = units_in_sys.current()
-                if un.isNull():
-                    units_in_sys.advance()
-                    continue
+                un = next(units_in_sys)
+                if un.isNull():  # just move on to the next unit in the list
+                    continue  
                 uname = un.getFullname()
                 ufac = un.getFactionName()
                 ufg = un.getFlightgroupName()
@@ -111,7 +111,7 @@ class patrol (Director.Mission):
                     try: # Valid fonctions: isSignificant isAsteroid isJumppoint isPlanet isDockableUnit isStarShip isCapitalShip isSun
                         if eval("un.is" + obj + "()"):
                             excepted = True
-                    except Exception, inst:
+                    except Exception as inst:
                         if obj == "Base" and ufg == "Base":
                             excepted = True
                         elif obj == "Nav" and uname.find("Nav") == 0:
@@ -129,7 +129,7 @@ class patrol (Director.Mission):
                     try: # Valid fonctions: isSignificant isAsteroid isJumppoint isPlanet isDockableUnit isStarShip isCapitalShip isSun
                         if eval("un.is" + obj + "()"):
                             toadd = True
-                    except Exception, inst:
+                    except Exception as inst:
                         if obj == "Base" and ufg == "Base":
                             toadd = True
                         elif obj == "Nav" and uname.capitalize().find("Nav") == 0:

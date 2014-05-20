@@ -47,15 +47,17 @@ def unOrTupleDistance(un,unortuple,significantp):
       
 def look_for (fg, faction, numships,myunit, pos, gcd,newship=[None]):
     i=0
+    debug.debug("VS.getUnit (%d)" % (i))
     un = VS.getUnit (i)
-    while (un):
+    while (not un.isNull()):
         i+=1
+        debug.debug("VS.getUnit (%d)" % (i))
         un = VS.getUnit (i)
     i-=1 #now our i is on the last value
     while ((i>=0) and (numships>0)):
+        debug.debug("VS.getUnit (%d)" % (i))
         un = VS.getUnit (i)
-        if (un):
-                    
+        if (not un.isNull()):
             if (unOrTupleDistance(un,myunit,1)>gcd ):
                 fac = un.getFactionName ()
                 fgname = un.getFlightgroupName ()

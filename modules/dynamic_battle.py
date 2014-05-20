@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
+
 import Director
 import VS
 import debug
@@ -124,7 +124,6 @@ def Siege(fac):
                         debug.debug("exploration: "+sys)
                         fgleader = fg_util.getFgLeaderType(fg,fac)
                         exploration = 1
-
                     else:
                         exploration = 0
                     if (VS.GetRelation(fac,enfac)<0 and neighborFaction(sys,fac)):#FIXME maybe even less than that
@@ -140,7 +139,7 @@ def Siege(fac):
                                                                         #FIXME use keyword (ignore
                                                                         #keyword for now Daniel)
 
-                        elif (numenemyfg==0 and numfriendfg==0): #If both annihalate each other completely (unlikely but possible)
+                        elif (numenemyfg==0 and numfriendfg==0):  #If both annihalate each other completely (unlikely but possible)
                             facnum = VS.GetFactionIndex (fac)
                             debug.debug('checking started')
                             debug.error("DRAW error "+fg+" sys has "+sys+" has " +str(fg_util.NumFactionFGsInSystem(fac,sys))+" String is "+Director.getSaveString(0,fg_util.MakeStarSystemFGKey(sys),facnum))
@@ -162,9 +161,8 @@ def Siege(fac):
                                                                         #FIXME use keyword (ignore
                                                                         #keyword for now Daniel)
 
-
                             generate_dyn_universe.TakeoverSystem(fac,sys)
-                            #HACK, regenerate bases instnatly
+                            #HACK, regenerate bases instantly
 
                         elif (numfriendfg==0):  #If aggressor lost
                             debug.warn('wtf!!')
@@ -178,8 +176,7 @@ def Siege(fac):
                                                                         #FIXME use keyword (ignore
                                                                         #keyword for now Daniel)
 
-
-                        #FIXME add if statements if there is instead a (non appocalyptic) draw (if waring factions have relations "almost neutral" you could have a cease fire, or if the two factions are evenly matched and go nowhere a withdraw of the attackers might occur)!!!
+                        #FIXME add if statements if there is instead a (non appocalyptic) draw (if warring factions have relations "almost neutral" you could have a cease fire, or if the two factions are evenly matched and go nowhere a withdraw of the attackers might occur)!!!
             siegenumber+=1
         return 1
     else:
@@ -208,18 +205,18 @@ def SimulateBattles():
         else:
             persystemattacklist=cpsal
             cpsal = {}
-            simulateiter= iter(attacklist.items())
+            simulateiter= iter(list(attacklist.items()))
     try:
     #if (1):
         #debug.debug("simulateiter.next()")
-        ally = simulateiter.next()
+        ally = next(simulateiter)
         godoit=1
     except StopIteration:
         simulateiter = None
         deadbattlesiter = len(deadbattles)-1
         godoit=0
         import sys
-        e = str(sys.exc_info()[0])+str(sys.exc_info()[1])
+        e = str( sys.exc_info()[0]) + str(sys.exc_info()[1] )
         debug.debug("caught exception: %s" % (e))
     if (godoit):
         enemy = ally[1]
@@ -340,7 +337,9 @@ lftiter=0
 def LookForTrouble (faction):
     global lftiter
     key = fg_util.MakeFactionKey(faction)
+    #debug.debug("fg_util.ccp=%s, key=%s" % (fg_util.ccp, key))
     numfg=Director.getSaveStringLength(fg_util.ccp,key)
+    debug.debug("<<%d>> = Director.getSaveStringLength(fg_util.ccp=%s, key=%s)" %(numfg, fg_util.ccp, key))
     if (lftiter>=numfg):
         lftiter=0
         if (0 and numfg):
@@ -348,7 +347,9 @@ def LookForTrouble (faction):
         if faction in faction_ships.fighterProductionRate:
             AddFighterTo("Alpha",faction,True)
         return 0
+    #debug.debug("key=%s" % (key))
     i = Director.getSaveString(fg_util.ccp,key,lftiter)
+    debug.debug(">>%s<< = Director.getSaveString(fg_util.ccp=%s, key=%s, lftiter=%d)" % (i, fg_util.ccp, key, lftiter))
     lftiter+=1
     sys = fg_util.FGSystem (i,faction)
     if (sys!='nil'):
@@ -375,23 +376,22 @@ def StopTargettingEachOther (fgname,faction,enfgname,enfaction):
                 un.setFgDirective ('b')
         #check to see that it's in this flightgroup or something :-)
         #debug.debug("i.next()")
-        un = i.next()
+        un = next(i)
 
 
 def TargetEachOther (fgname,faction,enfgname,enfaction):
+    debug.debug("i = VS.getUnitList()")
     i = VS.getUnitList()
-    un = i.current()
     en=None
     al=None
     while (not i.isDone() and ((not en) or (not al))):
-        if un:
+        un = next(i)
+        if not un.isNull():
             if (un.getFactionName()==enfaction and un.getFlightgroupName()==enfgname):
                 if ((not en) or (vsrandom.randrange(0,3)==0)):
                     en=un
             if (un.getFactionName()==faction and un.getFlightgroupName()==fgname):
                 al=un
-        #debug.debug("i.next()")
-        un = i.next()
     if (en and al):
         al.setFlightgroupLeader(al)
         al.SetTarget(en)
@@ -470,14 +470,13 @@ def countTn (l):
 
 
 def findLaunchedShipInFGInSystem (fgname,faction):
+    debug.debug("uni = VS.getUnitList()")
     uni = VS.getUnitList()
-    un = uni.current()
     while (not uni.isDone()):
-        if un:
+        un = next(uni)
+        if not un.isNull():
             if (un.getFlightgroupName() == fgname and un.getFactionName() == faction):
                 return un
-        #debug.debug("uni.next()")
-        un = uni.next()
 
 
 def LaunchMoreShips(fgname,faction,landedtn,nums):

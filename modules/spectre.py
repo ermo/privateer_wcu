@@ -127,27 +127,27 @@ class Environment(Director.Mission):
             self.CreateSubs("subs");
 
     def Execute(self):
+        debug.debug("un = VS.getUnit (%d)" % (self.iter))
         un = VS.getUnit (self.iter)
-        if (un):
+        if (not un.isNull()):
             if (isCar(un)):
                 self.ApplyEventualEnvironment (un,VS.getPlayer())
             self.iter+=1
         else:
             self.iter=0
 
-    def EventualExecture (self):
+    def EventualExecute (self):
         self.Execute()
 
     def AlwaysExecute(self):
         self.EventualExecute()
+        debug.debug("VS.getUnitList ()")
         iter = VS.getUnitList ()
-        un = iter.current()
         playa = VS.getPlayer()
-        while (un):
-            if (isCar(un)):
+        while (not iter.isDone()):
+            un = next(iter)
+            if ((not un.isNull()) and isCar(un)):
                 self.ApplyPerFrameEnvironment (un,playa)
-            iter.advance()
-            un = iter.current()
 
     def ApplyEventualEnvironment(self,un,playa):
         unheight=0
