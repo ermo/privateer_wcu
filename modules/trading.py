@@ -136,5 +136,5 @@ class trading:
                                 ownedcargo=un.GetCargo(cargo.GetContent())
                                 if (ownedcargo.GetQuantity()):
                                     debug.debug("Removing one "+ownedcargo.GetContent())
-                                    un.removeCargo(ownedcargo.GetContent(),ownedcargo.GetQuantity()/3+1,0)
+                                    un.removeCargo(ownedcargo.GetContent(), ownedcargo.GetQuantity()//3 + 1, 0)
             self.last_ship+=1
