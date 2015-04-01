@@ -1,9 +1,15 @@
-Gemini/Troy^2900.000000^tarsus.begin 17972.762846 516.810020 517.512846
-0 mission data  3
-31337ness 2 0.050000 0.050000 
-436457r1K3574r7uP71m35 1 2.000000 
+Gemini/Troy^2900.000000^tarsus.begin 17935.296204 479.046204 480.046204
+0 stardate data 10 0.0000:000
+0 mission data  7
+Relation_to_pirates 1 -0.01 
+Relation_to_retro 1 -0.2 
+freetrader_campaign 1 0 
 stardate 1 151.199997 
-0 missionstring data 3079
+436457r1K3574r7uP71m35 1 2 
+31337ness 2 0.257125 0.257125 
+Relation_to_kilrathi 1 -0.04 
+0 missionstring data 3029
+1 -1 8 -0.5 0 0
 4 FF:1516 12 Base_Sol/Sol8 Stanford6 Banjul17 Base_Vega/Proxima15 Base_Vega/Munro17 Base_Enigma/Niven5 Skien19 Base_Enigma/Salayna12 Saundersfoot16 Base_Enigma/Brin6 Delran5 Lisse9 Magdeburg19 Base_Enigma/Ellison20 Base_Enigma/Hilleman6 Matera4 Page18 Base_Enigma/Irving18 Base_Enigma/Vespus12 Port_Clinton13 Base_Sol/Ella34 Base_Enigma/CallimachusCallmachius19 Base_Sol/Tingvallir9 Hoogeveen8 Cornwall22 Base_Sol/AlphaCentauri24 Base_Sol/ProximaCentauri8 Pembroke31 Base_Vega/HellsKitchenApocalyse8 Mayfield21 Base_Vega/HubblesStar8 Fairhope16 Base_Vega/Xanadu14 Base_Vega/Able20 Base_TrkPahn/Maginot7 Paducah7 Newport5 Spiro9 Brunswick8 Boardman13 Putnam_Valley5 Lecce6 Ithaca7 Bedford13 New_Bethlehem7 Phoenix7 Barstow10 Manchester6 Menard9 Lewisburg12 Carol_Stream6 Monroe9 Ambleside4 Juva12 Port_Chester10 Middletown6 Winona12 Port_Deposit12 Lloydminster9 Lancaster4 Ucon12 MuscatMasqat4 Pisa5 Cuzco11 Carle_Place21 Base_Vega/PortHedland14 Taylors_Island21 Base_Vega/PlancksStar7 Norwood21 Base_TrkPahn/HiloBase7 Midland18 Base_TrkPahn/Roche9 Keszthely20 Base_TrkPahn/Astoria17 Base_TrkPahn/Uruk9 Frankfort10 Dahlenburg20 Base_Vega/VegaKratna19 Base_Vega/Brimstone10 Vila_Velha8 Asuncion16 Base_Vega/Rostov14 Hendersonville25 Base_Vega/VeniceKharakTar25 Base_Vega/McAuliffeVikyah17 Base_Vega/Eddings15 Base_Sol/Weslyn12 Charles_City15 Base_Sol/Luyten5 Kyoto17 Base_Vega/Krieger14 Base_Vega/Enyo17 Base_Vega/Gateway18 Base_Vega/Chang-Cu10 Great_Bend17 Base_Vega/Megaron25 Base_Vega/ChengduCheng-Du18 Base_Enigma/Enigma10 Cape_Coral10 Mt._Magnet20 Base_Epsilon/TauCeti20 Base_Epsilon/Goddard5 Burns21 Base_Epsilon/Morpheus10 Santa_Rosa8 Onancock25 Base_Epsilon/OrsiniOrsine16 Base_Vega/Tamayo20 Base_Epsilon/Locanda7 Merritt8 Elmhurst15 Base_Vega/Ariel10 Harrisburg16 Base_Vega/Delius7 Warroad15 Base_Vega/Alcor19 Base_Vega/Blackmane11 Morrisville7 Caribou18 Base_Vega/Alliance20 Base_Enigma/Pembroke28 Base_Enigma/SperadonSpeardon17 Base_Vega/Caliban17 Base_Enigma/Rigel21 Base_Enigma/AxiusAxis23 Base_Enigma/HeavensGate20 Base_Enigma/Sterling9 Saskatoon22 Base_Enigma/NovayaKiev19 Base_Enigma/Gwynedd8 Cheyenne22 Base_Enigma/Muspelheim11 Cootamundra17 Base_Enigma/Adams17 Base_Enigma/Blake4 Hugo17 Base_Enigma/Tesla8 Brussels18 Base_Vega/Montrose18 Base_Vega/Pephedro7 Elberta16 Base_Vega/Carlin19 Base_Vega/Lafayette7 Anaheim18 Base_Vega/Midpoint6 Clovis7 Estevan21 Base_Vega/Blytheheart16 Saratoga_Springs24 Base_Vega/McDanielsWorld8 Burleson15 Base_Sol/Beacon12 Forked_River6 Tirana8 Rockwall16 Base_Sol/Promise16 Base_Sol/Canarus20 Base_Sol/BetaCanarus6 Lawton17 Base_Sol/E-Erandi7 Tolland15 Base_Sol/E-Indi15 Base_Vega/Acrus11 Santa_Maria17 Base_Vega/Cambria8 Anadarko22 Base_Enigma/Niffleheim10 Greenville25 Base_Enigma/FiddlersGreen18 Base_Enigma/Midian5 Salem11 Baie-Comeau17 Base_Enigma/Piper5 Cabot21 Base_Enigma/Pournelle11 Novosibirsk10 Montpelier16 Base_Sol/61Cygni9 Gibraltar19 Base_Sol/AlphaTauri16 Base_Sol/Ross51G7 Toronto23 Base_Hawking/IvansFolly21 Base_Hawking/IvansJoy10 Belle_Isle33 Base_Sol/BernardsStarBarnardsStar15 Base_Sol/Leonis16 Base_Sol/Ross1547 Rangoon17 Base_Sol/Grimstad13 Mission_Viejo15 Base_Sol/Aquila8 Winfield8 Lockport9 Encinitas8 Sleaford16 Base_Sol/Camelot9 Homecourt21 Base_Sol/Wattenbarger16 Base_Sol/Celeste15 Base_Sol/Mastif10 Binghamton7 Penrith14 Port_St._Lucie15 Base_Sol/Murphy17 Base_Sol/Arcturus16 Base_Sol/Timonen7 Reading16 Base_Sol/Ross2488 Chandler7 Bacolod19 Base_Sol/EtaCarinae9 Flagstaff16 Base_Sol/Procyon18 Base_Sol/CetiPrime20 Base_Sol/ZetaOrionis17 Base_Sol/Miyahira10 Charleston7 Okinawa16 Base_Sol/Polaris16 Base_Sol/Wolf35913 Base_Sol/Ceti7 Moberly7 Dresden17 Base_Sol/Neubauer14 Base_Sol/Minsk18 Base_Hawking/Titov20 Base_Hawking/Hawking6 Conway22 Base_Hawking/EagleBase9 Cranbrook20 Base_Hawking/Shepard13 Coral_Springs18 Base_Argent/Yeager16 Base_Enigma/Pohl9 Cleveland7 Fordyce18 Base_Argent/Mathis21 Base_Hawking/Chandley9 Princeton19 Base_Argent/Destiny21 Base_Argent/Hardwicke19 Base_Argent/Lesnick19 Base_Argent/Gobeski7 Sahagun19 Base_Argent/Coppock7 Roanoke16 Base_Argent/Prem6 Millet9 Elizabeth15 Base_Argent/Ray19 Base_Argent/Solomon20 Base_Argent/Alderson18 Base_Argent/Torres18 Base_Argent/Olivia9 Red_Bluff7 Boulder19 Base_Argent/Karpiak19 Base_Argent/Everett10 Union_City18 Base_Argent/McLean8 Poitiers7 Jupiter19 Base_Argent/Venture22 Base_Argent/Hidebeidel20 Base_Argent/Hentrich19 Base_Argent/Schmidt6 Owosso19 Base_Argent/Benford20 Base_Argent/Portilla17 Base_Enigma/Drake20 Base_Enigma/Heinlein8 Gatineau6 Monsey20 Base_Enigma/Stirling5 Lihue17 Base_Enigma/Lucas9 Fullerton27 Base_Landreich/GainersWorld20 Base_Enigma/Mustakas12 Gordonsville7 Limeira17 Base_Enigma/Dyson9 Johnstown20 Base_Enigma/Vonnegut18 Base_Enigma/Clarke7 Vallejo9 Wauwatosa18 Base_Enigma/Gibson17 Base_Enigma/Blish10 Meuselwitz16 Base_Enigma/Card10 Twin_Falls6 Dublin9 Roseville21 Base_Enigma/Halderman17 Base_Argent/Kebie10 Landisburg18 Base_Argent/Argent23 Base_Argent/BetaTucanae19 International_Falls21 Base_Argent/Marcelais7 Gliwice19 Base_Argent/Arcadia7 Norfolk17 Base_Argent/Brack5 Natal19 Base_Enigma/Gerrold13 Prince_George7 Douglas11 Santa_Marta19 Base_Enigma/Herbert8 Wanganui9 Buxtehude17 Hasbrouck_Heights12 Villingen-S.20 Base_Enigma/Langston9 Wiscasset18 Base_Argent/Pandey11 Somersworth6 Aurora16 Base_Argent/Dano19 Base_Argent/Miniyar7 Yonkers12 Schererville17 Base_Argent/Baker10 Washington5 Elgin9 Eibiswald9 Guayaquil18 Base_Hawking/White9 Salisbury20 Base_Hawking/Grissom11 Grand_Haven22 Base_Hawking/Armstrong17 Kern_River_Valley10 Fort_Bragg10 Blairstown6 Surrey20 Base_Hawking/Sommers21 Base_Hawking/MuCephei18 Base_Hawking/David11 Englishtown20 Base_Hawking/Oldziey5 Capac10 Chelmsford22 Base_Hawking/Manhavier6 Warsaw9 Fairfield19 Base_Hawking/Newton20 Base_Hawking/Petunia7 Salinas18 Base_Hawking/Sagan9 Stratford17 Hopewell_Junction18 Base_Hawking/Barns6 Novato22 Base_Hawking/NewBaikal9 Jefferson21 Base_Hawking/Korolyov20 Base_Hawking/Vostock9 Beaumaris20 Base_Hawking/Waldrip5 Galax19 Base_Hawking/Brunet9 Massillon11 Tallahassee20 Base_Hawking/Merrell14 Villeneuve_d'A21 Base_Hawking/Outreach18 Base_Hawking/Brown10 Chinandega18 Base_Hawking/Gauss13 Base_Sol/Todd7 Emporia9 Clearlake20 Base_Hawking/Galileo7 Opotiki20 Base_Hawking/Mercury11 Stadskanaal18 Base_Hawking/Yorin14 Base_Sol/Kirov11 Londonderry14 Base_Sol/Lenin9 Amsterdam20 Base_Hawking/Komarov5 Newry18 Base_Avalon/Tethys20 Base_Avalon/Poseidon11 Green_Creek20 Base_Avalon/Callisto7 Hermann10 Malmesbury17 Base_Avalon/Haven11 La_Crescent17 Base_Avalon/Tanis15 Base_Avalon/Dis8 Carlsbad18 Base_Avalon/Xualla8 Hedemora16 Base_Avalon/Ubar18 Base_Avalon/Avalon13 Andros_Island9 Vancouver20 Base_Avalon/ElDorado8 Conneaut10 Morgantown9 Millerton18 Base_Avalon/Giunta19 Base_Avalon/Grajeda9 Chisasibi11 Farnborough19 Base_Avalon/Hermann8 Picayune11 Marlborough19 Base_Avalon/Carloss16 Base_Avalon/Mira9 Woodstock8 Karlstad8 Valencia16 Base_Avalon/Leon10 Fort_Myers16 Base_Avalon/Kier19 Base_Avalon/Perseus14 Ribeirao_Preto11 Breedsville21 Base_Avalon/Hephestus10 Tuscaloosa22 Base_Avalon/Alexandria21 Base_Avalon/Britannia7 Evesham23 Base_Avalon/NewAtlantis17 Base_Avalon/Babel17 Base_Avalon/Elena9 Pickering20 Base_Avalon/Gomorrah7 Ontario6 Berlin17 Base_Avalon/Sodom10 Fort_Davis4 Reno18 Base_Avalon/Baroda18 Base_Avalon/Panama17 Base_Avalon/Sheol16 Base_Avalon/Roma19 Stratford-upon-Avon16 Base_Avalon/Agea18 Base_Avalon/Athena20 Base_Hawking/Gilmore7 Camrose15 Rolling_Prairie19 Base_Hawking/Chemla6 Prague17 Base_Hawking/Jeni13 Richmond_Hill10 Portsmouth17 Base_Avalon/Hades9 Fortaleza17 Base_Avalon/Aries11 Blairsville18 Base_Avalon/Phobos18 Base_Avalon/Deimos7 Preston11 Scarborough20 Base_Avalon/Pietzsch6 Cudahy11 Giebelstadt6 Roslyn16 Base_Avalon/Russ9 Piacicaba13 Base_Sol/Huff8 New_Bern18 Base_Sol/BetaTauri19 Base_Sol/Mollerhaug14 Base_Sol/Agder15 Base_Sol/Vainio9 New_Roads17 Base_Sol/Prentice13 Bellefontaine15 Base_Sol/Gjovik15 Base_Sol/Altair18 Base_Enigma/Foster19 WhiteSulphurSprings19 Base_Epsilon/Primus10 Ben_Guerir18 Base_Epsilon/Yarin13 Bullhead_City15 Base_Vega/Gimle12 Harrisonburg15 Base_Vega/Dieno9 Leningrad15 Base_Sol/Cygnus11 Morgan_City14 Base_Sol/Frase17 Base_Sol/Bradshaw6 Casino16 Base_Sol/Tikopal13 Hickory_Ridge15 Base_Sol/Sirius5 Lille14 Base_Sol/Talos9 Thornbury16 Base_Vega/Oberan16 Base_Vega/Hammer6 Brazil4 Nome17 Base_Vega/Plummer6 Irving8 Sarajevo18 Berwick-upon-Tweed20 Base_Enigma/Crichton19 Base_Enigma/Damioyn10 Zoetermeer9 Ingleside17 Base_Sol/Hilthros8 Waukegan
 5 FF:1032 8 Elsinore10 Montmartre19 Base_Landreich/Siva24 Base_Landreich/Balthazar18 Base_Landreich/Jab27 Base_Landreich/BufordsWorld24 Base_Landreich/Landreich20 Base_Landreich/Ilios25 Base_Landreich/Greenhouse19 Base_Landreich/Tara28 Base_Landreich/Landreich1(2)27 Base_Landreich/NewSamarkand27 Base_Landreich/GonwynsGlory22 Base_Landreich/Orleans8 Doberman7 Huntley9 Pendleton8 Eastwood10 Lippincott8 Parjanya6 Loomis7 Chaplin5 Olson9 Mycenaean3 Dow10 Hildebrand5 Juras6 Selwyn23 Base_Landreich/Oecumene24 Base_Landreich/NewSydney8 Stafford6 Coffey
 5 FF:1170 18 Base_Vega/Tartarus20 Base_Vega/BairdsStar12 Smith_Center20 Base_TrkPahn/Etruria21 Base_TrkPahn/Grovsner16 Base_Vega/Dakota8 Mayaguez11 Greeneville27 Base_Vega/KurasawaWarachTha20 Base_Vega/Hellespont11 Mount_Baldy14 Base_Vega/Ymir17 Base_Vega/Nephele9 Red_Bluff13 Base_Vega/Tyr24 Base_Landreich/NewPlains10 Cookeville21 Base_Enigma/McCaffrey20 Base_Epsilon/Granita7 Madison10 River_Edge21 Base_Epsilon/Veronica22 Base_Epsilon/Trafalgar18 Base_Enigma/Racene6 Murcia21 Base_Enigma/Repleetah19 Base_Enigma/Shelton20 Base_Enigma/Bradbury19 Base_Enigma/Wetland16 South_Plainfield20 Base_Epsilon/Antares37 Base_Epsilon/EpsilonPrimeEpsilonPrima5 Davis8 Hartland21 Base_Epsilon/Canewdon21 Base_Epsilon/Perillia10 Kincardine18 Base_Epsilon/Ayers7 Corsham9 Stockholm28 Base_Epsilon/TorgoKoBarYagar16 Base_Vega/Elohim8 Hannibal7 Sabinal19 Base_Vega/Nifelheim20 Base_Vega/LokiVILoki19 Base_Epsilon/Chanel19 Base_Epsilon/Peleus11 Farnborough18 Base_Epsilon/Circe19 Base_Enigma/Talamon20 Base_Epsilon/Orestes19 Base_Epsilon/Lennox11 New_Bedford19 Base_Vega/Segallion17 Base_Epsilon/Masa20 Base_Epsilon/Silenos11 Grahamstown19 Base_Epsilon/Verula6 Perris13 Laguna_Niguel24 Base_Epsilon/AnaticPrime19 Base_Epsilon/Ulsima6 Durham19 Base_Epsilon/Leyton18 Base_Enigma/Cabrea30 Base_Epsilon/BistangioBistango20 Base_Landreich/Oasis20 Base_Epsilon/Ross34F15 Base_Vega/Mylon
@@ -13,7 +19,7 @@ stardate 1 151.199997
 4 FF:5120 9 Bucharest8 Pericles5 Kafka7 Bristol5 Ogden4 Celt8 Hispanic11 Butterfield10 Afrikaners6 Crimea6 Kiewit8 Formicas10 Lauderdale8 Schwartz8 Scotsman4 Kali8 Bosporus7 Colombo8 Condatis8 Gonzalez7 Faustus6 Bausch6 Tigris8 Heinrich6 Morris7 Miocene6 Judder8 Ethiopia7 Wieland3 Hod11 Terpsichore6 Brandt6 Freida6 Yaunde6 Shiite10 Blumenthal7 Ruppert5 Angie8 Buehring7 Cypriot5 Glynn10 Wheatstone4 Joes8 Hennessy6 Ganesh8 Reynolds6 Angles7 Bologna8 Comanche8 McKinley9 Hollywood5 Boise5 Niger12 Kinich Kakmo6 Lumpur8 Moriarty12 Macaulayisms8 Huxtable7 Siannon9 Nordstrom5 Assam8 Sudanese4 Clio9 Bolshevik8 Giovanni7 Cassite7 Artemis8 Triplett10 Bolshevism4 Rick10 Meriwether8 Bismarck9 Fulbright4 Saud6 Caputo5 Genoa5 Bowes4 Paul8 McMartin4 Sean8 Berniece7 Everett6 Atwood6 Talmud7 Vincent4 Rena5 Malay5 Willy7 Gifford6 Lionel7 Turkish10 Plainfield6 Bertha11 Newburyport10 Louisville6 Wausau6 Bimini5 Heine7 Charley6 Athens8 Anheuser4 Skye6 Baylor6 Tanaka4 Itel10 Montmartre5 McGee8 Wheelock8 Brinkley6 Claire7 Yorkers5 Davis10 Erlenmeyer6 Burkes5 Spiro10 Nottingham6 Dorado8 Humboldt4 Indy7 Barstow
 4 FF:6338 7 Camelot10 Egyptology8 Frederic4 Troy6 Davies6 Kowtow5 Golda9 Asheville7 Clemens9 Arianrhod7 Cypriot7 Francis12 Scheherazade5 Vegas8 Alhambra8 Moreland6 Sutton8 Roseland6 Connie6 Khepry4 Bach9 McClellan5 Swink7 Poussin7 Aladdin7 Bolivia7 Gruyere7 Hammond5 Percy6 Mysore6 Newman8 Lawrence8 Giovanni9 Na Wahine4 Jane9 Buxtehude8 Hastings5 Ernst11 Weierstrass16 Mictlantecihuatl7 Maldive8 Marietta9 Arlington5 Tioga6 Goethe9 Beethoven7 Bromley8 Capetown6 Angelo6 Morton7 Houston7 Algenib6 Norman8 Bontempo11 Christensen7 Brannon5 Waals5 Ogden6 Pfizer8 Chisholm13 Balkanization5 Maier9 Selectric8 Atalanta9 Siegfried7 Wendell10 Fredericks6 Clotho6 Sharpe5 Berra9 Sarasvati7 Stimson7 Gustave7 Finnish11 Tchaikovsky7 Baldwin6 Apollo8 MacMahon8 Schwartz10 Ninhursaga8 Labrador5 Lykes5 Wylie10 Versailles5 Donna6 Duluth7 Maurine5 Flynn6 Bangui7 Oedipal7 Bayonne4 Eris3 Tim6 Breton5 Wakea7 Puccini9 Byzantium10 Talleyrand4 Cole12 Milquetoasts7 Holland7 Belenus6 Paynes8 Matthews8 Staunton7 Prussia3 Eng6 Valery6 Kohler12 Tallahatchie10 Richardson6 Bolton8 Brisbane5 Intel8 Angelica9 Catalonia8 Bessemer6 Stuart8 Rapunzel6 Brigit7 Waldron8 Rutledge6 Cesare5 Bragi5 Altos9 Euclidean6 Ingram8 Damascus5 Magni10 Meriwether5 Bayda8 Pullmans6 O'Shea7 Tzeltal6 Garvey4 Alar10 Bernardino6 Gerber5 Frito7 Uruguay4 Abba5 Burke7 Shawano6 Moscow7 Joaquin7 Smalley6 Leyden9 Priscilla5 Chang7 Vincent5 Vasus4 Corb6 Michel7 Boonton7 Broglie7 Scripps6 Sandia7 Schafer7 Artemis5 Allan4 Ulan6 Imagen7 Bentham9 Tektronix8 Bowditch6 Malton7 Russell5 Ising8 Mortimer9 Bonaparte9 Styrofoam5 Dirac5 Dunne9 Sanderson8 Brasilia6 Bumbry5 Benny10 Beltsville6 McKeon5 Asher6 Kovacs5 Ozark7 Culvers10 Huntington8 Wolfgang6 Sussex6 Esmark5 Burch6 Ruanda7 Jackman8 Dietrich8 Malagasy6 Bangor4 Java7 Berlitz9 Blanchard5 Tamil6 Harlem6 Scotty6 Fizeau5 Scots8 Buchwald4 Bali6 Watson14 Constantinople6 Eccles11 Southampton8 Berkeley7 Wilhelm8 Filipino10 Mahayanist8 Lipscomb7 Berlioz6 Bamako7 Jenkins8 Blenheim6 Balkan8 Transite8 Cheshire11 Wallenstein8 Pandanus5 Morse11 Christopher5 Babel9 Greenland7 Peabody4 Modi6 Markov8 Diogenes8 Maguires5 Wolff4 Sian8 Brighton5 Ababa6 Moines7 Juanita8 Herschel10 Montrachet7 Winsett6 Ramona5 Bates7 Rockies6 Anshar8 Bundoora5 Topsy3 Nat9 Lancaster10 Zellerbach10 Pittsburgh8 Boylston8 Stargate10 McAllister6 Birgit3 Aed10 Greenblatt12 Velociraptor8 Booleans3 Hom8 Pershing8 Baptiste7 Antaios4 Alec8 Thompson8 Pretoria6 Munsey6 Harlan4 Urdu9 Oligocene7 Vietnam7 Dubuque10 Montpelier6 Gambia7 Palermo8 Copacati8 Caligula4 Reub5 Chevy5 Aruru9 Trobriand6 Taoism6 Dodson8 Bakelite7 Beijing6 Sibley6 Havana5 Buick9 Wednesday5 Shiva11 Triceratops7 Faustus7 UniSoft6 Phobos7 Kristin4 Loki9 Tzultacaj4 Asia7 Loretta5 Bella8 Aquarius5 Yemen4 Wong5 Mimir7 Bernice8 Cortland8 Antilles6 Injuns8 Flanders6 Enrico5 Delia5 Alcoa8 Renville13 Bhagavad-Gita4 Noah3 Vic9 Katharine7 Simpson7 Nichols9 Lindstrom6 Turing5 Shara7 Ariadne5 Poole6 Tirana9 Europeans8 Fruehauf5 Celia11 Ptolemaists7 Finland5 Carty7 Dunedin9 Romeldale3 Kek8 Belgrade5 Agnes7 Halpern7 Saracen9 Kamchatka8 Magellan
 4 FF:781 8 Heathkit6 Browne9 McDermott5 Burma7 Hermosa6 Kowtow7 Alfonso6 Hermes7 Buzzard9 Willisson4 Orin5 Kenya8 Einstein5 Kirby11 Leavenworth10 Gilbertson13 Gushkin-banda9 Macintosh10 Belleville7 Deutsch6 Bertha6 Brahms5 Adair11 Bakersfield5 Kafka7 Peiping5 Blake8 Delmarva9 Wilkinson6 Verona4 Marc9 Richfield7 Murigen5 Juras7 Senegal8 Heublein9 Silverman6 Waller5 Beebe10 Sacramento6 Agatha10 Shanghaied8 Nazarene6 Deimos5 Lowry6 Adonis7 England9 Berkowitz9 Wheatland6 Barney8 Winfield6 Mekong5 Edain6 Ferrer9 Adsullata7 Gabriel4 Bini6 Gemini6 Uranus7 Holmdel5 Monet7 Berlioz6 Gothic9 Greenberg5 Andes8 Gertrude4 Byrd8 Madeline5 Marie7 Brenner6 Kelvin8 Colombia10 Protophyta6 Meyers5 Meier3 Hod8 Bernardo8 Wilmette6 Adolph6 Canute6 Gurkha
-4 FF:8115 8 Plymouth10 China_Lake5 Davis7 Kouvola6 Conway9 Lake_Park6 Sliema9 Hartselle10 Pleasanton11 Gainesville7 Fremont7 Spencer8 Onancock10 Sebastopol7 Ossipee7 Rocklin8 St._Paul7 Amherst12 Prairie_City10 Shepparton9 Woodstock9 Stratford10 New_Canaan7 P'ohang10 Scottsdale11 Warrnambool12 Breckenridge5 Ocala10 Kincardine14 Rostov-na-Donu7 Bologna10 Balladonia9 Pittsburg9 La_Grange5 Tomar7 Muenchen11 Saarbruecken4 Riom10 Shreveport7 Liberia8 Muskegon10 Bridgeview6 Tehran7 Elkland12 Kristianstad5 Paris7 Lugansk14 Drayton_Valley10 Wilmington4 Anna9 Hoogeveen6 Surrey6 Newnan8 Bancroft9 Ste._Rose11 Beanblossom13 Silver_Spring5 Ndola9 Annandale8 Boardman15 San_Luis_Obispo5 Chiba10 Middletown4 Bath9 Ocklawaha14 West_Hempstead6 Sendai5 Utica4 Kiel11 Bowmanville6 Monroe10 Mt._Magnet10 Chittagong11 Baie-Comeau7 Durango13 Ustica_Island7 Hialeah6 Luzern9 Galesburg8 Lakemoor6 Natick8 Soperton9 Nashville6 Irvine6 Lufkin11 West_Monroe7 Tbilisi10 Framingham9 Steenwijk8 Shanghai6 Girona7 Bastrop7 Truckee9 Honesdale7 Sulphur10 Janesville8 Hannover8 La_Tuque9 Rochester6 Snyder13 Oinville-s-A.11 Torrelavega14 West_Sand_Lake12 Grand_Island9 Hermiston6 Aviles7 Adelfia4 Troy6 Yakima11 Montevarchi8 Danville5 Derby7 Forster10 Winchester7 Granger
+4 FF:8115 8 Plymouth10 China_Lake5 Davis7 Kouvola6 Conway9 Lake_Park6 Sliema9 Hartselle10 Pleasanton11 Gainesville7 Fremont7 Spencer8 Onancock10 Sebastopol7 Ossipee7 Rocklin8 St._Paul7 Amherst12 Prairie_City10 Shepparton9 Woodstock9 Stratford10 New_Canaan7 P'ohang10 Scottsdale11 Warrnambool12 Breckenridge5 Ocala10 Kincardine14 Rostov-na-Donu7 Bologna10 Balladonia9 Pittsburg9 La_Grange5 Tomar7 Muenche11 Saarbruecke4 Riom10 Shreveport7 Liberia8 Muskegon10 Bridgeview6 Tehran7 Elkland12 Kristianstad5 Paris7 Lugansk14 Drayton_Valley10 Wilmington4 Anna9 Hoogeveen6 Surrey6 Newnan8 Bancroft9 Ste._Rose11 Beanblossom13 Silver_Spring5 Ndola9 Annandale8 Boardman15 San_Luis_Obispo5 Chiba10 Middletown4 Bath9 Ocklawaha14 West_Hempstead6 Sendai5 Utica4 Kiel11 Bowmanville6 Monroe10 Mt._Magnet10 Chittagong11 Baie-Comeau7 Durango13 Ustica_Island7 Hialeah6 Luzern9 Galesburg8 Lakemoor6 Natick8 Soperton9 Nashville6 Irvine6 Lufkin11 West_Monroe7 Tbilisi10 Framingham9 Steenwijk8 Shanghai6 Girona7 Bastrop7 Truckee9 Honesdale7 Sulphur10 Janesville8 Hannover8 La_Tuque9 Rochester6 Snyder13 Oinville-s-A.11 Torrelavega14 West_Sand_Lake12 Grand_Island9 Hermiston6 Aviles7 Adelfia4 Troy6 Yakima11 Montevarchi8 Danville5 Derby7 Forster10 Winchester7 Granger
 4 FF:914 28 Base_Landreich/Landreich3(3)28 Base_Landreich/Landreich3(4)24 Base_Landreich/42-33Beta28 Base_Landreich/Landreich3(5)20 Base_Argent/TCSC161320 Base_Argent/TCSC160220 Base_Argent/TCST159320 Base_Argent/TCSC170121 Base_Hawking/TCSC157521 Base_Hawking/TCSC072521 Base_Hawking/TCSC073020 Base_Avalon/TCSC310220 Base_Avalon/TCSC156918 Base_Avalon/_prime
 10 FG:Ababa|66 1 514 Argent/Venture1 011 talon.blank1 51 5
 9 FG:Abba|66 1 218 MShrak/Ksathque(8)1 011 talon.blank1 21 2
@@ -1125,8 +1131,8 @@ stardate 1 151.199997
 12 FG:Holland|66 2 1416 Kilrah/TAggABren1 011 talon.blank2 142 14
 14 FG:Hollywood|56 1 917 Epsilon/Trafalgar1 011 talon.blank1 91 9
 12 FG:Holmdel|76 1 128 Landreich/BlackHolesystem2991 011 orion.blank1 11 1
-8 FG:Hom|66 2 1612 Argent/Baker1 011 talon.blank2 162 16
 14 FG:Homecourt|16 2 2011 Sol/Camelot1 08 stiletto2 202 20
+8 FG:Hom|66 2 1612 Argent/Baker1 011 talon.blank2 162 16
 10 FG:Honda|46 1 714 Enigma/Arraman1 012 tarsus.blank1 71 7
 14 FG:Honesdale|86 2 149 Sol/Lenin1 011 talon.blank2 142 14
 11 FG:Honshu|46 2 1811 Argent/Roaz1 012 galaxy.blank2 182 18
@@ -1282,7 +1288,7 @@ stardate 1 151.199997
 13 FG:Matthews|66 2 1412 Kilrah/KCris1 011 talon.blank2 142 14
 12 FG:Maurine|66 2 1517 VukarTag/TqlHhass1 011 talon.blank2 152 15
 11 FG:Maxine|46 1 514 Argent/Tucanae1 012 tarsus.blank1 51 5
-14 FG:Mayagyez|116 1 111 Vega/Dakota1 012 tarsus.blank1 11 1
+14 FG:Mayaguez|116 1 111 Vega/Dakota1 012 tarsus.blank1 11 1
 11 FG:Mayans|46 1 816 Avalon/Britannia1 012 tarsus.blank1 81 8
 13 FG:Mayfield|16 1 626 Vega/HellsKitchenApocalyse1 08 stiletto1 61 6
 15 FG:McAllister|66 1 715 Enigma/Langston1 011 talon.blank1 71 7
@@ -1349,24 +1355,7 @@ stardate 1 151.199997
 17 FG:Mount_Baldy|116 2 1615 Vega/Hellespont1 011 talon.blank2 162 16
 15 FG:Mt._Magnet|16 2 1915 Epsilon/Veratek1 08 stiletto2 192 19
 15 FG:Mt._Magnet|86 2 1017 Argent/Hidebeidel1 013 gladius.blank2 102 10
-10 FG:Mundt|46 2 1411 Gemini/J9001 012 tarsus.blank2 142 14
-11 FG:Munsey|66 1 216 Hawking/TCSC15751 011 talon.blank1 21 2
-12 FG:Murcia|119 2 1613 Enigma/Racene1 012 tarsus.blank2 152 158 paradigm1 11 1
-12 FG:Murigen|76 1 415 TrkPahn/HhriSom1 011 demon.blank1 41 4
-17 FG:MuscatMasqat|16 2 1013 Gemini/KM-2521 08 stiletto2 102 10
-13 FG:Muskegon|86 2 1112 Vega/Caliban1 013 gladius.blank2 112 11
-15 FG:Mycenaean|106 2 1815 Vega/LokiVILoki1 013 drayman.blank2 182 18
-12 FG:Mynheer|46 2 1713 Gemini/Varnus1 012 galaxy.blank2 172 17
-11 FG:Mysore|66 2 1119 Gemini/Penders_Star1 011 talon.blank2 112 11
-12 FG:Muenchen|86 1 520 Enigma/CardellGardel1 013 gladius.blank1 51 5
-14 FG:Na Wahine|66 1 119 Gemini/Penders_Star1 011 talon.blank1 11 1
-11 FG:Nagoya|46 1 910 Sol/Morone1 012 galaxy.blank1 91 9
-14 FG:Nashville|86 2 1115 Hawking/Petunia1 011 talon.blank2 112 11
-10 FG:Natal|16 2 1612 Argent/Brack1 010 broadsword2 162 16
-11 FG:Natick|86 2 1314 Hawking/Apollo1 011 talon.blank2 132 13
-8 FG:Nat|66 1 711 Argent/Akis1 011 talon.blank1 71 7
-13 FG:Nazarene|76 2 1418 Kilrah/Kurukhag(2)1 011 demon.blank2 142 14
-10 FG:Ndola|86 1 211 Sol/Procyon1 013 gladius.blank1 21 2
+12 FG:Muenchen|86 1 520 Enigma/CardellGardel1 013 gladius.blank1 51 514 FG:Na Wahine|66 1 119 6 1 119 11 talon.blank1 11 111 FG:Nagoya|46 1 910 6 1 910 12 galaxy.blank1 91 914 FG:Nashville|86 2 11156 2 111511 talon.blank2 112 1110 FG:Natal|16 2 16126 2 161210 broadsword2 162 1611 FG:Natick|86 2 13146 2 131411 talon.blank2 132 138 FG:Nat|66 1 711 6 1 711 11 talon.blank1 71 713 FG:Nazarene|76 2 14186 2 14181410 FG:Ndola|86 1 211 Sol/Procyon1 013 gladius.blank1 21 2
 11 FG:Nellie|46 1 312 Sol/Neubauer1 012 tarsus.blank1 31 3
 17 FG:New_Bedford|119 2 1414 Epsilon/Lennox1 013 gladius.blank2 132 138 paradigm1 11 1
 13 FG:New_Bern|16 2 198 Sol/Huff1 010 broadsword2 192 19
@@ -1387,13 +1376,16 @@ stardate 1 151.199997
 9 FG:Nome|16 2 179 Vega/Nemo1 08 stiletto2 172 17
 14 FG:Nordstrom|56 2 1914 Epsilon/Chanel1 011 talon.blank2 192 19
 12 FG:Norfolk|16 1 714 Argent/Arcadia1 010 broadsword1 71 7
-11 FG:Norman|66 1 625 Gemini/New_Constantinople1 011 talon.blank1 61 6
-11 FG:Norris|46 2 149 Sol/Mauer1 012 tarsus.blank2 142 14
-12 FG:Norwood|16 1 616 Vega/PlancksStar1 08 stiletto1 61 6
-15 FG:Nottingham|56 1 210 Sol/Altair1 011 talon.blank1 21 2
-11 FG:Novato|19 1 613 Hawking/Barns1 08 stiletto1 51 58 paradigm1 11 1
-16 FG:Novosibirsk|16 1 916 Enigma/Pournelle1 010 broadsword1 91 9
-11 FG:O'Hare|46 1 918 Hawking/IvansFolly1 012 tarsus.blank1 91 9
+11 FG:Norman|66 1 625 Gemini/New_Constantinople1 011 talon.blank1 61 61 66 2 149 1 01 02 142 142 146 1 616 1 01 01 61 61 66 1 210 1 01 01 21 21 29 1 613 Haw1 01 01 51 51 51 11 11 16 1 916 1 01 01 91 91 96 1 918 1 01 01 91 9
+10 FG:Mundt|46 2 1411 Gemini/J9001 012 tarsus.blank2 142 14
+11 FG:Munsey|66 1 216 Hawking/TCSC15751 011 talon.blank1 21 2
+12 FG:Murcia|119 2 1613 Enigma/Racene1 012 tarsus.blank2 152 158 paradigm1 11 1
+12 FG:Murigen|76 1 415 TrkPahn/HhriSom1 011 demon.blank1 41 4
+17 FG:MuscatMasqat|16 2 1013 Gemini/KM-2521 08 stiletto2 102 10
+13 FG:Muskegon|86 2 1112 Vega/Caliban1 013 gladius.blank2 112 11
+15 FG:Mycenaean|106 2 1815 Vega/LokiVILoki1 013 drayman.blank2 182 18
+12 FG:Mynheer|46 2 1713 Gemini/Varnus1 012 galaxy.blank2 172 17
+11 FG:Mysore|66 2 1119 Gemini/Penders_Star1 011 talon.blank2 112 11
 11 FG:O'Shea|66 1 318 MShrak/Ksathque(6)1 011 talon.blank1 31 3
 10 FG:Ocala|86 2 1313 Gemini/Pollux1 011 talon.blank2 132 13
 14 FG:Ocklawaha|86 2 2013 Argent/Miller1 013 gladius.blank2 202 20
@@ -1508,27 +1500,8 @@ stardate 1 151.199997
 12 FG:Russell|66 2 1915 Enigma/Bradbury1 011 talon.blank2 192 19
 11 FG:Russia|46 1 714 Enigma/Gerrold1 012 tarsus.blank1 71 7
 13 FG:Rutledge|66 2 1413 Hari/Hari1(2)1 011 talon.blank2 142 14
-16 FG:Saarbruecken|86 2 1220 Epsilon/OrsiniOrsine1 013 gladius.blank2 122 12
-13 FG:Sabinal|119 2 1711 Vega/Elohim1 011 talon.blank2 162 168 paradigm1 11 1
-15 FG:Sacramento|76 2 1513 Hari/Hari3(1)1 015 centurion.blank2 152 15
-12 FG:Sahagun|19 1 414 Argent/Gobeski1 010 broadsword1 31 38 paradigm1 11 1
-10 FG:Salem|16 2 1713 Enigma/Midian1 08 stiletto2 172 17
-12 FG:Salinas|16 1 915 Hawking/Petunia1 010 broadsword1 91 9
-11 FG:Salina|49 2 1415 Epsilon/Firekka1 011 orion.blank2 132 137 drayman1 11 1
-14 FG:Salisbury|16 2 1213 Hawking/White1 08 stiletto2 122 12
-11 FG:Salish|46 2 1318 Enigma/HeavensGate1 012 tarsus.blank2 132 13
-20 FG:San_Luis_Obispo|86 1 19 Sol/Minsk1 013 gladius.blank1 11 1
-14 FG:Sanderson|66 1 220 Epsilon/OrsiniOrsine1 011 talon.blank1 21 2
-11 FG:Sandia|66 2 1631 Enigma/KtithrakMangKTithrakMang1 011 talon.blank2 162 16
-16 FG:Santa_Maria|16 1 910 Vega/Acrus1 08 stiletto1 91 9
-16 FG:Santa_Marta|16 2 1112 Enigma/Exile1 010 broadsword2 112 11
-15 FG:Santa_Rosa|16 1 916 Epsilon/Morpheus1 010 broadsword1 91 9
-12 FG:Saracen|66 2 1916 TrkPahn/SumnLkor1 011 talon.blank2 192 19
-13 FG:Sarajevo|16 1 49 Vega/Cain1 08 stiletto1 41 4
-14 FG:Sarasvati|46 1 515 Epsilon/Orestes1 012 tarsus.blank1 51 5
-14 FG:Sarasvati|66 2 1419 VukarTag/KvtKarh(6)1 011 talon.blank2 142 14
-21 FG:Saratoga_Springs|16 2 1216 Vega/Blytheheart1 08 stiletto2 122 12
-14 FG:Saskatoon|16 2 1915 Enigma/Sterling1 08 stiletto2 192 19
+16 FG:Saarbruecken|86 2 1220 Epsilon/OrsiniOrsine1 013 gladius.blank2 122 1213 FG:Sabinal|119 2 1711 Ve9 2 1711 Ve11 talon.blank2 162 168 paradigm1 11 115 FG:Sacramento|76 2 15136 2 151316 2 1213 Hawking/W1 01 02 122 122 126 2 13181 01 02 132 132 136 1 19 S1 01 01 11 11 16 1 220 1 01 01 21 21 26 2 16311 01 02 162 162 166 1 910 1 01 01 91 91 96 2 11121 01 02 112 112 116 1 916 1 01 01 91 91 96 2 19161 01 02 192 192 196 1 49 V1 01 01 41 41 46 1 515 1 01 01 51 51 56 2 141961 011 talon.blank2 142 14
+21 FG:Saratoga_Springs|16 2 1216 Vega
 13 FG:Satanism|46 2 1111 Sol/Procyon1 012 galaxy.blank2 112 11
 9 FG:Saud|56 2 189 Sol/Minsk1 011 talon.blank2 182 18
 17 FG:Saundersfoot|16 2 1614 Enigma/Salayna1 010 broadsword2 162 16
@@ -1805,7 +1778,7 @@ stardate 1 151.199997
 17 FG:botallackite|26 1 712 Kilrah/Khirg1 07 dralthi1 71 7
 15 FG:bottinoite|26 1 918 VukarTag/KvtTag(4)1 06 gothri1 91 9
 17 FG:boulangerite|29 2 1614 Gemini/Tr_Pakh1 07 dralthi2 152 156 kamekh1 11 1
-20 FG:boussingaultite|26 1 419 VukarTag/SkurTql(2)1 06 gothri1 41 4
+20 FG:boussingaultite|26 1 419 VukarTag/SkurTql(1)1 06 gothri1 41 4
 17 FG:bracewellite|26 1 719 TrkPahn/TrlHmass(4)1 07 dralthi1 71 7
 15 FG:brezinaite|26 2 1021 Landreich/Halgkrak(6)1 07 dralthi2 102 10
 19 FG:brownmillerite|26 1 717 MShrak/Dathque(6)1 07 dralthi1 71 7
@@ -1814,7 +1787,7 @@ stardate 1 151.199997
 18 FG:buddingtonite|26 2 209 Kilrah/Wu1 06 gothri2 202 20
 14 FG:bunsenite|26 2 1112 Kilrah/Eyoka1 07 dralthi2 112 11
 15 FG:burangaite|26 2 2022 Kilrah/HrissthHrissith1 06 gothri2 202 20
-13 FG:bursaite|26 1 519 VukarTag/KvtKarh(7)1 07 dralthi1 51 5
+13 FG:bursaite|26 1 519 VukarTag/KvtKarh(8)1 07 dralthi1 51 5
 14 FG:bustamite|26 1 421 MShrak/KuruSomMers(2)1 06 gothri1 41 4
 16 FG:butschliite|26 1 915 VukarTag/Rushta1 07 dralthi1 91 9
 13 FG:bystrite|26 2 1115 Epsilon/Jakarta1 06 gothri2 112 11
@@ -1905,7 +1878,7 @@ stardate 1 151.199997
 19 FG:ferropargasite|26 1 519 VukarTag/KvtKarh(2)1 07 dralthi1 51 5
 22 FG:ferrotschermakite|26 2 1913 Hari/Hari3(4)1 07 dralthi2 192 19
 14 FG:fingerite|26 2 1117 MShrak/TrKHhra(9)1 07 dralthi2 112 11
-20 FG:fluocerite-(Ce)|26 1 120 VukarTag/KvtKarh(12)1 06 gothri1 11 1
+20 FG:fluocerite-(Ce)|26 1 118 VukarTag/KvtTag(1)1 06 gothri1 11 1
 20 FG:fluorrichterite|26 1 719 VukarTag/KvtKarh(9)1 07 dralthi1 71 7
 12 FG:foggite|26 2 1113 Kilrah/Ghoran1 06 gothri2 112 11
 14 FG:fornacite|26 2 1118 MShrak/Ksathque(4)1 07 dralthi2 112 11
@@ -1921,7 +1894,7 @@ stardate 1 151.199997
 11 FG:garnet|26 2 2017 Kilrah/KurUTak(4)1 06 gothri2 202 20
 13 FG:gaspeite|26 2 1513 Epsilon/Circe1 07 dralthi2 152 15
 16 FG:gatehousite|26 1 716 TrkPahn/KharSumn1 07 dralthi1 71 7
-14 FG:gatzenite|26 1 219 VukarTag/KvtKarh(7)1 07 dralthi1 21 2
+14 FG:gatzenite|26 1 219 VukarTag/KvtKarh(8)1 07 dralthi1 21 2
 15 FG:gaylussite|26 1 617 VukarTag/TqlHhass1 06 gothri1 61 6
 14 FG:genkinite|26 2 1217 MShrak/TrKHhra(3)1 07 dralthi2 122 12
 17 FG:gersdorffite|26 1 110 Vega/Ardai1 07 dralthi1 11 1
@@ -1936,7 +1909,7 @@ stardate 1 151.199997
 15 FG:haycockite|26 1 320 VukarTag/SkurTql(11)1 07 dralthi1 31 3
 17 FG:hedenbergite|26 2 1217 Epsilon/KablaMeth1 06 gothri2 122 12
 21 FG:helmutwinklerite|26 2 1020 TrkPahn/TrlHmass(11)1 07 dralthi2 102 10
-13 FG:hematite|26 2 1619 VukarTag/KvtKarh(4)1 07 dralthi2 162 16
+13 FG:hematite|26 2 1619 VukarTag/KvtKarh(2)1 07 dralthi2 162 16
 18 FG:hematophanite|26 1 413 Kilrah/KnKhur1 07 dralthi1 41 4
 17 FG:hendersonite|26 1 619 MShrak/Ksathque(11)1 07 dralthi1 61 6
 17 FG:hentschelite|26 2 1213 Epsilon/Jakal1 06 gothri2 122 12
@@ -1990,7 +1963,7 @@ stardate 1 151.199997
 17 FG:kurchatovite|26 1 119 VukarTag/KvtKarh(4)1 07 dralthi1 11 1
 16 FG:kurnakovite|26 2 2015 TrkPahn/Trktlon1 06 gothri2 202 20
 16 FG:kutnohorite|26 2 1919 VukarTag/SkurTql(1)1 07 dralthi2 192 19
-15 FG:lacroixite|26 2 2019 VukarTag/KvtKarh(3)1 07 dralthi2 202 20
+15 FG:lacroixite|26 2 2019 VukarTag/KvtKarh(2)1 07 dralthi2 202 20
 15 FG:laffittite|26 1 713 Epsilon/TvxAq1 07 dralthi1 71 7
 14 FG:laihunite|26 1 114 Kilrah/Dhollas1 07 dralthi1 11 1
 14 FG:landesite|26 2 1612 MShrak/Gorth1 07 dralthi2 162 16
@@ -2152,7 +2125,7 @@ stardate 1 151.199997
 21 FG:rhabdophane-(Ce)|26 1 616 Landreich/Pisoes1 07 dralthi1 61 6
 14 FG:rhodesite|26 2 1015 Kilrah/TlanMeth1 07 dralthi2 102 10
 15 FG:richellite|26 1 517 MShrak/Dathque(7)1 07 dralthi1 51 5
-17 FG:riversideite|26 2 1220 VukarTag/KvtKarh(12)1 07 dralthi2 122 12
+17 FG:riversideite|26 2 1219 VukarTag/KvtKarh(2)1 07 dralthi2 122 12
 16 FG:romanechite|26 2 209 Kilrah/Ka1 07 dralthi2 202 20
 12 FG:romeite|26 1 315 Epsilon/Valgard1 06 gothri1 31 3
 15 FG:roscherite|26 1 513 Epsilon/Circe1 07 dralthi1 51 5
@@ -2199,14 +2172,14 @@ stardate 1 151.199997
 15 FG:srilankite|26 2 1617 Kilrah/Kza-Haduhm1 07 dralthi2 162 16
 15 FG:staurolite|26 1 117 MShrak/Dathque(6)1 06 gothri1 11 1
 15 FG:steigerite|26 2 1113 Epsilon/Circe1 07 dralthi2 112 11
-14 FG:stenonite|26 2 1519 VukarTag/KvtKarh(3)1 07 dralthi2 152 15
+14 FG:stenonite|26 2 1519 VukarTag/KvtKarh(2)1 07 dralthi2 152 15
 17 FG:sternbergite|26 2 2017 Epsilon/TasMahran1 07 dralthi2 202 20
 15 FG:stevensite|26 1 613 Hari/Hari3(3)1 07 dralthi1 61 6
 13 FG:stibnite|26 2 1114 TrkPahn/Gorath1 07 dralthi2 112 11
 13 FG:stilbite|26 1 118 MShrak/Dathque(10)1 07 dralthi1 11 1
 13 FG:stolzite|26 1 713 Kilrah/Ghoran1 07 dralthi1 71 7
 16 FG:strelkinite|26 2 1718 VukarTag/KvtTag(5)1 07 dralthi2 172 17
-23 FG:strontiopiemontite|26 1 816 VukarTag/Skur(9)1 06 gothri1 81 8
+23 FG:strontiopiemontite|26 1 819 VukarTag/SkurTql(2)1 06 gothri1 81 8
 13 FG:studtite|26 2 1221 MShrak/KuruSomMers(2)1 07 dralthi2 122 12
 16 FG:svanbergite|26 1 313 Vega/Aloysius1 07 dralthi1 31 3
 20 FG:synchysite-(Ce)|26 1 613 Kilrah/Ghoran1 07 dralthi1 61 6
@@ -2387,7 +2360,7 @@ stardate 1 151.199997
 16 SS:Enigma/Cabrea12 0 0 15 clinosafflorite0 0 10 Bolshevism0 0 0 0 0 18 Base_Enigma/Cabrea
 32 SS:Enigma/CallimachusCallmachius9 0 34 Base_Enigma/CallimachusCallmachius0 0 0 0 9 Asheville0 10 China_Lake
 14 SS:Enigma/Card2 0 44 Base_Enigma/Card|Twin_Falls|Dublin|Roseville
-23 SS:Enigma/CardellGardel9 0 8 Onancock0 0 0 0 0 0 13 Tomar|Muenchen
+23 SS:Enigma/CardellGardel9 0 8 Onancock0 0 0 0 0 0 13 Tomar|Muenche
 16 SS:Enigma/Clarke7 0 36 Base_Enigma/Clarke|Vallejo|Wauwatosa0 0 0 0 8 Bundoora
 18 SS:Enigma/Crichton9 0 20 Base_Enigma/Crichton0 0 0 0 0 0 10 Winchester
 17 SS:Enigma/Damioyn5 0 30 Base_Enigma/Damioyn|Zoetermeer0 0 6 Kepler
@@ -2488,7 +2461,7 @@ stardate 1 151.199997
 19 SS:Epsilon/Morpheus7 0 32 Base_Epsilon/Morpheus|Santa_Rosa0 0 0 0 5 Dunne
 24 SS:Epsilon/NatanyaNTanya7 0 0 57 Base_Epsilon/NatanyaNTanya|arseniosiderite|borishanskiite0 0 0 9 Katharine
 18 SS:Epsilon/Orestes12 0 0 0 0 9 Sarasvati8 Sudanese0 0 0 0 0 20 Base_Epsilon/Orestes
-23 SS:Epsilon/OrsiniOrsine9 0 25 Base_Epsilon/OrsiniOrsine0 0 0 0 9 Sanderson0 11 Saarbruecken
+23 SS:Epsilon/OrsiniOrsine9 0 25 Base_Epsilon/OrsiniOrsine0 0 0 0 9 Sanderson0 11 Saarbruecke
 18 SS:Epsilon/Pasqual3 0 0 43 Base_Epsilon/Pasqual|chalcophyllite|vrbaite
 17 SS:Epsilon/Peleus12 0 0 0 0 0 5 Assam0 0 0 0 0 31 Base_Epsilon/Peleus|Farnborough
 19 SS:Epsilon/Perillia12 0 0 0 0 0 0 0 0 0 0 7 Chaplin32 Base_Epsilon/Perillia|Kincardine
@@ -2978,7 +2951,7 @@ stardate 1 151.199997
 14 SS:Vega/Carlin9 0 16 Base_Vega/Carlin0 0 0 0 0 0 10 Wilmington
 16 SS:Vega/Chang-Cu5 0 29 Base_Vega/Chang-Cu|Great_Bend0 0 6 Wilkes
 23 SS:Vega/ChengduCheng-Du2 0 25 Base_Vega/ChengduCheng-Du
-14 SS:Vega/Dakota12 0 0 0 0 0 0 0 0 0 0 8 Elsinore37 Base_Vega/Dakota|Mayagyez|Greeneville
+14 SS:Vega/Dakota12 0 0 0 0 0 0 0 0 0 0 8 Elsinore37 Base_Vega/Dakota|Mayaguez|Greeneville
 14 SS:Vega/Delius7 0 24 Base_Vega/Delius|Warroad0 0 0 0 16 Benny|Beltsville
 13 SS:Vega/Dieno5 0 25 Base_Vega/Dieno|Leningrad0 0 6 Brenda
 15 SS:Vega/Eddings7 0 17 Base_Vega/Eddings0 0 0 0 7 Prussia
@@ -3038,18 +3011,18 @@ stardate 1 151.199997
 22 SS:VukarTag/KvtKarh(1)8 0 0 12 dufrenoysite0 0 0 0 6 Brahms
 23 SS:VukarTag/KvtKarh(10)3 0 0 35 maricopaite|limonite|meyerhofferite
 23 SS:VukarTag/KvtKarh(11)3 0 0 49 Base_VukarTag/KvtKarh(11)|manjiroite|picotpaulite
-23 SS:VukarTag/KvtKarh(12)3 0 0 65 Base_VukarTag/KvtKarh(12)|ameghinite|riversideite|fluocerite-(Ce)
+23 SS:VukarTag/KvtKarh(12)3 0 0 36 Base_VukarTag/KvtKarh(12)|ameghinite
 23 SS:VukarTag/KvtKarh(13)3 0 0 64 Base_VukarTag/KvtKarh(13)|synchysite-(Nd)|cyrilovite|calcjarlite
 23 SS:VukarTag/KvtKarh(14)8 0 0 25 Base_VukarTag/KvtKarh(14)0 0 0 0 5 Adair
-22 SS:VukarTag/KvtKarh(2)3 0 0 48 Base_VukarTag/KvtKarh(2)|cafetite|ferropargasite
-22 SS:VukarTag/KvtKarh(3)3 0 0 45 Base_VukarTag/KvtKarh(3)|stenonite|lacroixite
-22 SS:VukarTag/KvtKarh(4)3 0 0 65 Base_VukarTag/KvtKarh(4)|hydroxyapophyllite|kurchatovite|hematite
+22 SS:VukarTag/KvtKarh(2)3 0 0 91 Base_VukarTag/KvtKarh(2)|cafetite|ferropargasite|stenonite|lacroixite|hematite|riversideite
+22 SS:VukarTag/KvtKarh(3)3 0 0 24 Base_VukarTag/KvtKarh(3)
+22 SS:VukarTag/KvtKarh(4)3 0 0 56 Base_VukarTag/KvtKarh(4)|hydroxyapophyllite|kurchatovite
 22 SS:VukarTag/KvtKarh(5)7 0 0 36 Base_VukarTag/KvtKarh(5)|nukundamite0 0 0 10 Ninhursaga
 22 SS:VukarTag/KvtKarh(6)7 0 0 47 Base_VukarTag/KvtKarh(6)|krauskopfite|mozartite0 0 0 9 Sarasvati
-22 SS:VukarTag/KvtKarh(7)3 0 0 55 Base_VukarTag/KvtKarh(7)|bursaite|gatzenite|melanterite
-22 SS:VukarTag/KvtKarh(8)7 0 0 24 Base_VukarTag/KvtKarh(8)0 0 0 15 Stimson|Gustave
+22 SS:VukarTag/KvtKarh(7)3 0 0 36 Base_VukarTag/KvtKarh(7)|melanterite
+22 SS:VukarTag/KvtKarh(8)7 0 0 43 Base_VukarTag/KvtKarh(8)|bursaite|gatzenite0 0 0 15 Stimson|Gustave
 22 SS:VukarTag/KvtKarh(9)3 0 0 40 Base_VukarTag/KvtKarh(9)|fluorrichterite
-21 SS:VukarTag/KvtTag(1)3 0 0 56 Base_VukarTag/KvtTag(1)|delvauxite|bruggenite|vuonnemite
+21 SS:VukarTag/KvtTag(1)3 0 0 72 Base_VukarTag/KvtTag(1)|delvauxite|bruggenite|vuonnemite|fluocerite-(Ce)
 21 SS:VukarTag/KvtTag(2)7 0 0 22 freboldite|sarmientite0 0 0 6 Bangui
 21 SS:VukarTag/KvtTag(3)3 0 0 61 Base_VukarTag/KvtTag(3)|spheniscidite|clinochlore|liandratite
 21 SS:VukarTag/KvtTag(4)3 0 0 34 Base_VukarTag/KvtTag(4)|bottinoite
@@ -3065,12 +3038,12 @@ stardate 1 151.199997
 19 SS:VukarTag/Skur(6)7 0 0 49 Base_VukarTag/Skur(6)|parapierrotite|moorhouseite0 0 0 8 Labrador
 19 SS:VukarTag/Skur(7)7 0 0 21 nacaphite|nitrobarite0 0 0 5 Wylie
 19 SS:VukarTag/Skur(8)8 0 0 21 Base_VukarTag/Skur(8)0 0 0 5 Lykes7 Peiping
-19 SS:VukarTag/Skur(9)7 0 0 53 Base_VukarTag/Skur(9)|strontiopiemontite|thomsenolite0 0 0 8 MacMahon
-22 SS:VukarTag/SkurTql(1)3 0 0 57 Base_VukarTag/SkurTql(1)|kutnohorite|bostwickite|orpheite
+19 SS:VukarTag/Skur(9)7 0 0 34 Base_VukarTag/Skur(9)|thomsenolite0 0 0 8 MacMahon
+22 SS:VukarTag/SkurTql(1)3 0 0 73 Base_VukarTag/SkurTql(1)|kutnohorite|bostwickite|orpheite|boussingaultite
 23 SS:VukarTag/SkurTql(10)8 0 0 46 Base_VukarTag/SkurTql(10)|uramphite|musgravite0 0 0 0 9 Wilkinson
 23 SS:VukarTag/SkurTql(11)3 0 0 47 Base_VukarTag/SkurTql(11)|haycockite|carboirite
 23 SS:VukarTag/SkurTql(12)3 0 0 51 Base_VukarTag/SkurTql(12)|sahamalite-(Ce)|ningyoite
-22 SS:VukarTag/SkurTql(2)7 0 0 40 Base_VukarTag/SkurTql(2)|boussingaultite0 0 0 14 Baldwin|Apollo
+22 SS:VukarTag/SkurTql(2)7 0 0 43 Base_VukarTag/SkurTql(2)|strontiopiemontite0 0 0 14 Baldwin|Apollo
 22 SS:VukarTag/SkurTql(3)3 0 0 65 Base_VukarTag/SkurTql(3)|tolovkite|lennilenapeite|tranquillityite
 22 SS:VukarTag/SkurTql(4)3 0 0 43 Base_VukarTag/SkurTql(4)|manganolangbeinite
 22 SS:VukarTag/SkurTql(5)3 0 0 35 Base_VukarTag/SkurTql(5)|avicennite
@@ -3083,45 +3056,50 @@ stardate 1 151.199997
 18 SS:VukarTag/Ujarka3 0 0 31 Base_VukarTag/Ujarka|nanlingite
 20 SS:VukarTag/VukarTag7 0 0 33 Base_VukarTag/VukarTag|parsonsite0 0 0 5 Flynn
 16 SS:VukarTag/Xsar7 0 0 29 Base_VukarTag/Xsar|willyamite0 0 0 19 Finnish|Tchaikovsky
+20 mission_descriptions0 
+13 mission_names0 
+15 mission_scripts0 
+17 unit_to_dock_with1 11 mining_base
 0 python data 1 0  
 0 news data 1
 
-0 factions begin 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 1 -1 0.2 1 -1 -1 0.3 1 -1 0.7 1 1 0.2 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 -1 1 -0.8 -1 0.2 -1 -1 -1 0 -1 -1 -0.8 -0.5 0 0 0 0 0 0 0 0 0 0 -0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0.15 -0.8 1 0.3 -0.5 -0.7 0 0.05 0 0.05 0.05 0.05 0.05 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0.1 -1 0.2 1 -0.8 -1 0.5 0.7 -0.1 0 0.05 0.1 0.05 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 -1 0.01 -1 -1 1 -0.001 -1 -1 0 -0.1 -0.4 -0.8 -0.5 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 -1 -1 -1 -1 -1 1 -1 -1 -0.1 0.6 -0.05 -1 -0.6 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0.6 -1 0 1 -1 -1 1 0.4 -0.1 0.05 0.05 0.1 0.05 0 0 0 0 0 0 0 0 0 0 -0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 1 -1 0.05 1 -1 -1 0 1 -0.1 -0.05 0.1 0 0.05 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 -1 -0.001 -1 -1 1 -1 -1 -1 1 -1 -1 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0.05 -1 0 0 -0.4 0.1 -0.1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0.2 -1 0.1 0.3 -1 -0.05 0.1 0.4 0 0.3 1 0 0.05 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0.2 -1 0.1 0.3 -1 -0.05 0.1 0.4 0 0.3 0 1 0.05 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0.2 -0.5 0.05 0.05 -0.5 -0.6 0.05 0.05 0 0 0.05 0.05 1 0.01 0 0 -0.05 -0.05 -0.05 -0.05 0.5 -0.05 0.5 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
-0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 -1 -1 -0.8 1 -1 0 -1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 0 0 0 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 0 0 0 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 0 0 0 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 0 0 0 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 0 0 0 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 0 0 0 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
-0 0 0 0 0 0 0 0 0 0 0 0 0 -10 0 0 0 0 0 0 0 0 0 0 0 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10
-0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1 -10 1
+0 factions begin 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 1 -1 0.2 0.3 -0.8 -0.2 0.3 0.7 -0.9 0.6 0.8 0.9 0.3 0 0 0 0 0 0 0 0 0 0 -0.6 0.5 0.5 -0.5 -0.5 0.15 0.15 -0.4 -0.4 -0.1 -0.1 0.15 0.15 0.35 0.35 0.25 
+0 -1 1 -0.3 -0.6 0.8 -0.1 -0.1 -0.7 0 -0.8 -0.8 -0.9 -0.3 0 0 0 0 0 0 0 0 0 0 -0.6 -0.5 -0.5 0.5 0.5 -0.3 -0.3 0.4 0.4 -0.15 -0.15 -0.15 -0.15 -0.35 -0.35 -0.25 
+0 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 0 -1 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -1 
+0 0.3 -0.6 0.2 1 -0.8 -1 0.5 0.8 -0.1 0.5 0.7 0.6 0.1 0 0 0 0 0 0 0 0 0 0 0.1 0.15 0.15 -0.3 -0.3 0.5 0.5 -0.4 -0.4 -0.5 -0.5 0.25 0.25 0.4 0.4 0.45 
+0 -0.8 0.8 -0.5 -0.6 1 -1 -0.9 -0.7 0 -0.3 -0.1 -0.2 -0.2 0 0 0 0 0 0 0 0 0 0 -0.1 -0.4 -0.4 0.4 0.4 -0.3 -0.3 0.5 0.5 -0.5 -0.5 -0.45 -0.45 -0.35 -0.35 -0.2 
+0 -0.2 -0.3 -0.7 -0.7 -1 1 -0.8 -1 -0.1 -0.1 -0.1 -0.9 -0.1 0 -0.9 0 0 0 0 0 0 0 0 0 -0.1 -0.1 -0.15 -0.15 -0.35 -0.35 -0.5 -0.5 0.05 0.05 -0.4 -0.4 -0.5 -0.5 -0.3 
+0 0.4 -0.3 0 0.9 -0.5 -1 1 0.7 -0.1 0.6 0.3 0.5 0.1 0 0 0 0 0 0 0 0 0 0 -0.1 0.2 0.2 -0.15 -0.15 0.45 0.45 -0.25 -0.25 -0.5 -0.5 0.5 0.5 0.35 0.35 0.4 
+0 0.4 -0.8 0.1 0.8 -1 -0.5 0.7 1 -0.1 0.2 0.5 0.6 0.1 0 0 0 0 0 0 0 0 0 0 -0.6 0.2 0.2 -0.4 -0.4 0.4 0.4 -0.5 -0.5 -0.25 -0.25 0.35 0.35 0.5 0.5 0.35 
+0 -0.9 -0.9 -0.9 -0.9 -0.9 -0.9 -0.9 -0.9 1 -0.9 -0.9 -0.9 -0.9 1 0 0 0 0 0 0 0 0 0 -0.9 -0.45 -0.45 -0.45 -0.45 -0.45 -0.45 0.45 0.45 -0.45 -0.45 -0.45 -0.45 -0.45 -0.45 -0.45 
+0 0.6 -1 0.2 0.5 -0.8 -0.5 0.4 0.3 0 1 0.9 0.5 0.1 0 0 0 0 0 0 0 0 0 0 0 0.3 0.3 -0.5 -0.5 0.25 0.25 -0.4 -0.4 -0.25 -0.25 0.2 0.2 0.15 0.15 0.35 
+0 0.5 -1 0.2 0.8 -0.1 -0.5 0.4 0.3 0 0.9 1 0.6 0.1 0 0 0 0 0 0 0 0 0 0 0 0.25 0.25 -0.5 -0.5 0.4 0.4 -0.05 -0.05 -0.25 -0.25 0.2 0.2 0.15 0.15 0.35 
+0 0.5 -1 0.2 0.8 -0.8 -0.5 0.4 0.3 0 0.5 0.6 1 0.1 0 0 0 0 0 0 0 0 0 0 0 0.25 0.25 -0.5 -0.5 0.4 0.4 -0.4 -0.4 -0.25 -0.25 0.2 0.2 0.15 0.15 0.35 
+0 0.2 -0.5 0.05 0.05 -0.5 -0.6 0.05 0.05 -0.1 0 0.05 0.05 1 0.01 0 0 -0.05 -0.05 -0.05 -0.05 0.5 -0.05 0.5 0 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0.05 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 -0.9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 -1 -0.9 -0.6 0.9 -0.5 0 -0.4 -1 0 0.6 0.5 0.7 0 0 0 0 0 0 0 0 0 0 0 1 -0.5 -0.5 -0.45 -0.45 0.45 0.45 -0.25 -0.25 0 0 -0.2 -0.2 -0.5 -0.5 0.8 
+0 0.1 -0.1 0.02 0.03 -0.08 -0.02 0.03 0.07 -0.09 0.06 0.08 0.09 -1 0 0 0 0 0 0 0 0 0 0 -0.06 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 0 
+0 0.1 -0.1 0.02 0.03 -0.08 -0.02 0.03 0.07 -0.09 0.06 0.08 0.09 1 0 0 0 0 0 0 0 0 0 0 -0.06 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0 
+0 -0.1 0.1 -0.03 -0.06 0.08 -0.03 -0.03 -0.07 0 -0.08 -0.08 -0.09 -1 0 0 0 0 0 0 0 0 0 0 -0.06 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 0 
+0 -0.1 0.1 -0.03 -0.06 0.08 -0.03 -0.03 -0.07 0 -0.08 -0.08 -0.09 1 0 0 0 0 0 0 0 0 0 0 -0.06 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0 
+0 0.03 -0.06 0.02 0.1 -0.08 -0.1 0.05 0.08 -0.01 0.05 0.07 0.06 -1 0 0 0 0 0 0 0 0 0 0 0.01 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 0 
+0 0.03 -0.06 0.02 0.1 -0.08 -0.1 0.05 0.08 -0.01 0.05 0.07 0.06 1 0 0 0 0 0 0 0 0 0 0 0.01 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0 
+0 -0.08 0.08 -0.05 -0.06 0.1 -0.1 -0.09 -0.07 0 -0.03 -0.01 -0.02 -1 0 0 0 0 0 0 0 0 0 0 -0.01 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 0 
+0 -0.08 0.08 -0.05 -0.06 0.1 -0.1 -0.09 -0.07 0 -0.03 -0.01 -0.02 1 0 0 0 0 0 0 0 0 0 0 -0.01 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0 
+0 -0.02 -0.03 -0.07 -0.07 -0.1 0.1 -0.08 -0.1 -0.01 -0.01 -0.01 -0.09 -1 0 -0.09 0 0 0 0 0 0 0 0 0 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 0 
+0 -0.02 -0.03 -0.07 -0.07 -0.1 0.1 -0.08 -0.1 -0.01 -0.01 -0.01 -0.09 1 0 -0.09 0 0 0 0 0 0 0 0 0 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0 
+0 0.04 -0.03 0 0.09 -0.05 -0.1 0.1 0.07 -0.01 0.06 0.03 0.05 -1 0 0 0 0 0 0 0 0 0 0 -0.01 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 0 
+0 0.04 -0.03 0 0.09 -0.05 -0.1 0.1 0.07 -0.01 0.06 0.03 0.05 1 0 0 0 0 0 0 0 0 0 0 -0.01 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0 
+0 0.04 -0.08 0.01 0.08 -0.1 -0.05 0.07 0.1 -0.01 0.02 0.05 0.06 -1 0 0 0 0 0 0 0 0 0 0 -0.06 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 
+0 0.04 -0.08 0.01 0.08 -0.1 -0.05 0.07 0.1 -0.01 0.02 0.05 0.06 1 0 0 0 0 0 0 0 0 0 0 -0.06 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 -1 1 0 
+0 0.3 -0.6 0.2 0.9 -0.8 -0.9 0.5 0.8 -0.1 0.4 0.7 0.6 0.1 0 0 0 0 0 0 0 0 0 0 0.8 0.15 0.15 -0.3 -0.3 0.45 0.45 -0.4 -0.4 -0.45 -0.45 0.25 0.25 0.4 0.4 1 
