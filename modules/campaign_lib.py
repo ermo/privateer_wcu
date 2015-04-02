@@ -72,33 +72,42 @@ class InSystemCondition(Condition):
     def __call__(self):
         if self.system:
             sys=VS.getSystemFile().split('/')
-            debug.debug('System: '+str(sys)+'==?=='+str(self.system))
-            for i in range(-1,-min(len(self.system),len(sys))-1,-1):
-                if sys[i].lower()!=self.system[i]:
-                    debug.debug(str(sys[i])+'!='+str(self.system[i]))
-                    debug.debug('*** insystem return false: not in system!!')
-                    return False
+            debug.debug("System: %s==?==%s" % (str(sys).lower(),str(self.system)))
+            ## this check looks fairly opaque -- why not use a helper function or make it simpler? /ermo
+            #for i in range(-1,-min(len(self.system),len(sys))-1,-1):
+            #    if sys[i].lower()!=self.system[i]:
+            #        debug.debug(str(sys[i])+'!='+str(self.system[i]))
+            #        debug.debug("*** InSystemCondition? return False: conditions NOT satified :-/")
+            #        return False
+            ## In essence, we need to compare two lists of the form [sector : str, system : str] for equality
+            if not str(sys).lower() == str(self.system):
+                debug.debug("*** InSystemCondition? return False: conditions NOT satified :-/")
+                return False
         if self.dockedshipname:
             if type(self.dockedshipname)==str:
-                debug.debug('*** Test if docked to: '+ self.dockedshipname)
-                iter = VS.getUnitList()
-                while (not iter.isDone()):
-                    testun = next(iter)
-                    #debug.debug("iter.next()")
-                    if (not testun.isNull() or VS.getPlayer().isDocked(testun) or testun.isDocked(VS.getPlayer())):
-                        #Not sure why both have to be checked, it seems to second gives a more consistantly correct response
-                        #find unit with name and check
-                        debug.info('*** Compare ' + testun.getName().replace(' ','_').lower() + " == " + self.dockedshipname)
-                        debug.info('    Compare ' + testun.getFullname().replace(' ','_').lower() + " == " + self.dockedshipname)
-                        if (testun.getName().replace(' ','_').lower() == self.dockedshipname or testun.getFullname().replace(' ','_').lower() == self.dockedshipname):
-                            debug.debug('*** inSystem return true')
-                            return True
-                    else:
-                        debug.info(testun.getName() + ' not docked to unit')
+                debug.debug("*** player.isDocked to: %s?" % (self.dockedshipname))
+                un = VS.getUnitList()
+                while (not un.isDone()):
+                    testun = next(un)
+                    #debug.debug("next(un)")
+                    if not testun.isNull():
+                        name = testun.getName().replace(" ", "_").lower()
+                        fullname = testun.getFullname().replace(" ", "_").lower()
+                        if VS.getPlayer().isDocked(testun) or testun.isDocked(VS.getPlayer()):
+                            # Not sure why both have to be checked, but it seems the second
+                            # gives a more consistantly correct response
+                            # find unit with name and check
+                            debug.info("*** [getName()] %s =?= %s" % (name, self.dockedshipname))
+                            debug.info("[getFullname()] %s =?= %s" % (fullname, self.dockedshipname))
+                            if name == self.dockedshipname or fullname == self.dockedshipname:
+                                debug.debug("*** InSystemCondition? return True: conditions satisfied :-)")
+                                return True
+                        else:
+                            debug.info("%s/%s not docked to %s" % (name, fullname, self.dockedshipname))
         else:
-            debug.debug('*** inSystem return true, no self.dockedshipname')
+            debug.debug("*** InSystemCondition? return True, but no self.dockedshipname")
             return True
-        debug.debug('*** insystem return false!!')
+        debug.debug("*** InSystemCondition? return False: conditions NOT satisfied :-/")
         return False
 
 
@@ -111,7 +120,7 @@ class HasUndocked(Condition):
 
     def __call__(self):
         global fixerloaded
-        debug.debug('*** HasUndocked check false')
+        debug.debug('*** HasUndocked? check False')
         if self.count==-1:
             self.count=fixerloaded
             return False
@@ -135,9 +144,9 @@ class CargoSpaceCondition(Condition):
         numcarg=you.addCargo(carg)
         you.removeCargo(self.type,numcarg,True)
         if numcarg<self.num:
-            debug.debug('*** CargoSpace return false::IGNORED')
+            debug.debug('*** CargoSpace return False::IGNORED')
             #return False
-        debug.debug('*** CargoSpace return true')
+        debug.debug('*** CargoSpaceCondition? return True: condition satisfied :-)')
         return True
 
 
@@ -927,13 +936,14 @@ class CampaignNode:
     def checkPreconditions(self):
         if self.preconditions:
             for cond in self.preconditions:
+                debug.debug("*CN* checking precondition: %s" % (cond))
                 if not cond():
                     return False
         return True
     #depends on Base
     def getFixer(self,room):
         if self.spritelink and self.checkPreconditions():
-            debug.debug('*** create fixer'+ str(self.spritelink))
+            debug.debug('*CN* create fixer'+ str(self.spritelink))
             tmpscript="#\nimport campaign_lib\n"
             if self.talkinghead and doTalkingHeads():
                 tmpscript+="campaign_lib.AddConversationStoppingSprite('Talking',"+repr(self.talkinghead)+",(0,0),(3.2,2.0),'Return_To_Bar').__call__("+str(room)+",None)\n"
@@ -1315,7 +1325,7 @@ def getActiveCampaignNodes(room):
         if curnode:
             debug.debug('*** found active node in campaign '+campaign.name)
             clist.append(curnode)
-            debug.debug('checking contingency: '+str(curnode.checkPreconditions()))
+            debug.debug('checking Preconditions: '+str(curnode.checkPreconditions()))
             #return clist # The bar shouldn't have more than one campaign at a time.
         else:
             debug.debug('*** no active node for '+campaign.name)
@@ -1340,15 +1350,17 @@ def getActiveCampaignNodes(room):
 
 #depends on Base
 def getFixersToDisplay(room):
-    debug.debug('*** Get the fixers to display!!!')
+    debug.debug("*F* Get the fixers to display!!!")
     global fixerloaded
     fixerloaded+=1
+    debug.debug("*F* calling getActiveCampaignNodes(room = %s)" % (room))
     cnodelist=getActiveCampaignNodes(room)
     fixerlist=[]
     for cnode in cnodelist:
-        debug.debug('*** display it.')
+        debug.debug("*F* calling cnode.getFixer(room = %s)" % (room))
         newfixer=cnode.getFixer(room)
         if newfixer:
+            debug.debug("*F* found fixer, appending...")
             fixerlist.append(newfixer)
     return fixerlist
 
