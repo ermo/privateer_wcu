@@ -40,32 +40,32 @@ def LookupTable(list,faction):
 
 situation=PEACELIST
 
-def mpl (list,newsituation,forcechange):
+def mpl(list,newsituation,forcechange):
     global situation
     debug.info("SITUATION IS "+str( situation)+" force change "+str(forcechange) + " bool "+ str(forcechange or newsituation!=situation))
     if (forcechange or newsituation!=situation):
         debug.info("SITUATION IS RESET TO "+str( newsituation))
         situation=newsituation
-        VS.musicPlayList(list) 
+        VS.musicPlayList(list)
 
 def PlayMusik(forcechange=1, hostile_dist=0):
     un = VS.getPlayer()
-    if (not un):            
+    if (not un):
         mpl (PEACELIST,PEACELIST,forcechange)
-        debug.info("Ppeace")
+        debug.info("PlayMusik: Peace (not un)")
     else:
         perfect = 1
-        debug.debug("before 'iter = VS.getUnitList()'")
-        iter = VS.getUnitList()
-        debug.debug("after 'iter = VS.getUnitList()'")
+        #debug.debug("before 'uni = VS.getUnitList()'")
+        uni = VS.getUnitList()
+        #debug.debug("after 'uni = VS.getUnitList()'")
         unlist = []
         asteroid = 0
-        while (not iter.isDone()):
-            debug.debug("before 'target = next(iter)'")
-            target = next(iter)
-            debug.debug("after 'target = next(iter)'")            
-            if (target):
-                debug.debug("inside 'if (target):'")
+        while (not uni.isDone()):
+            #debug.debug("before 'target = next(uni)'")
+            target = next(uni)
+            #debug.debug("after 'target = next(uni)'")
+            if not target.isNull():
+                #debug.debug("inside 'if not target.isNull():'")
                 ftmp = 2 * target.getRelation(un)
                 nam = target.getName().lower()
                 if un.getSignificantDistance(target) <= 2 * target.rSize() and ('afield' == nam[:6] or 'asteroid'== nam[:8]):
@@ -85,7 +85,7 @@ def PlayMusik(forcechange=1, hostile_dist=0):
             if vsrandom.random() < .5:
                 fact = None
             mpl(LookupTable(peacelist, fact), PEACELIST, forcechange)
-            debug.info("peaCce")
+            debug.info("PlayMusik: Peace")
         else:
             ftmp = (un.FShieldData() + 2 * un.GetHullPercent() + un.RShieldData() - 2.8) * 2
             fact = None
@@ -94,7 +94,7 @@ def PlayMusik(forcechange=1, hostile_dist=0):
             debug.info("faction: %s" % (fact))
             if (ftmp < -.5):
                 mpl(LookupTable(paniclist, fact), BATTLELIST, forcechange)
-                debug.info("paAnic")
+                debug.info("PlayMusik: Panic")
             else:
                 mpl(LookupTable(battlelist, fact), BATTLELIST, forcechange)
-                debug.info("bSattle")
+                debug.info("PlayMusik: Battle")
