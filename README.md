@@ -51,7 +51,7 @@ engine can be found here:
 
   http://wiki.vega-strike.org/HowTo:Compile_from_SVN_on_Linux
 
-  I've recently ported the codebase to python3.4, but this requires that the user hacks the latest Vega Strike CMake configuration (since the current VS revision only supports python3.3 out of the box).  There are instructions on how to accomplish this on the wiki -- it basically involves replace py3.3 with py3.4 in a section of 20 lines of code.
+  I've recently ported the codebase to python3.4, but this requires that the user hacks the latest Vega Strike CMake configuration (since the current VS revision only supports python3.3 out of the box).  There are instructions on how to accomplish this on the wiki -- it basically involves replacing py3.3 with py3.4 in a section of 20 lines of code.
   
   Python 2.7 is no longer supported.
 
