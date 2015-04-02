@@ -18,7 +18,7 @@ stahlspeech1 = {
         ("Burrows","Wouldn't it be smarter to start in a safer place?"),
         ("Captain_Stahl","Not so. The big bucks are waiting here; the 'eastern' quadrants already have a good merchant force."),
         ("Burrows","So what am I supposed to do, deliver gems?"),
-        ("Captain_Stahl","Exactly. We delegate such missions to privateers, since we have do not currently have any of our own freighters in this quadrant. Your mission is to deliver 10 cases of gems to Helen. The pay is 2500 credits."),
+        ("Captain_Stahl","Exactly. We delegate such missions to privateers, since we do not currently have any of our own freighters in this quadrant. Your mission is to deliver 10 cases of gems to Helen. The pay is 2500 credits."),
         ("Burrows","Excuse me, but that's a ridiculous payment. If I wanted to make so little money, I could find a job as a male nurse on good old Earth. Tell me why I shouldn't just take those gems and run away?"),
         ("Captain_Stahl","Because I can offer a lot more than just money. Without contacts you're Nobody in Gemini. If your performance is good, we'll be 'friends', and the friends of ES delegates tend to get access to exclusive parts and ships not available to the general public, got it?"),
         ("Burrows","Yeah, but with 2500 credits I can't even afford a hand laser, let alone a jump drive!"),
