@@ -272,7 +272,7 @@ def textline(strs):
 #depends on Base
 def displayText(room,textlist,enqueue=False):
     debug.debug("displayText()")
-    debug.debug("Displaying campaign text:\n%s" % (debug.pp(textlist)))
+    #debug.debug("Displaying campaign text:\n%s" % (textlist))
     if room==-1:
         debug.debug("Room is -1!!!")
     room = Base.GetCurRoom()
@@ -1002,8 +1002,7 @@ class CampaignChoiceNode(CampaignNode):
     #depends on Base... should remove dependencies?
     def evaluate(self,room):
         debug.debug('***')
-        debug.debug('***')
-        debug.debug(debug.pp(self.text))
+        #debug.debug(debug.pp(self.text))
         displayText(room,self.text)
         arr=[]
         debug.debug('*** create buttons +'+str(self.choices))
@@ -1011,7 +1010,6 @@ class CampaignChoiceNode(CampaignNode):
             arr.append(fixers.Choice(self.choices[x][0],"#\nimport campaign_lib\ncampaign_lib.clickChoice("+str(room)+","+str(x)+")\n",self.choices[x][1]))
         fixers.DestroyActiveButtons()
         fixers.CreateChoiceButtons(room,arr)
-        debug.debug('***')
         debug.debug('***')
 
 def CampaignEndNode(campaign):
