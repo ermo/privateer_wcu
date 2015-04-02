@@ -703,7 +703,7 @@ def contractMissionsFor(fac,baseship,minsysaway,maxsysaway):
                                 faction="planets"
                                 name=baseship.getFullname()
                             debug.info("TRADING")
-                            debug.debug("name: %s, faction: %s" % (name, faction))
+                            debug.debug("getFullname(): %s, getName(): %s, faction: %s" % (baseship.getFullname(), baseship.getName(), faction))
                             exports=trading.getNoStarshipExports(name,faction,20)
                             debug.debug("exports:\n%s" % (debug.pp(exports)))
                             if (category.find("assengers")==-1 and len(exports)):

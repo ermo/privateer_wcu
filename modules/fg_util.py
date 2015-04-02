@@ -455,7 +455,7 @@ def NumFactionFGsInSystem(faction,system):
         #debug.debug("key=%s" % (key))
         #debug.debug("facnum=%s" % (facnum))
         st=Director.getSaveString(ccp,key,facnum)
-        debug.debug(">>%s<< = Director.getSaveString(ccp=%s, key=%s, facnum=%s)" % (st, ccp, key, facnum))
+        #debug.debug(">>%s<< = Director.getSaveString(ccp=%s, key=%s, facnum=%s)" % (st, ccp, key, facnum))
     if (st):
         return st.count('|')+1
     return 0
@@ -628,12 +628,12 @@ def GetShipsInFG(fgname,faction):
         launchnum=count
     ret = []
     for num in range(ShipListOffset(),len(ships),PerShipDataSize()):
-        debug.debug("num: %d, ShipListOffset(): %d, len(ships): %d, PerShipDataSize(): %d " % (num, ShipListOffset(), len(ships), PerShipDataSize()))
+        #debug.debug("num: %d, ShipListOffset(): %d, len(ships): %d, PerShipDataSize(): %d " % (num, ShipListOffset(), len(ships), PerShipDataSize()))
         curnum = int(ships[num + 2])
         cnum = _prob_round(curnum * float(launchnum)/count)
         if (cnum > 0):
             ret+=[(ships[num],cnum)]
-    debug.debug("ret: %s" % (ret))
+    #debug.debug("ret: %s" % (ret))
     return ret
 
 def LaunchLandShip(fgname,faction,typ,numlaunched=1):

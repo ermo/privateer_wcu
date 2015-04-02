@@ -11,7 +11,7 @@ _GUITraceLevel = TRACE_DEBUG
 """----------------------------------------------------------------"""
 """                                                                """
 """ GUIRoot - root management interface for the GUI framework.     """
-"""     Also acts as singleton "glue" since python snippets can't  """
+"""     Also acts as singleton 'glue' since python snippets can't  """
 """     hold any kind of state (that's a To-Do)                    """
 """                                                                """
 """----------------------------------------------------------------"""
@@ -630,6 +630,7 @@ class GUIStaticText(GUIElement):
         else:
             self.bgcolor = GUIColor.clear()
         self.fontsize = fontsize
+        trace(TRACE_VERBOSE, " ::: GUIStaticText(text=%s)" % (text))
         self.text = text
 
     def draw(self):
@@ -660,6 +661,7 @@ class GUIStaticText(GUIElement):
 
     def setText(self,newtext):
         self.text = newtext
+        trace(TRACE_VERBOSE, " ::: setText(self, newtext=%s)" % (newtext))
         if self.textstate==1:
             Base.SetTextBoxText(self.room.getIndex(),str(self.index),str(self.text))
 

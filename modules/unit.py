@@ -33,12 +33,12 @@ def isAsteroid (un):
 
 def getUnitFullName(un):
     debug.debug("getUnitFullName")
-    thename=(un.getName())
-    fg=un.getFlightgroupName()
-    if fg=='Base':
-        thename=un.getFullname()+' '+thename.replace('_',' ')
-    elif fg!='Shadow' and fg!='':
-        thename=thename+' in the '+fg+' flightgroup'
+    thename = un.getName()
+    fg = un.getFlightgroupName()
+    if fg == 'Base':
+        thename = un.getFullname()+' '+thename.replace('_',' ')
+    elif fg != 'Shadow' and fg != '':
+        thename = thename+' in the '+fg+' flightgroup'
     return thename
 
 def getSignificant (whichsignificant, landable_only, capship_only):

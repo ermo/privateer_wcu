@@ -44,7 +44,7 @@ def getImports(name,faction):
                         prodlist[-1][4]=0.0
                 # _very_ verbose!
                 #debug.debug("tail:\n%s" % (debug.pp(s)))
-        debug.debug("whole list:\n%s" % (debug.pp(prodlist)))
+        #debug.debug("whole list:\n%s" % (debug.pp(prodlist)))
         return prodlist
     except:
         import sys
@@ -68,7 +68,7 @@ def getNoStarshipExports(name,faction,twice=10000):
             del prodlist[i]
         elif prodlist[i][0].find('starships')==0:
             del prodlist[i]
-    debug.debug("prodlist:\n%s" % (debug.pp(prodlist)))
+    #debug.debug("prodlist:\n%s" % (debug.pp(prodlist)))
     return prodlist
 
 class trading:

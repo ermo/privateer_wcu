@@ -121,7 +121,7 @@ def Siege(fac):
                     #fg_util.CheckAllShips(fac)
                     #fg_util.CheckAllShips(enfac)
                     if enfac == "unknown":
-                        debug.debug("exploration: "+sys)
+                        debug.debug("Siege: system '%s' is not invincible, exploring..." % (sys))
                         fgleader = fg_util.getFgLeaderType(fg,fac)
                         exploration = 1
                     else:
@@ -129,7 +129,7 @@ def Siege(fac):
                     if (VS.GetRelation(fac,enfac)<0 and neighborFaction(sys,fac)):#FIXME maybe even less than that
                         numenemyfg = fg_util.NumFactionFGsInSystem(enfac,sys)
                         numfriendfg = fg_util.NumFactionFGsInSystem(fac,sys)
-                        #debug.debug('siegarol enemioes '+str(numenemyfg)+ ' friends '+str(numfriendfg))
+                        debug.debug("Siege: %d enemy FGs and %d friendly FGs in current system" % (numenemyfg, numfriendfg))
                         global dnewsman_
                         if exploration:
                             if sys != 'nil':
@@ -141,7 +141,7 @@ def Siege(fac):
 
                         elif (numenemyfg==0 and numfriendfg==0):  #If both annihalate each other completely (unlikely but possible)
                             facnum = VS.GetFactionIndex (fac)
-                            debug.debug('checking started')
+                            debug.debug('Siege: sanity check started...')
                             debug.error("DRAW error "+fg+" sys has "+sys+" has " +str(fg_util.NumFactionFGsInSystem(fac,sys))+" String is "+Director.getSaveString(0,fg_util.MakeStarSystemFGKey(sys),facnum))
                             if sys != 'nil':
                                 dnewsman_.writeDynamicString([str(Director.getSaveData(0,"stardate",0)),dnewsman_.TYPE_SIEGE,dnewsman_.STAGE_END,fac,enfac,dnewsman_.SUCCESS_WIN,str(getImportanceOfSystem(sys)),sys,dnewsman_.KEYWORD_DEFAULT,fg,"unknown","unknown","unknown"])
@@ -149,8 +149,10 @@ def Siege(fac):
                                                                         #keyword for now Daniel)
 
                         elif (numenemyfg==0 and (fg_util.CapshipInFG(fg,fac) or moveSurroundingCapshipsToSiege(fac,sys))):      #If aggressor succeeded
-                            debug.debug(fac + ' took over '+ sys + ' originally owned by '+enfac)
-                            #ok now we have him... while the siege is going on the allies had better initiate the battle--because we're now defending the place...  so that means if the owners are gone this place is ours at this point in time
+                            debug.info("%s took over %s originally owned by %s" % (fac, sys, enfac))
+                            # ok now we have him... while the siege is going on the allies had better
+                            # initiate the battle -- because we're now defending the place...
+                            # so that means if the owners are gone this place is ours at this point in time
                             fgs = fg_util.FGsInSystem(fac,sys)
                             if (len(fgs)>0):
                                 fgs=fgs[0]
@@ -165,7 +167,7 @@ def Siege(fac):
                             #HACK, regenerate bases instantly
 
                         elif (numfriendfg==0):  #If aggressor lost
-                            debug.warn('wtf!!')
+                            debug.warn("WTF?! Agressor lost?!")
                             fgs = fg_util.FGsInSystem(enfac,sys)
                             if (len(fgs)>0):
                                 fgs=fgs[0]
@@ -339,7 +341,7 @@ def LookForTrouble (faction):
     key = fg_util.MakeFactionKey(faction)
     #debug.debug("fg_util.ccp=%s, key=%s" % (fg_util.ccp, key))
     numfg=Director.getSaveStringLength(fg_util.ccp,key)
-    debug.debug("<<%d>> = Director.getSaveStringLength(fg_util.ccp=%s, key=%s)" %(numfg, fg_util.ccp, key))
+    #debug.debug("<<%d>> = Director.getSaveStringLength(fg_util.ccp=%s, key=%s)" %(numfg, fg_util.ccp, key))
     if (lftiter>=numfg):
         lftiter=0
         if (0 and numfg):
@@ -349,7 +351,7 @@ def LookForTrouble (faction):
         return 0
     #debug.debug("key=%s" % (key))
     i = Director.getSaveString(fg_util.ccp,key,lftiter)
-    debug.debug(">>%s<< = Director.getSaveString(fg_util.ccp=%s, key=%s, lftiter=%d)" % (i, fg_util.ccp, key, lftiter))
+    #debug.debug(">>%s<< = Director.getSaveString(fg_util.ccp=%s, key=%s, lftiter=%d)" % (i, fg_util.ccp, key, lftiter))
     lftiter+=1
     sys = fg_util.FGSystem (i,faction)
     if (sys!='nil'):
@@ -368,15 +370,14 @@ def LookForTrouble (faction):
 
 def StopTargettingEachOther (fgname,faction,enfgname,enfaction):
     i = VS.getUnitList()
-    un = i.current()
     while (not i.isDone()):
+        un = next(i)
         if un:
             if ((un.getFactionName()==enfaction and un.getFlightgroupName()==enfgname) or
                     (un.getFactionName()==faction and un.getFlightgroupName()==fgname)):
                 un.setFgDirective ('b')
         #check to see that it's in this flightgroup or something :-)
         #debug.debug("i.next()")
-        un = next(i)
 
 
 def TargetEachOther (fgname,faction,enfgname,enfaction):
@@ -501,7 +502,7 @@ def LaunchMoreShips(fgname,faction,landedtn,nums):
 
 
 def LaunchEqualShips (fgname, faction, enfgname, enfaction):
-    debug.debug("DYNAMO*3")
+    debug.debug("LaunchEqualShips(%s, %s, %s, %s)" % (fgname, faction, enfgname, enfaction))
     land=fg_util.LandedShipsInFG(fgname,faction)
     launch=fg_util.ShipsInFG(fgname,faction)
     enland=fg_util.LandedShipsInFG(enfgname,enfaction)
@@ -579,7 +580,7 @@ def attackFlightgroup (fgname, faction, enfgname, enfaction,iscap):
             LaunchEqualShips (fgname,faction,enfgname,enfaction)
             VS.TargetEachOther (fgname,faction,enfgname,enfaction)
             VS.popSystem()
-        #debug.debug('duke '+fgname + ' '+enfgname)
+        debug.debug("attackFlightgroup(fgname=%s, faction=%s, enfgname=%s, enfaction=%s, iscap=%s)" % (fgname, faction, enfgname, enfaction, iscap))
         SimulatedDukeItOut (fgname,faction,enfgname,enfaction)
     elif (sys!='nil' and ensys!='nil'):
         #pursue other flightgroup
