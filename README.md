@@ -51,10 +51,9 @@ engine can be found here:
 
   http://wiki.vega-strike.org/HowTo:Compile_from_SVN_on_Linux
 
-  At present, Priv:WCU depends on the Python 2.7 branch of the VS
-source code (this is the default).  It will likely not work on the new
-Python 3.x branch.
-
+  I've recently ported the codebase to python3.4, but this requires that the user hacks the latest Vega Strike CMake configuration (since the current VS revision only supports python3.3 out of the box).  There are instructions on how to accomplish this on the wiki -- it basically involves replacing py3.3 with py3.4 in a section of 20 lines of code.
+  
+  Python 2.7 is no longer supported.
 
 ### Creating symlinks to the VegaStrike binaries ###
 
