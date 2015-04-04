@@ -78,14 +78,14 @@ non-canon ship variants) right away.
 Bug notes:
  * Tarsus model is missing gun models?
  * Tarsus hud model does not show up at the ship dealer?
- * Why are there no shield indications on the hud when flying?!
+ * Why are there no enemy shield indicators on the hud when flying?!
  * Ships are often parked in a weird position on the landing pad
  * The map computer appears to not be scaled correctly to the VS map
  * Patrol mission description can offer more navpoints than are in the system
  ** The mission is scaled down correctly by the patrol mission script
     though
  * The mission computer does not display the name of the current planet(!)
-   -- PO does and so does GG.
+   -- PO does and so does GG. (FIXED -- VS src/cmd/basecomputer.cpp)
  * Wingmen fire all the time -- can I tell them to cease fire? Can they
    be taught to cease fire if no hostiles are nearby?
  ** This might be releated to the 'attack my target' command?
