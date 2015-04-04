@@ -96,7 +96,7 @@ Bug notes:
    issue?
 
 Changes:
- * Default Tarsus size modified from 1 to 6 (was too small before)
+ * Default Tarsus size modified from 1 to 12 (was too small before)
  * Changed master_parts_list.csv to avoid mismatched categories for parts
    (seen with the starting Tarsus)
  ** Hull and Armor => Hull, Armor
