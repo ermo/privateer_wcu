@@ -218,12 +218,10 @@ class QuineComputer:
             self.add_button( GUI.GUIButton(guiroom,'XXXRight','btn_right', sprites[3], hot_loc[3]), scroll_click )
 
         current_base = universe.getDockedBase()
-        #trace(TRACE_VERBOSE," ::: computer_lib.py:221 current_base = %s" % (current_base))
         player = VS.getPlayer()
 
         # this doesn't change while docked, so only call it once
         self.str_start = get_location_text(current_base)
-        trace(TRACE_VERBOSE," ::: computer_lib.py:226 self.str_start = %s" % (self.str_start))
 
         screen_loc = GUI.GUIRect(80,90,350,380,"pixel",(800,600))
         screen_color = GUI.GUIColor(20/255.0, 22/255.0 ,10/255.0)
@@ -470,7 +468,6 @@ def get_base_text(current_base = None, str_system_file = None):
     if current_base.isPlanet():
         str_base = current_base.getName()
         str_base_type = current_base.getFullname() + " planet"
-        trace(TRACE_VERBOSE," ::: computer_lib.py:473 isPlanet: (str_base, str_base_type) = (%s, %s)" % (str_base, str_base_type))
     else:
         str_base = current_base.getFullname()
         str_base_type = current_base.getName()
@@ -481,7 +478,6 @@ def get_base_text(current_base = None, str_system_file = None):
                     str_base = pirate_bases[str_system_file]
                 except KeyError:
                     str_base = 'Unknown'
-        trace(TRACE_VERBOSE," ::: computer_lib.py:484 notPlanet: (str_base, str_base_type) = (%s, %s)" %(str_base, str_base_type))
 
     # adjust the base type for certain planets
     if str_base_type == 'new_constantinople':
@@ -490,8 +486,6 @@ def get_base_text(current_base = None, str_system_file = None):
         str_base_type = "military base"
     elif str_base_type == 'church_of_man planet':
         str_base_type = "agricultural planet"
-
-    trace(TRACE_VERBOSE, " ::: computer_lib.py:494 Adjusted: (str_base, str_base_type) = (%s, %s)" % (str_base, str_base_type))
 
     return ((int_faction,str_faction),(str_base,str_base_type))
 
