@@ -5,8 +5,14 @@ import universe
 
 # move generic shipdealer to showroom from upgrades
 TalkToStanForExtraShips = 1
-# The value of a used part compared to a new part
+# Set up the scaling value of a used part compared to a new part
 USED_VALUE = 0.5
+try:
+    USED_VALUE = float(VS.vsConfig("economics", "ship_sellback_price", str(USED_VALUE)))
+    debug.debug("Got XML value of ship_sellback_price :) (float = %.2f)" % (USED_VALUE))
+except:
+    debug.debug("Falling back to hardcoded USED_VALUE of ship_sellback_price :/ (float = %.2f)" % (USED_VALUE))
+    pass
 
 
 def CanX(disallowed):
@@ -140,10 +146,7 @@ def ShipValue(shipname, used):
     carg = VS.GetMasterPartList().GetCargo(shipname)
     price = carg.GetPrice()
     if used:
-        try:
-            price *= float(VS.vsConfig("economics", "ship_sellback_price", str(USED_VALUE)))
-        except:
-            price *= USED_VALUE
+        price *= USED_VALUE
     return price
 
 
