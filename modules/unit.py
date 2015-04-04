@@ -183,7 +183,7 @@ def setPreciseTargetShip (which_fgid, target_unit):
             un = next(i)
 
 def getMinDistFrom(sig1,siglist=None):
-    debug.debug("getMinDistFrom(sig1=%s, siglist=%s)" % (sig1, siglist))
+    debug.debug("getMinDistFrom(sig1=%s, siglist=)" % (sig1.getName()))
     siglist=siglist or getPlanetList(0)
     mindist=100000000000000000000000000000000000000000000.0
     for sig2 in siglist:
