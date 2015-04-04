@@ -12,7 +12,13 @@ room0 = room
 Base.Texture (room, 'background', 'bases/mining_base/MiningBase_LandingPad'+time_of_day+'.spr', 0, 0)
 Base.Texture (room, 'lgt', 'bases/mining_base/MiningBase_LandingPad_lgt'+time_of_day+'.spr', 0.775, 0.375)
 Base.Texture (room, 'shp', 'bases/mining_base/MiningBase_LandingPad_shp'+time_of_day+'.spr', 0.2125, 0.6875)
-Base.Ship (room, 'my_ship', (0.044375,-0.319167,3), (0, 0.93, -0.34), (-1, 0, 0))
+#Base.Ship (room, 'my_ship', (0.044375,-0.319167,3), (0, 0.93, -0.34), (-1, 0, 0))  # original PPU r505 orientation
+
+# (pos_vec), (up_vec), (nose_vec)
+#Base.Ship (room, 'my_ship', (0.04, -0.18, 2.6), (0, 1, 0), (-0.5372996083, 0, -0.8433914458)) # <= OK basic relative size and position of Tarsus (212.5 degrees RotY in spreadsheet)
+#Base.Ship (room, 'my_ship', (0.04, -0.18, 2.6), (-0.02812008879, 0.9986295348, -0.0441396978), (-0.5365632579, -0.05233595624, -0.8422356071)) # as above but tilted +3 degrees RotX
+Base.Ship (room, 'my_ship', (0.04, -0.18, 2.6), (-0.01406486407, 0.999657325, -0.02207741428), (-0.5371154892, -0.02617694831, -0.8431024366)) # as above but tilted only +1.5 degrees RotX
+#Base.Ship (room, 'my_ship', (0.04, -0.18, 2.6), (-0.01308847415, 0.999657325, -0.02266990223), (-0.4998286625, -0.02617694831, -0.8657286385)) # Tarsus 210 degrees RotY, 1.5 degrees RotX
 
 room = Base.Room ('Main_Concourse')
 room1 = room

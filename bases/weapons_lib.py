@@ -86,7 +86,14 @@ def MakeWeapon(concourse, timeofdayignored='_day', dealername="bases/repair_upgr
     Base.Texture(room, 'background', upgradename+'.spr', x, y)
 
     if use_ship_320_240_upgrade:
-        Base.Ship(room, 'my_ship', (1.0, 0.12, 1.5), (0, 1, 0), (-0.85, 0.03, -0.89))
+        #Base.Ship(room, 'my_ship', (1.0, 0.12, 1.5), (0, 1, 0), (-0.85, 0.03, -0.89)) # Original setting
+
+        # (pos_vec), (up_vec), (nose_vec)
+        #Base.Ship(room, 'my_ship', (0.7, 0.15, 1.3), (0, 1, 0), (-0.7071067812, 0.0, -0.7071067812)) # 225 degrees RotY in spreadsheet
+        #Base.Ship(room, 'my_ship', (0.7, 0.14, 1.3), (0, 1, 0), (-0.6427876097, 0.0,-0.7660444431)) # 220 degrees RotY in spreadsheet
+        Base.Ship(room, 'my_ship', (0.7, 0.14, 1.3), (0.01121819062, 0.9998476952, 0.01336931897), (-0.64268971, 0.01745240644, -0.7659277708)) # 220 degrees RotY, -1 degree RotX 
+        #Base.Ship(room, 'my_ship', (0.7, 0.14, 1.3), (0.01682621803, 0.999657325, 0.02005270579), (-0.6425673424, 0.02617694831, -0.7657819388)) # 220 degrees RotY, -1.5 degrees RotX
+
     # move generic shipdealer to showroom from upgrades
     if TalkToStanForExtraShips:
         Base.Comp(room0, 'my_comp_id', -0.855, -0.81, 0.6325, 0.663333, 'Upgrade/Repair', 'Upgrade Info ')
