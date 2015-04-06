@@ -2,7 +2,7 @@ import Base
 import dynamic_mission
 import VS
 import vsrandom
-import industrial_lib
+#import industrial_lib
 
 def MakeIndustrial(sunny,time_of_day='',AWACS=False):
     room = Base.Room ('Landing_Pad')
