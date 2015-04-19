@@ -6,12 +6,12 @@ import universe
 # move generic shipdealer to showroom from upgrades
 TalkToStanForExtraShips = 1
 # Set up the scaling value of a used part compared to a new part
-USED_VALUE = 0.5
+USED_VALUE = 0.8
 try:
     USED_VALUE = float(VS.vsConfig("economics", "ship_sellback_price", str(USED_VALUE)))
     debug.debug("Got XML value of ship_sellback_price :) (float = %.2f)" % (USED_VALUE))
 except:
-    debug.debug("Falling back to hardcoded USED_VALUE of ship_sellback_price :/ (float = %.2f)" % (USED_VALUE))
+    debug.debug("Falling back to hardcoded USED_VALUE (= %.2f) of ship_sellback_price :-/" % (USED_VALUE))
     pass
 
 
