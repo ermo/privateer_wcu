@@ -76,11 +76,14 @@ non-canon ship variants) right away.
  * It's tedious to sell missiles -- create Buy/Sell 1, 5 and 10 buttons?
 
 Bug notes:
- * Tarsus model is missing gun models?
+ * Tarsus model is missing gun models? Is this a model issue (missing mount points)?
  * Tarsus hud model does not show up at the ship dealer?
  * Why are there no enemy shield indicators on the hud when flying?!
  * Ships are often parked in a weird position on the landing pad
- * The map computer appears to not be scaled correctly to the VS map
+   -- The position is fixed per base and depends on the scale and orientation
+      of the spaceship model in question. Fixed this so that the Tarsus.begin
+      is positioned properly (TarsusMk2 looks funky, though...)
+ * The map computer appears to not be scaled correctly to the VS map?
  * Patrol mission description can offer more navpoints than are in the system
  ** The mission is scaled down correctly by the patrol mission script
     though
@@ -108,3 +111,8 @@ Changes:
    Let's pretend that its slight increase in armor is offset by smarter
    construction (keeping mass and inertia the same as the original Tarsus,
    and thus keeping its handling)
+ * I've turned off totally blank ship upgrades for now ()
+ ** I have turned on special upgrade rules if:
+ *** We're in Troy and the player is in a tarsus
+ *** We're launching a pirate talon -- it gets weaker guns like in PO.
+ 
