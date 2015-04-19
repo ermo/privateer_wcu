@@ -105,12 +105,12 @@ def launch_types_around ( fg, faction, typenumbers, ai, radius, myunit, garbage_
     nr_ships=0
     for t in typenumbers:
         nr_ships+=t[1]
-    debug.info("before"+str(nr_ships))
+    debug.info("launch_types_around: before"+str(nr_ships))
     retcontainer=[None]
     if (fgappend=='' and nr_ships>1):
         (nr_ships,pos) = look_for (fg,faction,nr_ships-1,myunit,pos,garbage_collection_distance,retcontainer)
         nr_ships+=1
-    debug.info("after "+str(nr_ships)+ str(retcontainer))
+    debug.info("launch_types_around: after "+str(nr_ships)+ str(retcontainer))
     count=0
     ret=retcontainer[0]
     found=0
@@ -132,9 +132,9 @@ def launch_types_around ( fg, faction, typenumbers, ai, radius, myunit, garbage_
   
 def launch_wave_around ( fg, faction, ai, nr_ships, capship, radius, myunit, garbage_collection_distance,logo):
     pos = whereTo(radius, myunit)
-    debug.info("before"+str(nr_ships))
+    debug.info("launch_wave_around: before"+str(nr_ships))
     (nr_ships,pos) = look_for (fg,faction,nr_ships,myunit,pos,garbage_collection_distance)
-    debug.info("after "+str(nr_ships))
+    debug.info("launch_wave_around: after "+str(nr_ships))
     while (nr_ships>0):
         type=""
         if (capship):

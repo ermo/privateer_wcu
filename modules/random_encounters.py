@@ -26,7 +26,7 @@ class random_encounters:
             return self.prob_amplitude*(.6+.4*VS.cos ((self.prob_phase*3.1415926536*2)/self.prob_period))
 
         def __init__(self,sig_distance,det_distance):
-            debug.debug("init playerdata")
+            debug.debug("random_encounters.playerdata.__init__()")
             try:
                 faction_ships.Precache()
             except:
@@ -42,12 +42,12 @@ class random_encounters:
             self.significant_distance=sig_distance
             self.detection_distance=det_distance
             self.GeneratePhaseAndAmplitude()
-            debug.debug("done playerdat")
+            debug.debug("random_encounters.playerdata.__init_() END")
 
 
     def __init__(self, sigdis, detectiondis, gendis,  minnships, gennships, unitprob, enemyprob, capprob, capdist):
         unitprob=1
-        debug.debug("init random enc")
+        debug.debug("random_encounters.__init__()")
         self.capship_gen_distance=capdist
         #    player_num=player
         self.enprob = enemyprob
@@ -61,7 +61,7 @@ class random_encounters:
         self.capship_prob=capprob
         self.cur_player=0
         self.sig_distance_table = {"enigma_sector/heavens_gate":(2000,4000,.4)}
-        debug.debug("end random enc")
+        debug.debug("random_encounters.__init__() END")
 
     def AddPlayer (self):
         #debug.debug("begin add player")
@@ -161,7 +161,7 @@ class random_encounters:
     def atLeastNInsignificantUnitsNear (self,uni, n):
         num_ships=0
         leadah = uni.getFlightgroupLeader ()
-        debug.debug("i = VS.getUnitList()")
+        #debug.debug("i = VS.getUnitList()")
         i = VS.getUnitList()
         dd = self.cur.detection_distance
         i.advanceNInsignificant(0)
@@ -228,7 +228,7 @@ class random_encounters:
             #significant_unit is something.... lets see what it is
             cursys = VS.getSystemFile()
             if (self.DifferentSystemP()):
-                debug.debug("different")
+                debug.debug("Significant unit in different system to player.")
                 self.SetModeZero()
                 significant_unit.setNull ()
             else:
@@ -277,4 +277,4 @@ class random_encounters:
             self.cur_player=0
         VS.setMissionOwner(self.cur_player)
 
-debug.debug("done loading rand enc")
+debug.debug("done loading random_encounters")
