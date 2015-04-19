@@ -336,35 +336,20 @@ def upgradeUnit(un, diff):
     debug.debug("'- Done interating through difficulty-based turretcount.")
 
 
-def getRabblePirateTalon():
-    """ Create a Talon opponent configuration specifically for new Privateers """
-    pass 
-    
-
-def troyify_talon(un):
-    """ Weaken the talons in the Troy system for new players """
-    pass
-    # if un is talon and system is Gemini, Troy
-    # force the outermost guns to be lasers
-    # and the middle one to be a mass driver
-    # 
-    #...  that's it?
-
-    
 def get_info(un):
     """ Show the configuration of a ship unit
-    
+
         unit_name : string
-        reactor : string
-        shield : string
-        hull : string
-        armor : string
-        ecm : string
-        repair_droid : string
-        radar : string
+        reactor : string (N/A)
+        shield : string (N/A)
+        hull : string (N/A)
+        armor : string (N/A)
+        ecm : string (N/A)
+        repair_droid : string (N/A)
+        radar : string (N/A)
         missiles : string
         guns : string
-        turrets : string
+        turrets : string (N/A)
     """
     num_mounts = un.GetNumMounts()
     info = "\n >>> current unit: %s (%s), %d mounts\n" % (un.getName(), un.getFactionName(), num_mounts)
@@ -386,16 +371,17 @@ def match_and_upgrade_weapons(un, upgrade_maps):
     for i in range(num_mounts):
         for umap in upgrade_maps:
             _match, _new = umap
-            current_mount = un.GetMountInfo(i)["weapon_info"]["name"]
-            if current_mount == _match:
-                un.upgrade(_new, i, 0, 1, 0)
-                matches = True
-                #debug.debug("\n >>> '- matched %s and swapped for %s (mount: %d)" % (_match, _new, i))
+            if "weapon_info" in un.GetMountInfo(i):
+                current_mount = un.GetMountInfo(i)["weapon_info"]["name"]
+                if current_mount == _match:
+                    un.upgrade(_new, i, 0, 1, 0)
+                    matches = True
+                    #debug.debug("\n >>> '- matched %s and swapped for %s (mount: %d)" % (_match, _new, i))
     return matches
 
 
 def adjust_upgrades(un):
-    """This is the master function for custom upgrade conditions"""
+    """This is the master function for custom upgrade rules"""
 
     upgraded = False
     current_system = VS.getSystemName()
@@ -418,7 +404,6 @@ def adjust_upgrades(un):
         upgraded = match_and_upgrade_weapons(un, pirate_rabble_talon_weapons)
 
     # END custom upgrade rules
-
     if upgraded:
         s = "\n >>> '- adjustments made to %s (%s)! :-)\n" % (this_unit, this_unit_faction)
         debug.debug(s)
