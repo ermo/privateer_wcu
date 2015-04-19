@@ -25,6 +25,10 @@
     heavy_6 = ["galaxygs", ]
     capship = ["kamekh", "paradigm", "freetrader"]
 
+    The current interface for the unit upgrade function is something like this:
+    unit.upgrade(upgrade_filename : string, mountoffset : int, subunitoffset : int, force : bool, loop_through_mounts : bool)
+
+    
 """
 import VS
 import debug
@@ -243,7 +247,9 @@ def basicUnit(un, diff):
             percent = un.upgrade("jump_drive", i, i, 0, 1)
     else:
         percent = un.upgrade("jump_drive", i, i, 0, 1)
-    #and after some careful review of the code in question, it appears upgrades below are already offered by default on blank ships...only need to give 'em a pair of guns
+    # and after some careful review of the code in question,
+    # it appears upgrades below are already offered by default on blank ships
+    # ...only need to give 'em a pair of guns
     #some engines
     #    percent=un.upgrade("engine_level_0",0,0,0,0)
     #    percent=un.upgrade("shield_2",0,0,0,0)
@@ -328,3 +334,97 @@ def upgradeUnit(un, diff):
                 break
         curmount += 1  # increase starting mounts hardpoint
     debug.debug("'- Done interating through difficulty-based turretcount.")
+
+
+def getRabblePirateTalon():
+    """ Create a Talon opponent configuration specifically for new Privateers """
+    pass 
+    
+
+def troyify_talon(un):
+    """ Weaken the talons in the Troy system for new players """
+    pass
+    # if un is talon and system is Gemini, Troy
+    # force the outermost guns to be lasers
+    # and the middle one to be a mass driver
+    # 
+    #...  that's it?
+
+    
+def get_info(un):
+    """ Show the configuration of a ship unit
+    
+        unit_name : string
+        reactor : string
+        shield : string
+        hull : string
+        armor : string
+        ecm : string
+        repair_droid : string
+        radar : string
+        missiles : string
+        guns : string
+        turrets : string
+    """
+    num_mounts = un.GetNumMounts()
+    info = "\n >>> current unit: %s (%s), %d mounts\n" % (un.getName(), un.getFactionName(), num_mounts)
+    for i in range(num_mounts):
+        if "weapon_info" in un.GetMountInfo(i):
+            info += "     '- mount %d: %s\n" % (i, un.GetMountInfo(i)["weapon_info"]["name"])
+        else:
+            info += "     '- mount %d: %s\n" % (i, un.GetMountInfo(i))
+    debug.debug(info)
+
+
+def match_and_upgrade_weapons(un, upgrade_maps):
+    """This function adjusts mounts according to the supplied upgrade maps
+
+       An upgrade map is a list with tuples of the form ('Laser','mass_driver')
+    """
+    matches = False
+    num_mounts = un.GetNumMounts()
+    for i in range(num_mounts):
+        for umap in upgrade_maps:
+            _match, _new = umap
+            current_mount = un.GetMountInfo(i)["weapon_info"]["name"]
+            if current_mount == _match:
+                un.upgrade(_new, i, 0, 1, 0)
+                matches = True
+                #debug.debug("\n >>> '- matched %s and swapped for %s (mount: %d)" % (_match, _new, i))
+    return matches
+
+
+def adjust_upgrades(un):
+    """This is the master function for custom upgrade conditions"""
+
+    upgraded = False
+    current_system = VS.getSystemName()
+    player_ship = VS.getPlayer().getName()
+    this_unit = un.getName()
+    this_unit_faction = un.getFactionName()
+
+    s = "\n >>> current_system: %s\n     player_ship = %s\n" % (current_system, player_ship)
+    s += "     '- attempting to upgrade: %s (%s)...\n" % (this_unit, this_unit_faction)
+    debug.debug(s)
+    get_info(un)
+    # BEGIN custom upgrade rules
+
+    pirate_rabble_talon_weapons = [("MassDriver", "laser"),
+                                   ("Particle", "mass_driver")]
+    if (current_system == "Troy"
+    and "tarsus" in player_ship
+    and "pirates" in this_unit_faction
+    and "talon" in this_unit):
+        upgraded = match_and_upgrade_weapons(un, pirate_rabble_talon_weapons)
+
+    # END custom upgrade rules
+
+    if upgraded:
+        s = "\n >>> '- adjustments made to %s (%s)! :-)\n" % (this_unit, this_unit_faction)
+        debug.debug(s)
+        get_info(un)
+    else:
+        s = "\n --- '- no adjustments made to %s (%s).\n" % (this_unit, this_unit_faction)
+        debug.debug(s)
+
+

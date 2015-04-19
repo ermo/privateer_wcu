@@ -32,6 +32,7 @@ def launch (fgname, faction, type, ai, nr_ships, nr_waves, vec, logo='',useani=1
     if (not isblank):
         debug.info("Launching non-blank ship(s)")
         ret = VS.launch (fgname,type,faction,"unit",ai,nr_ships,nr_waves,VS.SafeEntrancePoint (vec,40),logo)
+        ship_upgrades.adjust_upgrades(ret)
         dj_lib.PlayMusik(0,dj_lib.HOSTILE_NEWLAUNCH_DISTANCE)
     else:  # only upgrade blank ships (for now)
         debug.info("Launching blank ship(s)")
