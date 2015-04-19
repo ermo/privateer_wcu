@@ -1,8 +1,6 @@
-
-
 """ Ship upgrade test campaign.
 
-    By default, the fixer is in Gemini/Troy on the Achilles mining base.
+    By default, the fixer is in Gemini/Troy on the Hector mining base.
 
     Talking to the fixer will launch a defend mission with a single
     waypoint (Helen by default), at which a single Confed AI controlled
@@ -41,7 +39,7 @@ import quest
 difficulty_ = 0  # will be incremented at some point. Range is [0/9; 9/9]
 
 system_ = "Gemini/Troy"
-base_ = "Achilles"
+base_ = "Hector"
 waypoint_ = "Helen"
 opponent_ =  "talon"  # corresponds to the 'Average' ship
 
@@ -132,7 +130,7 @@ def load_ship_upgrade_test_campaign():
         None,  # Script to be run to start the mission
         'defend',  # missionname
         (
-            'confed_',  # factionname -- the enemy faction we're fighting
+            'pirates_',  # factionname -- the enemy faction we're fighting
             0,  # numsystemsaway -- 0 means the enemy is in this system
             1,  # enemyquantity -- There's one enemy in this case
             5000,  # distancefrombase -- the enemy is spawned as the player gets within this distance
@@ -143,7 +141,7 @@ def load_ship_upgrade_test_campaign():
             'merchant',  # protectivefactionname -- presumably the faction we're protecting
             (),  # jumps -- since it is in-system, this is empty (?)
             priv.name+"_mission",  # var_to_set -- probably to keep track of this mission in save games
-            'Confed_AI_drone',  # dynamic_attack_fg -- name of the attacking flight group
+            'ES_AI_drone',  # dynamic_attack_fg -- name of the attacking flight group
             opponent_,  # dynamic_type -- the type of opponent
             waypoint_,  # dynamic_defend_fg -- name of the defending flight group
             0,  # waves -- how many extra waves of opponents will be spawned
