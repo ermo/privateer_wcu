@@ -27,10 +27,10 @@
     such that RotZ(90, (1,0,0)) returns (0, 1, 0).
 
     But since Vega Strike uses a left-hand coordinate system, the sign is
-    in the rotate function; rotating a negative amount of degrees is the same
-    as going from counter-clockwise to clockwise in a right-handed coordinate
-    system, and thus from clockwise to counter-clockwise in a left-handed
-    coordinate system.
+    negative in the rotate function; rotating a negative amount of degrees
+    is the same as going from counter-clockwise to clockwise in a
+    right-handed coordinate system, and thus from clockwise to
+    counter-clockwise in a left-handed coordinate system.
 
      LH:          RH:
 
@@ -58,7 +58,6 @@ def RotZ(rotation, vec3=unitZ):
     x_ = cos(rotation*rpd)*x - sin(rotation*rpd)*y
     y_ = sin(rotation*rpd)*x + cos(rotation*rpd)*y
     z_ = z
-
     return (x_, y_, z_)
 
 
@@ -69,7 +68,6 @@ def RotY(rotation, vec3=unitY):
     x_ = cos(rotation*rpd)*x + sin(rotation*rpd)*z
     y_ = y
     z_ = -sin(rotation*rpd)*x + cos(rotation*rpd)*z
-
     return (x_, y_, z_)
 
 
@@ -80,7 +78,6 @@ def RotX(rotation, vec3=unitX):
     x_ = x
     y_ = cos(rotation*rpd)*y - sin(rotation*rpd)*z
     z_ = sin(rotation*rpd)*y + cos(rotation*rpd)*z
-
     return (x_, y_, z_)
 
 
@@ -140,5 +137,5 @@ def main():
                 pitchX=1, yawY=180-32.5, rollZ=0)
     
 if __name__ == "__main__":
-    run_tests()
+    #run_tests()
     main()
