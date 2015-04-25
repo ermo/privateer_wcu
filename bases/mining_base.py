@@ -15,11 +15,9 @@ Base.Texture (room, 'shp', 'bases/mining_base/MiningBase_LandingPad_shp'+time_of
 #Base.Ship (room, 'my_ship', (0.044375,-0.319167,3), (0, 0.93, -0.34), (-1, 0, 0))  # original PPU r505 orientation
 
 # (pos_vec), (up_vec), (nose_vec)
-# OK basic relative size and position of scale 12 Tarsus
+# OK basic relative size and position of scale 6 Tarsus
 # (180-32.5 degrees yaw anti-clockwise around Y in ./tools/matrix_rotation.py)
-#Base.Ship (room, 'my_ship', (0.04, -0.18, 2.6), (0, 1, 0), (-0.5372996083, 0, -0.8433914458)) 
-# as above but with +1 degree pitch up (anti-clockwise) around X
-Base.Ship (room, 'my_ship', (0.04, -0.18, 2.6), (0.014065, 0.999657, 0.022077), (-0.537115, 0.026177, -0.843102))
+Base.Ship (room, 'my_ship', (0.02, -0.2, 2.0), (0, 1, 0), (-0.5373, 0.0, -0.843391))
 
 room = Base.Room ('Main_Concourse')
 room1 = room

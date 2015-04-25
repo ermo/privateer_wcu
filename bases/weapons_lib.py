@@ -89,10 +89,10 @@ def MakeWeapon(concourse, timeofdayignored='_day', dealername="bases/repair_upgr
         #Base.Ship(room, 'my_ship', (1.0, 0.12, 1.5), (0, 1, 0), (-0.85, 0.03, -0.89)) # Original setting
 
         # (pos_vec), (up_vec), (nose_vec)
-        #Base.Ship(room, 'my_ship', (0.7, 0.15, 1.3), (0, 1, 0), (-0.7071067812, 0.0, -0.7071067812)) # 225 degrees RotY in spreadsheet
-        #Base.Ship(room, 'my_ship', (0.7, 0.14, 1.3), (0, 1, 0), (-0.6427876097, 0.0,-0.7660444431)) # 220 degrees RotY in spreadsheet
-        Base.Ship(room, 'my_ship', (0.7, 0.14, 1.3), (0.01121819062, 0.9998476952, 0.01336931897), (-0.64268971, 0.01745240644, -0.7659277708)) # 220 degrees RotY, -1 degree RotX 
-        #Base.Ship(room, 'my_ship', (0.7, 0.14, 1.3), (0.01682621803, 0.999657325, 0.02005270579), (-0.6425673424, 0.02617694831, -0.7657819388)) # 220 degrees RotY, -1.5 degrees RotX
+        # 180-38 degrees RotY, 1 degrees RotX (roll up)
+        #Base.Ship(room, 'my_ship', (0.7, 0.12, 0.7), (0.010745, 0.999848, 0.013753), (-0.615568, 0.017452, -0.787891))
+        # 180-38 degrees RotY, 2 degrees RotX (roll up)
+        Base.Ship(room, 'my_ship', (0.7, 0.12, 1.0), (0.021486, 0.999391, 0.027501), (-0.615286, 0.034899, -0.787531))
 
     # move generic shipdealer to showroom from upgrades
     if TalkToStanForExtraShips:

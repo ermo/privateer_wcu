@@ -134,8 +134,10 @@ def run_tests():
 
 def main():
     base_rotate("mining_base + pleasure_land + pirate",
-                pitchX=1, yawY=180-32.5, rollZ=0)
-    
+                pitchX=0, yawY=180-32.5, rollZ=0)
+    base_rotate("dealer_repair",
+                pitchX=2, yawY=180-38, rollZ=0)
+
 if __name__ == "__main__":
     #run_tests()
     main()
