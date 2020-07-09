@@ -333,7 +333,7 @@ def upgradeUnit(un, diff):
                 creds = upgradeHelper(un, mycargo, curmount, creds, 0, 1)  # we pass this in to the credits...and we only loop through all mounts if we're adding a weapon
                 break
         curmount += 1  # increase starting mounts hardpoint
-    debug.debug("'- Done interating through difficulty-based turretcount.")
+    debug.debug("'- Done iterating through difficulty-based turretcount.")
 
 
 def get_info(un):
