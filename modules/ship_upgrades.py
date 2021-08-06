@@ -351,7 +351,7 @@ def get_info(un):
         guns : string
         turrets : string (N/A)
     """
-    num_mounts = un.GetNumMounts()
+    num_mounts = un.getNumMounts()
     info = "\n >>> current unit: %s (%s), %d mounts\n" % (un.getName(), un.getFactionName(), num_mounts)
     for i in range(num_mounts):
         if "weapon_info" in un.GetMountInfo(i):
