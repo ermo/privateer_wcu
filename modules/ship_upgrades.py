@@ -351,7 +351,7 @@ def get_info(un):
         guns : string
         turrets : string (N/A)
     """
-    num_mounts = un.GetNumMounts()
+    num_mounts = un.getNumMounts()
     info = "\n >>> current unit: %s (%s), %d mounts\n" % (un.getName(), un.getFactionName(), num_mounts)
     for i in range(num_mounts):
         if "weapon_info" in un.GetMountInfo(i):
@@ -367,7 +367,7 @@ def match_and_upgrade_weapons(un, upgrade_maps):
        An upgrade map is a list with tuples of the form ('Laser','mass_driver')
     """
     matches = False
-    num_mounts = un.GetNumMounts()
+    num_mounts = un.getNumMounts()
     for i in range(num_mounts):
         for umap in upgrade_maps:
             _match, _new = umap
