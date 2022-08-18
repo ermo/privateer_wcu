@@ -12,8 +12,9 @@ of the original game.
 
   Similarly, the aim is to include and allow the purchase of ships
 not available for purchase in the original Privateer game.  The
-rationale is that all ships flying around in the wider Wing
-Commander Universe should be available for purchase.
+rationale is that if a ship is seen flying around in the wider Wing
+Commander Universe, it should be available for purchase -- at the
+right price (which may include doing someone a personal favour).
 
   It should be noted that Privateer: Wing Commander Universe is
 basically a rebranded version of Privateer: Parallel Universe.
@@ -32,50 +33,50 @@ check out the development thread on the Vega Strike forums:
 How to get Privateer: Wing Commander Universe running
 -----------------------------------------------------
 
-  Priv:WCU is developed on top of the latest SVN version of the
-VegaStrike engine. It is not presently in a state suitable for
+  Priv:WCU is developed on top of the latest stable git branch version
+of the VegaStrike engine. It is not presently in a state suitable for
 end-users.
 
-  It is worth noting that Priv:WCU is developed on Linux.
+  It is worth noting that Priv:WCU is developed and tested primarily on
+Linux.
   
 ### Windows:
 
-  Priv:WCU does not currently run under Windows.  Last I checked, the 
-VegaStrike development binaries for Windows did not work with the
-Priv:WCU code base. 
+  Priv:WCU is not currently tested under Windows, but the VegaStrike
+engine should now be running on Windows.
 
 ### Linux:
 
   Instructions on how to fetch and compile the newest VegaStrike
 engine can be found here:
 
-  http://wiki.vega-strike.org/HowTo:Compile_from_SVN_on_Linux
+  https://github.com/vegastrike/Vega-Strike-Engine-Source#compiling-vegastrike
 
-  I've recently ported the codebase to python3.4, but this requires that the user hacks the latest Vega Strike CMake configuration (since the current VS revision only supports python3.3 out of the box).  There are instructions on how to accomplish this on the wiki -- it basically involves replacing py3.3 with py3.4 in a section of 20 lines of code.
+  The Priv:WCU codebase has been ported to py3. Python-3.4 and up is
+supported since the 0.8.x branch of the Vega-Strike-Engine-Source project.
   
-  Python 2.7 is no longer supported.
+  Python-2.7 is no longer supported.
 
 ### Creating symlinks to the VegaStrike binaries ###
 
   Create a bin/ directory in the root Priv:WCU folder and create
-symbolic links to the vegastrike and vssetup binaries respectively.
+symbolic links to the `vegastrike-engine` and `vegasettings` binaries respectively.
 
 On my system, it looks like this:
 
 
-    [privateer_wcu/]$ ls -la bin/
-    total 8
-    drwx------  2 ermo ermo 4096 Sep 25 16:16 .
-    drwxrwxr-x 26 ermo ermo 4096 Sep 25 16:12 ..
-    lrwxrwxrwx  1 ermo ermo   39 Sep  5 00:46 vegastrike -> ../../trunk/vegastrike/build/vegastrike
-    lrwxrwxrwx  1 ermo ermo   42 Sep  5 00:46 vssetup -> ../../trunk/vegastrike/build/setup/vssetup
-    [privateer_wcu/]$
+    ermo@dante:~/repos/privateer_wcu/bin [master* +0 ~1 -0 !]
+    $ ls -l
+    total 0
+    lrwxrwxrwx 1 ermo ermo 48 Aug 18 18:14 vegasettings -> ../../Vega-Strike-Engine-Source/bin/vegasettings
+    lrwxrwxrwx 1 ermo ermo 53 Aug 18 18:14 vegastrike-engine -> ../../Vega-Strike-Engine-Source/bin/vegastrike-engine
 
 
-To start Priv:WCU, navigate to the root Priv:WCU folder and type bin/vegastrike <ENTER>
+To start Priv:WCU in development mode, navigate to the Priv:WCU `bin/` folder
+and type `./vegastrike-engine -D../` `<ENTER>`
 
-To change the Priv:WCU configuration options, navigate to the root Priv:WCU folder
-and type bin/vssetup <ENTER>
+To change the Priv:WCU configuration options, navigate to the Priv:WCU `bin/` folder
+and type `./vegasettings --target ../` `<ENTER>`
 
 
 Forking
@@ -86,6 +87,7 @@ competing projects until such time as it is clear that I (ermo) am no
 longer making any attempt to update it.  You are however welcome to
 fork the project if the intent is to contribute content or bugfixes. :)
 
+Please use only `https://github.com/pwcu/privateer_wcu` as the fork origin.
 
 History
 -------
@@ -98,7 +100,7 @@ here), but also includes content from the Privateer: Gemini Gold mod
 engine as one is likely to get) and the Wing Commander Universe project,
 which itself spawned the Privateer Remake project.
 
-Wing Commander Universe can be found at http://wcu.solsector.net/
+Wing Commander: Universe can be found at http://wcu.solsector.net/
 
 Privateer: Gemini Gold can be found at http://privateer.sourceforge.net/
 
@@ -108,6 +110,7 @@ Confused yet?
 Credits
 -------
 
-* Chuck Starchaser (Privateer: Parallel Universe lead)
-* John Cordell (Privateer: Gemini Gold lead)
-* (to be filled in as I learn more about the long history this project)
+- Chuck Starchaser (Privateer: Parallel Universe lead)
+- John Cordell (Privateer: Gemini Gold lead)
+- [DMJC](https://github.com/DMJC) (Wing Commander: Universe lead)
+- (to be filled in as I learn more about the long history this project)
