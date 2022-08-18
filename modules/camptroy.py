@@ -51,7 +51,7 @@ stahlspeech2={
         ("Captain_Stahl","By 'tried' I suppose you mean he failed?"),
         ("Burrows","Otherwise I wouldn't be standing here."),
         ("Captain_Stahl","Good. You have proved your abilities, then. But this also shows that we have a traitor in our ranks."),
-        ("Burrows","Oh, come on! You think that the pirates would go such lengths as to plant a spy in your company - just to intercept a shipment?"),
+        ("Burrows","Oh, come on! You think that the pirates would go to such lengths as to plant a spy in your company - just to intercept a shipment?"),
         ("Captain_Stahl","I think they're worried that the introduction of the TarsusMk2 will turn their way of earning a living into a deadly gamble. And they should worry..."),
         ("Burrows","So, first thing is we need to stop this guy from transmitting information."),
         ("Captain_Stahl","You're learning fast. But I've checked the Achilles com logs and found that the information is not being transmitted. I believe one of my affiliates meets the pirates directly in this system."),
