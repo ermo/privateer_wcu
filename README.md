@@ -72,11 +72,11 @@ On my system, it looks like this:
     lrwxrwxrwx 1 ermo ermo 53 Aug 18 18:14 vegastrike-engine -> ../../Vega-Strike-Engine-Source/bin/vegastrike-engine
 
 
-To start Priv:WCU in development mode, navigate to the Priv:WCU `bin/` folder
-and type `./vegastrike-engine -D../` `<ENTER>`
+To start Priv:WCU in development mode, navigate to the Priv:WCU folder
+and type `bin/vegastrike-engine -D./` `<ENTER>`
 
-To change the Priv:WCU configuration options, navigate to the Priv:WCU `bin/` folder
-and type `./vegasettings --target ../` `<ENTER>`
+To change the Priv:WCU configuration options, navigate to the Priv:WCU folder
+and type `bin/vegasettings --target ./` `<ENTER>`
 
 
 Forking
